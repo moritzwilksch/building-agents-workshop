@@ -7,33 +7,17 @@ or flatbed scans of printed expense receipts and invoices submitted by employees
 from __future__ import annotations
 
 import argparse
-from datetime import date, datetime
-from decimal import Decimal
-import json
-from pathlib import Path
 import sys
+from pathlib import Path
+from typing import get_args
 
 from dotenv import load_dotenv
-from pydantic import BaseModel
+from pydantic import TypeAdapter
 from pydantic_ai import Agent, BinaryImage
 from pydantic_ai.capabilities.image_generation import ImageGeneration
+from pydantic_ai.native_tools import ImageAspectRatio
 
-# Import schemas and discriminator union from generate_invoice
-from generate_invoice import (
-    CardPayment,
-    CardSlip,
-    FlightInvoice,
-    FlightSegment,
-    FuelReceipt,
-    HotelFolio,
-    InvoiceCase,
-    LineItem,
-    RestaurantReceipt,
-    StandardInvoice,
-    TaxiReceipt,
-    TaxItem,
-    Vendor,
-)
+from generate_invoice import InvoiceCase, invoice_adapter
 
 load_dotenv()
 
@@ -69,7 +53,7 @@ Grounding & Accuracy:
 
 IMAGE_MODEL = "google:gemini-3.1-flash-lite-image"
 
-DEFAULT_ASPECT_RATIO = "3:4"
+DEFAULT_ASPECT_RATIO: ImageAspectRatio = "3:4"
 
 image_agent = Agent(
     IMAGE_MODEL,
@@ -79,40 +63,17 @@ image_agent = Agent(
 )
 
 
-def _json_serializable(val: object) -> object:
-    if isinstance(val, (datetime, date)):
-        return val.isoformat()
-    if isinstance(val, Decimal):
-        return str(val)
-    return str(val)
-
-
 def generate_invoice_image(
-    invoice: BaseModel | dict,
-    aspect_ratio: str = DEFAULT_ASPECT_RATIO,
+    invoice: InvoiceCase,
+    aspect_ratio: ImageAspectRatio = DEFAULT_ASPECT_RATIO,
 ) -> BinaryImage:
-    """Generate a realistic photograph or scan of an invoice in portrait orientation.
-
-    Args:
-        invoice: Pydantic model instance (e.g., InvoiceCase) or JSON-compatible dictionary.
-        aspect_ratio: Desired image aspect ratio (default: '3:4' portrait).
-
-    Returns:
-        BinaryImage containing the generated image bytes and media type.
-    """
-    if isinstance(invoice, BaseModel):
-        invoice_dict = invoice.model_dump(mode="json")
-    else:
-        invoice_dict = dict(invoice)
-
-    # Exclude internal/submission metadata like 'note' from the physical receipt prompt
-    invoice_dict.pop("note", None)
-
-    invoice_json_str = json.dumps(invoice_dict, indent=2, default=_json_serializable)
+    """Render invoice data as a photograph or scan, excluding the employee note."""
+    # The employee note belongs to the claim, not the physical receipt.
+    invoice_json = invoice.model_dump_json(indent=2, exclude={"note"})
 
     user_prompt = (
         "Generate a realistic expense submission photograph or scan of the following invoice data in portrait orientation:\n\n"
-        f"```json\n{invoice_json_str}\n```\n\n"
+        f"```json\n{invoice_json}\n```\n\n"
         "Ensure all details, items, vendor information, and monetary totals match the data exactly."
     )
 
@@ -122,11 +83,13 @@ def generate_invoice_image(
         agent = Agent(
             IMAGE_MODEL,
             output_type=BinaryImage,
-            capabilities=[ImageGeneration(aspect_ratio=aspect_ratio)],  # type: ignore[arg-type]
+            capabilities=[ImageGeneration(aspect_ratio=aspect_ratio)],
             system_prompt=SYSTEM_PROMPT,
         )
 
     result = agent.run_sync(user_prompt)
+    print(f"Usage: {result.usage}")
+    print(f"Cost (USD): {result.usage.cost}")
     return result.output
 
 
@@ -145,16 +108,17 @@ def main() -> None:
         "-o",
         type=str,
         default=None,
-        help="Path to write the output image (default: <input_dir>/receipt.png or receipt.png)",
+        help="Output image path with --input (default: receipt.jpg or receipt.png beside the input)",
     )
     parser.add_argument(
         "--case-dir",
         type=str,
-        help="Path to a case directory containing invoice.json; writes receipt.png inside it",
+        help="Case directory containing invoice.json; writes receipt.jpg or receipt.png inside it",
     )
     parser.add_argument(
         "--aspect-ratio",
-        type=str,
+        type=TypeAdapter(ImageAspectRatio).validate_python,
+        choices=get_args(ImageAspectRatio),
         default=DEFAULT_ASPECT_RATIO,
         help=f"Aspect ratio for generated image (default: {DEFAULT_ASPECT_RATIO})",
     )
@@ -162,8 +126,7 @@ def main() -> None:
 
     if args.case_dir:
         input_path = Path(args.case_dir) / "invoice.json"
-        ext = "jpg"
-        output_path = Path(args.case_dir) / f"receipt.{ext}"
+        output_path = Path(args.case_dir) / "receipt.jpg"
     elif args.input:
         input_path = Path(args.input)
         if args.output:
@@ -177,15 +140,14 @@ def main() -> None:
         sys.exit(f"Error: file not found: {input_path}")
 
     print(f"Reading invoice from {input_path}...")
-    with open(input_path, encoding="utf-8") as f:
-        invoice_data = json.load(f)
+    invoice = invoice_adapter.validate_json(input_path.read_text(encoding="utf-8"))
 
     print(f"Generating realistic invoice image using {IMAGE_MODEL} (aspect ratio: {args.aspect_ratio})...")
-    image = generate_invoice_image(invoice_data, aspect_ratio=args.aspect_ratio)
+    image = generate_invoice_image(invoice, aspect_ratio=args.aspect_ratio)
 
-    ext = "jpg" if "jpeg" in image.media_type else "png"
+    extension = "jpg" if "jpeg" in image.media_type else "png"
     if args.case_dir or (args.input and not args.output):
-        output_path = output_path.with_suffix(f".{ext}")
+        output_path = output_path.with_suffix(f".{extension}")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_bytes(image.data)

@@ -7,23 +7,21 @@ Pydantic model instance using PydanticAI and Gemini.
 from __future__ import annotations
 
 import argparse
+import random
 from datetime import date, datetime
 from decimal import Decimal
-import json
-import random
+from pathlib import Path
 from typing import Annotated, Literal, Union
 
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, TypeAdapter
 from pydantic_ai import Agent
 from pydantic_ai.settings import ModelSettings
 
 load_dotenv()
 
 
-# ---------------------------------------------------------------------------
-# Pydantic Schemas from invoice-spec.md
-# ---------------------------------------------------------------------------
+# Invoice schemas (see invoice-spec.md).
 
 
 class LineItemCategory:
@@ -272,11 +270,13 @@ InvoiceCase = Annotated[
 ]
 
 
-# ---------------------------------------------------------------------------
-# Archetype Distribution
-# ---------------------------------------------------------------------------
+invoice_adapter = TypeAdapter(InvoiceCase)
 
-INVOICE_TYPE_DISTRIBUTION: dict[str, float] = {
+InvoiceType = Literal["hotel", "standard", "restaurant", "taxi", "flight", "train", "card_slip", "fuel"]
+
+# Sampling weights for invoice types.
+
+INVOICE_TYPE_DISTRIBUTION: dict[InvoiceType, float] = {
     "hotel": 0.28,
     "standard": 0.25,
     "restaurant": 0.22,
@@ -288,15 +288,11 @@ INVOICE_TYPE_DISTRIBUTION: dict[str, float] = {
 }
 
 
-def sample_invoice_type(rng: random.Random) -> str:
-    types = list(INVOICE_TYPE_DISTRIBUTION.keys())
+def sample_invoice_type(rng: random.Random) -> InvoiceType:
+    types = list(INVOICE_TYPE_DISTRIBUTION)
     weights = list(INVOICE_TYPE_DISTRIBUTION.values())
     return rng.choices(types, weights=weights, k=1)[0]
 
-
-# ---------------------------------------------------------------------------
-# PydanticAI Agent
-# ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = """You are a synthetic invoice generator producing colorful, varied business expense receipt data.
 Generate realistic receipts matching the requested invoice type, but crank up the entropy, personality, and realism.
@@ -325,13 +321,17 @@ agent = Agent(
 )
 
 
-def generate_invoice(invoice_type: str, seed: int | None = None) -> InvoiceCase:
+def generate_invoice(invoice_type: InvoiceType, seed: int | None = None) -> InvoiceCase:
     prompt = (
         f"Generate a realistic expense receipt of type '{invoice_type}'. "
         f"Ensure `invoice_type` is set exactly to '{invoice_type}'."
     )
-    settings = ModelSettings(thinking="low", seed=seed) if seed is not None else ModelSettings(thinking="low")
+    settings = ModelSettings(thinking="low")
+    if seed is not None:
+        settings["seed"] = seed
     result = agent.run_sync(prompt, model_settings=settings)
+    print(f"Usage: {result.usage}")
+    print(f"Cost (USD): {result.usage.cost}")
     return result.output
 
 
@@ -340,8 +340,8 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=42, help="Random seed for archetype sampling and generation")
     parser.add_argument(
         "--type",
-        type=str,
-        choices=list(INVOICE_TYPE_DISTRIBUTION.keys()),
+        type=TypeAdapter(InvoiceType).validate_python,
+        choices=list(INVOICE_TYPE_DISTRIBUTION),
         default=None,
         help="Explicit invoice type (default: randomly sampled)",
     )
@@ -368,30 +368,28 @@ def main() -> None:
     rng = random.Random(args.seed)
 
     if args.output_dir:
-        from pathlib import Path
-
-        out_base = Path(args.output_dir)
-        for i in range(args.num_cases):
-            case_idx = args.start_idx + i
-            case_name = f"case-{case_idx:04d}"
-            case_dir = out_base / case_name
+        output_dir = Path(args.output_dir)
+        for offset in range(args.num_cases):
+            case_index = args.start_idx + offset
+            case_name = f"case-{case_index:04d}"
+            case_dir = output_dir / case_name
             case_dir.mkdir(parents=True, exist_ok=True)
 
-            case_seed = rng.randint(0, 1000000)
+            case_seed = rng.randint(0, 1_000_000)
             case_rng = random.Random(case_seed)
             chosen_type = args.type if args.type else sample_invoice_type(case_rng)
             print(f"[{case_name}] Generating {chosen_type} (seed={case_seed})...")
 
             invoice = generate_invoice(chosen_type, seed=case_seed)
-            dest = case_dir / "invoice.json"
-            dest.write_text(json.dumps(invoice.model_dump(mode="json"), indent=2))
-            print(f"[{case_name}] Saved to {dest}")
+            output_path = case_dir / "invoice.json"
+            output_path.write_text(invoice.model_dump_json(indent=2), encoding="utf-8")
+            print(f"[{case_name}] Saved to {output_path}")
     else:
         chosen_type = args.type if args.type else sample_invoice_type(rng)
         print(f"Sampled invoice type: {chosen_type} (seed={args.seed})")
         invoice = generate_invoice(chosen_type, seed=args.seed)
         print("\nGenerated Invoice Object:")
-        print(json.dumps(invoice.model_dump(mode="json"), indent=2))
+        print(invoice.model_dump_json(indent=2))
 
 
 if __name__ == "__main__":
