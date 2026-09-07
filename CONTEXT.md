@@ -1,54 +1,53 @@
-# Workshop Context
+# Workshop context
 
-This workshop teaches how to build reliable enterprise AI agents through a concrete, hill-climbing engineering exercise. The audience is mixed: some participants are experienced engineers, while others have limited coding background and rely on coding agents (e.g. Codex) to implement solutions. Keep participant-facing code simple, explicit, and easy to reason about. Scaffolding, evals, and setup can remain technical under the hood.
+In this workshop, participants build reliable AI agents through an iterative engineering exercise. The audience is mixed: some are experienced engineers, while others rely on coding agents to write code. Keep participant-facing code simple and explicit. Scaffolding, evals, and setup can stay technical.
 
-## Running Example
+## Running example
 
-The running example is an **expense reimbursement agent** adjudicating employee expense claims and receipts against an enterprise policy document.
+Participants build an expense reimbursement agent that checks employee claims and receipts against a company policy document.
 
-A single claim case contains:
-- Structured claim metadata (employee, dates, purpose, amounts claimed).
-- Raw receipts (invoices, itemized bills).
-- The company policy document: a single comprehensive PDF containing rules, exceptions, per diems, and visual decision flowcharts.
+Each claim includes:
+- **Metadata**: employee, dates, purpose, and amounts claimed.
+- **Receipts**: invoices and itemized bills.
+- **Policy manual**: a PDF containing rules, exceptions, per diems, and flowcharts.
 
-The decision requires determining:
-1. Decision: `approved`, `rejected`, or `partially_approved`.
-2. Exact reimbursement amount in USD/EUR.
-3. Policy rules cited to justify the adjudication.
+The agent must determine:
+1. **Decision**: `approved`, `rejected`, or `partially_approved`.
+2. **Amount**: exact reimbursement in USD or EUR.
+3. **Policy rules**: citations that justify the decision.
 
-## Workshop Progression (4 Stages)
+## Workshop progression
 
-Participants evolve the agent across four discrete stages. Each stage exposes a specific failure mode in real-world agent design:
+Participants build and refine the agent across four stages. Each stage addresses a concrete failure mode:
 
-### Stage 1: Full-Context Prose Dump
-- **Setup**: Dump the claim, receipts, and full policy text directly into prompt context. Ask the model for a freeform prose decision.
-- **Failure mode**: Unstructured, non-deterministic output. Impossible to evaluate programmatically or integrate into downstream automated systems. High hallucination risk.
+### Stage 1: Full-context prompt dump
+- **Setup**: Put the claim, receipts, and full policy text into the prompt. Ask for a freeform prose decision.
+- **Failure mode**: Unstructured, non-deterministic output that downstream systems cannot use and tests cannot grade reliably. Hallucinations are common.
 
-### Stage 2: Structured Outputs & Deterministic Evals
-- **Setup**: Enforce a strict JSON / Pydantic schema (`decision`, `amount`, `cited_rules`). Connect the agent to a deterministic evaluation runner.
-- **Failure mode**: While responses can now be graded automatically, dumping large policy manuals into context is slow, expensive, and fails on complex multi-rule scenarios or subtle exceptions buried across pages.
+### Stage 2: Structured outputs and deterministic evals
+- **Setup**: Require a strict schema (`decision`, `amount`, `cited_rules`) with Pydantic or JSON schema. Run deterministic evaluations against test cases.
+- **Failure mode**: The outputs are testable, but passing full policy manuals into context is slow and expensive. The agent struggles with complex exceptions and combinations of rules scattered across pages.
 
-### Stage 3: Naive Text RAG / Search Tool
-- **Setup**: Agent receives a standard text search / retrieval tool over chunked policy text to look up relevant guidelines on demand before outputting structured JSON.
-- **The Trap**: Real enterprise policy documents contain non-textual rules. In this case, the policy PDF includes a critical visual flowchart (e.g. *Weekend / Client Entertainment Approval Decision Tree*) on one of the pages. Text extraction renders this diagram as garbled ASCII or a placeholder (`[Figure 2: Approval Policy Flowchart - see document]`).
-- **Failure mode**: Evaluation score plateaus (~60–70%). Cases that depend on the visual flowchart fail consistently because text search cannot resolve the logic.
+### Stage 3: Text search tool
+- **Setup**: Give the agent a text search tool over chunked policy text so it retrieves relevant guidelines before returning structured JSON.
+- **Failure mode**: Scores plateau around 60% to 70%. Real policies contain visual rules; this policy PDF includes a decision flowchart for weekend and client entertainment claims. Text extraction turns that diagram into garbled text or a placeholder (`[Figure 2: Approval Policy Flowchart]`). Cases that depend on the flowchart fail every time.
 
-### Stage 4: Tool Engineering & Multimodal Inspection (Hill Climbing)
-- **Setup**: Participants run the eval runner, inspect execution traces and tool call logs for failing cases, and identify that the model is blinded by the missing flowchart.
-- **Solution**: Participants equip the agent with a multimodal tool: `view_page_image(page_number)` that renders the specified PDF page as an image for the vision model.
-- **Outcome**: The agent uses fast text search to locate relevant policy sections, detects the visual diagram reference, calls `view_page_image` to inspect the flowchart, and resolves the exception correctly. Eval score reaches ~95–100%.
+### Stage 4: Multimodal inspection and tool engineering
+- **Setup**: Participants inspect execution traces and tool logs for failing cases and find that the agent misses diagram content.
+- **Fix**: Add a multimodal tool, `view_page_image(page_number)`, that renders a PDF page for the vision model.
+- **Result**: The agent searches text to locate sections, detects diagram references, inspects the page image, and resolves exceptions. Test accuracy reaches 95% to 100%.
 
-## Deterministic Evaluation
+## Deterministic evaluation
 
-Avoid LLM-as-a-judge where possible. Evaluate solely against ground-truth synthetic test cases:
+Avoid LLM-as-a-judge. Grade against ground-truth test cases instead:
 
-- **Decision accuracy**: Exact match on status (`approved` / `rejected` / `partially_approved`).
-- **Reimbursement error**: Absolute difference ($) between model-calculated payout and ground-truth payout.
-- **Policy citation accuracy**: Set overlap / precision-recall of cited policy rule IDs.
-- **Tool efficiency & variance**: Valid tool call sequence, tool call count, and consistency over $N$ runs where appropriate.
+- **Decision accuracy**: exact match on status (`approved`, `rejected`, `partially_approved`).
+- **Reimbursement error**: absolute dollar difference between calculated and expected payout.
+- **Citation accuracy**: precision and recall of cited policy rule IDs.
+- **Tool efficiency**: tool call count, valid call sequence, and consistency across repeated runs.
 
-## Repository & Architecture Constraints
+## Repository and architecture constraints
 
-- **Modularity between stages**: Code for Stages 1–4 must remain self-contained and modular so they can be separated into discrete git tags, branches, or subdirectories later.
-- **No leakages**: Ensure later-stage solutions (such as visual tools or golden prompts) do not leak into earlier stages where coding agents like Codex could inspect them.
-- **Minimal abstractions**: Avoid heavy agent frameworks (LangChain, CrewAI, etc.). Use lightweight, standard Python with direct API calls and clear tool loops so participants focus on system design rather than framework quirks.
+- **Stage modularity**: Keep code for stages 1 to 4 self-contained so we can separate them into branches, git tags, or directories later.
+- **No leakage**: Keep later-stage solutions (such as visual tools or tuned prompts) out of earlier stages where coding agents could read them.
+- **Minimal abstractions**: Avoid agent frameworks (LangChain, CrewAI). Use standard Python with direct API calls and explicit tool loops so participants focus on system design.
