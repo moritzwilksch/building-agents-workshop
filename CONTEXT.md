@@ -1,33 +1,54 @@
-# Workshop context
+# Workshop Context
 
-This workshop teaches how to engineer enterprise AI agents through a fictional expense reimbursement agent. The audience is mixed: some participants are technical, while others may not have coded before. Teach the ideas and system design first; keep code simple and optional.
+This workshop teaches how to build reliable enterprise AI agents through a concrete, hill-climbing engineering exercise. The audience is mixed: some participants are experienced engineers, while others have limited coding background and rely on coding agents (e.g. Codex) to implement solutions. Keep participant-facing code simple, explicit, and easy to reason about. Scaffolding, evals, and setup can remain technical under the hood.
 
-## Running example
+## Running Example
 
-The agent decides which employee expenses should be reimbursed, how much to reimburse, and which company policy supports each decision. A case contains multiple expenses and receipts. The decision depends on a large, messy body of policies, exceptions, local rules, and effective dates.
+The running example is an **expense reimbursement agent** adjudicating employee expense claims and receipts against an enterprise policy document.
 
-## Workshop progression
+A single claim case contains:
+- Structured claim metadata (employee, dates, purpose, amounts claimed).
+- Raw receipts (invoices, itemized bills).
+- The company policy document: a single comprehensive PDF containing rules, exceptions, per diems, and visual decision flowcharts.
 
-Evolve the same agent through versions. Each version must fix a concrete failure from the previous one:
+The decision requires determining:
+1. Decision: `approved`, `rejected`, or `partially_approved`.
+2. Exact reimbursement amount in USD/EUR.
+3. Policy rules cited to justify the adjudication.
 
-1. Naive one-shot LLM
-2. Structured outputs
-3. Deterministic validation
-4. Agentic tool loop
-5. Improved access to policy knowledge
-6. Domain-specific tools that expose stable business concepts directly
+## Workshop Progression (4 Stages)
 
-The main lesson: strong enterprise agents do not come from increasingly elaborate prompts. They come from engineering the environment around the model: clear interfaces, deterministic checks, good information access, useful tools, and measurable feedback.
+Participants evolve the agent across four discrete stages. Each stage exposes a specific failure mode in real-world agent design:
 
-## Evaluation
+### Stage 1: Full-Context Prose Dump
+- **Setup**: Dump the claim, receipts, and full policy text directly into prompt context. Ask the model for a freeform prose decision.
+- **Failure mode**: Unstructured, non-deterministic output. Impossible to evaluate programmatically or integrate into downstream automated systems. High hallucination risk.
 
-Maintain a small evaluation set throughout the workshop and rerun it after every version. Track:
+### Stage 2: Structured Outputs & Deterministic Evals
+- **Setup**: Enforce a strict JSON / Pydantic schema (`decision`, `amount`, `cited_rules`). Connect the agent to a deterministic evaluation runner.
+- **Failure mode**: While responses can now be graded automatically, dumping large policy manuals into context is slow, expensive, and fails on complex multi-rule scenarios or subtle exceptions buried across pages.
 
-- Decision accuracy
-- Fully correct reports
-- Reimbursement error
-- Cost
-- Latency
-- Policy-citation correctness, where useful
+### Stage 3: Naive Text RAG / Search Tool
+- **Setup**: Agent receives a standard text search / retrieval tool over chunked policy text to look up relevant guidelines on demand before outputting structured JSON.
+- **The Trap**: Real enterprise policy documents contain non-textual rules. In this case, the policy PDF includes a critical visual flowchart (e.g. *Weekend / Client Entertainment Approval Decision Tree*) on one of the pages. Text extraction renders this diagram as garbled ASCII or a placeholder (`[Figure 2: Approval Policy Flowchart - see document]`).
+- **Failure mode**: Evaluation score plateaus (~60–70%). Cases that depend on the visual flowchart fail consistently because text search cannot resolve the logic.
 
-Use the results to make improvement visible. Treat the workshop as a concrete hill-climbing exercise, not a sequence of disconnected demos.
+### Stage 4: Tool Engineering & Multimodal Inspection (Hill Climbing)
+- **Setup**: Participants run the eval runner, inspect execution traces and tool call logs for failing cases, and identify that the model is blinded by the missing flowchart.
+- **Solution**: Participants equip the agent with a multimodal tool: `view_page_image(page_number)` that renders the specified PDF page as an image for the vision model.
+- **Outcome**: The agent uses fast text search to locate relevant policy sections, detects the visual diagram reference, calls `view_page_image` to inspect the flowchart, and resolves the exception correctly. Eval score reaches ~95–100%.
+
+## Deterministic Evaluation
+
+Avoid LLM-as-a-judge where possible. Evaluate solely against ground-truth synthetic test cases:
+
+- **Decision accuracy**: Exact match on status (`approved` / `rejected` / `partially_approved`).
+- **Reimbursement error**: Absolute difference ($) between model-calculated payout and ground-truth payout.
+- **Policy citation accuracy**: Set overlap / precision-recall of cited policy rule IDs.
+- **Tool efficiency & variance**: Valid tool call sequence, tool call count, and consistency over $N$ runs where appropriate.
+
+## Repository & Architecture Constraints
+
+- **Modularity between stages**: Code for Stages 1–4 must remain self-contained and modular so they can be separated into discrete git tags, branches, or subdirectories later.
+- **No leakages**: Ensure later-stage solutions (such as visual tools or golden prompts) do not leak into earlier stages where coding agents like Codex could inspect them.
+- **Minimal abstractions**: Avoid heavy agent frameworks (LangChain, CrewAI, etc.). Use lightweight, standard Python with direct API calls and clear tool loops so participants focus on system design rather than framework quirks.
