@@ -1,0 +1,91 @@
+{
+  "note": "Hotel stay for the FinTech Summit. Includes express shirt laundering before my speaking session and overnight parking for the rental EV.",
+  "invoice_type": "hotel",
+  "id": "inv_htl_882041b",
+  "folio_number": "FOL-2024-88419",
+  "issued_date": "2024-03-14",
+  "currency": "EUR",
+  "hotel": {
+    "name": "The Alchemist Boutique Hotel & Urban Spa",
+    "address": "Spandauer Str. 101",
+    "city": "Berlin",
+    "postal_code": "10178",
+    "country": "DE",
+    "tax_id": "DE319842105",
+    "phone": "+49 30 5553 8200"
+  },
+  "guest_name": "Julian Becker",
+  "room_number": "408",
+  "room_category": "Executive Loft with Skylight",
+  "check_in": "2024-03-12",
+  "check_out": "2024-03-14",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Room Charge - Night 1 (Mar 12)",
+      "quantity": "1",
+      "unit_price": "185",
+      "total_price": "185",
+      "tax_rate": "0.07",
+      "category": "accommodation",
+      "is_alcohol": false
+    },
+    {
+      "description": "Room Charge - Night 2 (Mar 13)",
+      "quantity": "1",
+      "unit_price": "185",
+      "total_price": "185",
+      "tax_rate": "0.07",
+      "category": "accommodation",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Emergency Express Silk Shirt De-Staining (1-hour turnaround)",
+      "quantity": "1",
+      "unit_price": "38.5",
+      "total_price": "38.5",
+      "tax_rate": "0.19",
+      "category": "laundry",
+      "is_alcohol": false
+    },
+    {
+      "description": "Midnight Artisanal Truffle Cashews & Botanical Craft Tonic",
+      "quantity": "1",
+      "unit_price": "18",
+      "total_price": "18",
+      "tax_rate": "0.19",
+      "category": "minibar",
+      "is_alcohol": false
+    },
+    {
+      "description": "Overpriced Single Toblerone (100g)",
+      "quantity": "2",
+      "unit_price": "6.5",
+      "total_price": "13",
+      "tax_rate": "0.19",
+      "category": "minibar",
+      "is_alcohol": false
+    },
+    {
+      "description": "Overnight Valet Parking with Ultra-Fast EV Surcharge",
+      "quantity": "2",
+      "unit_price": "35",
+      "total_price": "70",
+      "tax_rate": "0.19",
+      "category": "parking",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "509.50",
+  "city_tax": "9.00",
+  "vat": "50.71",
+  "total_amount": "569.21",
+  "paid": true,
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7142",
+    "auth_code": "TX-849201"
+  }
+}

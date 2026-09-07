@@ -1,0 +1,70 @@
+{
+  "note": "Booth staging supplies and hardware tools for the quarterly hackathon, including promotional ducks for attendee giveaways. Pre-approved under the team event budget.",
+  "invoice_type": "standard",
+  "id": "inv_std_20240328_88412",
+  "invoice_number": "INV-2024-88412",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "KreativWerk & TechBedarf Kreuzberg GmbH",
+    "address": "Holzmarktstra\u00dfe 25",
+    "city": "Berlin",
+    "postal_code": "10243",
+    "country": "DE",
+    "tax_id": "DE284910294",
+    "phone": "+49 30 5549 1800"
+  },
+  "buyer_name": "Dr. Moritz von Flotow",
+  "buyer_company": "HyperScale Distributed Labs GmbH",
+  "buyer_tax_id": "DE319882104",
+  "items": [
+    {
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "quantity": "1",
+      "unit_price": "280",
+      "total_price": "280",
+      "tax_rate": "0.19",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Boutique USB-C Soldering Iron TS80P (Silver Pro Edition)",
+      "quantity": "2",
+      "unit_price": "99",
+      "total_price": "198",
+      "tax_rate": "0.19",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Glow-in-the-Dark Gaffer Tape (50mm x 25m Roll)",
+      "quantity": "4",
+      "unit_price": "19.5",
+      "total_price": "78",
+      "tax_rate": "0.19",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Office Air-Revival Monster Ficus (Rental & Staging Deposit)",
+      "quantity": "1",
+      "unit_price": "145",
+      "total_price": "145",
+      "tax_rate": "0.19",
+      "category": "botanical",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "701",
+  "taxes": [
+    {
+      "name": "USt 19%",
+      "rate": "0.19",
+      "amount": "133.19"
+    }
+  ],
+  "total_amount": "834.19",
+  "paid": true,
+  "payment_terms": "Net 14"
+}

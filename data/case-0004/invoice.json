@@ -1,0 +1,21 @@
+{
+  "note": "Taxi to Messe Berlin to transport heavy booth display equipment that could not be carried on public transit.",
+  "invoice_type": "taxi",
+  "id": "TX-BER-2024-91823",
+  "issued_at": "2024-10-16T08:42:15Z",
+  "currency": "EUR",
+  "vendor_name": "Funk Taxi Berlin eG",
+  "taxi_license": "B-TX-5519",
+  "pickup": "Hotel Oderberger, Oderberger Str. 57, 10435 Berlin",
+  "dropoff": "Messe Berlin (South Entrance), Jaff\u00e9stra\u00dfe, 14055 Berlin",
+  "distance_km": "18.4",
+  "fare_amount": "46.5",
+  "tip_amount": "5",
+  "total_amount": "51.5",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Visa",
+    "last_four": "4821",
+    "auth_code": "72941X"
+  }
+}

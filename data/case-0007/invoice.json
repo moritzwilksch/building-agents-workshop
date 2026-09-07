@@ -1,0 +1,91 @@
+{
+  "note": "Two-night stay for Berlin investor meetings. Includes same-day garment cleaning following a spill during lunch and overnight parking for the rental EV.",
+  "invoice_type": "hotel",
+  "id": "inv_htl_89124021",
+  "folio_number": "FOL-2024-88412",
+  "issued_date": "2024-10-16",
+  "currency": "EUR",
+  "hotel": {
+    "name": "The Bohemian Spree Grand Boutique Hotel",
+    "address": "Am Kupfergraben 12-13",
+    "city": "Berlin",
+    "postal_code": "10117",
+    "country": "DE",
+    "tax_id": "DE318492041",
+    "phone": "+49 30 8920110"
+  },
+  "guest_name": "Julian Vance-Moreau",
+  "room_number": "418",
+  "room_category": "Deluxe Spree-View Atelier Suite",
+  "check_in": "2024-10-14",
+  "check_out": "2024-10-16",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 1)",
+      "quantity": "1",
+      "unit_price": "230",
+      "total_price": "230",
+      "tax_rate": "0.07",
+      "category": "lodging",
+      "is_alcohol": false
+    },
+    {
+      "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 2)",
+      "quantity": "1",
+      "unit_price": "230",
+      "total_price": "230",
+      "tax_rate": "0.07",
+      "category": "lodging",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
+      "quantity": "1",
+      "unit_price": "28",
+      "total_price": "28",
+      "tax_rate": "0.19",
+      "category": "dry_cleaning",
+      "is_alcohol": false
+    },
+    {
+      "description": "Minibar: Gold-Leaf Salted Marcona Almonds (45g tin)",
+      "quantity": "1",
+      "unit_price": "14.5",
+      "total_price": "14.5",
+      "tax_rate": "0.19",
+      "category": "snack",
+      "is_alcohol": false
+    },
+    {
+      "description": "Minibar: Artisan Organic Fermented Mate Soda",
+      "quantity": "2",
+      "unit_price": "8",
+      "total_price": "16",
+      "tax_rate": "0.19",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
+      "quantity": "2",
+      "unit_price": "35",
+      "total_price": "70",
+      "tax_rate": "0.19",
+      "category": "fee",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "588.5",
+  "city_tax": "11.5",
+  "vat": "56.88",
+  "total_amount": "656.88",
+  "paid": true,
+  "card": {
+    "card_brand": "MasterCard",
+    "last_four": "9102",
+    "auth_code": "781294"
+  }
+}

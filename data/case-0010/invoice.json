@@ -1,0 +1,91 @@
+{
+  "note": "Dinner with 3 prospective DevOps candidates following second-round technical interviews (4 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rest_20241018_9821a",
+  "issued_at": "2024-10-18T21:44:12Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Dragon Breath Mala House & Noodle Bar",
+    "address": "Torstra\u00dfe 142",
+    "city": "Berlin",
+    "postal_code": "10119",
+    "country": "DE",
+    "tax_id": "DE312984571",
+    "phone": "+49 30 55982104"
+  },
+  "receipt_number": "RN-2024-884019",
+  "table_number": "T-07",
+  "number_of_guests": 4,
+  "items": [
+    {
+      "description": "Spicy Sichuan Wontons in Chili Oil (12 pcs)",
+      "quantity": "2",
+      "unit_price": "9.8",
+      "total_price": "19.6",
+      "tax_rate": "0.19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Chongqing Fiery Numbing Dry Hotpot (Bullfrog & Tofu)",
+      "quantity": "1",
+      "unit_price": "32.5",
+      "total_price": "32.5",
+      "tax_rate": "0.19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Hand-Pulled Biang Biang Ribbon Noodles with Braised Cumin Lamb",
+      "quantity": "2",
+      "unit_price": "18.5",
+      "total_price": "37",
+      "tax_rate": "0.19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Tsingtao 1903 Craft Lager (0.64L)",
+      "quantity": "3",
+      "unit_price": "7.5",
+      "total_price": "22.5",
+      "tax_rate": "0.19",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Fermented Plum & Smoked Hawthorn Cordial (Jugs)",
+      "quantity": "2",
+      "unit_price": "6.5",
+      "total_price": "13",
+      "tax_rate": "0.19",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Sweet Crispy Brown Sugar Glutinous Rice Cakes",
+      "quantity": "1",
+      "unit_price": "8.9",
+      "total_price": "8.9",
+      "tax_rate": "0.19",
+      "category": "food",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "133.5",
+  "taxes": [
+    {
+      "name": "MwSt (19%)",
+      "rate": "0.19",
+      "amount": "25.37"
+    }
+  ],
+  "tip_amount": "16.5",
+  "total_amount": "150",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "6614",
+    "auth_code": "849201"
+  }
+}

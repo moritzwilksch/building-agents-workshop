@@ -24,3 +24,4 @@ hatchling = "*"
 expense-agent = { path = "." }
 python = ">=3.12"
 pydantic-ai = ">=2.40.0,<3"
+google-genai = ">=2.22.0,<3"

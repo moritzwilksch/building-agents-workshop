@@ -1,0 +1,100 @@
+{
+  "note": "Dinner with 3 lead architects from CloudScale Systems (4 attendees total) to finalize the Q2 multi-cloud migration architecture.",
+  "invoice_type": "restaurant",
+  "id": "inv_rest_88204b1f",
+  "issued_at": "2024-03-22T21:47:15Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Das Wilde Moos Gastrolab",
+    "address": "Kastanienallee 42",
+    "city": "Berlin",
+    "postal_code": "10435",
+    "country": "DE",
+    "tax_id": "DE319842511",
+    "phone": "+49 30 5549 1820"
+  },
+  "receipt_number": "REC-2024-08912",
+  "table_number": "T-14",
+  "number_of_guests": 4,
+  "items": [
+    {
+      "description": "Dry-Aged Smoked Duck Breast with Fermented Plum",
+      "quantity": "2",
+      "unit_price": "29",
+      "total_price": "58",
+      "tax_rate": "19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Black Garlic & Porcini Truffle Risotto",
+      "quantity": "2",
+      "unit_price": "23",
+      "total_price": "46",
+      "tax_rate": "19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Charred Octo-Tentacle with Saffron Foam",
+      "quantity": "1",
+      "unit_price": "21.5",
+      "total_price": "21.5",
+      "tax_rate": "19",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Ghost Pepper Mezcalita Cocktail",
+      "quantity": "3",
+      "unit_price": "14.5",
+      "total_price": "43.5",
+      "tax_rate": "19",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Pine-Infused Alpine Botanical Spritz (0% ABV)",
+      "quantity": "1",
+      "unit_price": "9.5",
+      "total_price": "9.5",
+      "tax_rate": "19",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Mineral Water (Rh\u00f6nQuelle Sparkling 0.75L)",
+      "quantity": "2",
+      "unit_price": "7.5",
+      "total_price": "15",
+      "tax_rate": "19",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoked Cardamom Ganache Tartlet",
+      "quantity": "3",
+      "unit_price": "9.5",
+      "total_price": "28.5",
+      "tax_rate": "19",
+      "category": "dessert",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "222",
+  "taxes": [
+    {
+      "name": "MwSt. (VAT)",
+      "rate": "19",
+      "amount": "42.18"
+    }
+  ],
+  "tip_amount": "25",
+  "total_amount": "247",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7134",
+    "auth_code": "AUTH-849201"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "note": "Simulation props and demo gear for the Q1 SRE Chaos Engineering onsite workshop. Pre-approved by engineering leadership as interactive training aids.",
+  "invoice_type": "standard",
+  "id": "inv_std_8829104",
+  "invoice_number": "INV-2024-09411",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Hacks & Props Event Engineering UG",
+    "address": "Kreativwerkstatt Spreeufer 44, Tor 3",
+    "city": "Berlin",
+    "postal_code": "10179",
+    "country": "DE",
+    "tax_id": "DE294817290",
+    "phone": "+49 30 55912830"
+  },
+  "buyer_name": "Dr. Elena Rostova",
+  "buyer_company": "Vortex Cloud Solutions GmbH",
+  "buyer_tax_id": "DE318492015",
+  "items": [
+    {
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "quantity": "1",
+      "unit_price": "249.99",
+      "total_price": "249.99",
+      "tax_rate": "0.19",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "quantity": "1",
+      "unit_price": "189.5",
+      "total_price": "189.5",
+      "tax_rate": "0.19",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "High-Density Fog Fluid (5L jug)",
+      "quantity": "2",
+      "unit_price": "29.5",
+      "total_price": "59",
+      "tax_rate": "0.19",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered)",
+      "quantity": "3",
+      "unit_price": "34.99",
+      "total_price": "104.97",
+      "tax_rate": "0.19",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "603.46",
+  "taxes": [
+    {
+      "name": "MwSt (19%)",
+      "rate": "0.19",
+      "amount": "114.66"
+    }
+  ],
+  "total_amount": "718.12",
+  "paid": true,
+  "payment_terms": "Immediate payment via Corporate Credit Card"
+}

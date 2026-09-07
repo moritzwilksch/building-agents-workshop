@@ -1,0 +1,70 @@
+{
+  "note": "Monthly plant rental and moss wall maintenance for client-facing conference rooms ahead of the quarterly compliance audit.",
+  "invoice_type": "standard",
+  "id": "inv_std_9921471a",
+  "invoice_number": "BOT-2024-0883",
+  "issued_date": "2024-05-01",
+  "due_date": "2024-05-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Urban Canopy & Foliage Design GmbH",
+    "address": "G\u00e4rtnerstra\u00dfe 44",
+    "city": "Berlin",
+    "postal_code": "10245",
+    "country": "DE",
+    "tax_id": "DE294819033",
+    "phone": "+49 30 78219901"
+  },
+  "buyer_name": "Moritz Falkenrath",
+  "buyer_company": "CloudScale Dynamics GmbH",
+  "buyer_tax_id": "DE318490215",
+  "items": [
+    {
+      "description": "Monstera Deliciosa (Mature Specimen, 1.8m) - Monthly Botanical Office Rental",
+      "quantity": "2",
+      "unit_price": "65",
+      "total_price": "130",
+      "tax_rate": "0.19",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Ficus Lyrata Fiddle Leaf Fig (Large, Self-Watering Planter) Rental",
+      "quantity": "3",
+      "unit_price": "55",
+      "total_price": "165",
+      "tax_rate": "0.19",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Emergency Biophilic Acoustic Moss Wall Revival & Foliage Grooming Service",
+      "quantity": "1",
+      "unit_price": "145",
+      "total_price": "145",
+      "tax_rate": "0.19",
+      "category": "services",
+      "is_alcohol": false
+    },
+    {
+      "description": "Organic Neem Oil Foliar Spray & Plant Tonic (500ml)",
+      "quantity": "2",
+      "unit_price": "13.95",
+      "total_price": "27.9",
+      "tax_rate": "0.19",
+      "category": "office_supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "467.9",
+  "taxes": [
+    {
+      "name": "USt 19%",
+      "rate": "0.19",
+      "amount": "88.9"
+    }
+  ],
+  "total_amount": "556.8",
+  "paid": true,
+  "payment_terms": "Net 14"
+}
