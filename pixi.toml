@@ -25,3 +25,13 @@ expense-agent = { path = "." }
 python = ">=3.12"
 pydantic-ai = ">=2.40.0,<3"
 google-genai = ">=2.22.0,<3"
+genai-prices = ">=0.1.6,<0.2"
+
+[feature.data-generation.dependencies]
+typst = "*"
+
+[feature.data-generation.tasks]
+compile-handbook = "typst compile .data-generation/handbook/main.typ data/handbook.pdf"
+
+[environments]
+data-generation = ["data-generation"]

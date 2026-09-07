@@ -1,0 +1,63 @@
+{
+  "note": "Flight booking to Munich for the Q2 robotics workshop and supplier audits at the Garching campus.",
+  "invoice_type": "flight",
+  "id": "inv_lh_20240412_0891",
+  "booking_reference": "X7K9PQ",
+  "ticket_number": "220-4920194812",
+  "issued_at": "2024-04-12T14:22:15Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Lufthansa German Airlines",
+    "address": "Flughafenring 1",
+    "city": "Frankfurt am Main",
+    "postal_code": "60549",
+    "country": "DE",
+    "tax_id": "DE114116563",
+    "phone": "+49 69 86 799 799"
+  },
+  "passenger_name": "Dr. Felix Baumgartner",
+  "segments": [
+    {
+      "flight_number": "LH2051",
+      "departure_airport": "HAM",
+      "arrival_airport": "MUC",
+      "departure_time": "2024-04-22T06:50:00Z",
+      "arrival_time": "2024-04-22T08:05:00Z",
+      "seat": "14C",
+      "cabin_class": "economy"
+    },
+    {
+      "flight_number": "LH2078",
+      "departure_airport": "MUC",
+      "arrival_airport": "HAM",
+      "departure_time": "2024-04-24T19:10:00Z",
+      "arrival_time": "2024-04-24T20:25:00Z",
+      "seat": "12D",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "389",
+  "taxes_and_fees": [
+    {
+      "name": "German Air Transport Tax (LuftVSt)",
+      "rate": null,
+      "amount": "52.48"
+    },
+    {
+      "name": "Passenger Service Charge (Domestic)",
+      "rate": null,
+      "amount": "41.2"
+    },
+    {
+      "name": "Carrier Imposed Surcharge (YQ)",
+      "rate": null,
+      "amount": "24"
+    }
+  ],
+  "total_amount": "506.68",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8201",
+    "auth_code": "749102"
+  }
+}
