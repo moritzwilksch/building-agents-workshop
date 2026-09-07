@@ -1,11 +1,11 @@
 // Shared template and styling for the Corporate Travel & Expense Policy Handbook
 
 #let corporate-handbook(
-  title: "Corporate Travel & Expense Reimbursement Policy",
-  subtitle: "Global Guidelines, Spending Thresholds & Compliance Procedures",
+  title: "Corporate Travel and Expense Policy",
+  subtitle: "Practical rules, daily limits, and reimbursement guidelines",
   version: "4.2",
   effective-date: "January 1, 2024",
-  organization: "Apex Global Technologies Inc.",
+  organization: "Noice & Toit LLP",
   body,
 ) = {
   // Page configuration
@@ -16,21 +16,21 @@
       let page-num = counter(page).get().first()
       if page-num > 2 {
         text(9pt, fill: luma(100))[
-          #organization -- #title
+          #organization | #title
           #h(1fr)
-          v#version
+          Version #version
         ]
         v(-0.5em)
-        line(length: 100%, stroke: 0.5pt + luma(180))
+        line(length: 100%, stroke: 0.5pt + luma(200))
       }
     },
     footer: context {
       let page-num = counter(page).get().first()
       if page-num > 2 {
-        line(length: 100%, stroke: 0.5pt + luma(180))
+        line(length: 100%, stroke: 0.5pt + luma(200))
         v(-0.5em)
         text(9pt, fill: luma(100))[
-          Strictly Confidential -- Internal Corporate Use Only
+          Internal corporate use only
           #h(1fr)
           Page #counter(page).display("1")
         ]
@@ -103,10 +103,9 @@
           row-gutter: 0.8em,
           align: (right, left),
           [#text(weight: "bold")[Version:]], [#version],
-          [#text(weight: "bold")[Effective Date:]], [#effective-date],
-          [#text(weight: "bold")[Applies To:]], [All Employees, Contractors & Subsidiaries],
-          [#text(weight: "bold")[Policy Owner:]], [Global Finance & Compliance Operations],
-          [#text(weight: "bold")[Document ID:]], [POL-CORP-EXP-2024-V4],
+          [#text(weight: "bold")[Effective date:]], [#effective-date],
+          [#text(weight: "bold")[Applies to:]], [All employees, contractors, and subsidiaries],
+          [#text(weight: "bold")[Maintained by:]], [Finance and People Operations],
         )
       ]
     )
@@ -118,10 +117,10 @@
   {
     set page(footer: context {
       let page-num = counter(page).get().first()
-      line(length: 100%, stroke: 0.5pt + luma(180))
+      line(length: 100%, stroke: 0.5pt + luma(200))
       v(-0.5em)
       text(9pt, fill: luma(100))[
-        Internal Corporate Use Only
+        Internal corporate use only
         #h(1fr)
         Page #counter(page).display("i")
       ]
@@ -143,58 +142,62 @@
   body
 }
 
-// Rule callout box helper
-#let policy-rule(id, title, body) = block(
+// "Do" card: Positive guidance and standard requirements
+#let card-do(title, body) = block(
   width: 100%,
-  stroke: (left: 4pt + rgb("#2563eb"), rest: 0.5pt + rgb("#cbd5e1")),
-  fill: rgb("#f8fafc"),
-  inset: (x: 12pt, y: 10pt),
-  radius: (right: 4pt),
+  stroke: (left: 4pt + rgb("#16a34a"), rest: 0.5pt + rgb("#bbf7d0")),
+  fill: rgb("#f0fdf4"),
+  inset: (x: 14pt, y: 11pt),
+  radius: (right: 6pt),
   breakable: false,
   [
     #grid(
-      columns: (1fr, auto),
-      [
-        #text(weight: "bold", fill: rgb("#1e3a8a"), size: 10.5pt)[#title]
-      ],
+      columns: (auto, 1fr),
+      gutter: 10pt,
+      align: (center + horizon, left + horizon),
       [
         #box(
-          fill: rgb("#dbeafe"),
-          inset: (x: 6pt, y: 2pt),
+          fill: rgb("#16a34a"),
+          inset: (x: 8pt, y: 3pt),
           radius: 3pt,
-          text(8pt, weight: "bold", fill: rgb("#1d4ed8"))[#id]
+          text(8.5pt, weight: "bold", fill: white)[DO]
         )
+      ],
+      [
+        #text(10.5pt, weight: "bold", fill: rgb("#14532d"))[#title]
       ]
     )
     #v(0.4em)
-    #body
+    #text(fill: rgb("#1f2937"))[#body]
   ]
 )
 
-// Warning / Disallowed callout box helper
-#let policy-warning(id, title, body) = block(
+// "Don't" card: Non-reimbursable practices, caps, and disallowed items
+#let card-dont(title, body) = block(
   width: 100%,
   stroke: (left: 4pt + rgb("#dc2626"), rest: 0.5pt + rgb("#fecaca")),
   fill: rgb("#fef2f2"),
-  inset: (x: 12pt, y: 10pt),
-  radius: (right: 4pt),
+  inset: (x: 14pt, y: 11pt),
+  radius: (right: 6pt),
   breakable: false,
   [
     #grid(
-      columns: (1fr, auto),
-      [
-        #text(weight: "bold", fill: rgb("#991b1b"), size: 10.5pt)[#title]
-      ],
+      columns: (auto, 1fr),
+      gutter: 10pt,
+      align: (center + horizon, left + horizon),
       [
         #box(
-          fill: rgb("#fee2e2"),
-          inset: (x: 6pt, y: 2pt),
+          fill: rgb("#dc2626"),
+          inset: (x: 8pt, y: 3pt),
           radius: 3pt,
-          text(8pt, weight: "bold", fill: rgb("#b91c1c"))[#id]
+          text(8.5pt, weight: "bold", fill: white)[DON'T]
         )
+      ],
+      [
+        #text(10.5pt, weight: "bold", fill: rgb("#991b1b"))[#title]
       ]
     )
     #v(0.4em)
-    #body
+    #text(fill: rgb("#1f2937"))[#body]
   ]
 )

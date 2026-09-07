@@ -31,7 +31,8 @@ genai-prices = ">=0.1.6,<0.2"
 typst = "*"
 
 [feature.data-generation.tasks]
-compile-handbook = "typst compile .data-generation/handbook/main.typ data/handbook.pdf"
+compile-figures = "typst compile .data-generation/handbook/figures/figure1-weekend.typ .data-generation/handbook/figures/figure1-weekend.png --ppi 200 && typst compile .data-generation/handbook/figures/figure2-dining.typ .data-generation/handbook/figures/figure2-dining.png --ppi 200"
+compile-handbook = { cmd = "typst compile .data-generation/handbook/main.typ data/handbook.pdf", depends-on = ["compile-figures"] }
 
 [environments]
 data-generation = ["data-generation"]

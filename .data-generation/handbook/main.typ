@@ -1,11 +1,11 @@
 #import "template.typ": corporate-handbook
 
 #show: corporate-handbook.with(
-  title: "Corporate Travel & Expense Reimbursement Policy",
-  subtitle: "Global Standards, Spending Caps, Verification Workflows & Compliance Guidelines",
+  title: "Corporate Travel and Expense Policy",
+  subtitle: "Practical rules, daily limits, and reimbursement guidelines",
   version: "4.2",
   effective-date: "January 1, 2024",
-  organization: "Apex Global Technologies Inc.",
+  organization: "Noice & Toit LLP",
 )
 
 #include "01-general-policy.typ"
