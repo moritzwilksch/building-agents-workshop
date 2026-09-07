@@ -2,7 +2,7 @@
 authors = ["Moritz Wilksch <moritzwilksch@gmail.com>"]
 channels = ["conda-forge"]
 name = "building-agents-workshop"
-platforms = ["linux-64"]
+platforms = ["osx-arm64", "win-64", "linux-64"]
 version = "0.1.0"
 preview = ["pixi-build"]
 
@@ -23,3 +23,4 @@ hatchling = "*"
 [dependencies]
 expense-agent = { path = "." }
 python = ">=3.12"
+pydantic-ai = ">=2.40.0,<3"
