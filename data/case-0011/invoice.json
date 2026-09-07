@@ -1,0 +1,45 @@
+{
+  "note": "Takeaway lunch for 6 team members during the Q2 engineering onsite in Kreuzberg (6 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rest_20240612_114493",
+  "issued_at": "2024-06-12T13:42:00Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Akcaabat Saray Köftesi",
+    "address": "Oranienstraße 72",
+    "city": "Berlin",
+    "postal_code": "10969",
+    "country": "DE",
+    "phone": "+49 171 5160461"
+  },
+  "receipt_number": "114.493",
+  "table_number": null,
+  "number_of_guests": 6,
+  "items": [
+    {
+      "description": "L. M zum Mitnehmen",
+      "quantity": "6",
+      "unit_price": "14.00",
+      "total_price": "84.00",
+      "tax_rate": "0.07",
+      "category": "meal",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "84.00",
+  "taxes": [
+    {
+      "name": "MwSt. 7% (inkl.)",
+      "rate": "0.07",
+      "amount": "5.50"
+    }
+  ],
+  "tip_amount": "25.20",
+  "total_amount": "109.20",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Visa",
+    "last_four": "7241",
+    "auth_code": "AUTH-99120"
+  }
+}
