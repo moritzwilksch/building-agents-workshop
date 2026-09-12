@@ -50,4 +50,4 @@ Avoid LLM-as-a-judge. Grade against ground-truth test cases instead:
 
 - **Stage modularity**: Keep code for stages 1 to 4 self-contained so we can separate them into branches, git tags, or directories later.
 - **No leakage**: Keep later-stage solutions (such as visual tools or tuned prompts) out of earlier stages where coding agents could read them.
-- **Minimal abstractions**: Avoid agent frameworks (LangChain, CrewAI). Use standard Python with direct API calls and explicit tool loops so participants focus on system design.
+- **Minimal abstractions**: Use pydantic-ai for the agent and its tool loop. Avoid heavyweight orchestration frameworks (LangChain, CrewAI); participants focus on prompt, tools, and system design.
