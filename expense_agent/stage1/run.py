@@ -28,7 +28,7 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cases", nargs="+", default=DEFAULT_CASES, help="case ids to run")
-    parser.add_argument("--run-id", default=None, help="run id; defaults to a random hex id")
+    parser.add_argument("--run-id", default=None, help="run id; defaults to a UTC timestamp")
     parser.add_argument("--data-dir", type=Path, default=Path("data"), help="case data directory")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="pydantic-ai model id")
     args = parser.parse_args()

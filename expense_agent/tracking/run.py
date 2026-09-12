@@ -18,7 +18,6 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from decimal import Decimal
 from typing import Annotated, Literal
-from uuid import uuid4
 
 from pydantic import BaseModel, ConfigDict, Field
 from pydantic_ai.messages import ModelMessage
@@ -27,6 +26,11 @@ from expense_agent.eval import evaluate
 from expense_agent.label import CaseDecision
 
 ZERO = Decimal("0")
+
+
+def default_run_id() -> str:
+    """Timestamp-based run id, e.g. `2026-09-12 16:50:00` (UTC)."""
+    return datetime.now(UTC).strftime("%Y-%m-%d %H:%M:%S")
 
 
 class CaseSuccess(BaseModel):
@@ -102,7 +106,7 @@ class Run(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    run_id: str = Field(default_factory=lambda: uuid4().hex, min_length=1)
+    run_id: str = Field(default_factory=default_run_id, min_length=1)
     created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     metrics: RunMetrics
     cases: list[RunCase] = Field(min_length=1)
@@ -112,4 +116,4 @@ class Run(BaseModel):
         """Build a run and derive its metrics from the case results."""
         if not cases:
             raise ValueError("at least one case is required")
-        return cls(run_id=run_id or uuid4().hex, metrics=RunMetrics.from_cases(cases), cases=cases)
+        return cls(run_id=run_id or default_run_id(), metrics=RunMetrics.from_cases(cases), cases=cases)
