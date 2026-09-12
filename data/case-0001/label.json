@@ -1,0 +1,49 @@
+{
+  "case_id": "case-0001",
+  "decision": "approved",
+  "claimed_amount": 247.00,
+  "reimbursed_amount": 247.00,
+  "line_items": [
+    {
+      "description": "Dry-Aged Smoked Duck Breast with Fermented Plum",
+      "claimed": 58.00,
+      "reimbursed": 58.00
+    },
+    {
+      "description": "Black Garlic & Porcini Truffle Risotto",
+      "claimed": 46.00,
+      "reimbursed": 46.00
+    },
+    {
+      "description": "Charred Octo-Tentacle with Saffron Foam",
+      "claimed": 21.50,
+      "reimbursed": 21.50
+    },
+    {
+      "description": "Ghost Pepper Mezcalita Cocktail",
+      "claimed": 43.50,
+      "reimbursed": 43.50
+    },
+    {
+      "description": "Pine-Infused Alpine Botanical Spritz (0% ABV)",
+      "claimed": 9.50,
+      "reimbursed": 9.50
+    },
+    {
+      "description": "Mineral Water (RhönQuelle Sparkling 0.75L)",
+      "claimed": 15.00,
+      "reimbursed": 15.00
+    },
+    {
+      "description": "Smoked Cardamom Ganache Tartlet",
+      "claimed": 28.50,
+      "reimbursed": 28.50
+    },
+    {
+      "description": "Tip",
+      "claimed": 25.00,
+      "reimbursed": 25.00
+    }
+  ],
+  "reasoning": "Client hospitality dinner for 4, including 3 external guests from CloudScale Systems, qualifies for the €90-per-attendee dinner cap, so the €247 invoice is within the €360 cap. The three Mezcalita cocktails count against the client-hospitality alcohol allowance of 30% of the €178.50 non-alcoholic food and drink subtotal; at €43.50 they sit within the €53.55 allowance, so they are reimbursed in full. The truffle risotto passes the Figure 3 screening as a main course at €23 per portion, below the €40 threshold. The German 20% tip cap allows the full €25.00 tip on the €222.00 pre-tip bill. Nothing is deducted, so the invoice is approved in full."
+}

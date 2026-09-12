@@ -1,0 +1,19 @@
+{
+  "case_id": "case-0004",
+  "decision": "approved",
+  "claimed_amount": 51.50,
+  "reimbursed_amount": 51.50,
+  "line_items": [
+    {
+      "description": "Taxi fare",
+      "claimed": 46.50,
+      "reimbursed": 46.50
+    },
+    {
+      "description": "Tip",
+      "claimed": 5.00,
+      "reimbursed": 5.00
+    }
+  ],
+  "reasoning": "The taxi transported heavy booth display equipment from the hotel to Messe Berlin, so the fare qualifies for full reimbursement despite exceeding the €25 unjustified-ride threshold. Germany's 20% tip cap allows the full €5.00 tip on the €46.50 fare, so nothing is deducted and the invoice is approved in full."
+}

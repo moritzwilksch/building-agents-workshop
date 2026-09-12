@@ -1,0 +1,29 @@
+{
+  "case_id": "case-0012",
+  "decision": "approved",
+  "claimed_amount": 506.68,
+  "reimbursed_amount": 506.68,
+  "line_items": [
+    {
+      "description": "Base fare",
+      "claimed": 389.00,
+      "reimbursed": 389.00
+    },
+    {
+      "description": "German Air Transport Tax (LuftVSt)",
+      "claimed": 52.48,
+      "reimbursed": 52.48
+    },
+    {
+      "description": "Passenger Service Charge (Domestic)",
+      "claimed": 41.20,
+      "reimbursed": 41.20
+    },
+    {
+      "description": "Carrier Imposed Surcharge (YQ)",
+      "claimed": 24.00,
+      "reimbursed": 24.00
+    }
+  ],
+  "reasoning": "Round-trip economy flights between Hamburg and Munich for the robotics workshop and supplier audits, departing on a Monday and returning on a Wednesday, so the weekend rules do not affect the ticket. Economy is the required cabin class for these short domestic segments, and the ticket was issued ten calendar days before the first departure, outside the seven-day window that would require a stated business reason. The German air transport tax, domestic passenger service charge, and carrier-imposed surcharge are mandatory taxes and surcharges that are part of the ticket price, and no seat selection, lounge, Wi-Fi, or bag fees appear, so the full €506.68 total is reimbursable."
+}

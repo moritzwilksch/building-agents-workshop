@@ -1,0 +1,44 @@
+{
+  "case_id": "case-0010",
+  "decision": "approved",
+  "claimed_amount": 150.00,
+  "reimbursed_amount": 150.00,
+  "line_items": [
+    {
+      "description": "Spicy Sichuan Wontons in Chili Oil (12 pcs)",
+      "claimed": 19.60,
+      "reimbursed": 19.60
+    },
+    {
+      "description": "Chongqing Fiery Numbing Dry Hotpot (Bullfrog & Tofu)",
+      "claimed": 32.50,
+      "reimbursed": 32.50
+    },
+    {
+      "description": "Hand-Pulled Biang Biang Ribbon Noodles with Braised Cumin Lamb",
+      "claimed": 37.00,
+      "reimbursed": 37.00
+    },
+    {
+      "description": "Tsingtao 1903 Craft Lager (0.64L)",
+      "claimed": 22.50,
+      "reimbursed": 22.50
+    },
+    {
+      "description": "Fermented Plum & Smoked Hawthorn Cordial (Jugs)",
+      "claimed": 13.00,
+      "reimbursed": 13.00
+    },
+    {
+      "description": "Sweet Crispy Brown Sugar Glutinous Rice Cakes",
+      "claimed": 8.90,
+      "reimbursed": 8.90
+    },
+    {
+      "description": "Tip",
+      "claimed": 16.50,
+      "reimbursed": 16.50
+    }
+  ],
+  "reasoning": "Recruiting dinner for one employee and three prospective DevOps candidates after their second-round technical interviews, so the client hospitality category applies: the €133.50 pre-tip bill is well below the €90-per-attendee dinner cap of €360 for 4 attendees. The Tsingtao lagers count against the client-hospitality alcohol allowance of 30% of the €111.00 non-alcoholic food and drink subtotal, an allowance of €33.30, and at €22.50 they sit within it, so they are reimbursed in full. The German 20% tip cap allows the full €16.50 tip on the €133.50 pre-tip bill. The receipt is dated Friday, 18 October 2024, a regular weekday, so the weekend rules do not apply. Nothing is deducted, so the invoice is approved in full."
+}

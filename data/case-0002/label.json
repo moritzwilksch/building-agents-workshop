@@ -1,0 +1,44 @@
+{
+  "case_id": "case-0002",
+  "decision": "partially_approved",
+  "claimed_amount": 230.00,
+  "reimbursed_amount": 225.05,
+  "line_items": [
+    {
+      "description": "Wagyu & Bone Marrow Gyoza (6 pcs)",
+      "claimed": 36.00,
+      "reimbursed": 36.00
+    },
+    {
+      "description": "Smoked Ghost Pepper Miso Ramen",
+      "claimed": 69.00,
+      "reimbursed": 69.00
+    },
+    {
+      "description": "Charred King Oyster Mushroom Bao",
+      "claimed": 14.50,
+      "reimbursed": 14.50
+    },
+    {
+      "description": "Yuzu Basil Craft Soda",
+      "claimed": 13.00,
+      "reimbursed": 13.00
+    },
+    {
+      "description": "Hibiki Japanese Harmony Highball",
+      "claimed": 51.00,
+      "reimbursed": 46.05
+    },
+    {
+      "description": "Black Sesame Matcha Lava Cake",
+      "claimed": 21.00,
+      "reimbursed": 21.00
+    },
+    {
+      "description": "Tip",
+      "claimed": 25.50,
+      "reimbursed": 25.50
+    }
+  ],
+  "reasoning": "Client hospitality dinner for one employee and two NeoCloud clients. The attendee ratio qualifies for the client hospitality category, whose €90 per-person dinner cap leaves the €204.50 pre-tip bill below the €270 cap. Alcohol at client hospitality is reimbursable up to a combined 30% of the €153.50 non-alcoholic food and drink subtotal, an allowance of €46.05; the three highballs cost €51.00, so €46.05 of the line is reimbursed and €4.95 is deducted. The German 20% tip cap allows the full €25.50 tip on the €204.50 pre-tip bill. Only the highball excess is deducted, so the invoice is partially approved."
+}

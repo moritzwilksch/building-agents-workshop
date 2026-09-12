@@ -1,0 +1,34 @@
+{
+  "case_id": "case-0003",
+  "decision": "approved",
+  "claimed_amount": 718.12,
+  "reimbursed_amount": 718.12,
+  "line_items": [
+    {
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "claimed": 249.99,
+      "reimbursed": 249.99
+    },
+    {
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "claimed": 189.50,
+      "reimbursed": 189.50
+    },
+    {
+      "description": "High-Density Fog Fluid (5L jug) (x2)",
+      "claimed": 59.00,
+      "reimbursed": 59.00
+    },
+    {
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered) (x3)",
+      "claimed": 104.97,
+      "reimbursed": 104.97
+    },
+    {
+      "description": "MwSt (19%)",
+      "claimed": 114.66,
+      "reimbursed": 114.66
+    }
+  ],
+  "reasoning": "The invoice contains workshop props and demonstration gear for the named Q1 SRE Chaos Engineering onsite workshop. The note states that engineering leadership pre-approved the purchase, and the commercial invoice includes the vendor VAT ID and itemized 19% VAT, so the full gross total is reimbursable."
+}

@@ -1,0 +1,49 @@
+{
+  "case_id": "case-0005",
+  "decision": "partially_approved",
+  "claimed_amount": 569.21,
+  "reimbursed_amount": 504.35,
+  "line_items": [
+    {
+      "description": "Room Charge - Night 1 (Mar 12)",
+      "claimed": 185.00,
+      "reimbursed": 185.00
+    },
+    {
+      "description": "Room Charge - Night 2 (Mar 13)",
+      "claimed": 185.00,
+      "reimbursed": 185.00
+    },
+    {
+      "description": "Emergency Express Silk Shirt De-Staining (1-hour turnaround)",
+      "claimed": 38.50,
+      "reimbursed": 25.00
+    },
+    {
+      "description": "Midnight Artisanal Truffle Cashews & Botanical Craft Tonic",
+      "claimed": 18.00,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "Overpriced Single Toblerone (100g)",
+      "claimed": 13.00,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "Overnight Valet Parking with Ultra-Fast EV Surcharge",
+      "claimed": 70.00,
+      "reimbursed": 60.00
+    },
+    {
+      "description": "City tax",
+      "claimed": 9.00,
+      "reimbursed": 9.00
+    },
+    {
+      "description": "VAT",
+      "claimed": 50.71,
+      "reimbursed": 40.35
+    }
+  ],
+  "reasoning": "Two-night Berlin stay for the FinTech Summit; the nights of March 12 and 13, 2024 begin on a Tuesday and a Wednesday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply. The note names the FinTech Summit and both nights fall in March, the event window, so the trade-fair override in Chapter 9 replaces Berlin's €160 Tier 2 cap with the €200 event surcharge cap; each €185 night is within the override and is reimbursed in full, and the 'Executive Loft' category earns no higher or lower cap either way. The folio documents an emergency de-staining of a silk shirt ahead of the speaking session, which establishes that business attire was soiled during the trip, so the €38.50 garment rescue is reimbursable up to the €25 short-stay laundry cap and €13.50 is deducted. Both minibar lines are deducted in full. The note identifies the rental EV, so the €70 two-night valet parking with EV surcharge is reimbursed up to €30 per night, i.e. €60, with €10 deducted. City tax is reimbursed in full. VAT is allocated line by line at each line's printed rate on its deducted portion (19% on the laundry excess, the minibar, and the parking excess), which deducts €10.36 of the €50.71 VAT."
+}

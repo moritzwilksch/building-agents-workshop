@@ -1,0 +1,19 @@
+{
+  "case_id": "case-0011",
+  "decision": "partially_approved",
+  "claimed_amount": 109.20,
+  "reimbursed_amount": 25.00,
+  "line_items": [
+    {
+      "description": "L. M zum Mitnehmen",
+      "claimed": 84.00,
+      "reimbursed": 25.00
+    },
+    {
+      "description": "Tip",
+      "claimed": 25.20,
+      "reimbursed": 0.00
+    }
+  ],
+  "reasoning": "The note names the Q2 engineering onsite in Kreuzberg and the 6-person headcount but does not state that a budget owner pre-approved the meal, so the internal team meal category fails and the takeaway bill is evaluated as a solo meal. The 13:42 receipt time makes it a lunch, whose solo cap is €25.00, so €59.00 of the €84.00 food bill is deducted. Takeaway orders anywhere in Europe carry no reimbursable tip, so the €25.20 tip is deducted in full. The receipt is dated Wednesday, 12 June 2024, a regular weekday, so the weekend rules do not apply."
+}

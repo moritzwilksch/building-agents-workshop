@@ -1,0 +1,34 @@
+{
+  "case_id": "case-0006",
+  "decision": "rejected",
+  "claimed_amount": 556.80,
+  "reimbursed_amount": 0.00,
+  "line_items": [
+    {
+      "description": "Monstera Deliciosa (Mature Specimen, 1.8m) - Monthly Botanical Office Rental",
+      "claimed": 130.00,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "Ficus Lyrata Fiddle Leaf Fig (Large, Self-Watering Planter) Rental",
+      "claimed": 165.00,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "Emergency Biophilic Acoustic Moss Wall Revival & Foliage Grooming Service",
+      "claimed": 145.00,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "Organic Neem Oil Foliar Spray & Plant Tonic (500ml)",
+      "claimed": 27.90,
+      "reimbursed": 0.00
+    },
+    {
+      "description": "USt 19%",
+      "claimed": 88.90,
+      "reimbursed": 0.00
+    }
+  ],
+  "reasoning": "All four lines are plant expenses for the office: two plant rentals, a moss-wall revival and foliage-grooming service, and a plant tonic for maintaining the rented greenery. Plants, including plant rental, plant care, and green-wall services, are Facilities budget items that are deducted from expense reports regardless of purpose or pre-approval. The only exception is temporary staging greenery rented for a named, pre-approved event (Chapter 10), which does not apply: the note describes recurring monthly office greenery for client-facing conference rooms rather than staging for a named event, and names no pre-approving budget owner. Where an entire invoice consists of such items the invoice is rejected. The VAT attributable to the deducted lines is deducted with them at each line's own 19% rate (0.19 x 130.00 + 0.19 x 165.00 + 0.19 x 145.00 + 0.19 x 27.90 = 24.70 + 31.35 + 27.55 + 5.30 = 88.90), so the full USt amount is deducted and nothing is reimbursed."
+}
