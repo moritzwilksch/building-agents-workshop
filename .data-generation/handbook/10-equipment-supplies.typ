@@ -50,10 +50,12 @@ Conference booths, hackathons, client workshops, and onsite trainings routinely 
 
 #card-do("Expense event materials for a named event with stated pre-approval")[
   Booth and display materials, promotional giveaways and team swag, workshop props and demonstration gear, signage, printing, and courier delivery of such items are reimbursable in full when the note (a) names the event, workshop, or campaign and (b) states that the budget owner (Department Director, Practice Leader, or equivalent) pre-approved the purchase. Both statements are required; if either is missing, the event material lines are deducted.
+
+  Event materials also include temporary staging and decor rented for the event venue, such as banners, backdrops, and rented plants, moss walls, and other greenery used as booth or stage decoration. This staging exception overrides the general plant exclusion in this chapter and in Chapter 11: greenery rented temporarily for a named, pre-approved event is an event material, while recurring office or home greenery remains a Facilities budget item.
 ]
 
 #card-dont("Buy event materials that double as personal or office goods")[
-  Furniture, decor, plants, apparel for personal use, and electronics above the peripheral threshold do not become reimbursable by being bought for an event. They remain governed by their own sections above.
+  Furniture, decor, apparel for personal use, and electronics above the peripheral threshold do not become reimbursable by being bought for an event. They remain governed by their own sections above. The same holds for plants, with the sole exception of temporary staging greenery rented for a named, pre-approved event under the card above: monthly office plant rental, permanent planting, and plant care for office greenery are Facilities budget items regardless of purpose or pre-approval.
 ]
 
 === A Note on Rubber Ducks and Other Icons
@@ -84,8 +86,8 @@ Any piece of hardware, technical device, peripheral, or book purchased with firm
 *Q: We bought 400 rubber ducks as giveaways for a hackathon booth. Seriously?*\
 A: Seriously. Giveaways for a named event are event materials. If the note names the hackathon and states who pre-approved the budget, the ducks are reimbursed in full.
 
-*Q: The invoice for our workshop props also includes a rented office plant. What happens?*\
-A: The props are event materials and are reimbursed if the note satisfies the two statements above. The plant rental line is deducted, together with its share of VAT, and the invoice is partially approved.
+*Q: The invoice for our booth props also includes a rented ficus for the booth. What happens?*\
+A: If the ficus is temporary staging rented for the named, pre-approved event, the staging exception above makes it an event material, and it is reimbursed with the props. Recurring office or conference-room greenery is not staging: that line is deducted, together with its share of VAT, and the invoice is partially approved.
 
 *Q: The vendor invoice is addressed to a client company rather than to the firm. Is it still valid?*\
 A: The buyer name on a commercial invoice does not affect reimbursability, provided the employee paid it and the note explains the purchase.

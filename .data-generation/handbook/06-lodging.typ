@@ -24,6 +24,8 @@ Nightly room caps are established based on prevailing hotel market rates across 
 - *Cap*: Up to *€120.00* / *\$140.00* / *£105.00* per night.
 - *Applicable Locations*: All other cities, university towns, suburban office parks, and provincial destinations.
 
+During declared trade-fair and congress weeks, the event surcharge caps in Chapter 9 override the tier caps above for the host city. The override applies only when the submission note names the listed event and the night falls within the event window stated there.
+
 #card-do("Stay within regional lodging caps")[
   Select standard rooms within the designated nightly cap for your destination city. When a nightly rate exceeds the cap, Finance reimburses the cap for that night and deducts the excess. VAT the folio charges on the excess is deducted as well. Municipal city tax is reimbursed in full regardless of the room rate.
 ]
@@ -91,7 +93,7 @@ When an assignment requires an employee to remain in a client city for more than
 == Frequently Asked Questions
 
 *Q: The folio shows a higher rate on one night because of a trade fair. Is that night capped too?*\
-A: Yes. Finance applies the cap per night. If a client contract explicitly authorizes higher lodging thresholds, state the client matter and the approving Practice Director in the note; Finance then reimburses the folio rate for that stay.
+A: Finance applies the cap per night. When the stay overlaps one of the declared trade-fair and congress weeks listed in Chapter 9 and the note names the event, the event surcharge cap in Chapter 9 replaces the tier cap for the nights within the event window. If a client contract explicitly authorizes higher lodging thresholds, state the client matter and the approving Practice Director in the note; Finance then reimburses the folio rate for that stay.
 
 *Q: The folio lists a "Deluxe Executive Loft" at €195 in Berlin. What do I get back?*\
 A: Berlin is Tier 2 with a €160 cap. You receive €160 per night plus the city tax and the VAT attributable to the €160, less any deducted incidentals.

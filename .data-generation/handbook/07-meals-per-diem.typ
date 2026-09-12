@@ -50,6 +50,7 @@ Tipping practices vary substantially across global jurisdictions. Gratuities are
 
 === European and United Kingdom Norms
 - In European Union countries and Switzerland, menu prices legally include tax and service. Discretionary tips of up to 10% of the pre-tip bill are reimbursable; anything above 10% is deducted.
+- Germany is a country-specific exception to this regional norm: see the Global Tipping Standards in Chapter 14, whose country-specific rows override these regional norms.
 - In the United Kingdom, where an optional service charge (typically 12.5%) is printed on the bill, that service charge is reimbursable and any additional tip is deducted. Where no service charge is printed, a tip of up to 12.5% is reimbursable.
 - Takeaway, counter service, and delivery orders anywhere in Europe carry no reimbursable tip.
 

@@ -17,6 +17,8 @@ The following caps apply to the nightly room rate as printed on the folio, exclu
   [Tier 3], [All other cities, secondary metropolitan markets, university hubs, and suburban districts], [€120.00], [\$140.00], [£105.00],
 )
 
+During declared trade-fair and congress weeks, the event surcharge caps in Chapter 9 override these tier caps for the host city when the submission note names the listed event.
+
 == Hotel Incidental Allowances
 
 #table(
@@ -69,7 +71,7 @@ Group dining caps (internal team meals and client hospitality) are set exclusive
 
 == Global Tipping and Gratuity Standards
 
-The cap is calculated on the bill before tip. It applies to restaurants and taxis alike. The vendor's country governs.
+The cap is calculated on the bill before tip. It applies to restaurants and taxis alike. The vendor's country governs. Where a country-specific row below differs from the regional norms in Chapter 7, the row below governs.
 
 #table(
   columns: (1.2fr, 1fr, 2.2fr),
@@ -79,7 +81,8 @@ The cap is calculated on the bill before tip. It applies to restaurants and taxi
   table.header[*Country / Region*][*Maximum Tip*][*Policy Guidance*],
   [United States & Canada], [20%], [Table service and taxis. Counter service, takeout, and delivery: \$1.00 maximum],
   [United Kingdom], [12.5%], [Only if no service charge is printed on the bill; printed service charge is reimbursed, extra tip deducted],
-  [EU countries (Germany, France, Spain, Italy, Netherlands, ...)], [10%], [Service included by law; takeaway and delivery: no tip reimbursed],
+  [Germany], [20%], [Generous rounding for good service is customary and fully supported; takeaway and delivery: no tip reimbursed],
+  [EU countries (France, Spain, Italy, Netherlands, ...)], [10%], [Service included by law; takeaway and delivery: no tip reimbursed],
   [Switzerland], [10%], [Service included; rounding up is customary],
   [Japan, South Korea], [0%], [Tipping is not customary; any tip deducted],
   [Singapore, Hong Kong], [0%], [Printed 10% service charge reimbursed; any additional tip deducted],

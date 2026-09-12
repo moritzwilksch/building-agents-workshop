@@ -60,7 +60,7 @@ The following items are non-reimbursable across all offices, projects, and billi
 - Museum admissions, city tours, ski passes, and other recreational activities (Chapter 9).
 
 === Office Furnishing
-- Furniture, lamps, decor, artwork, and plants, including plant rental and plant care services (Chapter 10).
+- Furniture, lamps, decor, artwork, and plants, including plant rental and plant care services (Chapter 10). The sole exception is temporary staging greenery rented for a named, pre-approved event, which Chapter 10 treats as an event material.
 
 === Venues
 - Any bill from a night club, gentleman's club, or casino (Chapter 8) is rejected in full.

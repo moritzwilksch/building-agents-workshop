@@ -53,6 +53,27 @@ On long-haul intercontinental journeys crossing more than six (6) time zones (Lo
 
 Which days count as public holidays is a surprisingly deep question in a firm with offices on three continents. For the purposes of Figure 1, a public holiday is a statutory holiday in the country where the expense was incurred, not in the employee's home country. Whit Monday in Berlin is a holiday; Whit Monday in New York is a Monday. Employees are encouraged to check the destination calendar before assuming either.
 
+== Trade Fair and Congress Weeks
+
+Hotel rates in trade-fair and congress cities surge during major events, and the ordinary tier caps in Chapter 6 can make a compliant booking impossible in those weeks. For the events listed below, Noice & Toit LLP therefore maintains event surcharge caps that override the regional tier caps in Chapter 6 and the appendix table in Chapter 14 for the host city concerned.
+
+#card-do("Claim the event surcharge cap when your stay overlaps a listed event")[
+  When your hotel stay overlaps the window of one of the events below and your submission note names the event, each night falling within the event window is reimbursed up to the event surcharge cap instead of the city's ordinary tier cap. All other lodging rules (incidentals, laundry, parking, city tax) are unchanged. Where the note names no listed event, or the stay falls outside the event window, the ordinary tier cap governs even if you attended the event.
+]
+
+#table(
+  columns: (1.1fr, 1.5fr, 1.1fr, 1.6fr),
+  align: (left, left, center, center),
+  fill: (_, y) => if y == 0 { rgb("#dbeafe") } else if calc.even(y) { rgb("#f8fafc") } else { none },
+  stroke: 0.5pt + rgb("#cbd5e1"),
+  table.header[*City*][*Event*][*Event Window*][*Nightly Surcharge Cap*],
+  [Berlin], [FinTech Summit], [March], [€200.00 / \$225.00 / £175.00],
+  [Munich], [Bauma construction fair], [April], [€200.00 / \$225.00 / £175.00],
+  [Hamburg], [SMM Wind Energy], [September], [€200.00 / \$225.00 / £175.00],
+  [Frankfurt], [Frankfurt Book Fair], [October], [€200.00 / \$225.00 / £175.00],
+  [Düsseldorf], [Medica], [November], [€200.00 / \$225.00 / £175.00],
+)
+
 == Frequently Asked Questions
 
 *Q: What if extending my stay over a Saturday night makes the return airfare significantly cheaper than a Friday departure?*\

@@ -46,7 +46,7 @@ Public transit systems (subways, underground networks, trams, and airport expres
 ]
 
 === Tips on Taxi Fares
-Taxi tips follow the Global Tipping Standards in Chapter 14, calculated on the fare before tip: up to 10% in the European Union and Switzerland, up to 20% in the United States and Canada, nothing in Japan, South Korea, Singapore, or Hong Kong. Tip amounts above the local cap are deducted.
+Taxi tips follow the Global Tipping Standards in Chapter 14, calculated on the fare before tip: up to 20% in Germany and in the United States and Canada, up to 10% elsewhere in the European Union and in Switzerland, nothing in Japan, South Korea, Singapore, or Hong Kong. Tip amounts above the local cap are deducted.
 
 == Rental Cars
 

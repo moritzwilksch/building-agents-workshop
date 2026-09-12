@@ -106,7 +106,7 @@
                 - *Who*: At least one external guest: clients, partners, suppliers, or job candidates.
                 - *Attendee ratio*: At least 1 external guest per employee; otherwise treated as an internal team meal.
                 - *Allowed spend*: Lunch €50 / \$55; Dinner €90 / \$100 per attendee.
-                - *Alcohol policy*: Beer and wine up to *30%* of the non-alcoholic food and drink subtotal. Cocktails and spirits deducted in full.
+                - *Alcohol policy*: Beer, wine, cocktails, and spirits are reimbursable up to a combined *30%* of the non-alcoholic food and drink subtotal; the amount above the allowance is deducted.
                 - *Mandatory*: Note states purpose, external organization, and attendee count.
               ]
             ]
