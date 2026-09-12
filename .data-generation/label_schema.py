@@ -5,11 +5,11 @@ and the labeling scripts share one definition. This module only
 re-exports them for the `.data-generation` scripts.
 
 Usage:
-    from label_schema import CaseLabel
+    from label_schema import CaseDecision
 
-    label = CaseLabel.model_validate_json(path.read_text())
+    decision = CaseDecision.model_validate_json(path.read_text())
 """
 
-from expense_agent.label import CaseLabel, Decision, LineItem
+from expense_agent.label import CaseDecision, Decision, LineItem
 
-__all__ = ["CaseLabel", "Decision", "LineItem"]
+__all__ = ["CaseDecision", "Decision", "LineItem"]

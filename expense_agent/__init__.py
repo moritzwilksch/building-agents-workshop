@@ -1,13 +1,13 @@
 """Expense agent workshop package."""
 
-from expense_agent.eval import CaseEval, LineItemEval, evaluate
-from expense_agent.label import CaseLabel, Decision, LineItem
+from expense_agent.eval import CaseEval, LineItemDelta, evaluate
+from expense_agent.label import CaseDecision, Decision, LineItem
 
 __all__ = [
+    "CaseDecision",
     "CaseEval",
-    "CaseLabel",
     "Decision",
     "LineItem",
-    "LineItemEval",
+    "LineItemDelta",
     "evaluate",
 ]

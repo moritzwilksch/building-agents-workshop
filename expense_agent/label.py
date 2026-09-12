@@ -4,9 +4,9 @@ The agent's structured output uses the same shape as the ground-truth
 label, so `evaluate` can compare them directly.
 
 Usage:
-    from expense_agent.label import CaseLabel
+    from expense_agent.label import CaseDecision
 
-    label = CaseLabel.model_validate_json(path.read_text())
+    decision = CaseDecision.model_validate_json(path.read_text())
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ class LineItem(BaseModel):
     reimbursed: Decimal = Field(ge=0)
 
 
-class CaseLabel(BaseModel):
+class CaseDecision(BaseModel):
     """One expense case: decision, amounts, line-item breakdown.
 
     Enforces the decision rules from LABELING.md and that line items
