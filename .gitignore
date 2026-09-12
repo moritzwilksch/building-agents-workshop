@@ -222,3 +222,6 @@ __marimo__/
 
 # macOS
 .DS_Store
+
+# Generated experiment runs
+data/runs/
