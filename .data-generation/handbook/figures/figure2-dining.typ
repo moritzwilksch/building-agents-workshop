@@ -23,7 +23,7 @@
       ]
       #v(0.3em)
       #text(9pt, fill: rgb("#64748b"))[
-        Binding decision hierarchy for all meal claims, team dinners, client entertainment, and beverage expenses
+        Binding decision hierarchy for all meal claims, team meals, client and recruiting hospitality, and beverage expenses. Truffle dishes are first screened under Figure 3.
       ]
       #v(1em)
 
@@ -40,7 +40,7 @@
       #text(14pt, fill: rgb("#64748b"))[↓]
       #v(0.5em)
 
-      #text(10pt, weight: "bold", fill: rgb("#475569"))[Determine Dining Category & Attendee Composition:]
+      #text(10pt, weight: "bold", fill: rgb("#475569"))[Determine Dining Category from the attendee composition stated in the note:]
 
       #v(0.6em)
 
@@ -58,8 +58,9 @@
               #text(10pt, weight: "bold", fill: rgb("#1d4ed8"))[Solo Employee Dining]\
               #v(0.3em)
               #text(8.5pt)[
-                - *Allowed spend*: Up to daily caps (€15 breakfast, €25 lunch, €45 dinner; daily max €85).
-                - *Alcohol policy*: *Strictly 0%*. Any beer, wine, or spirits must be deducted in full.
+                - *Who*: One employee, or a group bill whose note lacks purpose or attendee count.
+                - *Allowed spend*: Up to daily caps (€15 breakfast, €25 lunch, €45 dinner by receipt time; daily max €85).
+                - *Alcohol policy*: *Strictly 0%*. Every alcoholic line is deducted in full.
                 - *Mandatory*: Itemized restaurant slip.
               ]
             ]
@@ -76,9 +77,10 @@
               #text(10pt, weight: "bold", fill: rgb("#047857"))[Internal Team Dinner]\
               #v(0.3em)
               #text(8.5pt)[
-                - *Allowed spend*: Up to €35.00 / \$40.00 per person.
-                - *Alcohol policy*: Moderate beer or wine up to *15%* of food subtotal.
-                - *Mandatory*: Manager pre-approval and quarterly milestone justification.
+                - *Who*: Two or more firm employees, no external guests.
+                - *Allowed spend*: Lunch €25 / \$30, Dinner €35 / \$40 per person (receipt time decides).
+                - *Alcohol policy*: Beer or wine up to *15%* of the non-alcoholic food and drink subtotal. Cocktails and spirits deducted.
+                - *Mandatory*: Note names the milestone or onsite and the pre-approving budget owner. Otherwise treated as solo dining.
               ]
             ]
           )
@@ -101,10 +103,11 @@
               #text(10pt, weight: "bold", fill: rgb("#c2410c"))[Client Hospitality Dinner]\
               #v(0.3em)
               #text(8.5pt)[
-                - *Attendee ratio*: At least 1 external guest per employee.
+                - *Who*: At least one external guest: clients, partners, suppliers, or job candidates.
+                - *Attendee ratio*: At least 1 external guest per employee; otherwise treated as an internal team meal.
                 - *Allowed spend*: Lunch €50 / \$55; Dinner €90 / \$100 per attendee.
-                - *Alcohol policy*: Beer/wine up to *30%* of food subtotal. Hard spirits strictly banned.
-                - *Mandatory*: Full attendee roster (names, titles, companies).
+                - *Alcohol policy*: Beer and wine up to *30%* of the non-alcoholic food and drink subtotal. Cocktails and spirits deducted in full.
+                - *Mandatory*: Note states purpose, external organization, and attendee count.
               ]
             ]
           )
@@ -117,12 +120,12 @@
             radius: 5pt,
             inset: 9pt,
             [
-              #text(10pt, weight: "bold", fill: rgb("#b91c1c"))[Late-Night Spending (After 23:00)]\
+              #text(10pt, weight: "bold", fill: rgb("#b91c1c"))[Late-Night Bills (receipt time 23:00 or later)]\
               #v(0.3em)
               #text(8.5pt)[
                 - *Eligibility*: *Strictly Non-Reimbursable (0%)*.
-                - *Coverage*: All bar bills, night clubs, lounge tabs, and meal charges after 23:00.
-                - *Action*: Deduct all post-23:00 line items from the claim.
+                - *Coverage*: Any restaurant, bar, or lounge bill whose printed time is 23:00 or later, in every dining category.
+                - *Action*: The entire bill is rejected. Room service posted after 23:00 is deducted from the folio.
               ]
             ]
           )

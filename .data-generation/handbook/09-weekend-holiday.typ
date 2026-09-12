@@ -13,12 +13,18 @@ However, complex multi-jurisdictional matters, international cross-border transa
 To ensure complete fairness and objective auditing across all practice groups, Noice & Toit LLP does not rely on subjective narrative rules for weekend reimbursement. Instead, all eligibility rules for Saturday, Sunday, and statutory holiday expenses are defined strictly within our centralized visual flowchart.
 
 #card-do("Evaluate weekend claims against the visual flowchart")[
-  Before booking weekend travel or submitting expenses dated on a Saturday, Sunday, or declared public holiday, you must consult Figure 1: Weekend and Public Holiday Travel Approval Flowchart in Chapter 13. All reimbursement decisions, Sunday hotel allowances, and documentation mandates are governed exclusively by that visual flowchart.
+  Any receipt dated on a Saturday, Sunday, or declared public holiday, and any hotel night beginning on such a day, is governed exclusively by Figure 1: Weekend and Public Holiday Travel Approval Flowchart in Chapter 13. The facts the flowchart asks about (a conference or client delivery on that day, a Monday morning meeting) must be stated in the submission note.
 ]
 
 #card-dont("Assume weekend stays are automatically reimbursed")[
   Do not assume that an early Monday meeting or late Friday flight automatically justifies company reimbursement for an entire weekend. If your circumstance leads to a non-reimbursable branch in Figure 1, you must cover those costs personally.
 ]
+
+=== What Counts as a Weekend Expense
+- A *restaurant, taxi, or fuel receipt* is a weekend expense when its printed date falls on a Saturday, Sunday, or public holiday.
+- A *hotel night* is a weekend expense when it begins on such a day (see Chapter 6). Weekday nights on the same folio are evaluated normally.
+- A *flight or train ticket* is not a weekend expense merely because the travel day is a weekend; the ticket is evaluated under Chapters 4 and 5. Lodging and meals at the destination on that weekend are.
+- *Commercial invoices* for goods (Chapter 10) are never weekend expenses.
 
 == Combining Business Travel with Personal Leisure (Bleisure)
 
@@ -26,13 +32,8 @@ Noice & Toit LLP supports employee well-being and recognizes that combining busi
 
 === The Cost-Neutrality Principle
 Personal extensions must impose zero incremental financial cost on Noice & Toit LLP or our billing clients:
-- *Airfare Benchmarking*: When booking flights that include a personal extension, you must perform a side-by-side fare benchmark in our corporate booking portal on the same day you book. Capture a screenshot or printout of the lowest standard non-stop economy fare for the direct business-only dates. If your extended itinerary costs more than the direct business flight, you must pay the fare difference immediately or deduct it from your expense report.
-- *Lodging and Daily Expenses*: All hotel room charges, local transit fares, daily meals, and incidental expenses incurred during personal extension days are the exclusive responsibility of the employee.
-- *Rental Cars*: If a rental car is retained through personal days, the employee must pay for the incremental rental days and all fuel consumed during leisure driving.
-
-#card-do("Document your direct business flight baseline")[
-  When extending a business trip for personal vacation, take a benchmark screenshot of the direct business return flight on the date you book. Upload that benchmark screenshot alongside your final flight receipt so Finance can verify cost neutrality.
-]
+- *Airfare*: A ticket whose dates include a personal extension is reimbursable as long as the note states the business dates and confirms that the fare did not exceed the direct business-only fare.
+- *Lodging and Daily Expenses*: Hotel nights, local transit, meals, and incidentals on personal extension days are the exclusive responsibility of the employee. Where a folio covers such nights, Finance deducts them.
 
 #card-dont("Expense personal sightseeing or recreational activities")[
   Never claim expenses for museum admissions, guided city tours, sporting event tickets, ski passes, beach equipment rentals, or cultural excursions, regardless of whether they take place during a weekend or on an extended business trip.
@@ -41,18 +42,21 @@ Personal extensions must impose zero incremental financial cost on Noice & Toit 
 == Family Members, Spouses, and Travel Companions
 
 Partners, associates, and staff are welcome to have family members, spouses, or companions accompany them on business trips, subject to strict boundaries:
-- *Travel Costs*: All airline, train, and transit tickets for accompanying companions must be purchased privately on personal credit cards.
-- *Lodging*: If a spouse or partner shares a standard business hotel room, the firm covers the single-occupancy room rate. Any additional charge levied by the hotel for double occupancy, upgraded room types, or rollaway beds must be paid personally.
-- *Meals*: All meals and beverages consumed by accompanying companions must be paid with personal funds and excluded from expense reports.
+- All tickets, meals, and transit for accompanying companions must be paid privately. Restaurant bills that include a companion are evaluated with the companion excluded from the attendee count and their share deducted.
+- If a companion shares a standard business hotel room, the firm covers the nightly rate up to the regional cap. Extra-person, rollaway, or double-occupancy surcharges on the folio are deducted.
 
 == International Travel and Transit Rest Days
 
-On long-haul intercontinental journeys crossing more than six (6) time zones (e.g., London to Singapore, or New York to Tokyo), travelers may arrange an arrival schedule that includes an overnight rest day before commencing formal client meetings. Refer directly to Figure 1 in Chapter 13 to verify reimbursement eligibility for weekend transit days.
+On long-haul intercontinental journeys crossing more than six (6) time zones (London to Singapore, New York to Tokyo), travelers may arrange an arrival schedule that includes an overnight rest day before commencing formal client meetings. Whether such a night is reimbursable depends only on the day of the week: a weekday rest night is an ordinary hotel night under Chapter 6, a weekend rest night follows Figure 1. Jet lag is real, but it is not a branch in the flowchart.
+
+== Public Holidays Around the World
+
+Which days count as public holidays is a surprisingly deep question in a firm with offices on three continents. For the purposes of Figure 1, a public holiday is a statutory holiday in the country where the expense was incurred, not in the employee's home country. Whit Monday in Berlin is a holiday; Whit Monday in New York is a Monday. Employees are encouraged to check the destination calendar before assuming either.
 
 == Frequently Asked Questions
 
 *Q: What if extending my stay over a Saturday night makes the return airfare significantly cheaper than a Friday departure?*\
-A: If staying over a Saturday night reduces the overall round-trip airfare by an amount greater than the cost of one extra hotel night and per diem meals, the firm may cover the Saturday night hotel, provided you obtain written pre-approval from your Practice Leader and attach the comparative fare quotes to your report.
+A: If staying over a Saturday night reduces the round-trip airfare by more than the cost of one extra hotel night and one day of meals, the firm may cover the Saturday night hotel. State the fare saving and the approving Practice Leader in the note; without both, Figure 1 applies unchanged.
 
-*Q: Can my travel companion ride with me in a rental car booked for firm business?*\
-A: Yes, provided the companion rides as a passenger and the employee remains the sole authorized driver under the corporate rental agreement. Adding unauthorized secondary drivers invalidates corporate insurance coverage and is prohibited.
+*Q: My conference ran Thursday to Saturday. Is Saturday night reimbursable?*\
+A: Follow Figure 1. The conference was on Saturday, so Saturday night is decided by the conference branch; name the conference in the note.

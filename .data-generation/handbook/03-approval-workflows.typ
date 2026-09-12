@@ -40,7 +40,7 @@ The approval matrix is based on the total monetary value of an individual expens
 Certain high-cost or high-risk activities require written authorization before travel is booked or commitments are made with vendors.
 
 #card-do("Secure written pre-approval before booking high-value travel")[
-  Obtain written confirmation (via email or ticketing workflow) from your Practice Leader before booking international flights, team offsites, or any purchase exceeding €2,500 / \$2,500. Attach this pre-approval to your final expense claim in the portal.
+  Obtain written confirmation (via email or ticketing workflow) from your Practice Leader before booking international flights, team offsites, or any purchase exceeding €2,500 / \$2,500. State in the submission note who approved the purchase and in what role (for example, "pre-approved by the Head of Engineering"). Finance accepts this statement at face value and verifies it in retrospective audits.
 ]
 
 #card-dont("Commit firm resources without prior sign-off")[
@@ -57,7 +57,7 @@ Before clicking the digital approval button in the Expense Portal, every reviewi
 - *Completeness*: Are all receipts attached, fully itemized, legible, and matched to claim line items?
 - *Policy Conformance*: Do hotel rates, meal costs, and travel classes comply with the limits set out in this handbook?
 - *Allocation*: Are billable project codes, task numbers, and non-billable cost centers correctly assigned?
-- *Exception Flagging*: Are any non-reimbursable items (such as minibar, personal alcohol, or traffic fines) properly removed or deducted?
+- *Exception Flagging*: Are any non-reimbursable items (such as minibar charges, alcohol on solo meals, spa treatments, or excess tips) properly removed or deducted following the calculation steps in Chapter 2?
 
 == Out-of-Office and Delegation Rules
 

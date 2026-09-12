@@ -68,7 +68,7 @@
               #text(weight: "bold", fill: rgb("#14532d"), size: 10pt)[FULLY REIMBURSABLE]\
               #v(0.3em)
               #text(8.5pt)[Lodging, travel, and meals covered under standard caps.\
-              *Requirement*: Attach event registration or client agenda.]
+              *Requirement*: The submission note names the conference, trade show, or client delivery.]
             ]
           )
         ],
@@ -82,7 +82,7 @@
             radius: 5pt,
             inset: 9pt,
             [
-              #text(weight: "bold", fill: rgb("#92400e"))[Is arrival on Sunday evening for a mandatory business meeting scheduled Monday before 10:00 AM?]
+              #text(weight: "bold", fill: rgb("#92400e"))[Does the submission note state a mandatory client or court meeting on the following business day before 10:00 AM, requiring arrival the evening before?]
             ]
           )
         ]
@@ -108,8 +108,8 @@
                 [
                   #text(8.5pt, weight: "bold", fill: rgb("#14532d"))[PARTIALLY REIMBURSED]\
                   #v(0.2em)
-                  #text(7.5pt)[Sunday night hotel and dinner reimbursable under standard caps.\
-                  *Condition*: Manager pre-approval required.]
+                  #text(7.5pt)[Only the hotel night and the dinner of that evening are reimbursable under standard caps. Earlier weekend days, taxis, and lunches on that day are deducted.\
+                  *Condition*: The note states the meeting.]
                 ]
               )
             ],

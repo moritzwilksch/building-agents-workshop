@@ -10,66 +10,75 @@ Expenses that represent ordinary personal maintenance, leisure choices, discreti
 
 == Master Catalog of Non-Reimbursable Expenditures
 
-The following items are strictly non-reimbursable across all offices, projects, and billing arrangements:
+The following items are non-reimbursable across all offices, projects, and billing arrangements. Where such an item appears as one line on an otherwise valid receipt, that line is deducted (with its tax) under the calculation steps in Chapter 2. Where the entire receipt consists of such items, the receipt is rejected.
 
 === Legal Penalties, Fines, and Citations
 #card-dont("Claim traffic tickets or legal citations")[
-  Speeding tickets, red-light camera fines, parking violation tickets, bus lane penalties, wheel clamping release fees, vehicle impound charges, toll violation surcharges, and court appearance costs are strictly personal obligations. The firm will not reimburse any fine or citation under any circumstance, even if incurred while rushing to a client emergency.
+  Speeding tickets, red-light camera fines, parking violation tickets, bus lane penalties, wheel clamping release fees, vehicle impound charges, and toll violation surcharges are strictly personal obligations. The firm will not reimburse any fine or citation under any circumstance, even if incurred while rushing to a client emergency.
 ]
-
-=== Personal Credit Card and Banking Surcharges
-- Credit card annual membership fees on personal credit cards.
-- Late payment fees, monthly finance interest charges, or penalty APR balances resulting from delayed employee payment of personal card accounts.
-- Overdraft protection charges or bank statement reproduction fees.
 
 === Personal Grooming, Health, and Apparel
 #card-dont("Expense haircuts, spa treatments, or clothing")[
   The firm does not reimburse routine personal care expenditures, including:
   - Haircuts, hair salon styling, blowouts, and manicures.
-  - Spa treatments, deep-tissue massages, saunas, and beauty therapies.
-  - Suits, ties, formal shirts, dresses, shoes, belts, or personal wardrobe items.
+  - Spa treatments, massages (including hotel "express" or "de-stress" massages), saunas, and beauty therapies.
+  - Suits, ties, shirts, dresses, shoes, belts, socks, and any other clothing, however urgently needed.
   - Over-the-counter pharmaceuticals, vitamins, headache tablets, or sunscreen.
   - Health club day-passes, gym drop-in fees, hotel fitness center surcharges, or fitness trainer sessions.
+  The only exception is the delayed-baggage allowance below.
 ]
 
 === Luggage, Bags, and Travel Accessories
 - Luggage sets, suitcases, carry-on roller bags, garment bags, and briefcases.
-- Personal passport renewal fees, non-business tourist visa fees, and passport photo fees (unless an expedited visa is required specifically for an emergency firm assignment).
-- Travel umbrellas, neck pillows, earplugs, sleep masks, and travel luggage tags.
+- Passport renewal fees, tourist visa fees, and passport photo fees.
+- Travel umbrellas, neck pillows, earplugs, sleep masks, and luggage tags.
 
 === Discretionary Upgrades and Luxury Preferences
-- Paid cabin upgrades on flights (Economy to Business, or Business to First).
-- Paid hotel room upgrades (Standard to Executive Suite or Penthouse).
-- Rental car upgrades (Compact to Premium, SUV, or Luxury Convertible).
-- Airline priority boarding, extra-legroom seats, and private airport lounge memberships.
+- Business or First Class cabins where Chapter 4 does not permit them; First Class rail where Chapter 5 does not permit it.
+- The portion of a hotel rate above the regional cap (Chapter 6).
+- Rental car categories above Intermediate without a named approver (Chapter 5).
+- Airline seat selection, extra-legroom seats, priority boarding, and lounge access (Chapter 4).
+- Premium rideshare tiers above the unjustified-ride threshold (Chapter 5).
+
+=== Hotel Incidentals
+- Minibar snacks and beverages of any kind, in-room movies and streaming, spa and wellness charges, pet or animal cleaning fees, and late check-out fees (Chapter 6).
+- Laundry outside the allowances in Chapter 6.
 
 === Gifts, Gift Cards, and Cash Equivalents
 #card-dont("Purchase gift cards or retail vouchers")[
-  Never purchase retail gift cards, Amazon vouchers, prepaid debit cards, or cash equivalents on an expense report. Tax regulations classify gift cards as cash compensation, triggering mandatory payroll tax withholding. All client gift initiatives and employee recognition programs must be coordinated through People Operations.
+  Retail gift cards, Amazon vouchers, prepaid debit cards, and cash equivalents are deducted wherever they appear. Tax regulations classify gift cards as cash compensation, triggering mandatory payroll tax withholding. Client gift initiatives and employee recognition programs must be coordinated through People Operations.
 ]
 
 === Family, Companion, and Pet Expenses
 - Airfare, train tickets, meals, and transit fares for spouses, domestic partners, children, friends, or other travel companions.
-- Pet boarding, kennel fees, dog walking services, and in-home pet care during business travel.
+- Pet boarding, kennel fees, dog walking services, hotel pet fees, and in-home pet care during business travel.
 - Babysitting services, childcare fees, house-sitting fees, or home plant watering services.
 
-=== Personal Subscriptions and Entertainment
-- Streaming media services (Netflix, Spotify, Apple Music, Hulu, Disney+, YouTube Premium).
-- Newspaper home deliveries or general consumer magazines.
-- Mini-bar snacks, in-room pay-per-view movies, in-flight audio-visual entertainment, or video game rentals.
+=== Personal Subscriptions, Software, and Entertainment
+- Streaming media services (Netflix, Spotify, Apple Music, Disney+, YouTube Premium) and consumer magazines.
+- Software licenses, app purchases, cloud credits, and AI API credits (Chapter 10).
+- Museum admissions, city tours, ski passes, and other recreational activities (Chapter 9).
+
+=== Office Furnishing
+- Furniture, lamps, decor, artwork, and plants, including plant rental and plant care services (Chapter 10).
+
+=== Venues
+- Any bill from a night club, gentleman's club, or casino (Chapter 8) is rejected in full.
 
 == Delayed or Lost Baggage Emergency Allowance
 
-The only recognized exception to our apparel and personal grooming exclusion occurs when an airline mishandles or loses an employee checked bag on an outbound business flight:
-- If the airline fails to deliver your checked baggage within twenty-four (24) continuous hours of flight arrival at an outbound business destination, you may purchase essential emergency toiletries and one modest change of business attire.
-- *Limit*: Up to a maximum cumulative limit of *€100.00* / *\$120.00* / *£90.00*.
-- *Mandatory Documentation*: You must file a Property Irregularity Report (PIR) with the airline baggage desk at the airport and attach the official airline PIR claim document and itemized merchant receipts to your expense report.
-- *Inbound Return Travel*: No emergency apparel or toiletry reimbursement is permitted upon return to your home residence city.
+The only exception to the apparel and grooming exclusion occurs when an airline mishandles or loses an employee's checked bag on an outbound business flight:
+- You may purchase essential toiletries and one modest change of business attire up to a cumulative *€100.00 / \$120.00 / £90.00*. The excess is deducted.
+- The note must state that the airline lost or delayed the bag, name the flight, and quote the Property Irregularity Report (PIR) reference issued by the airline baggage desk. Without a PIR reference in the note, apparel and toiletries are deducted like any other personal item.
+- No emergency apparel or toiletry reimbursement is permitted upon return to your home residence city.
 
 == Frequently Asked Questions
 
 *Q: What if I received a parking ticket because the client office parking lot was full?*\
-A: The ticket remains your personal responsibility. You should plan parking in designated public lots or garages when client visitor parking is unavailable.
+A: The ticket remains your personal responsibility. Plan parking in designated public lots or garages when client visitor parking is unavailable.
 
 *Q: Can I expense a hotel laundry bill if my suit was stained during a client dinner?*\
-A: If professional business attire is accidentally soiled during a documented client dinner or workshop, reasonable spot-cleaning or pressing (up to €25.00 / \$30.00) is reimbursable with an explanatory note.
+A: Possibly. Chapter 6 sets the conditions and the per-stay cap for garment rescue on short trips; the incident must be described in the note.
+
+*Q: I bought emergency socks at the airport before a client meeting. Reimbursable?*\
+A: No, unless the airline lost your bag and the note quotes the PIR reference. Clothing is otherwise personal regardless of circumstance.

@@ -6,7 +6,7 @@
 
 Timely and accurate submission of expenses keeps our financial records current, supports accurate billing to clients, and ensures you get reimbursed quickly. All expense submissions at Noice & Toit LLP must be filed through the central Noice & Toit Expense Portal (accessible via single sign-on from your desktop or mobile device).
 
-Do not accumulate receipts over multiple quarters or bundle unrelated trips into a single submission. Treat each client engagement, conference trip, or month of routine local spending as an individual expense report.
+Each receipt is submitted as its own expense line. A line consists of exactly two things: the receipt image and a short submission note written by the employee. Finance evaluates every line on those two inputs alone.
 
 == Deadlines and the Accounting Calendar
 
@@ -26,8 +26,8 @@ Special cut-off rules apply at the end of our fiscal year (December 31st). All e
 == Receipt Substantiation Standards
 
 Both tax authorities (including the IRS, HMRC, and German Finanzamt) and our commercial clients require full substantiation before business deductions or reimbursements are recognized. A proof of payment must establish five core facts:
-+ *Who*: The legal name, business address, and tax registration number (VAT / Tax ID) of the vendor.
-+ *When*: The precise date and time the transaction occurred.
++ *Who*: The legal name and business address of the vendor. Hotel folios and commercial invoices must additionally show the vendor's VAT or tax registration number.
++ *When*: The date and, for restaurants and taxis, the time the transaction occurred.
 + *What*: An itemized list showing individual line items, service descriptions, unit costs, and quantities.
 + *How much*: The total gross amount paid, broken down by net price, applicable tax rates, and tips.
 + *Currency*: The exact currency in which the transaction was charged.
@@ -37,45 +37,60 @@ Both tax authorities (including the IRS, HMRC, and German Finanzamt) and our com
 ]
 
 #card-dont("Rely on credit card charge slips")[
-  Never submit terminal charge slips showing only a total amount and masked credit card numbers. A credit card slip proves that money changed hands, but it does not prove what was purchased. Finance will reject expense lines supported only by summary card slips.
+  Never submit terminal charge slips showing only a merchant name, a total amount, and a masked card number. A card slip proves that money changed hands, but it does not prove what was purchased. Finance rejects any expense line supported only by a summary card slip, regardless of amount or explanation in the note.
 ]
+
+== The Submission Note
+
+The submission note is the only narrative Finance reads. No screenshots, e-mail threads, approval tickets, or card statements can be attached to an expense line; anything Finance needs to know must be stated in the note. Statements in the note are accepted at face value and audited retrospectively. A knowingly false statement is misconduct under Chapter 1.
+
+#card-do("State the facts that unlock reimbursement")[
+  Keep notes to one or two plain sentences and include the facts relevant to the receipt type:
+  - *Restaurants and bars*: The business purpose, the external organization(s) present, and the total number of attendees including yourself.
+  - *Hotels*: The trip purpose. For nights falling on a weekend or public holiday, name the conference or client meeting (see Figure 1). For laundry or parking charges, state the garment incident or the vehicle (see Chapter 6).
+  - *Taxis and ride-hailing*: Destination and purpose. For fares above the unjustified-ride threshold, state which justification in Chapter 5 applies.
+  - *Fuel*: Identify the rental vehicle the fuel was for.
+  - *Flights and rail*: The trip purpose. For bookings made inside seven days of departure, the reason. For premium cabins or first-class rail, the qualifying condition from Chapters 4 and 5.
+  - *Commercial invoices (equipment, supplies, event materials)*: What the items are for, the event or project name, and, where Chapter 10 requires it, the approver's role or the IT ticket number.
+]
+
+#card-dont("Leave the note blank or generic")[
+  Notes such as "dinner", "business lunch", or "supplies" do not satisfy any documentation requirement. Where this handbook says a fact must be stated in the note and it is missing, Finance applies the less favorable branch of the rule. Routine transit (public transport, short taxi rides, standard rail tickets) may carry an empty note.
+]
+
+=== Notes We Have Actually Received
+The Expense Auditing Team keeps an anonymized collection of memorable notes for training purposes. "Dinner." is the most common entry and the least useful. "Emergency ducks, see Hamburg" has become shorthand for a note that assumes context the reader does not have. The best notes in the collection are short, specific, and slightly boring: "Lunch with 2 engineers from Acme (3 attendees total) to review the Q3 rollout plan." Aim for boring.
 
 == Mobile Capture and Document Legibility
 
-Most employees photograph receipts with smartphone cameras. While digital image capture is encouraged, the resulting image must be clear, legible, and suitable for formal tax inspection.
+Most employees photograph receipts with smartphone cameras. The resulting image must be clear, legible, and suitable for formal tax inspection.
 
-=== Best Practices for Capturing Receipts
-- Lay the receipt flat on a dark, matte surface with adequate overhead lighting.
-- Ensure the entire receipt is visible in the frame, from the merchant header to the total footer.
-- Avoid angled photos, blurry focus, deep shadows, and cropped corners.
-- Pay special attention to thermal paper receipts from taxis, petrol stations, and cafes. Thermal receipts fade quickly; capture the photo within 24 hours of purchase while text remains sharp.
-- For multi-page hotel folios, photograph or upload every page in sequence, including the final balance page showing a zero balance or card settlement.
+- Lay the receipt flat with adequate lighting and keep the entire receipt in frame, from the merchant header to the total footer.
+- Thermal paper receipts from taxis, petrol stations, and cafes fade quickly; capture the photo within 24 hours of purchase.
+- For multi-page hotel folios, upload every page in sequence.
+- Finance may reject lines where amounts, line items, or the vendor cannot be read.
 
-== Missing and Lost Receipts
+== How Finance Calculates the Reimbursable Amount
 
-We understand that paper slips can occasionally be lost, or a merchant POS printer may run out of ink. Our policy provides a limited safety valve for such situations, while maintaining strict controls against abuse.
+Finance applies the rules in this handbook in a fixed order so that every reviewer arrives at the same figure. The steps are:
 
-#card-do("Use a declaration for minor lost receipts")[
-  If you lose a receipt for an unavoidable business expense under €50.00 or \$50.00, submit a Missing Receipt Declaration through the portal. The declaration requires you to explain the business circumstance, list purchased items, and attest to the expenditure. You may use this mechanism at most twice per calendar year.
++ *Eligibility check*. If the receipt is a summary card slip, or the expense category is prohibited outright (Chapter 11), the line is *rejected* and nothing further is calculated.
++ *Remove non-reimbursable line items*. Deduct every prohibited item (alcohol where not permitted, minibar, spa, personal goods, prohibited fees) at its gross line price. Where the receipt adds tax on top of the subtotal, also deduct the tax charged on that item at the rate shown for the line. Where prices already include tax, the gross line price is the deduction.
++ *Apply item caps*. Where a specific line is capped (a nightly room rate, a laundry charge, a hotel parking night, a tip), reimburse up to the cap and deduct the excess.
++ *Apply category caps*. Apply the per-meal, per-person, or per-day caps in Chapter 7, Figure 2, and Chapter 10 to what remains.
++ *Determine the outcome*. If nothing was deducted, the line is *approved* in full. If something was deducted but a positive amount remains, the line is *partially approved* for the remaining amount. If nothing remains, the line is *rejected*.
+
+#card-do("Work through the steps yourself before submitting")[
+  Employees may enter the net business amount they expect to receive. Finance recalculates every line independently, so a self-reduced claim does not shortcut the audit, but it does speed up settlement.
 ]
-
-#card-dont("File declarations for major bookings")[
-  Never use a Missing Receipt Declaration for flights, rail tickets, hotel stays, or rental cars. Commercial travel providers automatically generate digital receipts and can re-issue folios or electronic ticket records within minutes upon request.
-]
-
-== Currency and Split Allocations
-
-When a single receipt contains charges that apply to multiple projects, or includes personal items purchased alongside business goods:
-- Use the split allocation tool in the Expense Portal to divide the bill across the relevant project codes.
-- Deduct personal items from the gross total before submitting the report. The employee is responsible for entering the exact net business amount claimed.
 
 == Frequently Asked Questions
 
-*Q: What if a small cafe or taxi driver only issues a handwritten receipt?*\
-A: Handwritten receipts are acceptable for amounts under €25.00 / \$30.00, provided they clearly display the merchant name, date, itemized description, and total amount paid.
-
 *Q: Do I need to keep the original paper receipts after uploading photos to the portal?*\
-A: Once you have uploaded a high-resolution, legible image to the portal and your report has been approved by Finance, you may securely discard the paper slips, unless your local office jurisdiction (e.g., specific regional tax mandates) requires physical paper retention. Check with your local office administrator.
+A: Once you have uploaded a legible image to the portal and your report has been approved by Finance, you may discard the paper slips, unless your local office jurisdiction requires physical paper retention. Check with your local office administrator.
 
 *Q: What happens if my expense report contains both billable and non-billable items?*\
-A: Tag each line item individually with the appropriate client billing code or internal administrative cost center. Your practice leader will review the billable allocation during their approval step.
+A: Tag each line with the appropriate client billing code or internal administrative cost center. Your practice leader reviews the billable allocation during the approval step. Allocation does not change whether a line is reimbursable.
+
+*Q: My receipt is in a foreign language. Do I need to translate it?*\
+A: No. Finance reads receipts in all major European and Asian languages. Do add a short English description of the purchase in the note when the item names are not self-explanatory.

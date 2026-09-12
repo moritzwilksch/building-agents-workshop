@@ -1,21 +1,19 @@
 #import "template.typ": card-do, card-dont
 
-= Office Supplies, Hardware, and Remote Work
+= Office Supplies, Hardware, and Event Materials
 
 == Modern Workplace Technology and Supplies
 
 At Noice & Toit LLP, our professionals work seamlessly across physical corporate offices, client sites, remote hotel hubs, and approved home working environments. Having dependable equipment, reliable connectivity, and essential stationery is critical to delivering top-tier professional services.
 
-However, equipment and digital subscriptions represent ongoing balance-sheet assets and carry significant data privacy, licensing, and IT security implications. This chapter outlines how to procure necessary equipment and supplies while remaining fully compliant with firm standards.
+However, equipment, event materials, and digital subscriptions represent ongoing balance-sheet assets and carry data privacy, licensing, and IT security implications. This chapter governs commercial invoices for goods and services: what may be bought out of pocket, up to what amount, and what the submission note must state. It is organized by what was purchased; where an invoice mixes categories, each line is evaluated under its own category.
 
 == Routine Office Supplies and Stationery
 
-For standard day-to-day administrative needs:
-- Whenever possible, order office stationery, paper, toner, notebooks, and writing materials through our central Office Services portal for direct delivery to your primary office or home location. Centralized purchasing secures bulk enterprise discounts and avoids individual out-of-pocket spending.
-- For emergency, travel-related, or incidental out-of-pocket purchases:
+Whenever possible, order stationery, paper, toner, notebooks, and writing materials through our central Office Services portal. For emergency, travel-related, or incidental purchases:
 
 #card-do("Purchase minor emergency supplies out of pocket")[
-  Incidental stationery, pens, notebooks, sticky notes, and printer paper may be expensed out of pocket up to €50.00 / \$60.00 / £45.00 per purchase, not to exceed €100.00 / \$120.00 / £90.00 per quarter. Provide an itemized store receipt with your claim.
+  Incidental stationery, pens, notebooks, sticky notes, tape, printer paper, cables, and similar consumables may be expensed out of pocket up to *€50.00 / \$60.00 / £45.00 per invoice*. Amounts above the cap are deducted.
 ]
 
 #card-dont("Stockpile office supplies through retail stores")[
@@ -24,39 +22,56 @@ For standard day-to-day administrative needs:
 
 == Computer Hardware and Digital Peripherals
 
-All laptops, tablets, smartphones, and associated hardware components must meet strict Noice & Toit Enterprise Information Security requirements.
+All laptops, tablets, smartphones, and associated hardware must meet Noice & Toit Enterprise Information Security requirements. Laptops, tablets, and phones themselves are never purchased out of pocket; IT issues them.
 
-=== IT Helpdesk Pre-Approval
-To prevent compatibility problems and data security vulnerabilities, employees must not purchase hardware devices independently without prior technical clearance:
-- Routine peripherals costing under €100.00 / \$120.00 (such as basic USB flash drives, wired travel mice, or standard USB-C cables) may be expensed with an itemized receipt.
-- Specialized peripherals costing over €100.00 / \$120.00 (such as external 4K monitors, ergonomic mechanical keyboards, high-definition webcams, noise-canceling headsets, or external SSD storage) require written sign-off from IT Helpdesk before purchase.
-
-#card-do("Consult IT before purchasing high-value peripherals")[
-  Submit an IT Helpdesk ticket detailing your technical requirement before buying high-value peripherals. Attach the IT ticket confirmation to your expense report to ensure smooth reimbursement.
+#card-do("Expense routine peripherals under the threshold")[
+  Peripherals and tools with a unit price under *€100.00 / \$120.00 / £90.00* (USB drives, travel mice, cables, adapters, hubs, soldering irons, hand tools, chargers) are reimbursable with an itemized invoice. A replacement charger or adapter bought while traveling is reimbursable up to €90.00 / \$100.00 when the note states that the original failed.
 ]
 
-#card-dont("Expense home office furniture or renovation items")[
-  Never expense office chairs, adjustable standing desks, lamps, footrests, monitors arms, or home renovation supplies through regular expense reports. Check the People portal for designated regional remote-work ergonomic stipend allowances.
+#card-do("Cite the IT ticket for high-value peripherals")[
+  Peripherals with a unit price of *€100.00 / \$120.00 / £90.00 or more* (external monitors, mechanical keyboards, webcams, noise-canceling headsets, external SSDs, specialist test equipment) are reimbursable only when the note cites the IT Helpdesk ticket number under which IT cleared the purchase. Without a ticket number, that line is deducted.
+]
+
+#card-dont("Expense home office furniture, decor, or plants")[
+  Office chairs, standing desks, lamps, footrests, monitor arms, shelving, rugs, artwork, and any live or artificial plants (including plant rental, plant care, and "green wall" services) are Facilities budget items. They are deducted from expense reports regardless of purpose or pre-approval. Check the People portal for the regional remote-work ergonomic stipend.
 ]
 
 == Software Licenses, Cloud Infrastructure, and AI Services
 
-In an era of rapid technological evolution, software tools, SaaS platforms, cloud environments, and generative AI APIs are increasingly utilized for research and productivity. However, unvetted software presents profound legal, intellectual property, and client confidentiality risks.
+Software tools, SaaS platforms, cloud environments, and generative AI APIs are increasingly utilized for research and productivity. Unvetted software presents legal, intellectual property, and client confidentiality risks.
 
 #card-dont("Expense software subscriptions or AI model credits")[
-  Never purchase software licenses, cloud compute credits (e.g., AWS, GCP, Azure), SaaS productivity subscriptions, or generative AI API credits (e.g., OpenAI, Anthropic, Midjourney) on a personal credit card expecting reimbursement.
+  Software licenses, cloud compute credits (AWS, GCP, Azure), SaaS productivity subscriptions, app store purchases, and generative AI API credits are deducted in full. Request them through the IT Service Portal, where IT reviews data protection agreements and provisions enterprise access.
 ]
 
-=== Enterprise Software Procurement Policy
-All software and cloud services must undergo centralized security review:
-- Client data confidentiality agreements and privacy laws (GDPR, HIPAA, CCPA) strictly prohibit transmitting client text or case evidence to unvetted third-party cloud tools.
-- To request a specialized software tool, compiler license, or enterprise AI subscription, submit a Software Procurement Request via the IT Service Portal. IT will review data protection agreements, negotiate enterprise volume pricing, and provision secure access credentials.
+== Event, Marketing, and Workshop Materials
 
-== Professional Publications, Books, and Subscriptions
+Conference booths, hackathons, client workshops, and onsite trainings routinely require materials that no central catalog stocks: booth displays, branded giveaways, demo props, signage, printed handouts, and consumables.
 
-Continuous professional development and research are core to our advisory practices:
-- *Books and Technical Reference Manuals*: Technical legal treatises, financial analysis handbooks, and reference volumes required for active client engagements may be expensed up to €80.00 / \$90.00 per item with project code citation.
-- *Professional Periodicals*: Subscriptions to the Financial Times, Wall Street Journal, Economist, or specialized legal journals must be ordered through our Global Library and Information Services team to take advantage of firm-wide digital license agreements.
+#card-do("Expense event materials for a named event with stated pre-approval")[
+  Booth and display materials, promotional giveaways and team swag, workshop props and demonstration gear, signage, printing, and courier delivery of such items are reimbursable in full when the note (a) names the event, workshop, or campaign and (b) states that the budget owner (Department Director, Practice Leader, or equivalent) pre-approved the purchase. Both statements are required; if either is missing, the event material lines are deducted.
+]
+
+#card-dont("Buy event materials that double as personal or office goods")[
+  Furniture, decor, plants, apparel for personal use, and electronics above the peripheral threshold do not become reimbursable by being bought for an event. They remain governed by their own sections above.
+]
+
+=== A Note on Rubber Ducks and Other Icons
+The firm's tolerance for unusual event materials has a history. The 2021 Hamburg hackathon booth, staffed by a team that had ordered a crate of squeaky ducks as a load-testing mascot, generated more qualified leads than any booth before or since. The ducks are now something of a tradition, and Finance has stopped asking why. This does not mean that anything bought in bulk and painted yellow is an event material; it means that giveaways for a named, pre-approved event are.
+
+== Team-Building Activities
+
+Activities such as escape rooms, cooking classes, bowling, or go-karting for a team are reimbursable up to *€50.00 / \$60.00 / £45.00 per participant* when the note states the occasion, the headcount, and the pre-approving budget owner. The excess is deducted. Meals during such events follow Figure 2.
+
+== Shipping, Courier, and Connectivity
+
+- *Courier and postage* for client deliverables, trial bundles, or replacement equipment is reimbursable in full when the note states what was shipped.
+- *Mobile data*: International roaming passes, travel eSIMs, and prepaid data bundles bought while traveling without a firm SIM are reimbursable up to *€50.00 / \$60.00 / £45.00 per trip*.
+
+== Professional Publications and Books
+
+- *Books and Technical Reference Manuals*: Treatises, handbooks, and reference volumes required for active client engagements may be expensed up to *€80.00 / \$90.00 / £70.00 per item* when the note cites the project or client matter. The excess per item is deducted.
+- *Professional Periodicals*: Subscriptions to the Financial Times, Wall Street Journal, Economist, or specialized legal journals must be ordered through Global Library and Information Services and are deducted from expense reports.
 
 == Ownership and Asset Tracking
 
@@ -66,8 +81,11 @@ Any piece of hardware, technical device, peripheral, or book purchased with firm
 
 == Frequently Asked Questions
 
-*Q: What if my laptop charger fails while traveling on a critical client engagement?*\
-A: If a crucial cable, power adapter, or charger fails during travel, purchase a replacement adapter at an electronics retailer (up to €90.00 / \$100.00) and submit the itemized receipt with an explanatory note. IT will log the replacement upon your return.
+*Q: We bought 400 rubber ducks as giveaways for a hackathon booth. Seriously?*\
+A: Seriously. Giveaways for a named event are event materials. If the note names the hackathon and states who pre-approved the budget, the ducks are reimbursed in full.
 
-*Q: Can I expense mobile phone roaming data passes during international travel?*\
-A: Yes. If traveling internationally without a global firm SIM card, purchase a temporary carrier international data bundle or regional travel eSIM to ensure uninterrupted client connectivity.
+*Q: The invoice for our workshop props also includes a rented office plant. What happens?*\
+A: The props are event materials and are reimbursed if the note satisfies the two statements above. The plant rental line is deducted, together with its share of VAT, and the invoice is partially approved.
+
+*Q: The vendor invoice is addressed to a client company rather than to the firm. Is it still valid?*\
+A: The buyer name on a commercial invoice does not affect reimbursability, provided the employee paid it and the note explains the purchase.
