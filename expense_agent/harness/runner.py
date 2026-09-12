@@ -2,7 +2,7 @@
 
 The runner owns the plumbing: it loads cases, runs them concurrently under
 a semaphore, isolates a raising case as a `CaseFailure`, grades the rest,
-and persists the whole run with `RunStore`. Participants own the agent:
+prices token usage per case, and persists the whole run with `RunStore`. Participants own the agent:
 its prompt and tools. The harness grades `CaseDecision` output.
 
 The runner passes `CaseInput` as pydantic-ai deps and sends the receipt
@@ -27,6 +27,7 @@ from pydantic_ai import Agent, BinaryContent, capture_run_messages
 from expense_agent.harness.cases import CaseInput, CaseLoader
 from expense_agent.label import CaseDecision
 from expense_agent.tracking import CaseFailure, CaseSuccess, Run, RunCase, RunStore
+from expense_agent.tracking.cost import messages_cost, messages_tokens
 
 MAX_CONCURRENCY = 4
 DEFAULT_PROMPT = "Evaluate the expense case and return your decision."
@@ -55,12 +56,16 @@ async def run_case(
                 expected=expected,
                 error=f"{type(exc).__name__}: {exc}",
                 agent_messages=messages,
+                cost=messages_cost(messages),
+                tokens=messages_tokens(messages),
             )
     return CaseSuccess(
         case_id=case_input.case_id,
         expected=expected,
         actual=actual,
         agent_messages=result.all_messages(),
+        cost=messages_cost(result.all_messages()),
+        tokens=messages_tokens(result.all_messages()),
     )
 
 

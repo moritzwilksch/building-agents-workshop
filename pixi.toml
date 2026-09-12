@@ -7,6 +7,7 @@ version = "0.1.0"
 preview = ["pixi-build"]
 
 [tasks]
+viewer = "python -m expense_agent.viewer.app"
 
 [package]
 name = "expense-agent"
@@ -28,6 +29,9 @@ google-genai = ">=2.22.0,<3"
 genai-prices = ">=0.1.6,<0.2"
 pypdf = ">=6.18.1,<7"
 openai = ">=3.12.0,<4"
+pydantic-ai-trace = ">=0.2.1,<0.3"
+fastapi = ">=0.141.1,<0.142"
+uvicorn = ">=0.52.4,<0.53"
 
 [feature.data-generation.dependencies]
 typst = "*"

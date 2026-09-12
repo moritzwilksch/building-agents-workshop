@@ -34,7 +34,12 @@ def default_run_id() -> str:
 
 
 class CaseSuccess(BaseModel):
-    """A graded case trajectory: expected and actual decisions plus messages."""
+    """A graded case trajectory: expected and actual decisions plus messages.
+
+    `cost` and `tokens` are captured when the case runs and persisted with
+    the run. They are `None` for runs saved before cost tracking existed;
+    derive them from `agent_messages` in that case.
+    """
 
     # No `extra="forbid"` here: it propagates into the nested pydantic-ai
     # `RequestUsage` dataclass and rejects provider-specific usage fields
@@ -47,10 +52,15 @@ class CaseSuccess(BaseModel):
     expected: CaseDecision
     actual: CaseDecision
     agent_messages: list[ModelMessage] = Field(default_factory=list)
+    cost: Decimal | None = None
+    tokens: int | None = None
 
 
 class CaseFailure(BaseModel):
-    """A failed case with its error and partial message history."""
+    """A failed case with its error and partial message history.
+
+    `cost` and `tokens` cover the partial trajectory before the failure.
+    """
 
     # See `CaseSuccess`: provider-specific usage fields must survive loading.
     model_config = ConfigDict(extra="ignore")
@@ -60,6 +70,8 @@ class CaseFailure(BaseModel):
     expected: CaseDecision
     error: str = Field(min_length=1)
     agent_messages: list[ModelMessage] = Field(default_factory=list)
+    cost: Decimal | None = None
+    tokens: int | None = None
 
 
 RunCase = Annotated[CaseSuccess | CaseFailure, Field(discriminator="kind")]
@@ -79,6 +91,7 @@ class RunMetrics(BaseModel):
     pass_rate: float | None = Field(default=None, ge=0, le=1)
     decision_accuracy: float | None = Field(default=None, ge=0, le=1)
     mean_reimbursed_error: Decimal | None = Field(default=None, ge=0)
+    total_cost: Decimal | None = None
 
     @classmethod
     def from_cases(cls, cases: list[RunCase]) -> RunMetrics:
@@ -90,7 +103,9 @@ class RunMetrics(BaseModel):
 
         passes = sum(1 for e in evals if e.decision_match and e.reimbursed_error == ZERO)
         decisions = sum(1 for e in evals if e.decision_match)
+        costs = [case.cost for case in cases if case.cost is not None]
         return cls(
+            total_cost=sum(costs, ZERO) if costs else None,
             total_cases=total,
             failed_cases=total - successful,
             pass_rate=passes / successful if successful else None,
