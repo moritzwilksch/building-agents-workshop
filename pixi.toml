@@ -26,6 +26,8 @@ python = ">=3.12"
 pydantic-ai = ">=2.40.0,<3"
 google-genai = ">=2.22.0,<3"
 genai-prices = ">=0.1.6,<0.2"
+pypdf = ">=6.18.1,<7"
+openai = ">=3.12.0,<4"
 
 [feature.data-generation.dependencies]
 typst = "*"

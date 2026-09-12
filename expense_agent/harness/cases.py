@@ -14,9 +14,7 @@ Usage:
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
-from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -25,7 +23,6 @@ from expense_agent.label import CaseDecision
 DEFAULT_DATA_DIR = Path("data")
 
 RECEIPT_FILENAME = "receipt.jpg"
-INVOICE_FILENAME = "invoice.json"
 LABEL_FILENAME = "label.json"
 HANDBOOK_FILENAME = "handbook.pdf"
 
@@ -36,7 +33,6 @@ class CaseInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     case_id: str = Field(min_length=1)
-    invoice: dict[str, Any]
     receipt_image: Path
     handbook_pdf: Path
 
@@ -57,17 +53,18 @@ class CaseLoader:
 
     def case_ids(self) -> list[str]:
         """Return sorted case directory names, e.g. `case-0001`."""
-        if not self.data_dir.exists():
-            return []
-        return sorted(path.name for path in self.data_dir.glob("case-*") if path.is_dir())
+        if not self.data_dir.is_dir():
+            raise FileNotFoundError(f"case data directory not found: {self.data_dir.resolve()}")
+        case_ids = sorted(path.name for path in self.data_dir.glob("case-*") if path.is_dir())
+        if not case_ids:
+            raise ValueError(f"no cases found in {self.data_dir.resolve()}")
+        return case_ids
 
     def load_input(self, case_id: str) -> CaseInput:
         """Read one case into its agent-facing input bundle."""
         case_dir = self._case_dir(case_id)
-        invoice = json.loads(self._required(case_dir / INVOICE_FILENAME).read_text(encoding="utf-8"))
         return CaseInput(
             case_id=case_id,
-            invoice=invoice,
             receipt_image=self._required(case_dir / RECEIPT_FILENAME),
             handbook_pdf=self._required(self.data_dir / HANDBOOK_FILENAME),
         )

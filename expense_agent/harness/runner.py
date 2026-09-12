@@ -3,11 +3,10 @@
 The runner owns the plumbing: it loads cases, runs them concurrently under
 a semaphore, isolates a raising case as a `CaseFailure`, grades the rest,
 and persists the whole run with `RunStore`. Participants own the agent:
-its prompt, tools, and output type.
+its prompt and tools. The harness grades `CaseDecision` output.
 
-An `Agent` alone is not runnable, so the runner fixes the input side. It
-passes `CaseInput` as pydantic-ai deps and a fixed user prompt. Put
-stage-specific prompt text in the agent's system prompt or tools.
+The runner passes `CaseInput` as pydantic-ai deps and sends the receipt
+image beside the stage-specific prompt.
 
 Usage:
     import asyncio
@@ -23,7 +22,7 @@ from __future__ import annotations
 import asyncio
 from typing import Any
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, BinaryContent, capture_run_messages
 
 from expense_agent.harness.cases import CaseInput, CaseLoader
 from expense_agent.label import CaseDecision
@@ -42,11 +41,21 @@ async def run_case(
     prompt: str,
 ) -> RunCase:
     """Run one case. Any exception becomes a `CaseFailure` for that case."""
-    try:
-        result = await agent.run(prompt, deps=case_input)
-        actual = CaseDecision.model_validate(result.output)
-    except Exception as exc:
-        return CaseFailure(case_id=case_input.case_id, expected=expected, error=f"{type(exc).__name__}: {exc}")
+    with capture_run_messages() as messages:
+        try:
+            receipt = BinaryContent.from_path(case_input.receipt_image)
+            result = await agent.run(
+                [prompt, f"Case ID: {case_input.case_id}\nReceipt:", receipt],
+                deps=case_input,
+            )
+            actual = CaseDecision.model_validate(result.output)
+        except Exception as exc:
+            return CaseFailure(
+                case_id=case_input.case_id,
+                expected=expected,
+                error=f"{type(exc).__name__}: {exc}",
+                agent_messages=messages,
+            )
     return CaseSuccess(
         case_id=case_input.case_id,
         expected=expected,
@@ -82,6 +91,8 @@ class AgentRunner:
         case failure, because the label is needed to represent a failure.
         """
         ids = self.loader.case_ids() if case_ids is None else case_ids
+        if not ids:
+            raise ValueError("at least one case is required")
         semaphore = asyncio.Semaphore(self.concurrency)
 
         async def bounded(case_id: str) -> RunCase:

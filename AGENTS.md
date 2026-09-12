@@ -8,6 +8,10 @@ Prioritize clear examples over abstractions, cleverness, and premature optimizat
 
 Code produced across the different workshop stages must remain modular and self-contained enough to be cleanly separated later (e.g. into discrete git tags or subdirectories). Maintain clear design boundaries between stages without introducing complex abstractions that confuse non-technical participants.
 
+## Prompts
+
+- Store each stage's prompt text in a `prompts/` directory beside that stage's main agent module. Keep prompt text out of Python modules.
+
 ## Synthetic data
 
 - `.data-generation/` is the instructor workspace for scripts that generate synthetic data.

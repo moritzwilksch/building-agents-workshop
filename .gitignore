@@ -225,3 +225,4 @@ __marimo__/
 
 # Generated experiment runs
 data/runs/
+data/runs.sqlite3
