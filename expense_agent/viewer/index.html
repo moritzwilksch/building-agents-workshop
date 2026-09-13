@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Expense agent runs</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@1.45.0/dist/umd/lucide.js"></script>
   </head>
   <body class="bg-slate-100 text-slate-900">
     <div class="mx-auto max-w-[1800px] p-6">
@@ -13,14 +14,14 @@
         <h1 class="mb-4 text-2xl font-semibold">Runs</h1>
         <div class="overflow-hidden rounded-xl bg-white shadow">
           <table class="w-full text-sm">
-            <thead class="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
+            <thead class="bg-slate-50 text-left text-xs font-medium text-slate-500">
               <tr>
                 <th class="px-4 py-3">Run</th>
                 <th class="px-4 py-3 text-right">Cases</th>
                 <th class="px-4 py-3 text-right">% correct</th>
                 <th class="px-4 py-3 text-right">% right decision</th>
                 <th class="px-4 py-3 text-right">$ overpaid</th>
-                <th class="px-4 py-3 text-right">avg. token cost</th>
+                <th class="px-4 py-3 text-right">Avg. token cost</th>
               </tr>
             </thead>
             <tbody id="runs-body" class="divide-y divide-slate-100"></tbody>
@@ -30,13 +31,19 @@
 
       <!-- Run details -->
       <section id="run-view" class="hidden">
-        <button id="back" class="mb-4 rounded-lg bg-white px-3 py-1.5 text-sm shadow hover:bg-slate-50">&larr; All runs</button>
+        <button id="back" class="mb-4 inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-sm shadow hover:bg-slate-50">
+          <i data-lucide="arrow-left" class="h-4 w-4"></i>
+          All runs
+        </button>
         <h1 id="run-title" class="mb-4 text-2xl font-semibold"></h1>
         <div id="run-metrics" class="mb-6 grid grid-cols-2 gap-4 md:grid-cols-6"></div>
 
         <div class="grid grid-cols-1 gap-4 xl:grid-cols-12">
           <div class="xl:col-span-2">
-            <h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">Cases</h2>
+            <h2 class="mb-2 flex items-center gap-1.5 text-sm font-semibold text-slate-500">
+              <i data-lucide="list" class="h-4 w-4"></i>
+              Cases
+            </h2>
             <ul id="case-list" class="max-h-[75vh] space-y-1 overflow-y-auto rounded-xl bg-white p-2 shadow"></ul>
           </div>
           <div class="space-y-4 xl:col-span-4">
@@ -44,7 +51,10 @@
             <div id="case-receipt" class="rounded-xl bg-white p-4 shadow"></div>
           </div>
           <div class="xl:col-span-6">
-            <h2 class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">Trajectory</h2>
+            <h2 class="mb-2 flex items-center gap-1.5 text-sm font-semibold text-slate-500">
+              <i data-lucide="route" class="h-4 w-4"></i>
+              Trajectory
+            </h2>
             <iframe id="trace" class="h-[75vh] w-full rounded-xl bg-white shadow" src="about:blank"></iframe>
           </div>
         </div>
@@ -66,9 +76,19 @@
         return response.json();
       }
 
-      function tile(label, value) {
+      // Renders any <i data-lucide> placeholders inserted since the last call.
+      // Icons are decorative: skip silently if the CDN script failed to load.
+      function refreshIcons() {
+        if (!window.lucide) return;
+        lucide.createIcons();
+      }
+
+      function tile(label, value, icon) {
         return `<div class="rounded-xl bg-white p-4 shadow">
-          <div class="text-xs uppercase tracking-wide text-slate-500">${label}</div>
+          <div class="flex items-center gap-1.5 text-xs font-medium text-slate-500">
+            <i data-lucide="${icon}" class="h-3.5 w-3.5"></i>
+            ${label}
+          </div>
           <div class="mt-1 text-xl font-semibold">${value}</div>
         </div>`;
       }
@@ -89,6 +109,7 @@
             </tr>`,
           )
           .join("");
+        refreshIcons();
       }
 
       async function showRun(runId) {
@@ -97,28 +118,34 @@
         currentRun = await getJson(`/api/runs/${runId}`);
         document.getElementById("run-title").textContent = currentRun.run_id;
         document.getElementById("run-metrics").innerHTML = [
-          tile("% correct", pct(currentRun.pass_rate)),
-          tile("% right decision", pct(currentRun.decision_accuracy)),
-          tile("$ overpaid", money(currentRun.overpaid)),
-          tile("avg. $ error", money(currentRun.mean_reimbursed_error)),
-          tile("avg. token cost", cost(currentRun.mean_cost)),
-          tile("cases", `${currentRun.total_cases}${currentRun.failed_cases ? ` / ${currentRun.failed_cases} failed` : ""}`),
+          tile("% correct", pct(currentRun.pass_rate), "percent"),
+          tile("% right decision", pct(currentRun.decision_accuracy), "scale"),
+          tile("$ overpaid", money(currentRun.overpaid), "dollar-sign"),
+          tile("Avg. $ error", money(currentRun.mean_reimbursed_error), "banknote"),
+          tile("Avg. token cost", cost(currentRun.mean_cost), "coins"),
+          tile("Cases", `${currentRun.total_cases}${currentRun.failed_cases ? ` / ${currentRun.failed_cases} failed` : ""}`, "layers"),
         ].join("");
         renderCaseList();
         if (currentRun.cases.length) showCase(currentRun.cases[0].case_id);
+        refreshIcons();
       }
 
       function renderCaseList(selected) {
         document.getElementById("case-list").innerHTML = currentRun.cases
           .map((row) => {
-            const mark = row.failed ? "✕" : row.correct ? "✓" : "!";
-            const color = row.failed ? "text-red-600" : row.correct ? "text-emerald-600" : "text-amber-600";
+            const [mark, color] = row.failed
+              ? ["x", "text-red-600"]
+              : row.correct
+                ? ["check", "text-emerald-600"]
+                : ["triangle-alert", "text-amber-600"];
             const active = row.case_id === selected ? "bg-sky-100" : "hover:bg-slate-50";
-            return `<li class="cursor-pointer rounded-lg px-3 py-2 text-sm ${active}" onclick="showCase('${row.case_id}')">
-              <span class="${color} font-semibold">${mark}</span> ${row.case_id}
+            return `<li class="flex cursor-pointer items-center gap-1.5 rounded-lg px-3 py-2 text-sm ${active}" onclick="showCase('${row.case_id}')">
+              <i data-lucide="${mark}" class="h-4 w-4 shrink-0 ${color}"></i>
+              ${row.case_id}
             </li>`;
           })
           .join("");
+        refreshIcons();
       }
 
       function diffRow(label, expected, actual) {
@@ -128,6 +155,13 @@
           <td class="py-1 pr-4">${expected}</td>
           <td class="py-1 font-medium">${actual}</td>
         </tr>`;
+      }
+
+      function heading(icon, text) {
+        return `<h3 class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+          <i data-lucide="${icon}" class="h-3.5 w-3.5"></i>
+          ${text}
+        </h3>`;
       }
 
       async function showCase(caseId) {
@@ -151,13 +185,13 @@
             )
             .join("");
           body = `<table class="w-full text-sm">
-              <thead><tr class="text-left text-xs uppercase tracking-wide text-slate-500">
-                <th class="pb-2"></th><th class="pb-2">expected</th><th class="pb-2">actual</th>
+              <thead><tr class="text-left text-xs font-medium text-slate-500">
+                <th class="pb-2"></th><th class="pb-2">Expected</th><th class="pb-2">Actual</th>
               </tr></thead>
               <tbody>
-                ${diffRow("decision", expected.decision, actual.decision)}
-                ${diffRow("reimbursed", money(Number(expected.reimbursed_amount)), money(Number(actual.reimbursed_amount)))}
-                ${diffRow("claimed", money(Number(expected.claimed_amount)), money(Number(actual.claimed_amount)))}
+                ${diffRow("Decision", expected.decision, actual.decision)}
+                ${diffRow("Reimbursed", money(Number(expected.reimbursed_amount)), money(Number(actual.reimbursed_amount)))}
+                ${diffRow("Claimed", money(Number(expected.claimed_amount)), money(Number(actual.claimed_amount)))}
               </tbody>
             </table>
             <div class="mt-3 flex gap-6 text-sm">
@@ -166,14 +200,14 @@
               <span class="text-slate-500">token cost <span class="font-medium text-slate-900">${cost(detail.cost)}</span></span>
               <span class="text-slate-500">tokens <span class="font-medium text-slate-900">${detail.tokens.toLocaleString()}</span></span>
             </div>
-            ${deltas ? `<h3 class="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Line items that differ</h3>
+            ${deltas ? `${heading("list", "Line items that differ")}
               <table class="w-full text-sm">
-                <thead><tr class="text-xs uppercase tracking-wide text-slate-500">
-                  <th class="pb-1 text-left">item</th><th class="pb-1 text-right">expected</th><th class="pb-1 text-right">actual</th><th class="pb-1 text-right">diff</th>
+                <thead><tr class="text-xs font-medium text-slate-500">
+                  <th class="pb-1 text-left">Item</th><th class="pb-1 text-right">Expected</th><th class="pb-1 text-right">Actual</th><th class="pb-1 text-right">Diff</th>
                 </tr></thead>
                 <tbody>${deltas}</tbody>
               </table>` : ""}
-            <h3 class="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Agent reasoning</h3>
+            ${heading("brain", "Agent reasoning")}
             <p class="mt-1 whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>`;
         }
         document.getElementById("case-detail").innerHTML = `<h2 class="mb-3 font-semibold">${caseId}</h2>${body}`;
@@ -182,9 +216,11 @@
             <img src="/api/cases/${caseId}/receipt" alt="receipt for ${caseId}" class="mx-auto max-h-[60vh] rounded-lg" />
           </a>`;
         document.getElementById("trace").src = `/api/runs/${encodeURIComponent(currentRun.run_id)}/cases/${caseId}/trace`;
+        refreshIcons();
       }
 
       document.getElementById("back").onclick = showRuns;
+      refreshIcons();
       showRuns();
     </script>
   </body>
