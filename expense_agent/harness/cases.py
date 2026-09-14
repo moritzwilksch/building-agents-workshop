@@ -14,6 +14,7 @@ Usage:
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -23,18 +24,25 @@ from expense_agent.label import CaseDecision
 DEFAULT_DATA_DIR = Path("data")
 
 RECEIPT_FILENAME = "receipt.jpg"
+INVOICE_FILENAME = "invoice.json"
 LABEL_FILENAME = "label.json"
 HANDBOOK_FILENAME = "handbook.pdf"
 
 
 class CaseInput(BaseModel):
-    """Case bundle passed to the agent as deps. Excludes the label."""
+    """Case bundle passed to the agent as deps. Excludes the label.
+
+    `note` is what the employee wrote when submitting the claim. It carries
+    the business purpose and attendee count that several policy rules turn
+    on, so it belongs in the agent's context beside the receipt.
+    """
 
     model_config = ConfigDict(extra="forbid")
 
     case_id: str = Field(min_length=1)
     receipt_image: Path
     handbook_pdf: Path
+    note: str | None = None
 
 
 class CaseLoader:
@@ -67,7 +75,13 @@ class CaseLoader:
             case_id=case_id,
             receipt_image=self._required(case_dir / RECEIPT_FILENAME),
             handbook_pdf=self._required(self.data_dir / HANDBOOK_FILENAME),
+            note=self.load_note(case_id),
         )
+
+    def load_note(self, case_id: str) -> str | None:
+        """Read the employee's submission note from the case invoice."""
+        path = self._required(self._case_dir(case_id) / INVOICE_FILENAME)
+        return json.loads(path.read_text(encoding="utf-8")).get("note")
 
     def load_expected(self, case_id: str) -> CaseDecision:
         """Read the ground-truth label for one case."""

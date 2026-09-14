@@ -20,10 +20,10 @@
                 <th class="px-4 py-3 text-right">Cases</th>
                 <th class="px-4 py-3 text-right">% correct</th>
                 <th class="px-4 py-3 text-right">% right decision</th>
-                <th class="px-4 py-3 text-right">$ overpaid</th>
-                <th class="px-4 py-3 text-right">$ underpaid</th>
-                <th class="px-4 py-3 text-right">Avg. $ error</th>
-                <th class="px-4 py-3 text-right">Avg. token cost</th>
+                <th class="px-4 py-3 text-right">€ overpaid</th>
+                <th class="px-4 py-3 text-right">€ underpaid</th>
+                <th class="px-4 py-3 text-right">Avg. € error</th>
+                <th class="px-4 py-3 text-right">Avg. token cost ($)</th>
               </tr>
             </thead>
             <tbody id="runs-body" class="divide-y divide-slate-100"></tbody>
@@ -49,9 +49,13 @@
             </h2>
             <ul id="case-list" class="max-h-[85vh] space-y-1 overflow-y-auto rounded-xl bg-white p-2 shadow"></ul>
           </div>
-          <div id="case-receipt" class="rounded-xl bg-white p-4 shadow xl:col-span-4"></div>
+          <div class="space-y-4 xl:col-span-4">
+            <div id="case-note" class="rounded-xl bg-white p-4 shadow"></div>
+            <div id="case-receipt" class="rounded-xl bg-white p-4 shadow"></div>
+          </div>
           <div class="space-y-4 xl:col-span-6">
             <div id="case-reasoning" class="rounded-xl bg-white p-4 shadow"></div>
+            <div id="case-truth" class="rounded-xl bg-white p-4 shadow"></div>
             <div id="case-diff" class="rounded-xl bg-white p-4 shadow"></div>
           </div>
         </div>
@@ -72,9 +76,15 @@
       const runView = document.getElementById("run-view");
       const traceView = document.getElementById("trace-view");
       let currentRun = null;
+      // Receipts are regenerated in place at a constant URL, so a browser can
+      // reuse a stale cached copy. A per-page-load version forces a refetch.
+      const receiptVersion = Date.now();
+      const receiptUrl = (caseId) => `/api/cases/${encodeURIComponent(caseId)}/receipt?v=${receiptVersion}`;
 
       const pct = (value) => (value === null || value === undefined ? "–" : (100 * value).toFixed(0) + "%");
-      const money = (value) => (value < 0 ? "-$" : "$") + Math.abs(value ?? 0).toFixed(2);
+      // Claim amounts are euros. Token cost is US dollars: that is how the
+      // model providers price it.
+      const money = (value) => (value < 0 ? "-€" : "€") + Math.abs(value ?? 0).toFixed(2);
       const cost = (value) => "$" + (value ?? 0).toFixed(4);
 
       async function getJson(url) {
@@ -131,10 +141,10 @@
         document.getElementById("run-metrics").innerHTML = [
           tile("% correct", pct(currentRun.pass_rate), "percent"),
           tile("% right decision", pct(currentRun.decision_accuracy), "scale"),
-          tile("$ overpaid", money(currentRun.overpaid), "dollar-sign"),
-          tile("$ underpaid", money(currentRun.underpaid), "dollar-sign"),
-          tile("Avg. $ error", money(currentRun.mean_reimbursed_error), "banknote"),
-          tile("Avg. token cost", cost(currentRun.mean_cost), "coins"),
+          tile("€ overpaid", money(currentRun.overpaid), "dollar-sign"),
+          tile("€ underpaid", money(currentRun.underpaid), "dollar-sign"),
+          tile("Avg. € error", money(currentRun.mean_reimbursed_error), "banknote"),
+          tile("Avg. token cost ($)", cost(currentRun.mean_cost), "coins"),
           tile("Cases", `${currentRun.total_cases}${currentRun.failed_cases ? ` / ${currentRun.failed_cases} failed` : ""}`, "layers"),
         ].join("");
         renderCaseList();
@@ -231,8 +241,11 @@
         const expected = detail.expected;
         const actual = detail.actual;
 
-        const receipt = `<a href="/api/cases/${caseId}/receipt" target="_blank">
-            <img src="/api/cases/${caseId}/receipt" alt="receipt for ${caseId}" class="mx-auto max-h-[80vh] w-full rounded-lg object-contain" />
+        const note = `${heading("sticky-note", "Employee note")}
+          <p class="mt-2 whitespace-pre-wrap text-sm ${detail.note ? "text-slate-700" : "text-slate-400"}">${detail.note ?? "No note submitted with this claim."}</p>`;
+
+        const receipt = `<a href="${receiptUrl(caseId)}" target="_blank">
+            <img src="${receiptUrl(caseId)}" alt="receipt for ${caseId}" class="mx-auto max-h-[80vh] w-full rounded-lg object-contain" />
           </a>`;
 
         let reasoning;
@@ -241,13 +254,7 @@
           reasoning = `<p class="rounded-lg bg-red-50 p-3 text-sm text-red-700">${detail.error ?? "case failed"}</p>`;
           diff = "";
         } else {
-          reasoning = `<div class="flex items-start justify-between gap-4">
-              <p class="whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>
-              <button onclick="showTrace('${caseId}')" class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-sky-700">
-                <i data-lucide="route" class="h-4 w-4"></i>
-                Inspect trajectory
-              </button>
-            </div>`;
+          reasoning = `<p class="mt-2 whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>`;
 
           const items = mergeItems(expected.line_items, actual.line_items);
           const itemRows = items
@@ -287,16 +294,25 @@
               ${statRow("decision", expected.decision === actual.decision
                 ? `<span class="text-emerald-700">${actual.decision}</span>`
                 : `<span class="text-slate-500">${expected.decision}</span> → <span class="text-red-600">${actual.decision}</span>`)}
-              ${statRow("$ error", money(detail.reimbursed_error))}
-              ${statRow("$ overpaid", money(detail.overpaid))}
-              ${statRow("$ underpaid", money(detail.underpaid))}
-              ${statRow("token cost", cost(detail.cost))}
+              ${statRow("€ error", money(detail.reimbursed_error))}
+              ${statRow("€ overpaid", money(detail.overpaid))}
+              ${statRow("€ underpaid", money(detail.underpaid))}
+              ${statRow("token cost ($)", cost(detail.cost))}
               ${statRow("tokens", detail.tokens.toLocaleString())}
             </dl>`;
         }
 
+        document.getElementById("case-note").innerHTML = note;
         document.getElementById("case-receipt").innerHTML = receipt;
-        document.getElementById("case-reasoning").innerHTML = `${heading("brain", "Agent reasoning")}${reasoning}`;
+        document.getElementById("case-reasoning").innerHTML = `<div class="flex items-center justify-between gap-4">
+            ${heading("brain", "Agent reasoning")}
+            <button onclick="showTrace('${caseId}')" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-sky-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-sky-700">
+              <i data-lucide="route" class="h-4 w-4"></i>
+              Inspect trajectory
+            </button>
+          </div>${reasoning}`;
+        document.getElementById("case-truth").innerHTML = `${heading("book-check", "Ground truth reasoning")}
+          <p class="mt-2 whitespace-pre-wrap text-sm text-slate-700">${expected.reasoning}</p>`;
         document.getElementById("case-diff").innerHTML = diff;
         refreshIcons();
       }

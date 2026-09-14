@@ -6,7 +6,7 @@ prices token usage per case, and persists the whole run with `RunStore`. Partici
 its prompt and tools. The harness grades `CaseDecision` output.
 
 The runner passes `CaseInput` as pydantic-ai deps and sends the receipt
-image beside the stage-specific prompt.
+image and the employee's submission note beside the stage-specific prompt.
 
 Usage:
     import asyncio
@@ -45,8 +45,9 @@ async def run_case(
     with capture_run_messages() as messages:
         try:
             receipt = BinaryContent.from_path(case_input.receipt_image)
+            note = case_input.note or "(none)"
             result = await agent.run(
-                [prompt, f"Case ID: {case_input.case_id}\nReceipt:", receipt],
+                [prompt, f"Case ID: {case_input.case_id}\nEmployee note: {note}\nReceipt:", receipt],
                 deps=case_input,
             )
             actual = CaseDecision.model_validate(result.output)

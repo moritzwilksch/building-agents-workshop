@@ -8,6 +8,12 @@ Prioritize clear examples over abstractions, cleverness, and premature optimizat
 
 Code produced across the different workshop stages must remain modular and self-contained enough to be cleanly separated later (e.g. into discrete git tags or subdirectories). Maintain clear design boundaries between stages without introducing complex abstractions that confuse non-technical participants.
 
+## Commands
+
+- Bench a stage: `pixi run python -m expense_agent.stage1.run [--cases case-0001 case-0002 case-0003] [--run-id NAME] [--model ID]`. Persists to `data/runs.sqlite3`.
+- View runs: `pixi run viewer`.
+- Rebuild handbook PDF (and figures): `pixi run -e data-generation compile-handbook`.
+
 ## Prompts
 
 - Store each stage's prompt text in a `prompts/` directory beside that stage's main agent module. Keep prompt text out of Python modules.

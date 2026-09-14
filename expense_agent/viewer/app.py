@@ -4,8 +4,11 @@ Serves a two-view interface: a table of all runs with their headline
 metrics, and a run detail view with per-case results, the receipt image,
 and the agent trajectory rendered by pydantic-ai-trace.
 
+Claim amounts are euros throughout; token cost is US dollars, as the
+model providers price it.
+
 Per-case token cost and token counts are stored with the run. Metrics
-the store does not keep (overpaid and underpaid dollars) are derived
+the store does not keep (euros overpaid and underpaid) are derived
 here from the stored messages and labels; costs for runs saved before
 cost tracking are derived from the stored messages.
 
@@ -26,7 +29,7 @@ from pydantic_ai.messages import ModelResponse
 from pydantic_ai_trace import TraceView
 
 from expense_agent.eval import evaluate
-from expense_agent.harness.cases import DEFAULT_DATA_DIR, RECEIPT_FILENAME
+from expense_agent.harness.cases import DEFAULT_DATA_DIR, RECEIPT_FILENAME, CaseLoader
 from expense_agent.tracking import CaseSuccess, Run, RunCase, RunStore
 from expense_agent.tracking.cost import messages_cost, messages_tokens
 
@@ -35,6 +38,7 @@ ZERO = Decimal("0")
 
 app = FastAPI(title="Expense agent runs")
 store = RunStore()
+loader = CaseLoader()
 
 
 def _case_cost(case: RunCase) -> Decimal:
@@ -96,6 +100,14 @@ def _run_summary(run: Run) -> dict[str, Any]:
     }
 
 
+def _case_note(case_id: str) -> str | None:
+    """The employee's submission note, or None if the case files are gone."""
+    try:
+        return loader.load_note(case_id)
+    except FileNotFoundError:
+        return None
+
+
 def _load_run(run_id: str) -> Run:
     try:
         return store.load(run_id)
@@ -133,7 +145,10 @@ def get_run(run_id: str) -> dict[str, Any]:
 def get_case(run_id: str, case_id: str) -> dict[str, Any]:
     """One case: the expected and actual decision plus their diff."""
     case = _find_case(_load_run(run_id), case_id)
-    detail = _case_row(case) | {"expected": case.expected.model_dump(mode="json")}
+    detail = _case_row(case) | {
+        "expected": case.expected.model_dump(mode="json"),
+        "note": _case_note(case_id),
+    }
     if isinstance(case, CaseSuccess):
         result = evaluate(case.expected, case.actual)
         detail |= {

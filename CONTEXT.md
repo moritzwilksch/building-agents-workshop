@@ -13,7 +13,7 @@ Each claim includes:
 
 The agent must determine:
 1. **Decision**: `approved`, `rejected`, or `partially_approved`.
-2. **Amount**: exact reimbursement in USD or EUR.
+2. **Amount**: exact reimbursement in EUR.
 3. **Policy rules**: citations that justify the decision.
 
 ## Workshop progression
