@@ -5,41 +5,49 @@
   "reimbursed_amount": 455.31,
   "line_items": [
     {
+      "id": 0,
       "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 1)",
       "claimed": 230.00,
       "reimbursed": 160.00
     },
     {
+      "id": 1,
       "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 2)",
       "claimed": 230.00,
       "reimbursed": 160.00
     },
     {
+      "id": 2,
       "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
       "claimed": 28.00,
       "reimbursed": 25.00
     },
     {
+      "id": 3,
       "description": "Minibar: Gold-Leaf Salted Marcona Almonds (45g tin)",
       "claimed": 14.50,
       "reimbursed": 0.00
     },
     {
+      "id": 4,
       "description": "Minibar: Artisan Organic Fermented Mate Soda",
       "claimed": 16.00,
       "reimbursed": 0.00
     },
     {
+      "id": 5,
       "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
       "claimed": 70.00,
       "reimbursed": 60.00
     },
     {
+      "id": 6,
       "description": "City tax",
       "claimed": 11.50,
       "reimbursed": 11.50
     },
     {
+      "id": 7,
       "description": "VAT",
       "claimed": 56.88,
       "reimbursed": 38.81

@@ -5,36 +5,43 @@
   "reimbursed_amount": 225.05,
   "line_items": [
     {
+      "id": 0,
       "description": "Wagyu & Bone Marrow Gyoza (6 pcs)",
       "claimed": 36.00,
       "reimbursed": 36.00
     },
     {
+      "id": 1,
       "description": "Smoked Ghost Pepper Miso Ramen",
       "claimed": 69.00,
       "reimbursed": 69.00
     },
     {
+      "id": 2,
       "description": "Charred King Oyster Mushroom Bao",
       "claimed": 14.50,
       "reimbursed": 14.50
     },
     {
+      "id": 3,
       "description": "Yuzu Basil Craft Soda",
       "claimed": 13.00,
       "reimbursed": 13.00
     },
     {
+      "id": 4,
       "description": "Hibiki Japanese Harmony Highball",
       "claimed": 51.00,
       "reimbursed": 46.05
     },
     {
+      "id": 5,
       "description": "Black Sesame Matcha Lava Cake",
       "claimed": 21.00,
       "reimbursed": 21.00
     },
     {
+      "id": 6,
       "description": "Tip",
       "claimed": 25.50,
       "reimbursed": 25.50

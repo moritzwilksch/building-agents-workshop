@@ -8,7 +8,7 @@
   "currency": "EUR",
   "vendor": {
     "name": "KreativWerk & TechBedarf Kreuzberg GmbH",
-    "address": "Holzmarktstra\u00dfe 25",
+    "address": "Holzmarktstraße 25",
     "city": "Berlin",
     "postal_code": "10243",
     "country": "DE",
@@ -66,5 +66,32 @@
   ],
   "total_amount": "834.19",
   "paid": true,
-  "payment_terms": "Net 14"
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "amount": "280"
+    },
+    {
+      "id": 1,
+      "description": "Boutique USB-C Soldering Iron TS80P (Silver Pro Edition)",
+      "amount": "198"
+    },
+    {
+      "id": 2,
+      "description": "Glow-in-the-Dark Gaffer Tape (50mm x 25m Roll)",
+      "amount": "78"
+    },
+    {
+      "id": 3,
+      "description": "Office Air-Revival Monster Ficus (Rental & Staging Deposit)",
+      "amount": "145"
+    },
+    {
+      "id": 4,
+      "description": "USt 19%",
+      "amount": "133.19"
+    }
+  ]
 }

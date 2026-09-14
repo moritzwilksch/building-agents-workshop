@@ -5,11 +5,13 @@
   "reimbursed_amount": 51.50,
   "line_items": [
     {
+      "id": 0,
       "description": "Taxi fare",
       "claimed": 46.50,
       "reimbursed": 46.50
     },
     {
+      "id": 1,
       "description": "Tip",
       "claimed": 5.00,
       "reimbursed": 5.00

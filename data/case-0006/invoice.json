@@ -8,7 +8,7 @@
   "currency": "EUR",
   "vendor": {
     "name": "Urban Canopy & Foliage Design GmbH",
-    "address": "G\u00e4rtnerstra\u00dfe 44",
+    "address": "Gärtnerstraße 44",
     "city": "Berlin",
     "postal_code": "10245",
     "country": "DE",
@@ -66,5 +66,32 @@
   ],
   "total_amount": "556.8",
   "paid": true,
-  "payment_terms": "Net 14"
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Monstera Deliciosa (Mature Specimen, 1.8m) - Monthly Botanical Office Rental",
+      "amount": "130"
+    },
+    {
+      "id": 1,
+      "description": "Ficus Lyrata Fiddle Leaf Fig (Large, Self-Watering Planter) Rental",
+      "amount": "165"
+    },
+    {
+      "id": 2,
+      "description": "Emergency Biophilic Acoustic Moss Wall Revival & Foliage Grooming Service",
+      "amount": "145"
+    },
+    {
+      "id": 3,
+      "description": "Organic Neem Oil Foliar Spray & Plant Tonic (500ml)",
+      "amount": "27.9"
+    },
+    {
+      "id": 4,
+      "description": "USt 19%",
+      "amount": "88.9"
+    }
+  ]
 }

@@ -8,7 +8,7 @@
   "hotel": {
     "name": "The Urban Alpaca Boutique Hotel & Spa",
     "address": "Kaiserswerther Str. 380",
-    "city": "D\u00fcsseldorf",
+    "city": "Düsseldorf",
     "postal_code": "40474",
     "country": "DE",
     "tax_id": "DE298374112",
@@ -87,5 +87,47 @@
     "card_brand": "Mastercard",
     "last_four": "4419",
     "auth_code": "781044"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Room Charge - Night 1 (Nov 14)",
+      "amount": "195.00"
+    },
+    {
+      "id": 1,
+      "description": "Room Charge - Night 2 (Nov 15)",
+      "amount": "195.00"
+    },
+    {
+      "id": 2,
+      "description": "Express Emergency Dry Cleaning (1x Silk Tie red wine extraction)",
+      "amount": "28.00"
+    },
+    {
+      "id": 3,
+      "description": "Artisanal Smoked Rosemary Almonds & Craft Botanical Tonic",
+      "amount": "18.00"
+    },
+    {
+      "id": 4,
+      "description": "Minibar Craft IPA (Altstadt Brauhaus)",
+      "amount": "16.00"
+    },
+    {
+      "id": 5,
+      "description": "'Pre-Keynote De-Stressor' Neck & Shoulder Express Massage (30 min)",
+      "amount": "65.00"
+    },
+    {
+      "id": 6,
+      "description": "City tax",
+      "amount": "12.50"
+    },
+    {
+      "id": 7,
+      "description": "VAT",
+      "amount": "50.99"
+    }
+  ]
 }

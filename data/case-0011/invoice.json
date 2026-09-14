@@ -10,6 +10,7 @@
     "city": "Berlin",
     "postal_code": "10969",
     "country": "DE",
+    "tax_id": null,
     "phone": "+49 171 5160461"
   },
   "receipt_number": "114.493",
@@ -41,5 +42,17 @@
     "card_brand": "Visa",
     "last_four": "7241",
     "auth_code": "AUTH-99120"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "L. M zum Mitnehmen",
+      "amount": "84.00"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "25.20"
+    }
+  ]
 }

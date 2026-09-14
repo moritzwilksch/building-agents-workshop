@@ -63,7 +63,7 @@
       "is_alcohol": false
     },
     {
-      "description": "Mineral Water (Rh\u00f6nQuelle Sparkling 0.75L)",
+      "description": "Mineral Water (RhönQuelle Sparkling 0.75L)",
       "quantity": "2",
       "unit_price": "7.5",
       "total_price": "15",
@@ -96,5 +96,47 @@
     "card_brand": "Mastercard",
     "last_four": "7134",
     "auth_code": "AUTH-849201"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Dry-Aged Smoked Duck Breast with Fermented Plum",
+      "amount": "58"
+    },
+    {
+      "id": 1,
+      "description": "Black Garlic & Porcini Truffle Risotto",
+      "amount": "46"
+    },
+    {
+      "id": 2,
+      "description": "Charred Octo-Tentacle with Saffron Foam",
+      "amount": "21.5"
+    },
+    {
+      "id": 3,
+      "description": "Ghost Pepper Mezcalita Cocktail",
+      "amount": "43.5"
+    },
+    {
+      "id": 4,
+      "description": "Pine-Infused Alpine Botanical Spritz (0% ABV)",
+      "amount": "9.5"
+    },
+    {
+      "id": 5,
+      "description": "Mineral Water (RhönQuelle Sparkling 0.75L)",
+      "amount": "15"
+    },
+    {
+      "id": 6,
+      "description": "Smoked Cardamom Ganache Tartlet",
+      "amount": "28.5"
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "amount": "25"
+    }
+  ]
 }

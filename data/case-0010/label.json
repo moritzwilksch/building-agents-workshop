@@ -5,36 +5,43 @@
   "reimbursed_amount": 150.00,
   "line_items": [
     {
+      "id": 0,
       "description": "Spicy Sichuan Wontons in Chili Oil (12 pcs)",
       "claimed": 19.60,
       "reimbursed": 19.60
     },
     {
+      "id": 1,
       "description": "Chongqing Fiery Numbing Dry Hotpot (Bullfrog & Tofu)",
       "claimed": 32.50,
       "reimbursed": 32.50
     },
     {
+      "id": 2,
       "description": "Hand-Pulled Biang Biang Ribbon Noodles with Braised Cumin Lamb",
       "claimed": 37.00,
       "reimbursed": 37.00
     },
     {
+      "id": 3,
       "description": "Tsingtao 1903 Craft Lager (0.64L)",
       "claimed": 22.50,
       "reimbursed": 22.50
     },
     {
+      "id": 4,
       "description": "Fermented Plum & Smoked Hawthorn Cordial (Jugs)",
       "claimed": 13.00,
       "reimbursed": 13.00
     },
     {
+      "id": 5,
       "description": "Sweet Crispy Brown Sugar Glutinous Rice Cakes",
       "claimed": 8.90,
       "reimbursed": 8.90
     },
     {
+      "id": 6,
       "description": "Tip",
       "claimed": 16.50,
       "reimbursed": 16.50

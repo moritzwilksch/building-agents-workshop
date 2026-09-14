@@ -6,7 +6,7 @@
   "currency": "EUR",
   "vendor": {
     "name": "Dragon Breath Mala House & Noodle Bar",
-    "address": "Torstra\u00dfe 142",
+    "address": "Torstraße 142",
     "city": "Berlin",
     "postal_code": "10119",
     "country": "DE",
@@ -87,5 +87,42 @@
     "card_brand": "Mastercard",
     "last_four": "6614",
     "auth_code": "849201"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Spicy Sichuan Wontons in Chili Oil (12 pcs)",
+      "amount": "19.6"
+    },
+    {
+      "id": 1,
+      "description": "Chongqing Fiery Numbing Dry Hotpot (Bullfrog & Tofu)",
+      "amount": "32.5"
+    },
+    {
+      "id": 2,
+      "description": "Hand-Pulled Biang Biang Ribbon Noodles with Braised Cumin Lamb",
+      "amount": "37"
+    },
+    {
+      "id": 3,
+      "description": "Tsingtao 1903 Craft Lager (0.64L)",
+      "amount": "22.5"
+    },
+    {
+      "id": 4,
+      "description": "Fermented Plum & Smoked Hawthorn Cordial (Jugs)",
+      "amount": "13"
+    },
+    {
+      "id": 5,
+      "description": "Sweet Crispy Brown Sugar Glutinous Rice Cakes",
+      "amount": "8.9"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "16.5"
+    }
+  ]
 }

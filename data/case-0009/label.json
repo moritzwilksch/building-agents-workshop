@@ -5,41 +5,49 @@
   "reimbursed_amount": 459.11,
   "line_items": [
     {
+      "id": 0,
       "description": "Room Charge - Night 1 (Nov 14)",
       "claimed": 195.00,
       "reimbursed": 195.00
     },
     {
+      "id": 1,
       "description": "Room Charge - Night 2 (Nov 15)",
       "claimed": 195.00,
       "reimbursed": 195.00
     },
     {
+      "id": 2,
       "description": "Express Emergency Dry Cleaning (1x Silk Tie red wine extraction)",
       "claimed": 28.00,
       "reimbursed": 25.00
     },
     {
+      "id": 3,
       "description": "Artisanal Smoked Rosemary Almonds & Craft Botanical Tonic",
       "claimed": 18.00,
       "reimbursed": 0.00
     },
     {
+      "id": 4,
       "description": "Minibar Craft IPA (Altstadt Brauhaus)",
       "claimed": 16.00,
       "reimbursed": 0.00
     },
     {
+      "id": 5,
       "description": "'Pre-Keynote De-Stressor' Neck & Shoulder Express Massage (30 min)",
       "claimed": 65.00,
       "reimbursed": 0.00
     },
     {
+      "id": 6,
       "description": "City tax",
       "claimed": 12.50,
       "reimbursed": 12.50
     },
     {
+      "id": 7,
       "description": "VAT",
       "claimed": 50.99,
       "reimbursed": 31.61

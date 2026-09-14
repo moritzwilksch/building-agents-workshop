@@ -157,7 +157,9 @@ def get_receipt(case_id: str) -> FileResponse:
     path = DEFAULT_DATA_DIR / case_id / RECEIPT_FILENAME
     if not path.is_file():
         raise HTTPException(status_code=404, detail=f"receipt not found: {path}")
-    return FileResponse(path)
+    # Receipts are regenerated in place; without this, browsers heuristically
+    # cache the unchanged URL and keep showing the previous image.
+    return FileResponse(path, headers={"Cache-Control": "no-cache"})
 
 
 if __name__ == "__main__":

@@ -5,41 +5,49 @@
   "reimbursed_amount": 504.35,
   "line_items": [
     {
+      "id": 0,
       "description": "Room Charge - Night 1 (Mar 12)",
       "claimed": 185.00,
       "reimbursed": 185.00
     },
     {
+      "id": 1,
       "description": "Room Charge - Night 2 (Mar 13)",
       "claimed": 185.00,
       "reimbursed": 185.00
     },
     {
+      "id": 2,
       "description": "Emergency Express Silk Shirt De-Staining (1-hour turnaround)",
       "claimed": 38.50,
       "reimbursed": 25.00
     },
     {
+      "id": 3,
       "description": "Midnight Artisanal Truffle Cashews & Botanical Craft Tonic",
       "claimed": 18.00,
       "reimbursed": 0.00
     },
     {
+      "id": 4,
       "description": "Overpriced Single Toblerone (100g)",
       "claimed": 13.00,
       "reimbursed": 0.00
     },
     {
+      "id": 5,
       "description": "Overnight Valet Parking with Ultra-Fast EV Surcharge",
       "claimed": 70.00,
       "reimbursed": 60.00
     },
     {
+      "id": 6,
       "description": "City tax",
       "claimed": 9.00,
       "reimbursed": 9.00
     },
     {
+      "id": 7,
       "description": "VAT",
       "claimed": 50.71,
       "reimbursed": 40.35

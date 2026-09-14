@@ -15,14 +15,17 @@ from expense_agent.label import CaseDecision
 
 
 class LineItemDelta(BaseModel):
-    """Reimbursement delta for one receipt line, matched by description.
+    """Reimbursement delta for one receipt line, matched by line id.
 
     Missing expected items appear with `actual_reimbursed=0`; extra
-    actual items appear with `expected_reimbursed=0`.
+    actual items appear with `expected_reimbursed=0`. `description` is
+    the ground-truth wording, falling back to the agent's for an item
+    the ground truth does not have.
     """
 
     model_config = ConfigDict(extra="forbid")
 
+    id: int
     description: str
     expected_reimbursed: Decimal
     actual_reimbursed: Decimal
@@ -47,26 +50,29 @@ class CaseEval(BaseModel):
 
 def evaluate(expected: CaseDecision, actual: CaseDecision) -> CaseEval:
     """Grade one agent decision against its ground-truth label."""
-    expected_items = {item.description: item.reimbursed for item in expected.line_items}
-    actual_items = {item.description: item.reimbursed for item in actual.line_items}
+    expected_items = {item.id: item for item in expected.line_items}
+    actual_items = {item.id: item for item in actual.line_items}
 
     deltas: list[LineItemDelta] = []
-    for description, expected_reimbursed in expected_items.items():
-        actual_reimbursed = actual_items.get(description, Decimal("0"))
-        if actual_reimbursed != expected_reimbursed:
+    for line_id, expected_item in expected_items.items():
+        actual_item = actual_items.get(line_id)
+        actual_reimbursed = actual_item.reimbursed if actual_item else Decimal("0")
+        if actual_reimbursed != expected_item.reimbursed:
             deltas.append(LineItemDelta(
-                description=description,
-                expected_reimbursed=expected_reimbursed,
+                id=line_id,
+                description=expected_item.description,
+                expected_reimbursed=expected_item.reimbursed,
                 actual_reimbursed=actual_reimbursed,
-                delta=actual_reimbursed - expected_reimbursed,
+                delta=actual_reimbursed - expected_item.reimbursed,
             ))
-    for description, actual_reimbursed in actual_items.items():
-        if description not in expected_items:
+    for line_id, actual_item in actual_items.items():
+        if line_id not in expected_items:
             deltas.append(LineItemDelta(
-                description=description,
+                id=line_id,
+                description=actual_item.description,
                 expected_reimbursed=Decimal("0"),
-                actual_reimbursed=actual_reimbursed,
-                delta=actual_reimbursed,
+                actual_reimbursed=actual_item.reimbursed,
+                delta=actual_item.reimbursed,
             ))
 
     reimbursed_error = abs(expected.reimbursed_amount - actual.reimbursed_amount)

@@ -7,6 +7,7 @@ Pydantic model instance using PydanticAI and Gemini.
 from __future__ import annotations
 
 import argparse
+import json
 import random
 from datetime import date, datetime
 from decimal import Decimal
@@ -43,6 +44,20 @@ class LineItem(BaseModel):
     tax_rate: Decimal | None = None
     category: str = LineItemCategory.MEAL
     is_alcohol: bool = False
+
+
+class ChargeLine(BaseModel):
+    """One numbered charge as it appears on the receipt, top to bottom.
+
+    Every invoice type carries its charges in different fields (items, room
+    charges, fares, taxes, tips). `charge_lines` flattens them into this one
+    numbered list so `invoice.json` and `label.json` share the same ids and a
+    label entry always refers to exactly one receipt line.
+    """
+
+    id: int
+    description: str
+    amount: Decimal
 
 
 class TaxItem(BaseModel):
@@ -272,6 +287,57 @@ InvoiceCase = Annotated[
 
 invoice_adapter = TypeAdapter(InvoiceCase)
 
+
+def charge_lines(invoice: InvoiceCase) -> list[ChargeLine]:
+    """Number every charge on the invoice in the order it appears on paper.
+
+    Only charges that add to `total_amount` get a line. A tax already baked
+    into the item prices (a restaurant's MwSt) is not its own charge.
+    """
+    charges: list[tuple[str, Decimal]] = []
+
+    match invoice:
+        case TaxiReceipt():
+            charges.append(("Taxi fare", invoice.fare_amount))
+            charges.append(("Tip", invoice.tip_amount))
+        case RestaurantReceipt():
+            charges += [(item.description, item.total_price) for item in invoice.items]
+            charges.append(("Tip", invoice.tip_amount))
+        case HotelFolio():
+            charges += [(item.description, item.total_price) for item in invoice.room_charges]
+            charges += [(item.description, item.total_price) for item in invoice.incidentals]
+            charges.append(("City tax", invoice.city_tax))
+            charges.append(("VAT", invoice.vat))
+        case FlightInvoice():
+            charges.append(("Base fare", invoice.base_fare))
+            charges += [(tax.name, tax.amount) for tax in invoice.taxes_and_fees]
+        case TrainTicket():
+            charges.append(("Ticket fare", invoice.ticket_fare))
+            charges.append(("Seat reservation", invoice.seat_reservation_fee))
+        case FuelReceipt():
+            charges.append((f"{invoice.fuel_type} ({invoice.liters} L)", invoice.fuel_total))
+            charges += [(item.description, item.total_price) for item in invoice.non_fuel_items]
+        case StandardInvoice():
+            charges += [(item.description, item.total_price) for item in invoice.items]
+            charges += [(tax.name, tax.amount) for tax in invoice.taxes]
+        case CardSlip():
+            charges.append((invoice.merchant_name, invoice.total_amount))
+
+    # Zero-amount charges (no tip, no seat reservation) never appear on paper.
+    return [
+        ChargeLine(id=index, description=description, amount=amount)
+        for index, (description, amount) in enumerate(
+            [(description, amount) for description, amount in charges if amount]
+        )
+    ]
+
+
+def invoice_json(invoice: InvoiceCase) -> str:
+    """Serialize an invoice with its numbered `charges` list appended."""
+    data = invoice.model_dump(mode="json")
+    data["charges"] = [charge.model_dump(mode="json") for charge in charge_lines(invoice)]
+    return json.dumps(data, indent=2, ensure_ascii=False)
+
 InvoiceType = Literal["hotel", "standard", "restaurant", "taxi", "flight", "train", "card_slip", "fuel"]
 
 # Sampling weights for invoice types.
@@ -382,14 +448,14 @@ def main() -> None:
 
             invoice = generate_invoice(chosen_type, seed=case_seed)
             output_path = case_dir / "invoice.json"
-            output_path.write_text(invoice.model_dump_json(indent=2), encoding="utf-8")
+            output_path.write_text(invoice_json(invoice), encoding="utf-8")
             print(f"[{case_name}] Saved to {output_path}")
     else:
         chosen_type = args.type if args.type else sample_invoice_type(rng)
         print(f"Sampled invoice type: {chosen_type} (seed={args.seed})")
         invoice = generate_invoice(chosen_type, seed=args.seed)
         print("\nGenerated Invoice Object:")
-        print(invoice.model_dump_json(indent=2))
+        print(invoice_json(invoice))
 
 
 if __name__ == "__main__":

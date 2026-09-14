@@ -5,21 +5,25 @@
   "reimbursed_amount": 506.68,
   "line_items": [
     {
+      "id": 0,
       "description": "Base fare",
       "claimed": 389.00,
       "reimbursed": 389.00
     },
     {
+      "id": 1,
       "description": "German Air Transport Tax (LuftVSt)",
       "claimed": 52.48,
       "reimbursed": 52.48
     },
     {
+      "id": 2,
       "description": "Passenger Service Charge (Domestic)",
       "claimed": 41.20,
       "reimbursed": 41.20
     },
     {
+      "id": 3,
       "description": "Carrier Imposed Surcharge (YQ)",
       "claimed": 24.00,
       "reimbursed": 24.00

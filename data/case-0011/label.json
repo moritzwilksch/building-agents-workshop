@@ -5,11 +5,13 @@
   "reimbursed_amount": 25.00,
   "line_items": [
     {
+      "id": 0,
       "description": "L. M zum Mitnehmen",
       "claimed": 84.00,
       "reimbursed": 25.00
     },
     {
+      "id": 1,
       "description": "Tip",
       "claimed": 25.20,
       "reimbursed": 0.00

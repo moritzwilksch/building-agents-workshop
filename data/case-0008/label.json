@@ -5,26 +5,31 @@
   "reimbursed_amount": 834.19,
   "line_items": [
     {
+      "id": 0,
       "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
       "claimed": 280.00,
       "reimbursed": 280.00
     },
     {
+      "id": 1,
       "description": "Boutique USB-C Soldering Iron TS80P (Silver Pro Edition)",
       "claimed": 198.00,
       "reimbursed": 198.00
     },
     {
+      "id": 2,
       "description": "Glow-in-the-Dark Gaffer Tape (50mm x 25m Roll)",
       "claimed": 78.00,
       "reimbursed": 78.00
     },
     {
+      "id": 3,
       "description": "Office Air-Revival Monster Ficus (Rental & Staging Deposit)",
       "claimed": 145.00,
       "reimbursed": 145.00
     },
     {
+      "id": 4,
       "description": "USt 19%",
       "claimed": 133.19,
       "reimbursed": 133.19

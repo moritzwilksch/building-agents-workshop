@@ -59,5 +59,27 @@
     "card_brand": "Mastercard",
     "last_four": "8201",
     "auth_code": "749102"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "389"
+    },
+    {
+      "id": 1,
+      "description": "German Air Transport Tax (LuftVSt)",
+      "amount": "52.48"
+    },
+    {
+      "id": 2,
+      "description": "Passenger Service Charge (Domestic)",
+      "amount": "41.2"
+    },
+    {
+      "id": 3,
+      "description": "Carrier Imposed Surcharge (YQ)",
+      "amount": "24"
+    }
+  ]
 }

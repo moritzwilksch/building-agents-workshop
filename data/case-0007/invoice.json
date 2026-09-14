@@ -87,5 +87,47 @@
     "card_brand": "MasterCard",
     "last_four": "9102",
     "auth_code": "781294"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 1)",
+      "amount": "230"
+    },
+    {
+      "id": 1,
+      "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 2)",
+      "amount": "230"
+    },
+    {
+      "id": 2,
+      "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
+      "amount": "28"
+    },
+    {
+      "id": 3,
+      "description": "Minibar: Gold-Leaf Salted Marcona Almonds (45g tin)",
+      "amount": "14.5"
+    },
+    {
+      "id": 4,
+      "description": "Minibar: Artisan Organic Fermented Mate Soda",
+      "amount": "16"
+    },
+    {
+      "id": 5,
+      "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
+      "amount": "70"
+    },
+    {
+      "id": 6,
+      "description": "City tax",
+      "amount": "11.5"
+    },
+    {
+      "id": 7,
+      "description": "VAT",
+      "amount": "56.88"
+    }
+  ]
 }

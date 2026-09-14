@@ -7,7 +7,7 @@
   "vendor_name": "Funk Taxi Berlin eG",
   "taxi_license": "B-TX-5519",
   "pickup": "Hotel Oderberger, Oderberger Str. 57, 10435 Berlin",
-  "dropoff": "Messe Berlin (South Entrance), Jaff\u00e9stra\u00dfe, 14055 Berlin",
+  "dropoff": "Messe Berlin (South Entrance), Jafféstraße, 14055 Berlin",
   "distance_km": "18.4",
   "fare_amount": "46.5",
   "tip_amount": "5",
@@ -17,5 +17,17 @@
     "card_brand": "Visa",
     "last_four": "4821",
     "auth_code": "72941X"
-  }
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "amount": "46.5"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "5"
+    }
+  ]
 }

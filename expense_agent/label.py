@@ -20,11 +20,17 @@ Decision = Literal["approved", "partially_approved", "rejected"]
 
 
 class LineItem(BaseModel):
-    """One receipt line: what was charged and what we reimburse."""
+    """One receipt line: what was charged and what we reimburse.
+
+    `id` is the line's position on the receipt, numbered from 0 top to
+    bottom with the tip last. Evaluation matches items by `id`, so the
+    agent's free-form `description` never has to match ours verbatim.
+    """
 
     # Reject unknown fields so typos in JSON fail loudly.
     model_config = ConfigDict(extra="forbid")
 
+    id: int = Field(ge=0)
     description: str = Field(min_length=1)
     claimed: Decimal = Field(ge=0)
     reimbursed: Decimal = Field(ge=0)
@@ -46,6 +52,13 @@ class CaseDecision(BaseModel):
     reimbursed_amount: Decimal = Field(ge=0)
     line_items: list[LineItem] = Field(min_length=1)
     reasoning: str = Field(min_length=1)
+
+    @model_validator(mode="after")
+    def check_line_item_ids(self) -> Self:
+        ids = [item.id for item in self.line_items]
+        if ids != list(range(len(ids))):
+            raise ValueError(f"line item ids must be 0..{len(ids) - 1} in receipt order, got {ids}")
+        return self
 
     @model_validator(mode="after")
     def check_amounts(self) -> Self:

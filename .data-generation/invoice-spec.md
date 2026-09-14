@@ -32,6 +32,36 @@ To create rich, realistic failure modes and test cases across Stages 1–4, invo
 
 ---
 
+## Numbered charges
+
+Each invoice archetype keeps its charges in different fields (`items`,
+`room_charges` plus `incidentals`, `base_fare` plus `taxes_and_fees`, tips,
+city tax, VAT). After generation, `charge_lines` in `generate_invoice.py`
+flattens them into one list in the order they appear on the printed receipt,
+top to bottom, and writes it to `invoice.json` as `charges`:
+
+```json
+"charges": [
+  { "id": 0, "description": "Dry-Aged Smoked Duck Breast", "amount": "58" },
+  { "id": 7, "description": "Tip", "amount": "25" }
+]
+```
+
+Rules:
+- One entry per charge that adds to `total_amount`; the amounts sum to it.
+- A tax already included in the item prices (a restaurant's MwSt) is not a
+  charge; one added on top (a standard invoice's USt, a hotel's VAT) is.
+- Zero-amount charges (no tip, no seat reservation) are dropped.
+- Ids run `0..n-1` in receipt order.
+
+`label.json` reuses these ids one-to-one, so evaluation matches an agent's
+line items to the ground truth by `id` rather than by description text. The
+`charges` list is metadata for labeling and evaluation only: the image
+generator validates `invoice.json` against the archetype schema, which
+ignores the field, so ids never appear on the rendered receipt.
+
+---
+
 ## Discriminated Union Pydantic Schema
 
 ```python

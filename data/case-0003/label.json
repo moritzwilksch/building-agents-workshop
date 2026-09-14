@@ -5,26 +5,31 @@
   "reimbursed_amount": 718.12,
   "line_items": [
     {
+      "id": 0,
       "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
       "claimed": 249.99,
       "reimbursed": 249.99
     },
     {
+      "id": 1,
       "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
       "claimed": 189.50,
       "reimbursed": 189.50
     },
     {
+      "id": 2,
       "description": "High-Density Fog Fluid (5L jug) (x2)",
       "claimed": 59.00,
       "reimbursed": 59.00
     },
     {
+      "id": 3,
       "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered) (x3)",
       "claimed": 104.97,
       "reimbursed": 104.97
     },
     {
+      "id": 4,
       "description": "MwSt (19%)",
       "claimed": 114.66,
       "reimbursed": 114.66

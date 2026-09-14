@@ -66,5 +66,32 @@
   ],
   "total_amount": "718.12",
   "paid": true,
-  "payment_terms": "Immediate payment via Corporate Credit Card"
+  "payment_terms": "Immediate payment via Corporate Credit Card",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "amount": "249.99"
+    },
+    {
+      "id": 1,
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "amount": "189.5"
+    },
+    {
+      "id": 2,
+      "description": "High-Density Fog Fluid (5L jug)",
+      "amount": "59"
+    },
+    {
+      "id": 3,
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered)",
+      "amount": "104.97"
+    },
+    {
+      "id": 4,
+      "description": "MwSt (19%)",
+      "amount": "114.66"
+    }
+  ]
 }
