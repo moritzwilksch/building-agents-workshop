@@ -26,7 +26,6 @@
       "quantity": "1",
       "unit_price": "185",
       "total_price": "185",
-      "tax_rate": "0.07",
       "category": "accommodation",
       "is_alcohol": false
     },
@@ -35,7 +34,6 @@
       "quantity": "1",
       "unit_price": "185",
       "total_price": "185",
-      "tax_rate": "0.07",
       "category": "accommodation",
       "is_alcohol": false
     }
@@ -46,7 +44,6 @@
       "quantity": "1",
       "unit_price": "38.5",
       "total_price": "38.5",
-      "tax_rate": "0.19",
       "category": "laundry",
       "is_alcohol": false
     },
@@ -55,7 +52,6 @@
       "quantity": "1",
       "unit_price": "18",
       "total_price": "18",
-      "tax_rate": "0.19",
       "category": "minibar",
       "is_alcohol": false
     },
@@ -64,7 +60,6 @@
       "quantity": "2",
       "unit_price": "6.5",
       "total_price": "13",
-      "tax_rate": "0.19",
       "category": "minibar",
       "is_alcohol": false
     },
@@ -73,15 +68,15 @@
       "quantity": "2",
       "unit_price": "35",
       "total_price": "70",
-      "tax_rate": "0.19",
       "category": "parking",
       "is_alcohol": false
     }
   ],
   "subtotal": "509.50",
   "city_tax": "9.00",
-  "vat": "50.71",
-  "total_amount": "569.21",
+  "vat_rate": "0.07",
+  "vat": "35.67",
+  "total_amount": "554.17",
   "paid": true,
   "card": {
     "card_brand": "Mastercard",
@@ -127,7 +122,7 @@
     {
       "id": 7,
       "description": "VAT",
-      "amount": "50.71"
+      "amount": "35.67"
     }
   ]
 }

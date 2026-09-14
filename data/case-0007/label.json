@@ -1,57 +1,57 @@
 {
   "case_id": "case-0007",
   "decision": "partially_approved",
-  "claimed_amount": 656.88,
-  "reimbursed_amount": 455.31,
+  "claimed_amount": 641.2,
+  "reimbursed_amount": 444.85,
   "line_items": [
     {
       "id": 0,
       "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 1)",
-      "claimed": 230.00,
-      "reimbursed": 160.00
+      "claimed": 230.0,
+      "reimbursed": 160.0
     },
     {
       "id": 1,
       "description": "Room Charge - Deluxe Spree-View Atelier Suite (Night 2)",
-      "claimed": 230.00,
-      "reimbursed": 160.00
+      "claimed": 230.0,
+      "reimbursed": 160.0
     },
     {
       "id": 2,
       "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
-      "claimed": 28.00,
-      "reimbursed": 25.00
+      "claimed": 28.0,
+      "reimbursed": 25.0
     },
     {
       "id": 3,
       "description": "Minibar: Gold-Leaf Salted Marcona Almonds (45g tin)",
-      "claimed": 14.50,
-      "reimbursed": 0.00
+      "claimed": 14.5,
+      "reimbursed": 0.0
     },
     {
       "id": 4,
       "description": "Minibar: Artisan Organic Fermented Mate Soda",
-      "claimed": 16.00,
-      "reimbursed": 0.00
+      "claimed": 16.0,
+      "reimbursed": 0.0
     },
     {
       "id": 5,
       "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
-      "claimed": 70.00,
-      "reimbursed": 60.00
+      "claimed": 70.0,
+      "reimbursed": 60.0
     },
     {
       "id": 6,
       "description": "City tax",
-      "claimed": 11.50,
-      "reimbursed": 11.50
+      "claimed": 11.5,
+      "reimbursed": 11.5
     },
     {
       "id": 7,
       "description": "VAT",
-      "claimed": 56.88,
-      "reimbursed": 38.81
+      "claimed": 41.2,
+      "reimbursed": 28.35
     }
   ],
-  "reasoning": "Two-night Berlin stay for investor meetings; the nights of October 14 and 15, 2024 begin on a Monday and a Tuesday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply. The note names investor meetings rather than a declared trade-fair or congress event from the Chapter 9 table, so no event surcharge cap applies and Berlin's ordinary €160 Tier 2 cap governs; the 'Atelier Suite' category earns no higher cap, so each €230 night is reimbursed at €160 with €70 deducted per night. The note states that a garment was soiled by a spill during lunch, so the €28 emergency dry cleaning qualifies for the €25 short-stay garment-rescue cap and €3.00 is deducted. Both minibar lines are deducted in full, since minibar snacks and beverages are excluded whatever they cost. The note identifies the rental EV, so the €70 two-night valet parking with EV supercharging surcharge is reimbursed up to €30 per night, i.e. €60, with €10 deducted. City tax is reimbursed in full. VAT is allocated line by line at each line's printed rate on its deducted portion (7% on the room-rate excess, 19% on the other deductions), which deducts €18.07 of the €56.88 VAT."
+  "reasoning": "Two-night Berlin stay for investor meetings; the nights of October 14 and 15, 2024 begin on a Monday and a Tuesday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply. The note names investor meetings rather than a declared trade-fair or congress event from the Chapter 9 table, so no event surcharge cap applies and Berlin's ordinary €160 Tier 2 cap governs; the 'Atelier Suite' category earns no higher cap, so each €230 night is reimbursed at €160 with €70 deducted per night. The note states that a garment was soiled by a spill during lunch, so the €28 emergency dry cleaning qualifies for the €25 short-stay garment-rescue cap and €3.00 is deducted. Both minibar lines are deducted in full, since minibar snacks and beverages are excluded whatever they cost. The note identifies the rental EV, so the €70 two-night valet parking with EV supercharging surcharge is reimbursed up to €30 per night, i.e. €60, with €10 deducted. City tax is reimbursed in full. VAT is allocated at the folio's single printed 7% rate on the reimbursed net charges, which deducts €12.85 of the €41.20 VAT."
 }

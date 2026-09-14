@@ -24,7 +24,6 @@
       "quantity": "1",
       "unit_price": "280",
       "total_price": "280",
-      "tax_rate": "0.19",
       "category": "hardware",
       "is_alcohol": false
     },
@@ -33,7 +32,6 @@
       "quantity": "2",
       "unit_price": "99",
       "total_price": "198",
-      "tax_rate": "0.19",
       "category": "hardware",
       "is_alcohol": false
     },
@@ -42,7 +40,6 @@
       "quantity": "4",
       "unit_price": "19.5",
       "total_price": "78",
-      "tax_rate": "0.19",
       "category": "office_supplies",
       "is_alcohol": false
     },
@@ -51,19 +48,13 @@
       "quantity": "1",
       "unit_price": "145",
       "total_price": "145",
-      "tax_rate": "0.19",
       "category": "botanical",
       "is_alcohol": false
     }
   ],
   "subtotal": "701",
-  "taxes": [
-    {
-      "name": "USt 19%",
-      "rate": "0.19",
-      "amount": "133.19"
-    }
-  ],
+  "tax_rate": "0.19",
+  "tax_amount": "133.19",
   "total_amount": "834.19",
   "paid": true,
   "payment_terms": "Net 14",
@@ -90,7 +81,7 @@
     },
     {
       "id": 4,
-      "description": "USt 19%",
+      "description": "VAT",
       "amount": "133.19"
     }
   ]

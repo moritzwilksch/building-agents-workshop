@@ -22,7 +22,6 @@
       "quantity": "2",
       "unit_price": "9.8",
       "total_price": "19.6",
-      "tax_rate": "0.19",
       "category": "food",
       "is_alcohol": false
     },
@@ -31,7 +30,6 @@
       "quantity": "1",
       "unit_price": "32.5",
       "total_price": "32.5",
-      "tax_rate": "0.19",
       "category": "food",
       "is_alcohol": false
     },
@@ -40,7 +38,6 @@
       "quantity": "2",
       "unit_price": "18.5",
       "total_price": "37",
-      "tax_rate": "0.19",
       "category": "food",
       "is_alcohol": false
     },
@@ -49,7 +46,6 @@
       "quantity": "3",
       "unit_price": "7.5",
       "total_price": "22.5",
-      "tax_rate": "0.19",
       "category": "beverage",
       "is_alcohol": true
     },
@@ -58,7 +54,6 @@
       "quantity": "2",
       "unit_price": "6.5",
       "total_price": "13",
-      "tax_rate": "0.19",
       "category": "beverage",
       "is_alcohol": false
     },
@@ -67,19 +62,13 @@
       "quantity": "1",
       "unit_price": "8.9",
       "total_price": "8.9",
-      "tax_rate": "0.19",
       "category": "food",
       "is_alcohol": false
     }
   ],
   "subtotal": "133.5",
-  "taxes": [
-    {
-      "name": "MwSt (19%)",
-      "rate": "0.19",
-      "amount": "25.37"
-    }
-  ],
+  "tax_rate": "0.19",
+  "tax_amount": "21.32",
   "tip_amount": "16.5",
   "total_amount": "150",
   "payment_method": "card",

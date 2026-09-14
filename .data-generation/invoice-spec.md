@@ -32,6 +32,45 @@ To create rich, realistic failure modes and test cases across Stages 1–4, invo
 
 ---
 
+## Arithmetic rules
+
+Every generated invoice must add up. `invoice_problems` in
+`generate_invoice.py` collects every violation, and the generation agent runs
+it as a PydanticAI `output_validator`: a mistake is raised as a `ModelRetry`
+listing the exact discrepancies, the LLM regenerates, and only an invoice that
+adds up reaches disk (up to `MAX_RETRIES` attempts).
+
+Tax is invoice-global - one `tax_rate` plus `tax_amount` (hotels: `vat_rate`
+plus `vat`) - so every line item on an invoice shares one rate and line items
+carry no rate of their own. A tax amount without a rate cannot be checked and
+is therefore rejected. Sums must match to the cent; tax amounts derived from a
+rate get 0.02 of slack for rounding. Rates are accepted as percentages (`19`)
+or fractions (`0.19`).
+
+| Archetype | Rules |
+| :--- | :--- |
+| any `LineItem` | `total_price` = `quantity` x `unit_price` |
+| `taxi` | `total_amount` = `fare_amount` + `tip_amount` |
+| `restaurant` | `subtotal` = sum of items; `total_amount` = `subtotal` + `tip_amount`; MwSt is **included** in item prices, so `tax_amount` = `subtotal` - `subtotal` / (1 + `tax_rate`) |
+| `hotel` | `subtotal` = sum of room charges + incidentals (net); `vat` = `subtotal` x `vat_rate`; `total_amount` = `subtotal` + `city_tax` + `vat`; `number_of_nights` = `check_out` - `check_in` |
+| `flight` | `total_amount` = `base_fare` + sum of `taxes_and_fees` |
+| `train` | `total_amount` = `ticket_fare` + `seat_reservation_fee` |
+| `fuel` | `fuel_total` = `liters` x `price_per_liter`; `total_amount` = `fuel_total` + non-fuel items |
+| `standard` | `subtotal` = sum of net items; `tax_amount` = `subtotal` x `tax_rate`; `total_amount` = `subtotal` + `tax_amount` |
+| `card_slip` | none (total only) |
+
+Validate files on disk with:
+
+```bash
+pixi run python .data-generation/validate_invoices.py data
+```
+
+It parses each `invoice.json` through the archetype schema (which runs the
+rules above) and checks the appended `charges` list: ids `0..n-1` in receipt
+order, amounts summing to `total_amount`.
+
+---
+
 ## Numbered charges
 
 Each invoice archetype keeps its charges in different fields (`items`,
@@ -91,13 +130,15 @@ class LineItem(BaseModel):
     quantity: Decimal = Decimal("1.0")
     unit_price: Decimal
     total_price: Decimal
-    tax_rate: Decimal | None = None
     category: str = LineItemCategory.MEAL
     is_alcohol: bool = False           # Crucial for partial reimbursement tests
 
 
 class TaxItem(BaseModel):
-    name: str                          # "VAT 19%", "Sales Tax", "City Tax"
+    """Only used for a flight's `taxes_and_fees`, which are separate charges.
+    Every other archetype carries one invoice-global tax rate and amount;
+    line items never carry a tax rate of their own."""
+    name: str                          # "Air Passenger Duty", "Booking Fee"
     rate: Decimal | None = None
     amount: Decimal
 
@@ -160,7 +201,8 @@ class RestaurantReceipt(BaseModel):
 
     items: list[LineItem]
     subtotal: Decimal
-    taxes: list[TaxItem] = Field(default_factory=list)
+    tax_rate: Decimal | None = None    # MwSt, included in the item prices
+    tax_amount: Decimal = Decimal("0.00")
     tip_amount: Decimal = Decimal("0.00")
     total_amount: Decimal
 
@@ -192,6 +234,7 @@ class HotelFolio(BaseModel):
 
     subtotal: Decimal
     city_tax: Decimal = Decimal("0.00")
+    vat_rate: Decimal | None = None    # added on top of the net subtotal
     vat: Decimal = Decimal("0.00")
     total_amount: Decimal
 
@@ -302,7 +345,8 @@ class StandardInvoice(BaseModel):
 
     items: list[LineItem]
     subtotal: Decimal
-    taxes: list[TaxItem]
+    tax_rate: Decimal | None = None    # USt, added on top of the net subtotal
+    tax_amount: Decimal = Decimal("0.00")
     total_amount: Decimal
 
     paid: bool = True

@@ -1,57 +1,57 @@
 {
   "case_id": "case-0005",
   "decision": "partially_approved",
-  "claimed_amount": 569.21,
-  "reimbursed_amount": 504.35,
+  "claimed_amount": 554.17,
+  "reimbursed_amount": 495.85,
   "line_items": [
     {
       "id": 0,
       "description": "Room Charge - Night 1 (Mar 12)",
-      "claimed": 185.00,
-      "reimbursed": 185.00
+      "claimed": 185.0,
+      "reimbursed": 185.0
     },
     {
       "id": 1,
       "description": "Room Charge - Night 2 (Mar 13)",
-      "claimed": 185.00,
-      "reimbursed": 185.00
+      "claimed": 185.0,
+      "reimbursed": 185.0
     },
     {
       "id": 2,
       "description": "Emergency Express Silk Shirt De-Staining (1-hour turnaround)",
-      "claimed": 38.50,
-      "reimbursed": 25.00
+      "claimed": 38.5,
+      "reimbursed": 25.0
     },
     {
       "id": 3,
       "description": "Midnight Artisanal Truffle Cashews & Botanical Craft Tonic",
-      "claimed": 18.00,
-      "reimbursed": 0.00
+      "claimed": 18.0,
+      "reimbursed": 0.0
     },
     {
       "id": 4,
       "description": "Overpriced Single Toblerone (100g)",
-      "claimed": 13.00,
-      "reimbursed": 0.00
+      "claimed": 13.0,
+      "reimbursed": 0.0
     },
     {
       "id": 5,
       "description": "Overnight Valet Parking with Ultra-Fast EV Surcharge",
-      "claimed": 70.00,
-      "reimbursed": 60.00
+      "claimed": 70.0,
+      "reimbursed": 60.0
     },
     {
       "id": 6,
       "description": "City tax",
-      "claimed": 9.00,
-      "reimbursed": 9.00
+      "claimed": 9.0,
+      "reimbursed": 9.0
     },
     {
       "id": 7,
       "description": "VAT",
-      "claimed": 50.71,
-      "reimbursed": 40.35
+      "claimed": 35.67,
+      "reimbursed": 31.85
     }
   ],
-  "reasoning": "Two-night Berlin stay for the FinTech Summit; the nights of March 12 and 13, 2024 begin on a Tuesday and a Wednesday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply. The note names the FinTech Summit and both nights fall in March, the event window, so the trade-fair override in Chapter 9 replaces Berlin's €160 Tier 2 cap with the €200 event surcharge cap; each €185 night is within the override and is reimbursed in full, and the 'Executive Loft' category earns no higher or lower cap either way. The folio documents an emergency de-staining of a silk shirt ahead of the speaking session, which establishes that business attire was soiled during the trip, so the €38.50 garment rescue is reimbursable up to the €25 short-stay laundry cap and €13.50 is deducted. Both minibar lines are deducted in full. The note identifies the rental EV, so the €70 two-night valet parking with EV surcharge is reimbursed up to €30 per night, i.e. €60, with €10 deducted. City tax is reimbursed in full. VAT is allocated line by line at each line's printed rate on its deducted portion (19% on the laundry excess, the minibar, and the parking excess), which deducts €10.36 of the €50.71 VAT."
+  "reasoning": "Two-night Berlin stay for the FinTech Summit; the nights of March 12 and 13, 2024 begin on a Tuesday and a Wednesday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply. The note names the FinTech Summit and both nights fall in March, the event window, so the trade-fair override in Chapter 9 replaces Berlin's €160 Tier 2 cap with the €200 event surcharge cap; each €185 night is within the override and is reimbursed in full, and the 'Executive Loft' category earns no higher or lower cap either way. The folio documents an emergency de-staining of a silk shirt ahead of the speaking session, which establishes that business attire was soiled during the trip, so the €38.50 garment rescue is reimbursable up to the €25 short-stay laundry cap and €13.50 is deducted. Both minibar lines are deducted in full. The note identifies the rental EV, so the €70 two-night valet parking with EV surcharge is reimbursed up to €30 per night, i.e. €60, with €10 deducted. City tax is reimbursed in full. VAT is allocated at the folio's single printed 7% rate on the reimbursed net charges, which deducts €3.82 of the €35.67 VAT."
 }

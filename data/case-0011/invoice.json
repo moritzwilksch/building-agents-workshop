@@ -22,19 +22,13 @@
       "quantity": "6",
       "unit_price": "14.00",
       "total_price": "84.00",
-      "tax_rate": "0.07",
       "category": "meal",
       "is_alcohol": false
     }
   ],
   "subtotal": "84.00",
-  "taxes": [
-    {
-      "name": "MwSt. 7% (inkl.)",
-      "rate": "0.07",
-      "amount": "5.50"
-    }
-  ],
+  "tax_rate": "0.07",
+  "tax_amount": "5.50",
   "tip_amount": "25.20",
   "total_amount": "109.20",
   "payment_method": "card",

@@ -16,13 +16,92 @@ from typing import Annotated, Literal, Union
 
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field, TypeAdapter
-from pydantic_ai import Agent
+from pydantic_ai import Agent, ModelRetry, UnexpectedModelBehavior
 from pydantic_ai.settings import ModelSettings
 
 load_dotenv()
 
 
 # Invoice schemas (see invoice-spec.md).
+
+# Arithmetic validation helpers.
+#
+# Every archetype must add up: line items multiply out, listed charges sum to
+# the subtotal, and the subtotal plus tax and tip equals `total_amount`. The
+# generation agent runs these checks as an output validator (see
+# `check_arithmetic`), so an invoice that does not add up is sent back to the
+# model instead of reaching disk.
+
+CENT = Decimal("0.01")
+
+# Sums of listed amounts must be exact to the cent (one cent of slack absorbs
+# rounding of a quantity like 2.5 L). Tax amounts derived from a rate get a
+# little more room, because a real receipt rounds its tax line.
+SUM_TOLERANCE = Decimal("0.01")
+TAX_TOLERANCE = Decimal("0.02")
+
+
+def _money(value: Decimal) -> Decimal:
+    return value.quantize(CENT)
+
+
+def _tax_fraction(rate: Decimal) -> Decimal:
+    """Rates appear both as percentages (19) and as fractions (0.19)."""
+    return rate / Decimal(100) if rate > 1 else rate
+
+
+def _mismatch(label: str, actual: Decimal, expected: Decimal, tolerance: Decimal) -> str | None:
+    if abs(actual - expected) <= tolerance:
+        return None
+    return f"{label}: {_money(actual)} != {_money(expected)} (off by {_money(actual - expected)})"
+
+
+def _sum_items(items: list[LineItem]) -> Decimal:
+    return sum((item.total_price for item in items), Decimal(0))
+
+
+def _check_tax(
+    label: str,
+    rate: Decimal | None,
+    amount: Decimal,
+    base: Decimal,
+    *,
+    inclusive: bool,
+) -> str | None:
+    """Cross-check one invoice-global tax against the base it is levied on.
+
+    `inclusive` means the tax is already contained in `base` (a restaurant's
+    MwSt); otherwise it is added on top of the net base.
+    """
+    if rate is None:
+        # A tax without a rate cannot be checked, so it is not allowed to exist.
+        return f"{label}: {_money(amount)} charged without a rate" if amount else None
+    fraction = _tax_fraction(rate)
+    expected = base - base / (1 + fraction) if inclusive else base * fraction
+    return _mismatch(label, amount, expected, TAX_TOLERANCE)
+
+
+def _problems(*problems: str | None) -> list[str]:
+    return [problem for problem in problems if problem]
+
+
+def _all_line_items(invoice: InvoiceCase) -> list[LineItem]:
+    return [
+        item
+        for field in ("items", "room_charges", "incidentals", "non_fuel_items")
+        for item in getattr(invoice, field, [])
+    ]
+
+
+def line_item_problems(item: LineItem) -> list[str]:
+    return _problems(
+        _mismatch(
+            f"line item '{item.description}' total_price",
+            item.total_price,
+            item.quantity * item.unit_price,
+            SUM_TOLERANCE,
+        )
+    )
 
 
 class LineItemCategory:
@@ -41,7 +120,6 @@ class LineItem(BaseModel):
     quantity: Decimal = Decimal("1.0")
     unit_price: Decimal
     total_price: Decimal
-    tax_rate: Decimal | None = None
     category: str = LineItemCategory.MEAL
     is_alcohol: bool = False
 
@@ -129,7 +207,8 @@ class RestaurantReceipt(BaseInvoice):
 
     items: list[LineItem]
     subtotal: Decimal
-    taxes: list[TaxItem] = Field(default_factory=list)
+    tax_rate: Decimal | None = None  # MwSt, already included in the item prices
+    tax_amount: Decimal = Decimal("0.00")
     tip_amount: Decimal = Decimal("0.00")
     total_amount: Decimal
 
@@ -157,6 +236,7 @@ class HotelFolio(BaseInvoice):
 
     subtotal: Decimal
     city_tax: Decimal = Decimal("0.00")
+    vat_rate: Decimal | None = None  # added on top of the net subtotal
     vat: Decimal = Decimal("0.00")
     total_amount: Decimal
 
@@ -251,7 +331,8 @@ class StandardInvoice(BaseInvoice):
 
     items: list[LineItem]
     subtotal: Decimal
-    taxes: list[TaxItem]
+    tax_rate: Decimal | None = None  # USt, added on top of the net subtotal
+    tax_amount: Decimal = Decimal("0.00")
     total_amount: Decimal
 
     paid: bool = True
@@ -287,6 +368,108 @@ InvoiceCase = Annotated[
 
 invoice_adapter = TypeAdapter(InvoiceCase)
 
+# Per-archetype arithmetic checks. Each returns a list of human-readable
+# problems, empty when the invoice adds up. `check_arithmetic` replays them to
+# the LLM as a retry; `validate_invoices.py` reports them for files on disk.
+
+
+def taxi_problems(invoice: TaxiReceipt) -> list[str]:
+    return _problems(
+        _mismatch("total_amount", invoice.total_amount, invoice.fare_amount + invoice.tip_amount, SUM_TOLERANCE)
+    )
+
+
+def restaurant_problems(invoice: RestaurantReceipt) -> list[str]:
+    # A restaurant's MwSt is included in the item prices, so it is not added
+    # to the total; only the tip is.
+    return _problems(
+        _mismatch("subtotal", invoice.subtotal, _sum_items(invoice.items), SUM_TOLERANCE),
+        _mismatch("total_amount", invoice.total_amount, invoice.subtotal + invoice.tip_amount, SUM_TOLERANCE),
+        _check_tax("tax_amount", invoice.tax_rate, invoice.tax_amount, invoice.subtotal, inclusive=True),
+    )
+
+
+def hotel_problems(invoice: HotelFolio) -> list[str]:
+    charges = invoice.room_charges + invoice.incidentals
+    return _problems(
+        _mismatch("subtotal", invoice.subtotal, _sum_items(charges), SUM_TOLERANCE),
+        _mismatch(
+            "total_amount",
+            invoice.total_amount,
+            invoice.subtotal + invoice.city_tax + invoice.vat,
+            SUM_TOLERANCE,
+        ),
+        _check_tax("vat", invoice.vat_rate, invoice.vat, invoice.subtotal, inclusive=False),
+        _mismatch(
+            "number_of_nights",
+            Decimal(invoice.number_of_nights),
+            Decimal((invoice.check_out - invoice.check_in).days),
+            Decimal(0),
+        ),
+    )
+
+
+def flight_problems(invoice: FlightInvoice) -> list[str]:
+    expected = invoice.base_fare + sum((tax.amount for tax in invoice.taxes_and_fees), Decimal(0))
+    return _problems(_mismatch("total_amount", invoice.total_amount, expected, SUM_TOLERANCE))
+
+
+def train_problems(invoice: TrainTicket) -> list[str]:
+    return _problems(
+        _mismatch(
+            "total_amount",
+            invoice.total_amount,
+            invoice.ticket_fare + invoice.seat_reservation_fee,
+            SUM_TOLERANCE,
+        )
+    )
+
+
+def fuel_problems(invoice: FuelReceipt) -> list[str]:
+    return _problems(
+        _mismatch("fuel_total", invoice.fuel_total, invoice.liters * invoice.price_per_liter, SUM_TOLERANCE),
+        _mismatch(
+            "total_amount",
+            invoice.total_amount,
+            invoice.fuel_total + _sum_items(invoice.non_fuel_items),
+            SUM_TOLERANCE,
+        ),
+    )
+
+
+def standard_problems(invoice: StandardInvoice) -> list[str]:
+    # A B2B invoice lists net item prices and adds VAT on top.
+    return _problems(
+        _mismatch("subtotal", invoice.subtotal, _sum_items(invoice.items), SUM_TOLERANCE),
+        _mismatch(
+            "total_amount",
+            invoice.total_amount,
+            invoice.subtotal + invoice.tax_amount,
+            SUM_TOLERANCE,
+        ),
+        _check_tax("tax_amount", invoice.tax_rate, invoice.tax_amount, invoice.subtotal, inclusive=False),
+    )
+
+
+def invoice_problems(invoice: InvoiceCase) -> list[str]:
+    """Every arithmetic problem on an invoice, empty when it all adds up."""
+    checks = {
+        "taxi": taxi_problems,
+        "restaurant": restaurant_problems,
+        "hotel": hotel_problems,
+        "flight": flight_problems,
+        "train": train_problems,
+        "fuel": fuel_problems,
+        "standard": standard_problems,
+    }
+    check = checks.get(invoice.invoice_type)
+    problems = list(check(invoice)) if check else []
+    for item in _all_line_items(invoice):
+        problems += line_item_problems(item)
+    return problems
+
+
+
 
 def charge_lines(invoice: InvoiceCase) -> list[ChargeLine]:
     """Number every charge on the invoice in the order it appears on paper.
@@ -319,7 +502,7 @@ def charge_lines(invoice: InvoiceCase) -> list[ChargeLine]:
             charges += [(item.description, item.total_price) for item in invoice.non_fuel_items]
         case StandardInvoice():
             charges += [(item.description, item.total_price) for item in invoice.items]
-            charges += [(tax.name, tax.amount) for tax in invoice.taxes]
+            charges.append(("VAT", invoice.tax_amount))
         case CardSlip():
             charges.append((invoice.merchant_name, invoice.total_amount))
 
@@ -332,8 +515,37 @@ def charge_lines(invoice: InvoiceCase) -> list[ChargeLine]:
     ]
 
 
+def validate_charges(invoice: InvoiceCase, charges: list[ChargeLine]) -> list[str]:
+    """Check a persisted `charges` list against the invoice it belongs to."""
+    problems: list[str] = []
+    expected = charge_lines(invoice)
+
+    expected_ids = [charge.id for charge in expected]
+    if [charge.id for charge in charges] != expected_ids:
+        problems.append(f"charge ids {[charge.id for charge in charges]} != expected {expected_ids}")
+
+    problem = _mismatch(
+        "charges sum",
+        sum((charge.amount for charge in charges), Decimal(0)),
+        invoice.total_amount,
+        SUM_TOLERANCE,
+    )
+    if problem:
+        problems.append(problem)
+    return problems
+
+
 def invoice_json(invoice: InvoiceCase) -> str:
-    """Serialize an invoice with its numbered `charges` list appended."""
+    """Serialize an invoice with its numbered `charges` list appended.
+
+    Last line of defence: an invoice that does not add up never gets
+    serialized, so no invalid JSON can reach disk even if the agent's output
+    validator is bypassed.
+    """
+    problems = invoice_problems(invoice) + validate_charges(invoice, charge_lines(invoice))
+    if problems:
+        raise ValueError("invoice does not add up: " + "; ".join(problems))
+
     data = invoice.model_dump(mode="json")
     data["charges"] = [charge.model_dump(mode="json") for charge in charge_lines(invoice)]
     return json.dumps(data, indent=2, ensure_ascii=False)
@@ -376,15 +588,44 @@ Guidelines:
   - Routine transit/taxi/train: can be null, empty string, or a brief destination/purpose.
   - Restaurant expenses: MUST explicitly mention the business purpose and number of attendees (e.g. "Dinner with 2 clients from Acme Corp to celebrate contract signing (3 attendees total)").
 - Maintain strict numerical consistency: subtotal, taxes, tips, and total amounts must calculate accurately.
+  - Every line item: `total_price` = `quantity` x `unit_price`.
+  - Tax is invoice-global: a single `tax_rate` plus `tax_amount` (hotels: `vat_rate` plus `vat`). Line items carry no tax rate of their own, so put every item on the same rate.
+  - Restaurant: `subtotal` = sum of items, `total_amount` = `subtotal` + `tip_amount`. MwSt is INCLUDED in the item prices, so `tax_amount` = `subtotal` - `subtotal` / (1 + `tax_rate`) - it is never added to the total.
+  - Standard invoice: `subtotal` = sum of net items, `tax_amount` = `subtotal` x `tax_rate`, `total_amount` = `subtotal` + `tax_amount`.
+  - Hotel: `subtotal` = sum of room charges + incidentals (net), `vat` = `subtotal` x `vat_rate`, `total_amount` = `subtotal` + `city_tax` + `vat`, and `number_of_nights` = `check_out` - `check_in`.
+  - Flight: `total_amount` = `base_fare` + all taxes and fees. Train: `total_amount` = `ticket_fare` + `seat_reservation_fee`. Taxi: `total_amount` = `fare_amount` + `tip_amount`.
+  - Fuel: `fuel_total` = `liters` x `price_per_liter`, `total_amount` = `fuel_total` + non-fuel items.
 - Ensure all dates, merchant details, addresses, and line item sums are internally consistent.
 """
+
+# Retries cover both output-tool validation failures (the schema's own
+# arithmetic validators) and the output validator below.
+MAX_RETRIES = 5
 
 agent = Agent(
     "google:gemini-3.8-flash",
     output_type=InvoiceCase,
     system_prompt=SYSTEM_PROMPT,
     model_settings=ModelSettings(thinking="low"),
+    retries=MAX_RETRIES,
 )
+
+
+@agent.output_validator
+def check_arithmetic(invoice: InvoiceCase) -> InvoiceCase:
+    """Feed every arithmetic mistake back to the model so it can fix them.
+
+    Raising `ModelRetry` returns the message to the LLM as a tool-retry prompt;
+    the agent then regenerates and is re-validated, up to `MAX_RETRIES` times.
+    """
+    problems = invoice_problems(invoice)
+    if problems:
+        print(f"  Retrying, invoice does not add up: {'; '.join(problems)}")
+        raise ModelRetry(
+            "The invoice does not add up. Fix these and return the whole invoice again:\n"
+            + "\n".join(f"- {problem}" for problem in problems)
+        )
+    return invoice
 
 
 def generate_invoice(invoice_type: InvoiceType, seed: int | None = None) -> InvoiceCase:
@@ -446,9 +687,17 @@ def main() -> None:
             chosen_type = args.type if args.type else sample_invoice_type(case_rng)
             print(f"[{case_name}] Generating {chosen_type} (seed={case_seed})...")
 
-            invoice = generate_invoice(chosen_type, seed=case_seed)
+            try:
+                invoice = generate_invoice(chosen_type, seed=case_seed)
+                payload = invoice_json(invoice)
+            except (UnexpectedModelBehavior, ValueError) as error:
+                # The model never produced an invoice that adds up. Skip the
+                # case rather than write numbers that do not.
+                print(f"[{case_name}] Skipped, no valid invoice after {MAX_RETRIES} retries: {error}")
+                continue
+
             output_path = case_dir / "invoice.json"
-            output_path.write_text(invoice_json(invoice), encoding="utf-8")
+            output_path.write_text(payload, encoding="utf-8")
             print(f"[{case_name}] Saved to {output_path}")
     else:
         chosen_type = args.type if args.type else sample_invoice_type(rng)

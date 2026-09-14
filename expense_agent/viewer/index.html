@@ -117,7 +117,7 @@
         const runs = await getJson("/api/runs");
         document.getElementById("runs-body").innerHTML = runs
           .map(
-            (run) => `<tr class="cursor-pointer hover:bg-sky-50" onclick="showRun('${encodeURIComponent(run.run_id)}')">
+            (run) => `<tr class="cursor-pointer hover:bg-indigo-50" onclick="showRun('${encodeURIComponent(run.run_id)}')">
               <td class="px-4 py-3 font-medium">${run.run_id}</td>
               <td class="px-4 py-3 text-right">${run.total_cases}${run.failed_cases ? ` <span class="text-red-600">(${run.failed_cases} failed)</span>` : ""}</td>
               <td class="px-4 py-3 text-right">${pct(run.pass_rate)}</td>
@@ -156,11 +156,11 @@
         document.getElementById("case-list").innerHTML = currentRun.cases
           .map((row) => {
             const [mark, color] = row.failed
-              ? ["x", "text-red-600"]
+              ? ["circle-x", "text-red-600"]
               : row.correct
                 ? ["check", "text-emerald-600"]
-                : ["triangle-alert", "text-amber-600"];
-            const active = row.case_id === selected ? "bg-sky-100" : "hover:bg-slate-50";
+                : ["x", "text-red-600"];
+            const active = row.case_id === selected ? "bg-indigo-100" : "hover:bg-slate-50";
             return `<li class="flex cursor-pointer items-center gap-1.5 rounded-lg px-3 py-2 text-sm ${active}" onclick="showCase('${row.case_id}')">
               <i data-lucide="${mark}" class="h-4 w-4 shrink-0 ${color}"></i>
               ${row.case_id}
@@ -175,6 +175,22 @@
           <i data-lucide="${icon}" class="h-3.5 w-3.5"></i>
           ${text}
         </h3>`;
+      }
+
+      // Anything the agent itself produced carries the violet accent: a
+      // violet heading with an "AI" tag, and a body panel with a violet left
+      // rule on a light violet ground. The text stays slate so long passages
+      // remain readable; the frame does the signalling.
+      function aiHeading(icon, text) {
+        return `<h3 class="flex items-center gap-1.5 text-xs font-semibold text-violet-600">
+          <i data-lucide="${icon}" class="h-3.5 w-3.5"></i>
+          ${text}
+          <span class="rounded bg-violet-50 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-violet-500">AI</span>
+        </h3>`;
+      }
+
+      function aiBody(html) {
+        return `<div class="mt-2 rounded-r-lg border-l-2 border-violet-500 bg-violet-50 p-3 text-sm text-slate-700">${html}</div>`;
       }
 
       // One label/value line in the per-case stats list.
@@ -251,10 +267,10 @@
         let reasoning;
         let diff;
         if (!actual) {
-          reasoning = `<p class="rounded-lg bg-red-50 p-3 text-sm text-red-700">${detail.error ?? "case failed"}</p>`;
+          reasoning = `<p class="rounded-r-lg border-l-2 border-red-600 bg-red-50 p-3 text-sm text-red-600">${detail.error ?? "case failed"}</p>`;
           diff = "";
         } else {
-          reasoning = `<p class="mt-2 whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>`;
+          reasoning = aiBody(`<p class="whitespace-pre-wrap">${actual.reasoning}</p>`);
 
           const items = mergeItems(expected.line_items, actual.line_items);
           const itemRows = items
@@ -263,7 +279,7 @@
                 <td class="py-1 pr-4"><span class="mr-1.5 text-xs text-slate-400">${item.id}</span>${item.description}</td>
                 <td class="py-1 pr-4 text-right text-slate-600">${money(item.claimed)}</td>
                 <td class="py-1 pr-4 text-right text-slate-600">${item.expected === null ? "–" : money(item.expected)}</td>
-                <td class="py-1 pr-4 text-right">${item.actual === null ? "–" : money(item.actual)}</td>
+                <td class="py-1 pr-4 text-right text-violet-600">${item.actual === null ? "–" : money(item.actual)}</td>
                 <td class="py-1 text-right">${diffDelta(item.expected, item.actual)}</td>
               </tr>`,
             )
@@ -274,7 +290,7 @@
                 <th class="pb-2 pr-4">Item</th>
                 <th class="pb-2 pr-4 text-right">Claimed</th>
                 <th class="pb-2 pr-4 text-right">Ground truth</th>
-                <th class="pb-2 pr-4 text-right">Reimbursed</th>
+                <th class="pb-2 pr-4 text-right text-violet-600">Reimbursed <span class="text-[10px] uppercase tracking-wide text-violet-500">AI</span></th>
                 <th class="pb-2 text-right">Diff</th>
               </tr></thead>
               <tbody class="divide-y divide-slate-100">
@@ -285,14 +301,14 @@
                   <td class="py-1 pr-4">Reimbursed total</td>
                   <td class="py-1 pr-4 text-right text-slate-600">${money(Number(expected.claimed_amount))}</td>
                   <td class="py-1 pr-4 text-right text-slate-600">${money(Number(expected.reimbursed_amount))}</td>
-                  <td class="py-1 pr-4 text-right">${money(Number(actual.reimbursed_amount))}</td>
+                  <td class="py-1 pr-4 text-right text-violet-600">${money(Number(actual.reimbursed_amount))}</td>
                   <td class="py-1 text-right">${diffDelta(Number(expected.reimbursed_amount), Number(actual.reimbursed_amount))}</td>
                 </tr>
               </tfoot>
             </table>
             <dl class="mt-4 divide-y divide-slate-100 rounded-lg bg-slate-50 px-3 text-sm">
               ${statRow("decision", expected.decision === actual.decision
-                ? `<span class="text-emerald-700">${actual.decision}</span>`
+                ? `<span class="text-emerald-600">${actual.decision}</span>`
                 : `<span class="text-slate-500">${expected.decision}</span> → <span class="text-red-600">${actual.decision}</span>`)}
               ${statRow("€ error", money(detail.reimbursed_error))}
               ${statRow("€ overpaid", money(detail.overpaid))}
@@ -305,8 +321,8 @@
         document.getElementById("case-note").innerHTML = note;
         document.getElementById("case-receipt").innerHTML = receipt;
         document.getElementById("case-reasoning").innerHTML = `<div class="flex items-center justify-between gap-4">
-            ${heading("brain", "Agent reasoning")}
-            <button onclick="showTrace('${caseId}')" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-sky-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-sky-700">
+            ${aiHeading("brain", "Agent reasoning")}
+            <button onclick="showTrace('${caseId}')" class="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-violet-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-violet-700">
               <i data-lucide="route" class="h-4 w-4"></i>
               Inspect trajectory
             </button>
