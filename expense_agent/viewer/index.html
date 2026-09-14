@@ -21,6 +21,7 @@
                 <th class="px-4 py-3 text-right">% correct</th>
                 <th class="px-4 py-3 text-right">% right decision</th>
                 <th class="px-4 py-3 text-right">$ overpaid</th>
+                <th class="px-4 py-3 text-right">$ underpaid</th>
                 <th class="px-4 py-3 text-right">Avg. token cost</th>
               </tr>
             </thead>
@@ -36,7 +37,7 @@
           All runs
         </button>
         <h1 id="run-title" class="mb-4 text-2xl font-semibold"></h1>
-        <div id="run-metrics" class="mb-6 grid grid-cols-2 gap-4 md:grid-cols-6"></div>
+        <div id="run-metrics" class="mb-6 grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-7"></div>
 
         <div class="grid grid-cols-1 gap-4 xl:grid-cols-12">
           <div class="xl:col-span-2">
@@ -44,26 +45,30 @@
               <i data-lucide="list" class="h-4 w-4"></i>
               Cases
             </h2>
-            <ul id="case-list" class="max-h-[75vh] space-y-1 overflow-y-auto rounded-xl bg-white p-2 shadow"></ul>
+            <ul id="case-list" class="max-h-[85vh] space-y-1 overflow-y-auto rounded-xl bg-white p-2 shadow"></ul>
           </div>
-          <div class="space-y-4 xl:col-span-4">
-            <div id="case-detail" class="rounded-xl bg-white p-4 shadow"></div>
+          <div class="space-y-4 xl:col-span-10">
             <div id="case-receipt" class="rounded-xl bg-white p-4 shadow"></div>
-          </div>
-          <div class="xl:col-span-6">
-            <h2 class="mb-2 flex items-center gap-1.5 text-sm font-semibold text-slate-500">
-              <i data-lucide="route" class="h-4 w-4"></i>
-              Trajectory
-            </h2>
-            <iframe id="trace" class="h-[75vh] w-full rounded-xl bg-white shadow" src="about:blank"></iframe>
+            <div id="case-reasoning" class="rounded-xl bg-white p-4 shadow"></div>
+            <div id="case-diff" class="rounded-xl bg-white p-4 shadow"></div>
           </div>
         </div>
+      </section>
+
+      <!-- Trajectory page -->
+      <section id="trace-view" class="hidden">
+        <button id="trace-back" class="mb-4 inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-sm shadow hover:bg-slate-50">
+          <i data-lucide="arrow-left" class="h-4 w-4"></i>
+          <span id="trace-back-label"></span>
+        </button>
+        <iframe id="trace" class="h-[80vh] w-full rounded-xl bg-white shadow" src="about:blank"></iframe>
       </section>
     </div>
 
     <script>
       const runsView = document.getElementById("runs-view");
       const runView = document.getElementById("run-view");
+      const traceView = document.getElementById("trace-view");
       let currentRun = null;
 
       const pct = (value) => (value === null || value === undefined ? "–" : (100 * value).toFixed(0) + "%");
@@ -94,6 +99,7 @@
       }
 
       async function showRuns() {
+        traceView.classList.add("hidden");
         runView.classList.add("hidden");
         runsView.classList.remove("hidden");
         const runs = await getJson("/api/runs");
@@ -105,6 +111,7 @@
               <td class="px-4 py-3 text-right">${pct(run.pass_rate)}</td>
               <td class="px-4 py-3 text-right">${pct(run.decision_accuracy)}</td>
               <td class="px-4 py-3 text-right">${money(run.overpaid)}</td>
+              <td class="px-4 py-3 text-right">${money(run.underpaid)}</td>
               <td class="px-4 py-3 text-right">${cost(run.mean_cost)}</td>
             </tr>`,
           )
@@ -113,6 +120,7 @@
       }
 
       async function showRun(runId) {
+        traceView.classList.add("hidden");
         runsView.classList.add("hidden");
         runView.classList.remove("hidden");
         currentRun = await getJson(`/api/runs/${runId}`);
@@ -121,6 +129,7 @@
           tile("% correct", pct(currentRun.pass_rate), "percent"),
           tile("% right decision", pct(currentRun.decision_accuracy), "scale"),
           tile("$ overpaid", money(currentRun.overpaid), "dollar-sign"),
+          tile("$ underpaid", money(currentRun.underpaid), "dollar-sign"),
           tile("Avg. $ error", money(currentRun.mean_reimbursed_error), "banknote"),
           tile("Avg. token cost", cost(currentRun.mean_cost), "coins"),
           tile("Cases", `${currentRun.total_cases}${currentRun.failed_cases ? ` / ${currentRun.failed_cases} failed` : ""}`, "layers"),
@@ -148,20 +157,35 @@
         refreshIcons();
       }
 
-      function diffRow(label, expected, actual) {
-        const same = String(expected) === String(actual);
-        return `<tr class="${same ? "" : "bg-amber-50"}">
-          <td class="py-1 pr-4 text-slate-500">${label}</td>
-          <td class="py-1 pr-4">${expected}</td>
-          <td class="py-1 font-medium">${actual}</td>
-        </tr>`;
-      }
-
       function heading(icon, text) {
-        return `<h3 class="mt-4 flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+        return `<h3 class="flex items-center gap-1.5 text-xs font-semibold text-slate-500">
           <i data-lucide="${icon}" class="h-3.5 w-3.5"></i>
           ${text}
         </h3>`;
+      }
+
+      // Diff-style value: one plain value when equal, otherwise a red
+      // removal (expected) and a green addition (actual), git-style.
+      function diffValue(expected, actual) {
+        if (expected === null) return `<span class="font-medium text-emerald-600">+${money(actual)}</span>`;
+        if (actual === null) return `<span class="font-medium text-red-600">−${money(expected)}</span>`;
+        if (Number(expected) === Number(actual)) return money(actual);
+        return `<span class="text-red-600 line-through">−${money(expected)}</span> <span class="font-medium text-emerald-600">+${money(actual)}</span>`;
+      }
+
+      // Merge expected and actual line items into one diff-style table.
+      // Expected order first, then items the agent invented.
+      function mergeItems(expectedItems, actualItems) {
+        const rows = expectedItems.map((item) => {
+          const match = actualItems.find((a) => a.description === item.description);
+          return { description: item.description, claimed: Number(item.claimed), expected: Number(item.reimbursed), actual: match ? Number(match.reimbursed) : null };
+        });
+        for (const item of actualItems) {
+          if (!expectedItems.some((e) => e.description === item.description)) {
+            rows.push({ description: item.description, claimed: Number(item.claimed), expected: null, actual: Number(item.reimbursed) });
+          }
+        }
+        return rows;
       }
 
       async function showCase(caseId) {
@@ -170,56 +194,84 @@
         const expected = detail.expected;
         const actual = detail.actual;
 
-        let body;
+        const receipt = `<a href="/api/cases/${caseId}/receipt" target="_blank">
+            <img src="/api/cases/${caseId}/receipt" alt="receipt for ${caseId}" class="mx-auto max-h-[35vh] rounded-lg" />
+          </a>`;
+
+        let reasoning;
+        let diff;
         if (!actual) {
-          body = `<p class="rounded-lg bg-red-50 p-3 text-sm text-red-700">${detail.error ?? "case failed"}</p>`;
+          reasoning = `<p class="rounded-lg bg-red-50 p-3 text-sm text-red-700">${detail.error ?? "case failed"}</p>`;
+          diff = "";
         } else {
-          const deltas = detail.line_item_deltas
-            .map(
-              (delta) => `<tr>
-                <td class="py-1 pr-4">${delta.description}</td>
-                <td class="py-1 pr-4 text-right">${money(Number(delta.expected_reimbursed))}</td>
-                <td class="py-1 pr-4 text-right">${money(Number(delta.actual_reimbursed))}</td>
-                <td class="py-1 text-right font-medium ${Number(delta.delta) > 0 ? "text-red-600" : "text-slate-600"}">${money(Number(delta.delta))}</td>
-              </tr>`,
-            )
+          reasoning = `<div class="flex items-start justify-between gap-4">
+              <p class="whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>
+              <button onclick="showTrace('${caseId}')" class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-sm font-medium text-white shadow hover:bg-sky-700">
+                <i data-lucide="route" class="h-4 w-4"></i>
+                Inspect trajectory
+              </button>
+            </div>`;
+
+          const items = mergeItems(expected.line_items, actual.line_items);
+          const itemRows = items
+            .map((item) => {
+              const changed = item.expected === null || item.actual === null || item.expected !== item.actual;
+              return `<tr class="${changed ? "bg-amber-50" : ""}">
+                <td class="py-1 pr-4">${item.description}</td>
+                <td class="py-1 pr-4 text-right text-slate-600">${money(item.claimed)}</td>
+                <td class="py-1 text-right">${diffValue(item.expected, item.actual)}</td>
+              </tr>`;
+            })
             .join("");
-          body = `<table class="w-full text-sm">
+          const anyChanged = items.some((item) => item.expected === null || item.actual === null || item.expected !== item.actual);
+
+          diff = `${heading("receipt", "Invoice diff")}
+            <table class="mt-2 w-full text-sm">
               <thead><tr class="text-left text-xs font-medium text-slate-500">
-                <th class="pb-2"></th><th class="pb-2">Expected</th><th class="pb-2">Actual</th>
+                <th class="pb-2">Item</th><th class="pb-2 text-right">Claimed</th><th class="pb-2 text-right">Reimbursed</th>
               </tr></thead>
-              <tbody>
-                ${diffRow("Decision", expected.decision, actual.decision)}
-                ${diffRow("Reimbursed", money(Number(expected.reimbursed_amount)), money(Number(actual.reimbursed_amount)))}
-                ${diffRow("Claimed", money(Number(expected.claimed_amount)), money(Number(actual.claimed_amount)))}
+              <tbody class="divide-y divide-slate-100">
+                ${itemRows}
+                <tr class="font-medium">
+                  <td class="py-1 pr-4">Reimbursed total</td>
+                  <td class="py-1 pr-4 text-right text-slate-600">${money(Number(expected.claimed_amount))}</td>
+                  <td class="py-1 text-right">${diffValue(Number(expected.reimbursed_amount), Number(actual.reimbursed_amount))}</td>
+                </tr>
               </tbody>
             </table>
-            <div class="mt-3 flex gap-6 text-sm">
+            <div class="mt-2 text-xs text-slate-500">
+              ${anyChanged ? "Red: expected payout removed. Green: actual payout. Highlighted rows differ." : "All line items match the ground truth."}
+            </div>
+            <div class="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm">
+              <span class="text-slate-500">decision <span class="font-medium text-slate-900">${expected.decision === actual.decision ? actual.decision : `${expected.decision} → ${actual.decision}`}</span></span>
               <span class="text-slate-500">$ error <span class="font-medium text-slate-900">${money(detail.reimbursed_error)}</span></span>
               <span class="text-slate-500">$ overpaid <span class="font-medium text-slate-900">${money(detail.overpaid)}</span></span>
+              <span class="text-slate-500">$ underpaid <span class="font-medium text-slate-900">${money(detail.underpaid)}</span></span>
               <span class="text-slate-500">token cost <span class="font-medium text-slate-900">${cost(detail.cost)}</span></span>
               <span class="text-slate-500">tokens <span class="font-medium text-slate-900">${detail.tokens.toLocaleString()}</span></span>
-            </div>
-            ${deltas ? `${heading("list", "Line items that differ")}
-              <table class="w-full text-sm">
-                <thead><tr class="text-xs font-medium text-slate-500">
-                  <th class="pb-1 text-left">Item</th><th class="pb-1 text-right">Expected</th><th class="pb-1 text-right">Actual</th><th class="pb-1 text-right">Diff</th>
-                </tr></thead>
-                <tbody>${deltas}</tbody>
-              </table>` : ""}
-            ${heading("brain", "Agent reasoning")}
-            <p class="mt-1 whitespace-pre-wrap text-sm text-slate-700">${actual.reasoning}</p>`;
+            </div>`;
         }
-        document.getElementById("case-detail").innerHTML = `<h2 class="mb-3 font-semibold">${caseId}</h2>${body}`;
-        document.getElementById("case-receipt").innerHTML =
-          `<a href="/api/cases/${caseId}/receipt" target="_blank">
-            <img src="/api/cases/${caseId}/receipt" alt="receipt for ${caseId}" class="mx-auto max-h-[60vh] rounded-lg" />
-          </a>`;
+
+        document.getElementById("case-receipt").innerHTML = receipt;
+        document.getElementById("case-reasoning").innerHTML = `${heading("brain", "Agent reasoning")}${reasoning}`;
+        document.getElementById("case-diff").innerHTML = diff;
+        refreshIcons();
+      }
+
+      async function showTrace(caseId) {
+        document.getElementById("trace-back-label").textContent = `Back to ${caseId}`;
         document.getElementById("trace").src = `/api/runs/${encodeURIComponent(currentRun.run_id)}/cases/${caseId}/trace`;
+        runView.classList.add("hidden");
+        traceView.classList.remove("hidden");
         refreshIcons();
       }
 
       document.getElementById("back").onclick = showRuns;
+      document.getElementById("trace-back").onclick = () => {
+        document.getElementById("trace").src = "about:blank";
+        traceView.classList.add("hidden");
+        runView.classList.remove("hidden");
+      };
       refreshIcons();
       showRuns();
     </script>

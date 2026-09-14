@@ -5,9 +5,9 @@ metrics, and a run detail view with per-case results, the receipt image,
 and the agent trajectory rendered by pydantic-ai-trace.
 
 Per-case token cost and token counts are stored with the run. Metrics
-the store does not keep (overpaid dollars) are derived here from the
-stored messages and labels; costs for runs saved before cost tracking
-are derived from the stored messages.
+the store does not keep (overpaid and underpaid dollars) are derived
+here from the stored messages and labels; costs for runs saved before
+cost tracking are derived from the stored messages.
 
 Usage:
     pixi run viewer   # http://127.0.0.1:8000
@@ -69,6 +69,7 @@ def _case_row(case: RunCase) -> dict[str, Any]:
             "actual_decision": case.actual.decision,
             "actual_amount": float(case.actual.reimbursed_amount),
             "overpaid": float(result.overpaid),
+            "underpaid": float(result.underpaid),
         }
     else:
         row |= {"correct": False, "decision_match": False, "error": case.error}
@@ -89,6 +90,7 @@ def _run_summary(run: Run) -> dict[str, Any]:
         "decision_accuracy": run.metrics.decision_accuracy,
         "mean_reimbursed_error": float(run.metrics.mean_reimbursed_error or 0),
         "overpaid": sum(row.get("overpaid", 0.0) for row in rows),
+        "underpaid": sum(row.get("underpaid", 0.0) for row in rows),
         "mean_cost": sum(costs) / len(costs) if costs else 0.0,
         "total_cost": float(total_cost),
     }

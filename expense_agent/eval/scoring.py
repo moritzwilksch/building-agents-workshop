@@ -41,6 +41,7 @@ class CaseEval(BaseModel):
     decision_match: bool
     reimbursed_error: Decimal  # |actual - expected| on the total
     overpaid: Decimal  # extra payout vs. ground truth, 0 if under
+    underpaid: Decimal  # missing payout vs. ground truth, 0 if over
     line_item_deltas: list[LineItemDelta]  # only items that differ
 
 
@@ -74,5 +75,6 @@ def evaluate(expected: CaseDecision, actual: CaseDecision) -> CaseEval:
         decision_match=expected.decision == actual.decision,
         reimbursed_error=reimbursed_error,
         overpaid=max(Decimal("0"), actual.reimbursed_amount - expected.reimbursed_amount),
+        underpaid=max(Decimal("0"), expected.reimbursed_amount - actual.reimbursed_amount),
         line_item_deltas=deltas,
     )
