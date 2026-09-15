@@ -1,5 +1,5 @@
 {
-  "note": "Branded ducks and UV inspection lights purchased for the interactive 'rubber duck debugging' booth challenge at CloudFest Berlin.",
+  "note": "Branded UV-reactive wristbands and UV inspection lights purchased for the blacklight scavenger hunt booth challenge at CloudFest Berlin.",
   "invoice_type": "standard",
   "id": "inv-std-20240417-8831",
   "invoice_number": "INV-2024-8831",
@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE318492015",
   "items": [
     {
-      "description": "Custom UV-reactive yellow mini rubber ducks (bulk 500-pack)",
+      "description": "Custom UV-reactive silicone event wristbands (bulk 500-pack)",
       "quantity": "1",
       "unit_price": "185",
       "total_price": "185",
@@ -53,7 +53,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Custom UV-reactive yellow mini rubber ducks (bulk 500-pack)",
+      "description": "Custom UV-reactive silicone event wristbands (bulk 500-pack)",
       "amount": "185"
     },
     {

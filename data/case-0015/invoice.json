@@ -1,5 +1,5 @@
 {
-  "note": "Branded promotional ducks and display hardware for the developer conference booth raffle next week.",
+  "note": "Branded promotional giveaways and display hardware for the developer conference booth raffle next week.",
   "invoice_type": "standard",
   "id": "inv_std_8829141",
   "invoice_number": "RE-2024-09412",
@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE319842105",
   "items": [
     {
-      "description": "Custom Printed Yellow Rubber Ducks (Branded with company logo) - Pack of 250",
+      "description": "Custom Printed Stress Balls (Branded with company logo) - Pack of 250",
       "quantity": "2",
       "unit_price": "199",
       "total_price": "398",
@@ -53,7 +53,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Custom Printed Yellow Rubber Ducks (Branded with company logo) - Pack of 250",
+      "description": "Custom Printed Stress Balls (Branded with company logo) - Pack of 250",
       "amount": "398"
     },
     {

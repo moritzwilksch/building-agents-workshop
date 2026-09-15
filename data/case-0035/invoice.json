@@ -1,5 +1,5 @@
 {
-  "note": "Hardware components for our local staging cluster prototype, plus branded duck swag for the Q2 developer meetup booth.",
+  "note": "Hardware components for our local staging cluster prototype, plus branded glow-in-the-dark swag for the Q2 developer meetup booth.",
   "invoice_type": "standard",
   "id": "inv_std_882910a",
   "invoice_number": "RE-2024-0418",
@@ -52,7 +52,7 @@
       "is_alcohol": false
     },
     {
-      "description": "Branded Glow-in-the-Dark Mini Rubber Ducks (Pack of 100)",
+      "description": "Branded Glow-in-the-Dark Bottle Openers (Pack of 100)",
       "quantity": "2",
       "unit_price": "48",
       "total_price": "96",
@@ -89,7 +89,7 @@
     },
     {
       "id": 4,
-      "description": "Branded Glow-in-the-Dark Mini Rubber Ducks (Pack of 100)",
+      "description": "Branded Glow-in-the-Dark Bottle Openers (Pack of 100)",
       "amount": "96"
     },
     {

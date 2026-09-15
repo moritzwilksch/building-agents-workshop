@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE319882104",
   "items": [
     {
-      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "description": "Custom Neon Team Lanyards & Badge Reels (Hackathon Giveaway, 400-pack)",
       "quantity": "1",
       "unit_price": "280",
       "total_price": "280",
@@ -61,7 +61,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "description": "Custom Neon Team Lanyards & Badge Reels (Hackathon Giveaway, 400-pack)",
       "amount": "280"
     },
     {

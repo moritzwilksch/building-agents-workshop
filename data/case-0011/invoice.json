@@ -18,7 +18,7 @@
   "number_of_guests": 6,
   "items": [
     {
-      "description": "L. M zum Mitnehmen",
+      "description": "Lahmacun Menü zum Mitnehmen",
       "quantity": "6",
       "unit_price": "14.00",
       "total_price": "84.00",
@@ -40,7 +40,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "L. M zum Mitnehmen",
+      "description": "Lahmacun Menü zum Mitnehmen",
       "amount": "84.00"
     },
     {

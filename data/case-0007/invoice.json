@@ -1,5 +1,5 @@
 {
-  "note": "Two-night stay for Berlin investor meetings. Includes same-day garment cleaning following a spill during lunch and overnight parking for the rental EV.",
+  "note": "Two-night stay for Berlin investor meetings. Includes same-day garment pressing after a spill at a client lunch, and overnight parking for the rental car.",
   "invoice_type": "hotel",
   "id": "inv_htl_89124021",
   "folio_number": "FOL-2024-88412",
@@ -40,7 +40,7 @@
   ],
   "incidentals": [
     {
-      "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
+      "description": "Priority Garment Pressing Service (1x Suit & Cravat)",
       "quantity": "1",
       "unit_price": "28",
       "total_price": "28",
@@ -64,7 +64,7 @@
       "is_alcohol": false
     },
     {
-      "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
+      "description": "Overnight Self-Parking (Event Weekend Rate)",
       "quantity": "2",
       "unit_price": "35",
       "total_price": "70",
@@ -96,7 +96,7 @@
     },
     {
       "id": 2,
-      "description": "Express Emergency Dry Cleaning (1x Burgundy Silk Cravat)",
+      "description": "Priority Garment Pressing Service (1x Suit & Cravat)",
       "amount": "28"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "id": 5,
-      "description": "Valet Parking & High-Speed EV Supercharging Surcharge",
+      "description": "Overnight Self-Parking (Event Weekend Rate)",
       "amount": "70"
     },
     {

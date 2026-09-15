@@ -1,5 +1,5 @@
 {
-  "note": "Materials and interactive display props for our developer booth at the Berlin Indie Games Expo. The branded ducks and interactive ball pit setup are part of the player engagement activation.",
+  "note": "Materials and interactive display props for our developer booth at the Berlin Indie Games Expo. The branded mascot keychains and interactive ball pit setup are part of the player engagement activation.",
   "invoice_type": "standard",
   "id": "inv_std_8841920_k9",
   "invoice_number": "INV-2024-0892",
@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE294820194",
   "items": [
     {
-      "description": "Miniature Custom Squeaky Rubber Ducks (Branded with company logo for expo booth giveaway)",
+      "description": "Miniature Custom Mascot Keychains (Branded with company logo for expo booth giveaway)",
       "quantity": "350",
       "unit_price": "1.2",
       "total_price": "420",
@@ -61,7 +61,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Miniature Custom Squeaky Rubber Ducks (Branded with company logo for expo booth giveaway)",
+      "description": "Miniature Custom Mascot Keychains (Branded with company logo for expo booth giveaway)",
       "amount": "420"
     },
     {
