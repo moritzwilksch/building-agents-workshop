@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0024",
+  "decision": "partially_approved",
+  "claimed_amount": 537.37,
+  "reimbursed_amount": 402.55,
+  "line_items": [
+    { "id": 0, "description": "Deluxe Room Night 14/05", "claimed": 195.00, "reimbursed": 160.00 },
+    { "id": 1, "description": "Deluxe Room Night 15/05", "claimed": 195.00, "reimbursed": 160.00 },
+    { "id": 2, "description": "Same-Day Shoe Shine & Sneaker Cleaning Service", "claimed": 38.00, "reimbursed": 0.00 },
+    { "id": 3, "description": "Minibar - Artisan Sea Salt Truffle Chips & Fritz-Kola", "claimed": 18.00, "reimbursed": 0.00 },
+    { "id": 4, "description": "Quiet-Zone High-Speed Workspace Pod Rental (Half Day)", "claimed": 45.00, "reimbursed": 45.00 },
+    { "id": 5, "description": "City tax", "claimed": 12.00, "reimbursed": 12.00 },
+    { "id": 6, "description": "VAT", "claimed": 34.37, "reimbursed": 25.55 }
+  ],
+  "reasoning": "Hotel folio, Hamburg, 2 nights (Tue 14/05 and Wed 15/05, so no weekend nights and Figure 1 is not triggered). Hamburg is a Tier 2 city, so the nightly room cap is EUR 160 (Ch 6 tier caps; appendix table). The folio rate is EUR 195 per night, so Finance reimburses 160 per night and deducts the 35 excess per night (70 total over two nights), plus the 7% VAT the folio charges on that excess (4.90). The 'Deluxe' room category gets no higher cap (Ch 6). The note names the 'European Maritime Tech Summit' in May, which is neither the listed Hamburg trade-fair event (SMM Wind Energy, September) nor in its window, so the Chapter 9 event surcharge cap does not apply and the ordinary tier cap governs. Incidental lines: the same-day shoe shine (38.00) is personal grooming under Ch 11 and is not laundry or garment rescue (no soiling incident stated in the note; Ch 6 laundry allowances do not cover it), so it is deducted in full with its VAT (2.66). The minibar line (18.00) is always deducted together with its VAT (1.26) per Ch 6 and the appendix incidental table; the 'truffle chips' wording is a red herring, as minibar items are deducted regardless. The quiet-zone workspace pod (45.00) is a legitimate business amenity for client video calls and is reimbursed. City tax (12.00) is fully reimbursable when itemized on the folio. Of the 34.37 total VAT, the attributable portion is 7% of the reimbursable base (2 x 160 room + 45 pod = 365), i.e. 25.55 reimbursed; the VAT on the room excess, shoe shine, and minibar (8.82) is deducted. Reimbursed: 320.00 capped room + 45.00 pod + 12.00 city tax + 25.55 VAT = 402.55. Deductions: 74.90 room excess incl. VAT + 40.66 shoe shine incl. VAT + 19.26 minibar incl. VAT = 134.82."
+}

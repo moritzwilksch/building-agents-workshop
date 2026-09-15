@@ -1,0 +1,15 @@
+{
+  "case_id": "case-0031",
+  "decision": "rejected",
+  "claimed_amount": 47.85,
+  "reimbursed_amount": 0.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "BAUHAUS Fachcentrum Berlin-Schöneberg",
+      "claimed": 47.85,
+      "reimbursed": 0.0
+    }
+  ],
+  "reasoning": "The receipt is a summary card slip: it shows only the merchant name, a single aggregate total of 47.85, and a masked card number, with no itemized breakdown of the velcro straps and cable trunking. Chapter 2's substantiation standard ('Rely on credit card charge slips') states that a card slip proves money changed hands but not what was purchased, and Finance rejects any expense line supported only by a summary card slip regardless of amount or note. This is calculation step 1 (eligibility check) in Chapter 2's fixed order, so the line is rejected before any caps are applied. The substantive rules would have allowed the claim - velcro straps and cable trunking are incidental consumables under Chapter 10's €50.00 per invoice cap, and the note states the business purpose (server-rack cabling cleanup during the weekend datacenter migration) - but that is moot because the eligibility check fails first. The weekend angle changes nothing: the slip is dated Friday 2024-10-18, and Chapter 9 says commercial invoices for goods are never weekend expenses in any case. Reimbursed: 0.00."
+}

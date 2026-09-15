@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0039",
+  "decision": "partially_approved",
+  "claimed_amount": 776.36,
+  "reimbursed_amount": 166.48,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Miniature Custom Mascot Keychains (Branded with company logo for expo booth giveaway)",
+      "claimed": 420.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Industrial Heavy-Duty Gaffer Tape (Matte Black, 50mm x 50m)",
+      "claimed": 78.0,
+      "reimbursed": 50.0
+    },
+    {
+      "id": 2,
+      "description": "Ultra-low latency USB-C to MIDI Host Interface Adapter for demo station",
+      "claimed": 89.9,
+      "reimbursed": 89.9
+    },
+    {
+      "id": 3,
+      "description": "Collapsible Pop-up Ball Pit Enclosure (1.5m diameter, for interactive product display)",
+      "claimed": 64.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 123.96,
+      "reimbursed": 26.58
+    }
+  ],
+  "reasoning": "Commercial invoice for expo booth goods, evaluated per line under its own category (Ch. 10). Line 0 (mascot keychains, 420.00) and line 3 (ball pit enclosure, 64.50) are event materials under the Ch. 10 event-materials rule: reimbursable only when the note both names the event and states that the budget owner (Department Director, Practice Leader, or equivalent) pre-approved the purchase. The note names the Berlin Indie Games Expo but never states pre-approval, so the second required statement is missing and both lines are deducted in full. Line 1 (gaffer tape, 78.00) is a routine office consumable explicitly listed under the Ch. 10 office-supplies card ('tape'), which caps out-of-pocket consumables at 50.00 per invoice; 50.00 net is reimbursed and the 28.00 excess is deducted. Line 2 (USB-C MIDI adapter, 89.90) is a peripheral with a unit price of 44.95, under the Ch. 10 100.00 peripheral threshold, so it is reimbursable with an itemized invoice and no IT ticket number is required. Line 4: the invoice adds 19% VAT on top of the net subtotal, so per the Ch. 2 calculation steps the VAT is reimbursed only in proportion to the reimbursable net lines: (50.00 + 89.90) x 0.19 = 26.58; the VAT attributable to deducted lines (keychains 79.80, tape excess 5.32, ball pit 12.26 = 97.38) is deducted with them. The buyer company name on the invoice does not affect reimbursability per the Ch. 10 FAQ. The invoice date (2024-03-29, a German public holiday) does not trigger the Ch. 9/13 weekend rules because commercial invoices for goods are never weekend expenses. Total reimbursed: 50.00 + 89.90 + 26.58 = 166.48 of 776.36, so the line is partially approved."
+}

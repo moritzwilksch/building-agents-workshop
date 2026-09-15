@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0017",
+  "decision": "rejected",
+  "claimed_amount": 539.90,
+  "reimbursed_amount": 0.00,
+  "line_items": [
+    { "id": 0, "description": "Base fare", "claimed": 385.00, "reimbursed": 0.00 },
+    { "id": 1, "description": "German Air Transport Tax (Ökosteuer)", "claimed": 42.15, "reimbursed": 0.00 },
+    { "id": 2, "description": "Airport Passenger Service Charge", "claimed": 56.30, "reimbursed": 0.00 },
+    { "id": 3, "description": "Carrier Imposed Surcharge (YQ)", "claimed": 38.00, "reimbursed": 0.00 },
+    { "id": 4, "description": "Swedish Aviation Tax", "claimed": 18.45, "reimbursed": 0.00 }
+  ],
+  "reasoning": "The e-ticket was issued on 2024-04-12 and the first segment (LH802, FRA-ARN) departs on 2024-04-18, which is 6 calendar days ahead. That puts the booking inside the seven-day window, where Chapter 4's 'Book inside the seven-day window without a stated reason' rule makes the ticket reimbursable only if the submission note states the business reason that prevented earlier booking (short-notice client meeting, moved court date, urgent site incident). The note names the trip purpose (Q2 cloud infrastructure migration sync with the Nordic engineering team) but never states why the flight was booked late. Per Chapter 2, where a required note fact is missing, Finance applies the less favorable branch of the rule, so the entire ticket is rejected. Cabin class is not the trigger - both segments are economy, compliant for roughly two-hour flights - and government taxes and carrier surcharges are normally fully reimbursable under Chapter 4, but they fall with the ticket because the booking-window failure rejects the whole e-ticket. Decision: rejected, EUR 0.00 of EUR 539.90."
+}

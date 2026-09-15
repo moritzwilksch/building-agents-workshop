@@ -1,0 +1,28 @@
+{
+ "case_id": "case-0050",
+ "audit": {
+  "case_id": "case-0050",
+  "invoice_type": "hotel",
+  "current_category": "subtle_multi",
+  "intended_rules": "Ch.6 Tier 2 Berlin nightly cap (€160) vs €165 rate; Ch.9 trade-fair/event surcharge override check (note names \"European Green Tech Summit\" which is not the listed Berlin FinTech Summit and the stay is in November, so the tier cap governs); Ch.6 deduction of late check-out fees; Ch.6/Ch.11 minibar deduction (non-alcoholic minibar items still deducted); Ch.2 calculation order including VAT on deducted lines; Ch.6/Ch.14 full reimbursement of itemized Berlin city tax.",
+  "consistency_issues": [
+   "Late checkout line bundles 'Overnight Luggage Storage' with the late checkout fee; luggage storage alone is not an enumerated deduction, but since the line is dominated by the late-checkout fee it is reasonable to deduct the whole line - minor ambiguity only."
+  ],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [
+   "City tax of €9.00 for 2 nights is low for Berlin: the Übernachtungsteuer is 5% of the net room rate (~€15.42 on a €308.42 net folio). Minor; does not affect adjudication.",
+   "Hotel name 'The Circus Hotel & Suites' closely resembles a real Berlin boutique hotel chain at a slightly different address; plausible overall."
+  ],
+  "recommendation": "keep",
+  "notes": "Validator passes (1/1 valid). No label.json or receipt.jpg, so no label/receipt work needed. Nights of Tue 2023-11-14 and Wed 2023-11-15 are weekday nights, so Figure 1 is not triggered. Correct payout: 407.04 total − 10.70 (room excess over €160 cap incl. 7% VAT) − 26.215 (late checkout incl. VAT) − 18.725 (minibar incl. VAT) = €351.40, partially approved. The named event is a good distractor for the Ch.9 event-surcharge override. Clean subtle_multi case; only quibble is the slightly low city tax amount."
+ },
+ "verify": {
+  "case_id": "case-0050",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

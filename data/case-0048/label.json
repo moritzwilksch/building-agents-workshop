@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0048",
+  "decision": "approved",
+  "claimed_amount": 120.10,
+  "reimbursed_amount": 120.10,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Ticket fare",
+      "claimed": 114.90,
+      "reimbursed": 114.90
+    },
+    {
+      "id": 1,
+      "description": "Seat reservation",
+      "claimed": 5.20,
+      "reimbursed": 5.20
+    }
+  ],
+  "reasoning": "Fully reimbursable rail expense. The ticket is a standard 2nd-class DB ICE fare, which Chapter 5 names as the firm standard for rail travel, reimbursed without further justification. The seat reservation fee is reimbursable in full per Chapter 5 (Seat Reservations and Flexible Fares). There is no rail cap and no advance-booking rule for rail: the 7-day booking window in Chapter 4 applies only to flights, so the ticket being issued four days before departure is irrelevant. The submission note states the trip purpose (quarterly partner enablement session), satisfying the Chapter 2 note requirement for rail; routine rail tickets may even carry an empty note. Travel is on Tuesday 2024-04-16, so no weekend or public-holiday rule applies, and train tickets are expressly not weekend expenses merely because of the travel day. No deductions: claimed 120.10, reimbursed 120.10."
+}

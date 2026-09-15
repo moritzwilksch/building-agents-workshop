@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0030",
+ "audit": {
+  "case_id": "case-0030",
+  "invoice_type": "standard",
+  "current_category": "subtle_multi",
+  "intended_rules": "Ch. 10 event materials card-do (reimbursable only if note names the event AND states budget-owner pre-approval; both required) combined with Ch. 10 computer hardware card-do (peripherals with unit price under €100 reimbursable with itemized invoice) — the note's missing pre-approval kills the event-material lines while the under-threshold UV lamps survive under their own category rule; Ch. 2 calculation steps govern the with-tax deduction of the event lines.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes (line items, subtotal 310, 19% VAT 58.90, total 368.90, charges mirror items). No label.json, no receipt.jpg; no edits made, so no image regeneration needed. Correct adjudication: partially approved, reimburse only the UV lamp line with its VAT = 79.80 * 1.19 = 94.96 EUR; deduct wristbands (185) and display tray (45.20) as event-material lines lacking the required pre-approval statement, including their VAT (230.20 * 0.19 = 43.74); 368.90 - 273.94 = 94.96. The lamps (unit 39.90 < 100 EUR peripheral threshold) are reimbursable under their own hardware rule even though bought for the event — the handbook explicitly says only above-threshold electronics stay non-reimbursable when bought for an event. Realism is good: Leipzig promotional-products vendor for event swag, plausible bulk wristband pricing (~0.37/unit), realistic UV lamp pack price, valid DE VAT IDs, sane dates and Net-30 terms. Classification judgment: requires combining the event-materials note test with the peripheral-threshold exception across two Ch. 10 passages, so subtle_multi rather than subtle_single. A minor wrinkle: the tray could arguably be read as decor (never reimbursable), but as booth display material the deduction outcome is identical. Fits target distribution; keep as-is, optionally add a label.json capturing the adjudication above."
+ },
+ "verify": {
+  "case_id": "case-0030",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

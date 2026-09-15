@@ -1,5 +1,5 @@
 {
-  "note": "Booth staging supplies and hardware tools for the quarterly hackathon, including promotional ducks for attendee giveaways. Pre-approved under the team event budget.",
+  "note": "Booth staging supplies and hardware tools for the quarterly hackathon, including promotional ducks for attendee giveaways. Pre-approved by the Head of Engineering under the team event budget.",
   "invoice_type": "standard",
   "id": "inv_std_20240328_88412",
   "invoice_number": "INV-2024-88412",
@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE319882104",
   "items": [
     {
-      "description": "Custom Neon Team Lanyards & Badge Reels (Hackathon Giveaway, 400-pack)",
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
       "quantity": "1",
       "unit_price": "280",
       "total_price": "280",
@@ -61,7 +61,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Custom Neon Team Lanyards & Badge Reels (Hackathon Giveaway, 400-pack)",
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
       "amount": "280"
     },
     {

@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0013",
+ "audit": {
+  "case_id": "case-0013",
+  "invoice_type": "taxi",
+  "current_category": "subtle_multi",
+  "intended_rules": "Ch. 5 taxi rule: fare-before-tip threshold €25.00 plus enumerated justifications (airport/rail station, 21:00–06:00, bulky equipment, shared vehicle, consecutive offsite meetings) with excess deducted; Ch. 2 note requirements: for fares above the threshold the note must state which Ch. 5 justification applies, missing fact → less favorable branch; Ch. 14 Global Tipping Standards: Germany 20% cap on fare before tip (tip €4.80 = 10.39%, within cap, fully reimbursed).",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes (1/1 valid). Receipt.jpg matches invoice exactly (vendor, license, ID, date/time, addresses, 18.4 km, fare 46.20 + tip 4.80 = 51.00, Mastercard ****7814). 2023-11-14 is a Tuesday, so Figure 1 weekend logic is not triggered. Fare €46.20 exceeds the €25.00 threshold and the note (\"early morning booth setup at Productronica\") states no Ch. 5 justification: 08:42 is not before 06:00, neither endpoint is an airport or rail station, no bulky equipment/shared-vehicle/consecutive-meetings claim. Ch. 2 says a missing required note fact means Finance applies the less favorable branch, so fare reimburses only to €25.00; excess €21.20 deducted. Tip is 10.39% of the pre-tip fare, within Germany's 20% cap, so it is reimbursed in full — a good distractor since it looks high. Correct payout: €29.80 (fare cap €25.00 + tip €4.80), deducted €21.20. Realism is excellent: Productronica 2023 really ran Nov 14–17 in Munich, IsarFunk and Hotel Torbräu are real Munich entities, ~€2.51/km is plausible for trade-fair week. Difficulty: subtle_multi — requires combining the Ch. 5 threshold/justification list, the Ch. 2 note-fact rule, and the Ch. 14 tip cap check. No label.json exists; if one is added it should record decision \"partial/deduct\", claimed €51.00, reimbursed €29.80, with citations to Ch. 5 (taxi threshold + justifications), Ch. 2 (note requirements), and Ch. 14 (Germany 20% tip cap)."
+ },
+ "verify": {
+  "case_id": "case-0013",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

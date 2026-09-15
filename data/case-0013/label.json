@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0013",
+  "decision": "partially_approved",
+  "claimed_amount": 51.0,
+  "reimbursed_amount": 29.8,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "claimed": 46.2,
+      "reimbursed": 25.0
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "claimed": 4.8,
+      "reimbursed": 4.8
+    }
+  ],
+  "reasoning": "Taxi from Hotel Torbräu to Messe München on 2023-11-14 (a Tuesday, so Figure 1 weekend rules do not apply). The fare before tip is €46.20, above the €25.00 unjustified-ride threshold in Chapter 5, so the fare is only fully reimbursable if the note states one of Chapter 5's justifications. The note says the ride was for early morning booth setup at Productronica, but states none of the enumerated justifications: the pickup and drop-off are a hotel and a trade-fair ground, not an airport or long-distance rail station; the receipt time 08:42 is not after 21:00 or before 06:00; and there is no mention of bulky presentation displays or heavy client equipment, a shared vehicle, or consecutive offsite meetings. Per Chapter 2, where a required note fact is missing Finance applies the less favorable branch, so the fare is reimbursed only up to the €25.00 threshold and the €21.20 excess is deducted. The €4.80 tip is checked against the Global Tipping Standards in Chapter 14: Germany allows up to 20% of the fare before tip (20% of €46.20 = €9.24), and €4.80 is 10.39%, so the tip is reimbursed in full. Total reimbursed €25.00 + €4.80 = €29.80 of the €51.00 claimed."
+}

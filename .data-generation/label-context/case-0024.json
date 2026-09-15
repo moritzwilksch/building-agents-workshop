@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0024",
+ "audit": {
+  "case_id": "case-0024",
+  "invoice_type": "hotel",
+  "current_category": "subtle_multi",
+  "intended_rules": "Ch 6 Tier 2 Hamburg nightly cap (€160) with VAT-on-excess deduction; Ch 9 trade-fair surcharge override as a distractor (note names an unlisted event, so tier cap governs); Ch 6/11 minibar deduction incl. truffle minibar snack (Fig 3 note confirms minibar items are deducted regardless of truffle rule); Ch 11 personal grooming deduction (shoe shine, no garment-rescue statement); city tax fully reimbursable; appendix incidental table.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes. Adjudication: partially approved. Deduct room excess €70 + VAT €4.90 (Tier 2 cap €160 vs €195/night × 2); shoe shine €38 + VAT €2.66 (personal grooming, Ch 11; not eligible laundry/garment rescue — 2-night stay and no soiling statement in note); minibar €18 + VAT €1.26 (always deducted; the truffle-chips name is a red herring — Fig 3 note sends minibar truffle snacks to Ch 6). Reimbursable: capped room €320 + workspace pod €45 (legitimate business amenity) + city tax €12 + attributable VAT €25.55 = €402.55. Nights begin Tue/Wed, so Figure 1 not triggered. Trade-fair distractor works as intended: \"European Maritime Tech Summit\" in May is neither the listed Hamburg event (SMM Wind Energy, September) nor in-window, so the €200 surcharge cap does not apply. Vendor, address, prices, and 7% German lodging VAT all realistic. No label.json or receipt.jpg present; nothing edited. Fits subtle_multi: correct payout requires combining the tier cap + VAT-on-excess + two incidental deductions + resisting the event-override distractor."
+ },
+ "verify": {
+  "case_id": "case-0024",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

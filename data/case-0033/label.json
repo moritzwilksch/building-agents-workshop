@@ -1,0 +1,57 @@
+{
+  "case_id": "case-0033",
+  "decision": "approved",
+  "claimed_amount": 166.5,
+  "reimbursed_amount": 166.5,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Chicken Karaage Bao Buns (Set of 3)",
+      "claimed": 27.0,
+      "reimbursed": 27.0
+    },
+    {
+      "id": 1,
+      "description": "Spicy Szechuan Dan Dan Wontons",
+      "claimed": 11.5,
+      "reimbursed": 11.5
+    },
+    {
+      "id": 2,
+      "description": "Smoked Black Garlic Tonkotsu Ramen",
+      "claimed": 39.0,
+      "reimbursed": 39.0
+    },
+    {
+      "id": 3,
+      "description": "Truffle Miso Butter Shoyu Ramen",
+      "claimed": 21.5,
+      "reimbursed": 21.5
+    },
+    {
+      "id": 4,
+      "description": "Yuzu Botanical Craft Soda",
+      "claimed": 11.0,
+      "reimbursed": 11.0
+    },
+    {
+      "id": 5,
+      "description": "Hitachino Nest White Ale 0.33l",
+      "claimed": 22.5,
+      "reimbursed": 22.5
+    },
+    {
+      "id": 6,
+      "description": "Matcha Lava Cake with Black Sesame Gelato",
+      "claimed": 19.0,
+      "reimbursed": 19.0
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "claimed": 15.0,
+      "reimbursed": 15.0
+    }
+  ],
+  "reasoning": "Client hospitality dinner (Fig. 2, Ch. 13): the note states the business purpose (Q3 data pipeline rollout review), the external organization (Kvantum Analytics), and the attendee count (3), meeting the documentation requirements of Ch. 8, so the bill is evaluated as client hospitality rather than solo dining. The receipt time 21:42 selects the dinner branch (Ch. 7) and is before the 23:00 late-night cutoff in Fig. 2, so the bill is not rejected. Truffle screening (Fig. 3, Ch. 13): the Truffle Miso Butter Shoyu Ramen is a main course at a unit price of 21.50, strictly below the 40.00 threshold, so it passes and is reimbursable. Dining cap (Fig. 2): 151.50 split over 3 attendees is 50.50 per person, well under the 90.00 per-attendee dinner cap for client hospitality. Alcohol allowance (Fig. 2): beer/wine/cocktails are reimbursable up to 30% of the non-alcoholic food and drink subtotal; the non-alcoholic subtotal is 151.50 - 22.50 = 129.00, so the allowance is 38.70, and the 22.50 of beer is within it. Tip (Ch. 14 appendix, Germany row): the cap is 20% of the bill before tip, i.e. up to 30.30; the 15.00 tip is within the cap. The 19% VAT is included in the item prices and is not a separate charge. No deductions apply; the full 166.50 is reimbursed."
+}

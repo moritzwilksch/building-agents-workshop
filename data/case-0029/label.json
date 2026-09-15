@@ -1,0 +1,51 @@
+{
+  "case_id": "case-0029",
+  "decision": "approved",
+  "claimed_amount": 250.0,
+  "reimbursed_amount": 250.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Charred Octopus with Romesco & Smoked Paprika",
+      "claimed": 39.0,
+      "reimbursed": 39.0
+    },
+    {
+      "id": 1,
+      "description": "Crispy Pork Belly Bao with Pickled Daikon",
+      "claimed": 25.5,
+      "reimbursed": 25.5
+    },
+    {
+      "id": 2,
+      "description": "Iberico Pluma with Truffle Polenta",
+      "claimed": 103.5,
+      "reimbursed": 103.5
+    },
+    {
+      "id": 3,
+      "description": "Matcha Fondant & Black Sesame Gelato",
+      "claimed": 28.5,
+      "reimbursed": 28.5
+    },
+    {
+      "id": 4,
+      "description": "San Pellegrino Sparkling Water (750ml)",
+      "claimed": 15.0,
+      "reimbursed": 15.0
+    },
+    {
+      "id": 5,
+      "description": "Espresso Doble",
+      "claimed": 13.5,
+      "reimbursed": 13.5
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "claimed": 25.0,
+      "reimbursed": 25.0
+    }
+  ],
+  "reasoning": "Client hospitality dinner per Figure 2 (fig2-dining). The note states the business purpose (integration API discussion), the external organization (Veloce Mobility), and the attendee count (3 total, 2 external), satisfying the documentation requirements of Chapter 8, so it is not downgraded to solo dining. Attendee ratio is 2 external per 1 employee, meeting the at-least-1-external-per-employee rule. Dinner cap is EUR 90 per attendee; the EUR 225 pre-tip bill divided by 3 attendees is EUR 75.00, within the cap. The truffle line (Iberico Pluma with Truffle Polenta) is a main course at EUR 34.50 unit price, strictly below the EUR 40.00 threshold in Figure 3 Step 3 (fig3-truffle), so it is reimbursable. Receipt time 21:42 is before the 23:00 late-night cutoff in Figure 2, so the bill is not rejected as a late-night expense. No alcohol was ordered, so the 30% alcohol allowance is not implicated. The EUR 25.00 tip is within the German 20% cap (20% of the EUR 225.00 pre-tip bill = EUR 45.00) from the Global Tipping table (tip-de-table). The EUR 35.92 tax is the 19% VAT-inclusive portion of the EUR 225.00 subtotal, not a separately added charge, so it needs no line of its own. The receipt is dated Thursday 2024-05-16, so no weekend or holiday screening under Figure 1 applies. Every line is fully reimbursed."
+}

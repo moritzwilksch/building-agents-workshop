@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0026",
+ "audit": {
+  "case_id": "case-0026",
+  "invoice_type": "restaurant",
+  "current_category": "subtle_multi",
+  "intended_rules": "Figure 1 weekend/holiday flowchart (Saturday receipt, neither conference/delivery branch nor Monday-meeting branch stated -> strictly disallowed); Figure 2 dining matrix (client hospitality for job candidates, 30% alcohol allowance, €90/attendee cap — the distractor that makes it look valid); Ch.14 Germany 20% tip cap vs the 10% EU norm (tip 9.9% passes); Ch.7/Ch.8 note documentation requirements.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes (tax correctly VAT-inclusive: 166.50*19/119=26.58; 166.50+16.50=183.00). Surface adjudication under Figure 2 + Ch.14 would fully reimburse €183.00: client hospitality (2 external candidates + 1 employee, ratio ≥1), note states purpose/external attendees/count, receipt 21:44 before 23:00 cutoff, alcohol €19.20 ≤ 30% of €147.30 non-alcohol subtotal, tip 9.9% ≤ Germany's country-specific 20% cap, €61/person ≤ €90 dinner cap, no truffle. However 2024-05-18 is a Saturday, so Figure 1 is binding for restaurant receipts: the note names no conference/trade show/client delivery and no mandatory pre-10:00 client/court meeting the following business day -> strictly disallowed, €0.00 reimbursed. Requires combining the weekend flowchart with the dining matrix (and the German tip row as a secondary distractor), so subtle_multi fits. Vendor/menu/price/date realism all fine; no receipt.jpg; no label.json so nothing to sync; no edits made."
+ },
+ "verify": {
+  "case_id": "case-0026",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

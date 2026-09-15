@@ -1,0 +1,57 @@
+{
+  "case_id": "case-0047",
+  "decision": "partially_approved",
+  "claimed_amount": 273.50,
+  "reimbursed_amount": 129.00,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Ghost Pepper & Yuzu Crispy Chicken Wings",
+      "claimed": 27.00,
+      "reimbursed": 27.00
+    },
+    {
+      "id": 1,
+      "description": "Smoked Bone Marrow & Sourdough Toast",
+      "claimed": 18.50,
+      "reimbursed": 18.50
+    },
+    {
+      "id": 2,
+      "description": "Dry-Aged Ribeye (350g) w/ Truffle Butter",
+      "claimed": 84.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 3,
+      "description": "Charred Miso King Oyster Mushrooms",
+      "claimed": 19.50,
+      "reimbursed": 19.50
+    },
+    {
+      "id": 4,
+      "description": "Riesling Spätlese Trocken (Bottle)",
+      "claimed": 44.00,
+      "reimbursed": 12.50
+    },
+    {
+      "id": 5,
+      "description": "Espresso Martini",
+      "claimed": 40.50,
+      "reimbursed": 11.50
+    },
+    {
+      "id": 6,
+      "description": "San Pellegrino 750ml",
+      "claimed": 15.00,
+      "reimbursed": 15.00
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "claimed": 25.00,
+      "reimbursed": 25.00
+    }
+  ],
+  "reasoning": "Client hospitality dinner for one employee and two prospective clients from FinFlow Systems, so the €90-per-attendee dinner cap for 3 attendees is easily met by the post-deduction bill. The truffle screening of Figure 3 runs first in Chapter 2's fixed calculation order: the dry-aged ribeye with truffle butter is a main course at €42.00 per portion, at or above the €40.00 threshold, so the entire €84.00 line is deducted. The remaining non-alcoholic food and drink subtotal is €80.00, and the client-hospitality alcohol allowance in Figure 2 is 30% of that subtotal, i.e. €24.00; the Riesling and the Espresso Martinis total €84.50, so €60.50 of alcohol is deducted, allocated proportionally across the two lines (€12.50 on the wine, €11.50 on the cocktails). Germany's 20% tip cap in Chapter 14 allows the full €25.00 tip on the €248.50 pre-tip bill. The receipt is dated Friday, 18 October 2024 with a 21:42 time, a regular weekday before the late-night cutoff, so the weekend and late-night rules do not apply. Something was deducted but a positive amount remains, so the invoice is partially approved."
+}

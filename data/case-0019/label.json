@@ -1,0 +1,13 @@
+{
+  "case_id": "case-0019",
+  "decision": "approved",
+  "claimed_amount": 599.76,
+  "reimbursed_amount": 599.76,
+  "line_items": [
+    { "id": 0, "description": "Base fare", "claimed": 465.00, "reimbursed": 465.00 },
+    { "id": 1, "description": "German Air Transport Tax (LuftVSt)", "claimed": 54.20, "reimbursed": 54.20 },
+    { "id": 2, "description": "Airport Passenger Service Charge", "claimed": 48.16, "reimbursed": 48.16 },
+    { "id": 3, "description": "Aviation Security Charge (LuftSiG)", "claimed": 32.40, "reimbursed": 32.40 }
+  ],
+  "reasoning": "Domestic economy round trip BER-MUC. Advance booking window met: ticket issued 2024-04-12, first segment departs 2024-05-02, i.e. 20 days ahead, above the 14-calendar-day minimum for domestic travel. Economy class is mandatory on domestic flights and this ticket is economy throughout. The submission note states the trip purpose (annual Q2 European partner summit and technical workshops), satisfying the flight documentation requirement. All four charge lines are reimbursable: the base fare plus government air transport tax, passenger service charge, and security fee, which are mandatory ticket-price components. The Saturday return date is a distractor: a flight ticket is not a weekend expense merely because a travel day falls on a weekend, so it is evaluated under the air travel rules alone. The total of 599.76 is under the 2,500 pre-approval threshold, so no written pre-approval was needed. Nothing is deducted; the claim is approved in full."
+}

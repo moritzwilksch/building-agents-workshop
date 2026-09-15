@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0038",
+ "audit": {
+  "case_id": "case-0038",
+  "invoice_type": "standard",
+  "current_category": "subtle_multi",
+  "intended_rules": "Ch.10 event materials: note must both name the event AND state budget-owner pre-approval, else event-material lines are deducted (sign, gaffer tape, branded giveaways); Ch.10 peripherals under €100 unit price reimbursable (adapter cable); Ch.2 calculation order - deduct non-reimbursable lines at gross (net + 19% VAT) since this invoice adds tax on top.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes; items, VAT, total, and charges list all consistent. Vendor (EventForge & Stagecraft GmbH, Frankfurt) plausible for event decor/materials; prices realistic (neon sign €245, gaffer tape €19.50/roll, pack of 15 zen gardens €65, DB9 adapter €24.95); dates sane (2024-05-04; commercial invoices are never weekend expenses per Ch.9). Correct adjudication: note names the hackathon but omits the required budget-owner pre-approval statement, so all three event-material lines (sign €245, tape €78, giveaways €195) are deducted at gross incl. VAT (616.42); the €49.90 adapter cable is a peripheral under €100 and reimbursable. Partially approved, reimbursed 59.38 EUR (49.90 + 9.48 VAT). Fits subtle_multi: combines event-material pre-approval rule, peripheral threshold, and Ch.2 tax-on-deduction mechanics. No label.json present, so nothing to reconcile; case is consistent and grounded, keep as-is."
+ },
+ "verify": {
+  "case_id": "case-0038",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

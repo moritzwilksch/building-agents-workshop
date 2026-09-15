@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0041",
+  "decision": "approved",
+  "claimed_amount": 794.80,
+  "reimbursed_amount": 794.80,
+  "line_items": [
+    { "id": 0, "description": "Base fare", "claimed": 540.00, "reimbursed": 540.00 },
+    { "id": 1, "description": "International Passenger Service Fee (DE)", "claimed": 78.50, "reimbursed": 78.50 },
+    { "id": 2, "description": "German Aviation Security Charge (LuftSiG)", "claimed": 42.10, "reimbursed": 42.10 },
+    { "id": 3, "description": "Helsinki Airport Departure Tax & Security Fee", "claimed": 38.20, "reimbursed": 38.20 },
+    { "id": 4, "description": "Carrier-Imposed International Fuel & Operating Surcharge (YQ)", "claimed": 96.00, "reimbursed": 96.00 }
+  ],
+  "reasoning": "Round-trip economy flight FRA-HEL for the Nordic Tech Summit and onsite partner onboarding, per the submission note. Advance booking (Ch.4): ticket issued 2024-04-12, first segment departs 2024-05-02, i.e. 20 days ahead. Only bookings made fewer than 7 calendar days before departure are rejected without a stated reason; 20 days clears that hard window, so the 21-day international advance-booking guidance (a best-practice card, not an enforced rejection trigger) does not cost anything. Cabin class (Ch.4): both segments are economy, which is mandatory for segments under 8 hours; both FRA-HEL legs are roughly 3.5h and 2.5h, so no premium-cabin violation. Taxes and surcharges (Ch.4): the four fee lines are government passenger service and security taxes, an airport departure tax, and the carrier-imposed YQ fuel surcharge, all of which are part of the ticket price and fully reimbursable; there are no seat-selection, priority, lounge, Wi-Fi, or checked-bag fees to deduct. Weekend rule (Ch.9/Ch.13 Figure 1): the receipt is dated Friday 2024-04-12, and flight tickets are not weekend expenses merely because travel days fall on a weekend, so the flowchart does not apply. Note requirements (Ch.2): the note states the trip purpose for the flight, which is all Chapter 2 requires for flight lines. Nothing is deducted, so the line is approved in full: 540.00 + 78.50 + 42.10 + 38.20 + 96.00 = 794.80 EUR, fully reimbursed."
+}

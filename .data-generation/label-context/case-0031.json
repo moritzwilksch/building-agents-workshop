@@ -1,0 +1,30 @@
+{
+ "case_id": "case-0031",
+ "audit": {
+  "case_id": "case-0031",
+  "invoice_type": "card_slip",
+  "current_category": "subtle_single",
+  "intended_rules": "Ch.2 receipt substantiation (\"Rely on credit card charge slips\" - summary card slips are rejected outright regardless of amount or note) as the eligibility check step; distractor is Ch.10 incidental supplies €50/invoice cap, which the €47.85 total sits just under, making the purchase otherwise fully reimbursable if itemized.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Correct adjudication: reject, €0.00 reimbursed, citing Ch.2 card-slip rejection rule (eligibility check in the Finance calculation order). The purchase itself would pass: velcro straps and cable trunking are incidental consumables under the Ch.10 €50/invoice cap, and the note states the purpose (weekend datacenter migration server-rack cleanup). Vendor, city, price, and timing (Friday 16:42, weekend migration) are all realistic. No label.json or receipt.jpg present, so no label check or regeneration needed. Validator passes cleanly. Good subtle_single case: the entire outcome hinges on knowing one handbook passage; a naive agent approves in full."
+ },
+ "verify": {
+  "case_id": "case-0031",
+  "pass": true,
+  "category_confirmed": "subtle_single",
+  "problems": [
+   "Adjudication: decision=rejected, claimed_amount=47.85 EUR, reimbursed_amount=0.00 EUR. The receipt is a summary card slip (merchant name + total + masked card number, single aggregate charge, no itemized line items), which Chapter 2 rejects outright: 'Finance rejects any expense line supported only by a summary card slip, regardless of amount or explanation in the note' and calculation step 1 ('If the receipt is a summary card slip ... the line is rejected'). Substantive itemization is also missing for what Chapter 10 requires ('reimbursable with an itemized invoice').",
+   "Trap confirmed: a careless reading of Chapter 10 ('cables, and similar consumables may be expensed out of pocket up to EUR 50.00 per invoice') would approve the full 47.85 EUR, since the note describes the purchase well and 47.85 < 50.00. The single governing passage is the Chapter 2 card-slip rejection, so the case genuinely lands in subtle_single.",
+   "Weekend angle is a distractor, not a factor: issued 2024-10-18 (a Friday), and Chapter 9 states commercial invoices for goods are never weekend expenses regardless.",
+   "No label.json exists in data/case-0031, so no ground-truth file to reconcile; none was created since edits are forbidden in this phase.",
+   "Arithmetic validator passes (1/1 valid); charges list (1 x 47.85) mirrors total_amount.",
+   "Realism checks out: BAUHAUS Fachcentrum Berlin-Schoneberg is a plausible Berlin hardware retailer for velcro straps and cable trunking; EUR pricing and the server-rack note are coherent."
+  ]
+ }
+}

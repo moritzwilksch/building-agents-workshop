@@ -1,0 +1,15 @@
+{
+  "case_id": "case-0035",
+  "decision": "partially_approved",
+  "claimed_amount": 680.68,
+  "reimbursed_amount": 566.44,
+  "line_items": [
+    { "id": 0, "description": "Raspberry Pi 5 Model B (8GB RAM) - Lab Cluster Node", "claimed": 356.00, "reimbursed": 356.00 },
+    { "id": 1, "description": "Active Cooler & Aluminium Heatsink Case", "claimed": 68.00, "reimbursed": 68.00 },
+    { "id": 2, "description": "Thermal Interface Tape (Pack of 5 rolls)", "claimed": 24.00, "reimbursed": 24.00 },
+    { "id": 3, "description": "Cat6A Ultra-Thin Patch Cable 0.5m (10-pack)", "claimed": 28.00, "reimbursed": 28.00 },
+    { "id": 4, "description": "Branded Glow-in-the-Dark Bottle Openers (Pack of 100)", "claimed": 96.00, "reimbursed": 0.00 },
+    { "id": 5, "description": "VAT", "claimed": 108.68, "reimbursed": 90.44 }
+  ],
+  "reasoning": "Commercial invoice for equipment, supplies, and event swag, evaluated line by line per Ch. 10 ('where an invoice mixes categories, each line is evaluated under its own category'). Hardware: the Raspberry Pi 5 (unit price EUR 89.00) and the active cooler/case (unit price EUR 17.00) are peripherals and tools with a unit price under EUR 100.00, which Ch. 10 reimburses with an itemized invoice; both are reimbursed in full (net EUR 356.00 and EUR 68.00). Supplies: the thermal tape (EUR 24.00) and the Cat6A patch cable (EUR 28.00; cables are also named in the sub-EUR-100 peripherals card, so only the tape counts against the supplies cap) fall under the Ch. 10 incidental-supplies allowance of EUR 50.00 per invoice; the covered supplies total stays within the cap and both lines are reimbursed in full. Event materials: the branded glow-in-the-dark bottle openers (EUR 96.00) are promotional giveaway/swag, reimbursable under the Ch. 10 event-materials card only when the note both (a) names the event and (b) states that the budget owner pre-approved the purchase. The note names the Q2 developer meetup booth but never states budget-owner pre-approval, so per Ch. 10 the event material line is deducted. Per the Ch. 2 calculation steps (step 2), a deducted line is removed at its gross line price together with the tax charged on it: EUR 96.00 net plus its 19% VAT share of EUR 18.24, i.e. EUR 114.24 total. The VAT line (id 5) is therefore reimbursed only in part: EUR 108.68 minus the EUR 18.24 attributable to the deducted line = EUR 90.44. The buyer company name differs from the firm name, but the Ch. 10 FAQ explicitly states that the buyer name on a commercial invoice does not affect reimbursability when the employee paid and the note explains the purchase. Total: EUR 680.68 claimed minus EUR 114.24 deducted = EUR 566.44 reimbursed; partially approved."
+}

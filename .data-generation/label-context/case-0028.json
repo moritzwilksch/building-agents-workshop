@@ -1,0 +1,25 @@
+{
+ "case_id": "case-0028",
+ "audit": {
+  "case_id": "case-0028",
+  "invoice_type": "standard",
+  "current_category": "valid",
+  "intended_rules": "Ch. 10 \"Event, Marketing, and Workshop Materials\" do-card (event named + budget-owner pre-approval stated in note → reimbursed in full); Ch. 10 card-dont \"event materials that double as personal or office goods\" (near-miss check); Ch. 10 peripherals threshold (cables at €39.90/unit < €100, reimbursable even viewed as peripherals); Ch. 12 VAT-registration requirement (vendor VAT ID present, so VAT reimbursable); Ch. 10 FAQ (buyer name on commercial invoice does not affect reimbursability).",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "not_checked",
+  "realism_issues": [
+   "Minor: €390 for 300 custom stainless bottles (€1.30/unit) is at the very low end of bulk custom-print pricing, but plausible for a 300-pack promotion; not a flag."
+  ],
+  "recommendation": "keep",
+  "notes": "Validator passes (1/1 valid); no label.json or receipt.jpg exists. Adjudication: approved in full, €613.68. Note names the event (CloudExpo Berlin exhibition) and states pre-approval (\"Approved under Q1 field marketing budget\") — consistent with the house convention established by case-0008's label, which treats \"pre-approved under the team event budget\" as satisfying the Ch. 10 pre-approval statement. All three lines are event materials for that named, pre-approved event: branded giveaway bottles, a booth game prop (inflatable pool + pump, same pattern as case-0027's hook-a-duck), and test cables for the booth demo; the cables are independently reimbursable as sub-€100 peripherals, so the line is covered under either category. VAT 19% is correct for Germany and the vendor shows a VAT ID, so the VAT line is reimbursable. Vendor (PromoTech Eventbedarf GmbH, Berlin) is plausible for the items; dates sane; charges mirror items. Fits the \"valid\" target: a realistic B2B invoice whose pool line looks recreational and whose cable line looks like IT hardware, but both are allowed — good distractor case. Consider adding a label.json so evaluation has ground truth."
+ },
+ "verify": {
+  "case_id": "case-0028",
+  "pass": true,
+  "category_confirmed": "valid",
+  "problems": []
+ }
+}

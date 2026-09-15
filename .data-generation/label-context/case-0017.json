@@ -1,0 +1,29 @@
+{
+ "case_id": "case-0017",
+ "audit": {
+  "case_id": "case-0017",
+  "invoice_type": "flight",
+  "current_category": "subtle_single",
+  "intended_rules": "Ch. 4 advance-booking rule (\"Book inside the seven-day window without a stated reason\" — ticket issued <7 calendar days before departure reimbursable only if the note states why; 2024-04-12 issue vs 2024-04-18 departure = 6 days), combined with Ch. 2's rule that missing required note facts trigger the less favorable branch. Economy cabin compliance and reimbursable taxes/surcharges act as plausible distractors.",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [
+   "Minor: taxes_and_fees line 'German Air Transport Tax (Ökosteuer)' mislabels the Luftverkehrsteuer (Ökosteuer is the German energy tax, not the air transport tax).",
+   "Minor: the same line lists rate 0.19 but amount 42.15, matching neither 19% of the 385.00 base fare (73.15) nor Germany's flat per-passenger air transport levy. Cosmetic; does not affect adjudication."
+  ],
+  "recommendation": "keep",
+  "notes": "Correct outcome: rejected in full (€0.00). Ticket issued 6 calendar days before departure; the note gives trip purpose but never states the business reason that prevented earlier booking, so the Ch. 4 seven-day exception fails and Ch. 2's less-favorable-branch rule applies. Economy is correct for ~2h segments, all fees are otherwise reimbursable, dates/weekday travel are unproblematic — the case reads as fully valid unless the agent knows the 7-day passage, which is exactly the subtle_single target. Validator passes (1/1 valid), no label.json, no receipt image. Could optionally fix the Ökosteuer naming/rate mismatch for realism, but it is cosmetic and does not change the adjudication."
+ },
+ "verify": {
+  "case_id": "case-0017",
+  "pass": true,
+  "category_confirmed": "subtle_single",
+  "problems": [
+   "Minor cosmetic only: taxes_and_fees entry 'German Air Transport Tax (Ökosteuer)' has rate \"0.19\" but amount 42.15 is not 19% of the 385.00 base fare (would be 73.15), and sibling flight cases (case-0012, case-0016) use rate null for this tax. Validator passes and adjudication is unaffected.",
+   "No label.json exists for this case; nothing to reconcile against (permitted, since label.json is optional)."
+  ]
+ }
+}

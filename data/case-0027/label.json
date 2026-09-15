@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0027",
+  "decision": "approved",
+  "claimed_amount": 421.50,
+  "reimbursed_amount": 421.50,
+  "line_items": [
+    { "id": 0, "description": "Custom Mini Rubber Ducks (Screen-Printed Logo) - 500pk", "claimed": 275.00, "reimbursed": 275.00 },
+    { "id": 1, "description": "Inflatable Duck Pond Display Pool (120cm)", "claimed": 34.50, "reimbursed": 34.50 },
+    { "id": 2, "description": "Electric Quick-Fill Air Pump 230V", "claimed": 18.90, "reimbursed": 18.90 },
+    { "id": 3, "description": "Telescopic Net with Foam Handle", "claimed": 25.80, "reimbursed": 25.80 },
+    { "id": 4, "description": "VAT", "claimed": 67.30, "reimbursed": 67.30 }
+  ],
+  "reasoning": "Commercial invoice for promotional giveaways and booth-game demo gear. Chapter 10 'Event, Marketing, and Workshop Materials' card allows booth materials, promotional giveaways, and demonstration gear in full when the note (a) names the event and (b) states that the budget owner pre-approved the purchase. Both conditions are met: the note names CloudFest Berlin and states the setup was approved for lead generation by Marketing, so the pre-approval by the budget owner is stated. The rubber-duck FAQ confirms that giveaways for a named, pre-approved event are event materials, covering the 500 ducks, the duck pond pool, and the nets. The air pump is demo gear for the booth game, not a computer peripheral, so the Chapter 10 IT-ticket requirement for peripherals at EUR 100 or more does not apply (and at EUR 18.90 it is below that threshold anyway). The invoice is addressed to the employee's company rather than the firm, but the Chapter 10 buyer-name FAQ states buyer name does not affect reimbursability when the employee paid and the note explains the purchase. The vendor shows a VAT registration number, so the VAT line is reimbursed with the goods. No deductions apply: approved in full at EUR 421.50."
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "case-0045",
+  "decision": "rejected",
+  "claimed_amount": 138.0,
+  "reimbursed_amount": 0.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Crispy Pork Belly Bao Buns (2 pcs)",
+      "claimed": 23.8,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Charred Edamame w/ Smoked Sea Salt",
+      "claimed": 7.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "Tonkotsu Black Garlic Ramen w/ Extra Chashu",
+      "claimed": 43.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 3,
+      "description": "Spicy Miso Tantanmen Ramen",
+      "claimed": 19.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 4,
+      "description": "Asahi Super Dry Draft (0.5L)",
+      "claimed": 20.7,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 5,
+      "description": "Yuzu Sparkling Mineral Water (0.75L)",
+      "claimed": 8.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "claimed": 15.0,
+      "reimbursed": 0.0
+    }
+  ],
+  "reasoning": "The receipt is dated 2024-05-18, a Saturday, so under Chapter 9 it is a weekend expense governed exclusively by Figure 1 (Weekend and Public Holiday Travel Approval Flowchart). The submission note names no conference, trade show, or scheduled client delivery on that Saturday, so the fully-reimbursable branch does not apply. It also states no mandatory client or court meeting before 10:00 AM on the following business day requiring arrival the evening before, so the partially-reimbursed branch does not apply either. The flowchart's remaining branch is strictly disallowed: the dinner is treated as personal leisure with zero reimbursement for weekend meals. The note is otherwise exemplary for Figure 2 client hospitality (recruiting dinner, 2 external candidates, 3 attendees total), and the figures would all pass on a weekday: alcohol at 20.70 EUR is within the 30% allowance (30% of the 102.30 EUR non-alcohol food and beverages is 30.69 EUR), the 123 EUR food-and-beverage spend is far below the per-person client-hospitality dinner cap of 90 EUR x 3 attendees, and the 15 EUR tip is under Germany's 20% tip cap from the Chapter 14 Global Tipping Standards (20% of the 123 EUR pre-tip bill is 24.60 EUR). But Figure 1 overrides Figure 2 for Saturday-dated receipts, so every line, including the tip, is reimbursed at 0.00 EUR and the receipt is rejected in full."
+}

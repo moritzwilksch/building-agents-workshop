@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0036",
+  "decision": "approved",
+  "claimed_amount": 50.00,
+  "reimbursed_amount": 50.00,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "claimed": 46.20,
+      "reimbursed": 46.20
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "claimed": 3.80,
+      "reimbursed": 3.80
+    }
+  ],
+  "reasoning": "Taxi from a client office in Unterföhring to München Hauptbahnhof to catch the evening train back. The fare of €46.20 is above the €25.00 unjustified-ride threshold in Chapter 5, but the drop-off is a long-distance rail station, one of the Chapter 5 exceptions that makes the fare reimbursable in full. The note states destination and purpose, satisfying the Chapter 2 note requirement for taxis (and for fares above the threshold, which justification applies). The €3.80 tip is 8.2% of the €46.20 fare, within the 20% Germany tip cap from the Chapter 14 Global Tipping Standards. The receipt is dated Tuesday 2023-11-14, so no weekend or holiday rule applies. Total approved: €50.00."
+}

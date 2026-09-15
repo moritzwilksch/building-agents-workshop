@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0037",
+ "audit": {
+  "case_id": "case-0037",
+  "invoice_type": "taxi",
+  "current_category": "valid",
+  "intended_rules": "Ch 5 taxi rule: airport pickup/drop-off exception to the €25 unjustified-ride threshold; Ch 2 note requirement to state a Ch 5 justification for above-threshold fares (bulky presentation displays); Ch 14 Global Tipping Standards: Germany 20% tip cap",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes (fare 46.20 + tip 4.80 = 51.00, charges mirror items). Receipt is a Tuesday morning, so no weekend flowchart. Fare exceeds the €25 threshold, but pickup is Frankfurt Airport, so Ch 5's airport exception makes it fully reimbursable; the note also states the bulky-displays justification, satisfying Ch 2. Tip 10.4% is under Germany's 20% cap (Ch 14). Vendor (Taxi-Ruf Frankfurt eG), route (FRA T1 to Messe Frankfurt), ~€2.51/km pricing, and booth-banner cargo are all plausible and mutually consistent. No label.json or receipt.jpg present, so nothing to reconcile there. Correct adjudication: approve €51.00 in full. Good \"valid\" distractor case: looks like an over-threshold fare but the airport rule rescues it, and the tip requires the country-specific German norm. Fits target distribution; keep as-is."
+ },
+ "verify": {
+  "case_id": "case-0037",
+  "pass": true,
+  "category_confirmed": "valid",
+  "problems": []
+ }
+}

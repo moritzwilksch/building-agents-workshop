@@ -1,0 +1,23 @@
+{
+ "case_id": "case-0014",
+ "audit": {
+  "case_id": "case-0014",
+  "invoice_type": "standard",
+  "current_category": "subtle_single",
+  "intended_rules": "Chapter 10 event-materials rule (note must BOTH name the event AND state budget-owner pre-approval; either missing → event lines deducted); Chapter 10 peripheral threshold (unit price under €100 reimbursable: hand tools, cables); Chapter 10 €50/invoice incidental supplies cap; Chapter 2 calculation steps (deduct non-reimbursable line plus its tax share).",
+  "consistency_issues": [],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes: line items multiply out, subtotal 402.18, VAT 76.41, total 478.59 all correct to the cent; charges list mirrors items. No label.json or receipt.jpg in the case directory. Vendor is plausible (Leipzig trade-fair supplies GmbH with VAT ID, which commercial invoices must show per Ch. 12); prices realistic; dates sane; note names the event (CloudCon Berlin) but omits the pre-approval statement — the exact trap. Correct adjudication: partial approval of €192.99 (net 162.18 = glue guns 79.98 + glue sticks 34.50 + cable straps 47.70, plus VAT 30.81); tote bags line (€240 net + €45.60 VAT) deducted as event materials lacking the required pre-approval statement. Glue guns and cable straps pass the under-€100 peripheral/hand-tool rule; glue sticks fall under the €50 incidental-supplies invoice cap. The apparent inconsistency of 'cables' appearing in both the supplies and peripherals lists is harmless here since both routes reimburse these amounts. Clean subtle_single: one specific Ch. 10 passage decides the outcome. Consider adding a label.json so the case can be scored."
+ },
+ "verify": {
+  "case_id": "case-0014",
+  "pass": true,
+  "category_confirmed": "subtle_single",
+  "problems": []
+ }
+}

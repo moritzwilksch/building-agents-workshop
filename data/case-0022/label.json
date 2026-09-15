@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0022",
+  "decision": "partially_approved",
+  "claimed_amount": 511.48,
+  "reimbursed_amount": 398.06,
+  "line_items": [
+    { "id": 0, "description": "Room Charge - Night 1 (Oct 14)", "claimed": 175.00, "reimbursed": 160.00 },
+    { "id": 1, "description": "Room Charge - Night 2 (Oct 15)", "claimed": 175.00, "reimbursed": 160.00 },
+    { "id": 2, "description": "Executive Lounge Day Pass - Quiet Video-Call Booth (Half Day)", "claimed": 38.00, "reimbursed": 38.00 },
+    { "id": 3, "description": "Minibar: Organic Truffle Cashews & Bio Mate Kola", "claimed": 16.00, "reimbursed": 0.00 },
+    { "id": 4, "description": "Overnight Secure Courtyard Parking w/ EV Charging", "claimed": 60.00, "reimbursed": 0.00 },
+    { "id": 5, "description": "City tax", "claimed": 15.00, "reimbursed": 15.00 },
+    { "id": 6, "description": "VAT", "claimed": 32.48, "reimbursed": 25.06 }
+  ],
+  "reasoning": "Hotel folio for a 2-night stay in Berlin (Mon Oct 14 and Tue Oct 15), so no weekend nights and Figure 1 does not apply. Chapter 6 'Regional Nightly Room Rate Caps' puts Berlin in Tier 2 with a 160.00 EUR nightly cap; each 175.00 EUR night exceeds it by 15.00 EUR, so each room line is reimbursed at 160.00 EUR. The note names 'AI Summit Berlin', but that event is not in the Chapter 9 'Trade Fair and Congress Weeks' table (only Berlin's FinTech Summit in March is listed), so the event surcharge override does not apply and the Tier 2 cap governs. The minibar line is deducted in full under Chapter 6 'Folio Substantiation and Incidental Auditing' (minibar snacks and beverages of any kind are always deducted; the 'truffle cashews' wording is irrelevant since Figure 3 governs restaurant dishes, not folio incidentals). Overnight parking with EV charging sits exactly at the Chapter 6 'Hotel Parking and EV Charging' / Chapter 14 'Hotel Incidental Allowances' cap of 30.00 EUR per night, but that allowance requires the note to identify a rental or pool vehicle; the note only mentions accommodation and EV charging, so Finance treats the vehicle as personal and the parking line is deducted in full. The Executive Lounge Day Pass is reimbursed: the note states the business purpose (a quiet client video call between conference sessions), and it is not on the list of deducted hotel incidentals. City tax is reimbursed in full per Chapter 6 'City Taxes, Resort Fees, and Mandatory Levies'. For the VAT line (32.48 EUR at 7 percent of the 464.00 EUR subtotal), the Chapter 2 calculation steps deduct the VAT attributable to non-reimbursable amounts: 2.10 EUR on the 30.00 EUR room excess, 1.12 EUR on the minibar, and 4.20 EUR on parking, leaving 25.06 EUR of VAT reimbursed. Totals: 511.48 EUR claimed, 113.42 EUR deducted (30.00 room excess + 2.10 VAT + 16.00 minibar + 1.12 VAT + 60.00 parking + 4.20 VAT), 398.06 EUR reimbursed."
+}

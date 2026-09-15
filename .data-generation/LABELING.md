@@ -37,6 +37,12 @@ restaurant's MwSt) is not its own line. Number the entries top to bottom
 starting at `0`; the ids must be `0..n-1` in that order, and evaluation matches
 the agent's items to ours by `id`, not by description.
 
+## Splitting one allowance across several lines
+
+When a cap or allowance covers multiple lines (e.g. the client-hospitality alcohol allowance spanning a wine bottle and a cocktail line), allocate the reimbursable amount across the covered lines **proportionally to each line's claimed amount**, rounded half-up to the cent, with the last covered line absorbing the rounding residual. Each covered line then shows its own partial `reimbursed`; uncovered deductions (truffle lines, minibar, tip excess) still get their full deduction on their own line.
+
+Example: a €44.00 wine and a €40.50 cocktail share a €24.00 allowance. The wine is reimbursed at `24 × 44 / 84.50 = 12.50`, the cocktail at the residual `11.50`.
+
 ## Decision rules
 
 - `approved` → `reimbursed_amount == claimed_amount`

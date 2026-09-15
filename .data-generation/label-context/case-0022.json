@@ -1,0 +1,25 @@
+{
+ "case_id": "case-0022",
+ "audit": {
+  "case_id": "case-0022",
+  "invoice_type": "hotel",
+  "current_category": "subtle_multi",
+  "intended_rules": "Chapter 6 Tier 2 nightly room cap (Berlin €160) with VAT on the excess; Chapter 6 parking rule requiring the note to identify a rental/pool vehicle (EV-charging parking deducted in full when absent); Chapter 6 minibar always deducted; Chapter 9 trade-fair surcharge override as a distractor (\"AI Summit Berlin\" is not a listed event); city tax reimbursed in full.",
+  "consistency_issues": [
+   "Minor schema quirk: the Executive Lounge Day Pass incidental is tagged category \"laundry\" even though it is a workspace/meeting booth; the description governs, and the validator accepts it, but the tag is misleading."
+  ],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [],
+  "recommendation": "keep",
+  "notes": "Validator passes: line items multiply out, subtotal 464 + city tax 15 + VAT 32.48 = 511.48, charges list mirrors items. No label.json or receipt.jpg in the case directory. Adjudication: stay is Mon-Tue nights, so Figure 1 is irrelevant; \"AI Summit Berlin\" is not a Chapter 9 listed event, so the Berlin Tier 2 cap of €160/night applies — deduct (175-160)x2 = 30 + 2.10 VAT. Minibar line 16 + 1.12 VAT deducted (the \"Truffle Cashews\" wording is a harmless distractor; minibar is deducted regardless of Figure 3). Parking at exactly the €30/night cap is deducted in full (60 + 4.20 VAT) because the note never identifies a rental or pool vehicle. Lounge day pass (business video call stated in note) and city tax are reimbursable. Correct outcome: partially approved, reimbursed EUR 398.06 of 511.48. Difficulty: subtle_multi — requires combining the tier cap + VAT-on-excess treatment, the parking note condition, and the minibar deduction, with the event-surcharge override as a near-miss distractor. Realistic Berlin folio (plausible address, DE tax ID, market-rate room, sensible incidental prices). Fits the subtle_multi distribution; keep as is."
+ },
+ "verify": {
+  "case_id": "case-0022",
+  "pass": true,
+  "category_confirmed": "subtle_multi",
+  "problems": []
+ }
+}

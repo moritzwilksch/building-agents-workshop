@@ -1,0 +1,28 @@
+{
+ "case_id": "case-0023",
+ "audit": {
+  "case_id": "case-0023",
+  "invoice_type": "taxi",
+  "current_category": "valid",
+  "intended_rules": "Ch. 5 taxi rule: fare above €25 threshold is reimbursed in full when pickup or drop-off is an airport; Ch. 5/Ch. 14 Global Tipping Standards: Germany taxi tip cap 20% (tip of 10.7% is within cap). The case exercises the airport exception as a distractor — the fare (€54.20) far exceeds €25 and looks ripe for a partial deduction, but the airport drop-off makes it fully reimbursable.",
+  "consistency_issues": [
+   "distance_km 18.4 is geographically implausible: Maximilianstraße 17 to Flughafen München Terminal 2 is ~35 km by road, not 18.4 km. Does not affect adjudication (fare is what counts) but a sharp agent could notice.",
+   "Minor: timestamp is 06:42Z, which is 08:42 local Munich time (CEST, UTC+2). The note says 'early return flight' and the local time is before the 06:00 cutoff only if UTC is naively used — irrelevant here because the airport exception already applies, but the Z-suffix could mislead. Still internally coherent."
+  ],
+  "handbook_issues": [],
+  "arithmetic_ok": true,
+  "has_label": false,
+  "label_correct": "no_label",
+  "realism_issues": [
+   "distance_km understated by roughly half versus the real route (~35 km); fare of €54.20 is realistic for the actual route, so the fare-to-distance ratio is inflated."
+  ],
+  "recommendation": "keep",
+  "notes": "Validator passes cleanly (line items, subtotal, total €60.00, charges mirror items). Correct adjudication: decision reimburse, payout €60.00 (fare €54.20 airport exception + tip €5.80 within 20% Germany cap). Date 2024-05-16 is a Thursday, no weekend flowchart. No label.json or receipt.jpg present, so nothing to regenerate or reconcile. Fits the 'valid' target: plausible-looking, near a threshold (€25), with an over-threshold fare rescued by the airport exception. Only blemish is the understated distance_km; a one-line fix would tighten it, but it is not required for correctness."
+ },
+ "verify": {
+  "case_id": "case-0023",
+  "pass": true,
+  "category_confirmed": "valid",
+  "problems": []
+ }
+}
