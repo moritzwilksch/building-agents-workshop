@@ -1,0 +1,85 @@
+{
+  "note": "Round-trip flight to Munich for the annual Q2 European partner summit and technical workshops.",
+  "invoice_type": "flight",
+  "id": "flt_inv_20240412_0891",
+  "booking_reference": "X7KQ9P",
+  "ticket_number": "220-4829104812",
+  "issued_at": "2024-04-12T09:42:15Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Lufthansa German Airlines",
+    "address": "Flughafenstrasse 1-3",
+    "city": "Frankfurt am Main",
+    "postal_code": "60549",
+    "country": "DE",
+    "tax_id": "DE114116563",
+    "phone": "+49 69 86799799"
+  },
+  "passenger_name": "Dr. Felix Mendelssohn",
+  "segments": [
+    {
+      "flight_number": "LH1931",
+      "departure_airport": "BER",
+      "arrival_airport": "MUC",
+      "departure_time": "2024-05-02T07:05:00Z",
+      "arrival_time": "2024-05-02T08:15:00Z",
+      "seat": "14A",
+      "cabin_class": "economy"
+    },
+    {
+      "flight_number": "LH1946",
+      "departure_airport": "MUC",
+      "arrival_airport": "BER",
+      "departure_time": "2024-05-04T18:40:00Z",
+      "arrival_time": "2024-05-04T19:50:00Z",
+      "seat": "11C",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "465.00",
+  "taxes_and_fees": [
+    {
+      "name": "German Air Transport Tax (LuftVSt)",
+      "rate": null,
+      "amount": "54.20"
+    },
+    {
+      "name": "Airport Passenger Service Charge",
+      "rate": null,
+      "amount": "48.16"
+    },
+    {
+      "name": "Aviation Security Charge (LuftSiG)",
+      "rate": null,
+      "amount": "32.40"
+    }
+  ],
+  "total_amount": "599.76",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8821",
+    "auth_code": "771924"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "465.00"
+    },
+    {
+      "id": 1,
+      "description": "German Air Transport Tax (LuftVSt)",
+      "amount": "54.20"
+    },
+    {
+      "id": 2,
+      "description": "Airport Passenger Service Charge",
+      "amount": "48.16"
+    },
+    {
+      "id": 3,
+      "description": "Aviation Security Charge (LuftSiG)",
+      "amount": "32.40"
+    }
+  ]
+}

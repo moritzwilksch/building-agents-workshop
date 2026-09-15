@@ -1,0 +1,117 @@
+{
+  "note": "Dinner with 2 prospective partners from Veloce Mobility to discuss integration APIs (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rest_20240516_8831",
+  "issued_at": "2024-05-16T21:42:15Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Restaurant Ember & Ash",
+    "address": "Kollwitzstraße 42",
+    "city": "Berlin",
+    "postal_code": "10405",
+    "country": "DE",
+    "tax_id": "DE293817456",
+    "phone": "+49 30 84920144"
+  },
+  "receipt_number": "RN-2024-0516-94",
+  "table_number": "14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Charred Octopus with Romesco & Smoked Paprika",
+      "quantity": "2",
+      "unit_price": "19.5",
+      "total_price": "39",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Crispy Pork Belly Bao with Pickled Daikon",
+      "quantity": "3",
+      "unit_price": "8.5",
+      "total_price": "25.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Iberico Pluma with Truffle Polenta",
+      "quantity": "3",
+      "unit_price": "34.5",
+      "total_price": "103.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Matcha Fondant & Black Sesame Gelato",
+      "quantity": "3",
+      "unit_price": "9.5",
+      "total_price": "28.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "San Pellegrino Sparkling Water (750ml)",
+      "quantity": "2",
+      "unit_price": "7.5",
+      "total_price": "15",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Espresso Doble",
+      "quantity": "3",
+      "unit_price": "4.5",
+      "total_price": "13.5",
+      "category": "beverage",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "225",
+  "tax_rate": "0.19",
+  "tax_amount": "35.92",
+  "tip_amount": "25",
+  "total_amount": "250",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4192",
+    "auth_code": "592811"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Charred Octopus with Romesco & Smoked Paprika",
+      "amount": "39"
+    },
+    {
+      "id": 1,
+      "description": "Crispy Pork Belly Bao with Pickled Daikon",
+      "amount": "25.5"
+    },
+    {
+      "id": 2,
+      "description": "Iberico Pluma with Truffle Polenta",
+      "amount": "103.5"
+    },
+    {
+      "id": 3,
+      "description": "Matcha Fondant & Black Sesame Gelato",
+      "amount": "28.5"
+    },
+    {
+      "id": 4,
+      "description": "San Pellegrino Sparkling Water (750ml)",
+      "amount": "15"
+    },
+    {
+      "id": 5,
+      "description": "Espresso Doble",
+      "amount": "13.5"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "25"
+    }
+  ]
+}

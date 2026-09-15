@@ -1,0 +1,33 @@
+{
+  "note": "Taxi from client office at Unterföhring to Hauptbahnhof to catch the evening train back.",
+  "invoice_type": "taxi",
+  "id": "TX-2023-882190",
+  "issued_at": "2023-11-14T20:45:12Z",
+  "currency": "EUR",
+  "vendor_name": "Taxi-Zentrale München eG",
+  "taxi_license": "M-TX-4412",
+  "pickup": "Dieselstraße 12, 85774 Unterföhring",
+  "dropoff": "München Hauptbahnhof, Bayerstraße, 80335 München",
+  "distance_km": "18.4",
+  "fare_amount": "46.2",
+  "tip_amount": "3.8",
+  "total_amount": "50",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "5821",
+    "auth_code": "841903"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "amount": "46.2"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "3.8"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "note": "Dinner with 2 prospective partners from Kvantum Analytics to discuss Q3 data pipeline integration (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rest_20240516_9812",
+  "issued_at": "2024-05-16T21:42:15Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Umami Craft Izakaya",
+    "address": "Rosenthaler Str. 38",
+    "city": "Berlin",
+    "postal_code": "10178",
+    "country": "DE",
+    "tax_id": "DE319842015",
+    "phone": "+49 30 28471930"
+  },
+  "receipt_number": "RE-2024-05-8941",
+  "table_number": "T-14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Fermented Chili & Charred Edamame",
+      "quantity": "2",
+      "unit_price": "8.5",
+      "total_price": "17",
+      "category": "starter",
+      "is_alcohol": false
+    },
+    {
+      "description": "Crispy Pork Belly Bao Buns (2 pcs)",
+      "quantity": "3",
+      "unit_price": "12.5",
+      "total_price": "37.5",
+      "category": "starter",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoked Duck Breast Ramen w/ Ajitsuke Tamago",
+      "quantity": "2",
+      "unit_price": "23.5",
+      "total_price": "47",
+      "category": "main",
+      "is_alcohol": false
+    },
+    {
+      "description": "Miso Glazed Black Cod w/ Lotus Root Chips",
+      "quantity": "1",
+      "unit_price": "29.5",
+      "total_price": "29.5",
+      "category": "main",
+      "is_alcohol": false
+    },
+    {
+      "description": "Yuzu Shiso House Soda (0.4L)",
+      "quantity": "2",
+      "unit_price": "6.5",
+      "total_price": "13",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Echigo Koshihikari Craft Beer (0.33L)",
+      "quantity": "2",
+      "unit_price": "7.5",
+      "total_price": "15",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Black Sesame Panna Cotta w/ Matcha Crumb",
+      "quantity": "3",
+      "unit_price": "9",
+      "total_price": "27",
+      "category": "dessert",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "186",
+  "tax_rate": "0.19",
+  "tax_amount": "29.7",
+  "tip_amount": "18.6",
+  "total_amount": "204.6",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8412",
+    "auth_code": "719302"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Fermented Chili & Charred Edamame",
+      "amount": "17"
+    },
+    {
+      "id": 1,
+      "description": "Crispy Pork Belly Bao Buns (2 pcs)",
+      "amount": "37.5"
+    },
+    {
+      "id": 2,
+      "description": "Smoked Duck Breast Ramen w/ Ajitsuke Tamago",
+      "amount": "47"
+    },
+    {
+      "id": 3,
+      "description": "Miso Glazed Black Cod w/ Lotus Root Chips",
+      "amount": "29.5"
+    },
+    {
+      "id": 4,
+      "description": "Yuzu Shiso House Soda (0.4L)",
+      "amount": "13"
+    },
+    {
+      "id": 5,
+      "description": "Echigo Koshihikari Craft Beer (0.33L)",
+      "amount": "15"
+    },
+    {
+      "id": 6,
+      "description": "Black Sesame Panna Cotta w/ Matcha Crumb",
+      "amount": "27"
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "amount": "18.6"
+    }
+  ]
+}

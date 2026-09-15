@@ -1,0 +1,75 @@
+{
+  "note": "Branded duck giveaways and booth display props for our interactive 'Rubber Duck Debugging' station at the Berlin DevOps Days.",
+  "invoice_type": "standard",
+  "id": "inv_std_88492011",
+  "invoice_number": "INV-2024-03912",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-12",
+  "currency": "EUR",
+  "vendor": {
+    "name": "ExpoCraft & Promo Solutions GmbH",
+    "address": "Görlitzer Str. 52",
+    "city": "Berlin",
+    "postal_code": "10997",
+    "country": "DE",
+    "tax_id": "DE298451733",
+    "phone": "+49 30 55194820"
+  },
+  "buyer_name": "Dr. Julian Vogl",
+  "buyer_company": "Nexora Systems GmbH",
+  "buyer_tax_id": "DE318920144",
+  "items": [
+    {
+      "description": "Custom Yellow Rubber Ducks (500-pack, branded debugging giveaways)",
+      "quantity": "1",
+      "unit_price": "275",
+      "total_price": "275",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Giant 40cm Inflatable Mascot Duck for Booth Display",
+      "quantity": "2",
+      "unit_price": "39.9",
+      "total_price": "79.8",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Heavy-Duty Cable Ties & Adhesive Mounting Anchors (Black, 100pk)",
+      "quantity": "3",
+      "unit_price": "11.9",
+      "total_price": "35.7",
+      "category": "office_supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "390.5",
+  "tax_rate": "0.19",
+  "tax_amount": "74.2",
+  "total_amount": "464.7",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Yellow Rubber Ducks (500-pack, branded debugging giveaways)",
+      "amount": "275"
+    },
+    {
+      "id": 1,
+      "description": "Giant 40cm Inflatable Mascot Duck for Booth Display",
+      "amount": "79.8"
+    },
+    {
+      "id": 2,
+      "description": "Heavy-Duty Cable Ties & Adhesive Mounting Anchors (Black, 100pk)",
+      "amount": "35.7"
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "amount": "74.2"
+    }
+  ]
+}

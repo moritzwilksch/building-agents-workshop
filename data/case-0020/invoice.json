@@ -1,0 +1,117 @@
+{
+  "note": "Dinner with 2 prospective partners from CloudNorth during our Berlin partner summit (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "inv_rest_8492041",
+  "issued_at": "2023-11-16T21:42:10Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Neon Dragon Noodle House",
+    "address": "Oranienstraße 188",
+    "city": "Berlin",
+    "postal_code": "10999",
+    "country": "DE",
+    "tax_id": "DE284910293",
+    "phone": "+49 30 5542 9811"
+  },
+  "receipt_number": "TX-2023-88419",
+  "table_number": "14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Crispy Pork Belly Bao (3 pcs)",
+      "quantity": "2",
+      "unit_price": "13.5",
+      "total_price": "27",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Szechuan Dan Dan Noodles with Minced Duck",
+      "quantity": "2",
+      "unit_price": "19.5",
+      "total_price": "39",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Ghost Pepper Chili Crunch Tasting Flight",
+      "quantity": "1",
+      "unit_price": "14.5",
+      "total_price": "14.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Tsingtao 1903 Draft (0.5L)",
+      "quantity": "3",
+      "unit_price": "6.8",
+      "total_price": "20.4",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Smoked Plum Sour Mocktail",
+      "quantity": "1",
+      "unit_price": "8.5",
+      "total_price": "8.5",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "San Pellegrino Sparkling Mineral Water (0.75L)",
+      "quantity": "2",
+      "unit_price": "7.5",
+      "total_price": "15",
+      "category": "beverage",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "124.4",
+  "tax_rate": "0.19",
+  "tax_amount": "19.86",
+  "tip_amount": "12.6",
+  "total_amount": "137",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7042",
+    "auth_code": "592811"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Crispy Pork Belly Bao (3 pcs)",
+      "amount": "27"
+    },
+    {
+      "id": 1,
+      "description": "Szechuan Dan Dan Noodles with Minced Duck",
+      "amount": "39"
+    },
+    {
+      "id": 2,
+      "description": "Ghost Pepper Chili Crunch Tasting Flight",
+      "amount": "14.5"
+    },
+    {
+      "id": 3,
+      "description": "Tsingtao 1903 Draft (0.5L)",
+      "amount": "20.4"
+    },
+    {
+      "id": 4,
+      "description": "Smoked Plum Sour Mocktail",
+      "amount": "8.5"
+    },
+    {
+      "id": 5,
+      "description": "San Pellegrino Sparkling Mineral Water (0.75L)",
+      "amount": "15"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "12.6"
+    }
+  ]
+}

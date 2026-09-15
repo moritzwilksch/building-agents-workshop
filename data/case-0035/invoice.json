@@ -1,0 +1,101 @@
+{
+  "note": "Hardware components for our local staging cluster prototype, plus branded duck swag for the Q2 developer meetup booth.",
+  "invoice_type": "standard",
+  "id": "inv_std_882910a",
+  "invoice_number": "RE-2024-0418",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-12",
+  "currency": "EUR",
+  "vendor": {
+    "name": "TronicSupply & MakerLab Solutions e.K.",
+    "address": "Industriestraße 42, Gebäude C",
+    "city": "Darmstadt",
+    "postal_code": "64293",
+    "country": "DE",
+    "tax_id": "DE284910472",
+    "phone": "+49 6151 9823100"
+  },
+  "buyer_name": "Dr. Julian Weber",
+  "buyer_company": "Novum Analytics GmbH",
+  "buyer_tax_id": "DE301984221",
+  "items": [
+    {
+      "description": "Raspberry Pi 5 Model B (8GB RAM) - Lab Cluster Node",
+      "quantity": "4",
+      "unit_price": "89",
+      "total_price": "356",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Active Cooler & Aluminium Heatsink Case",
+      "quantity": "4",
+      "unit_price": "17",
+      "total_price": "68",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Thermal Interface Tape (Pack of 5 rolls)",
+      "quantity": "2",
+      "unit_price": "12",
+      "total_price": "24",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Cat6A Ultra-Thin Patch Cable 0.5m (10-pack)",
+      "quantity": "1",
+      "unit_price": "28",
+      "total_price": "28",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Branded Glow-in-the-Dark Mini Rubber Ducks (Pack of 100)",
+      "quantity": "2",
+      "unit_price": "48",
+      "total_price": "96",
+      "category": "promotional",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "572",
+  "tax_rate": "0.19",
+  "tax_amount": "108.68",
+  "total_amount": "680.68",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Raspberry Pi 5 Model B (8GB RAM) - Lab Cluster Node",
+      "amount": "356"
+    },
+    {
+      "id": 1,
+      "description": "Active Cooler & Aluminium Heatsink Case",
+      "amount": "68"
+    },
+    {
+      "id": 2,
+      "description": "Thermal Interface Tape (Pack of 5 rolls)",
+      "amount": "24"
+    },
+    {
+      "id": 3,
+      "description": "Cat6A Ultra-Thin Patch Cable 0.5m (10-pack)",
+      "amount": "28"
+    },
+    {
+      "id": 4,
+      "description": "Branded Glow-in-the-Dark Mini Rubber Ducks (Pack of 100)",
+      "amount": "96"
+    },
+    {
+      "id": 5,
+      "description": "VAT",
+      "amount": "108.68"
+    }
+  ]
+}

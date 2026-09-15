@@ -1,0 +1,75 @@
+{
+  "note": "Interactive 'duck pond' giveaway booth props and USB-C test cables for the CloudExpo Berlin exhibition. Approved under Q1 field marketing budget.",
+  "invoice_type": "standard",
+  "id": "inv_std_884190_2024",
+  "invoice_number": "INV-2024-81920",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-12",
+  "currency": "EUR",
+  "vendor": {
+    "name": "PromoTech Eventbedarf GmbH",
+    "address": "Gewerbepark Spreeau 14",
+    "city": "Berlin",
+    "postal_code": "12459",
+    "country": "DE",
+    "tax_id": "DE294811032",
+    "phone": "+49 30 88291040"
+  },
+  "buyer_name": "Fabian Lindner",
+  "buyer_company": "Kromer & Partner Digital GmbH",
+  "buyer_tax_id": "DE318920145",
+  "items": [
+    {
+      "description": "Custom screen-printed yellow rubber ducks with company logo (Bulk Pack 300 pcs)",
+      "quantity": "1",
+      "unit_price": "390",
+      "total_price": "390",
+      "category": "event supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Inflatable mini carnival pool (120cm) & electric air pump",
+      "quantity": "1",
+      "unit_price": "45.9",
+      "total_price": "45.9",
+      "category": "booth hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial magnetic USB-C charging cables (Pack of 5)",
+      "quantity": "2",
+      "unit_price": "39.9",
+      "total_price": "79.8",
+      "category": "cable & connectivity",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "515.7",
+  "tax_rate": "0.19",
+  "tax_amount": "97.98",
+  "total_amount": "613.68",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom screen-printed yellow rubber ducks with company logo (Bulk Pack 300 pcs)",
+      "amount": "390"
+    },
+    {
+      "id": 1,
+      "description": "Inflatable mini carnival pool (120cm) & electric air pump",
+      "amount": "45.9"
+    },
+    {
+      "id": 2,
+      "description": "Industrial magnetic USB-C charging cables (Pack of 5)",
+      "amount": "79.8"
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "amount": "97.98"
+    }
+  ]
+}

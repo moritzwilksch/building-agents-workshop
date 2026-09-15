@@ -1,0 +1,88 @@
+{
+  "note": "Swag and interactive booth game materials for CloudFest Berlin next week. The rubber duck 'hook-a-duck' setup was approved for lead generation by Marketing.",
+  "invoice_type": "standard",
+  "id": "inv_std_88492014",
+  "invoice_number": "INV-2024-08912",
+  "issued_date": "2024-03-15",
+  "due_date": "2024-03-30",
+  "currency": "EUR",
+  "vendor": {
+    "name": "PromoKreativ Eventbedarf & Werbemittel OHG",
+    "address": "Industriestraße 42",
+    "city": "Köln",
+    "postal_code": "50996",
+    "country": "DE",
+    "tax_id": "DE284910283",
+    "phone": "+49 221 8971034"
+  },
+  "buyer_name": "Felix Brandstetter",
+  "buyer_company": "Nordic Cloud Solutions GmbH",
+  "buyer_tax_id": "DE319842105",
+  "items": [
+    {
+      "description": "Custom Mini Rubber Ducks (Screen-Printed Logo) - 500pk",
+      "quantity": "1",
+      "unit_price": "275",
+      "total_price": "275",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Inflatable Duck Pond Display Pool (120cm)",
+      "quantity": "1",
+      "unit_price": "34.5",
+      "total_price": "34.5",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Electric Quick-Fill Air Pump 230V",
+      "quantity": "1",
+      "unit_price": "18.9",
+      "total_price": "18.9",
+      "category": "equipment",
+      "is_alcohol": false
+    },
+    {
+      "description": "Telescopic Net with Foam Handle",
+      "quantity": "2",
+      "unit_price": "12.9",
+      "total_price": "25.8",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "354.2",
+  "tax_rate": "0.19",
+  "tax_amount": "67.3",
+  "total_amount": "421.5",
+  "paid": true,
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Mini Rubber Ducks (Screen-Printed Logo) - 500pk",
+      "amount": "275"
+    },
+    {
+      "id": 1,
+      "description": "Inflatable Duck Pond Display Pool (120cm)",
+      "amount": "34.5"
+    },
+    {
+      "id": 2,
+      "description": "Electric Quick-Fill Air Pump 230V",
+      "amount": "18.9"
+    },
+    {
+      "id": 3,
+      "description": "Telescopic Net with Foam Handle",
+      "amount": "25.8"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "67.3"
+    }
+  ]
+}

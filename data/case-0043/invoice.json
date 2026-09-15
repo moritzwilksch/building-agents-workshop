@@ -1,0 +1,117 @@
+{
+  "note": "Dinner with 2 design partners from Studio Hyperlink to discuss the Q4 UI redesign (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "inv_rest_20231014_9182",
+  "issued_at": "2023-10-14T21:48:12Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "SSAM Korean BBQ & Craft Lounge",
+    "address": "Torstraße 118",
+    "city": "Berlin",
+    "postal_code": "10119",
+    "country": "DE",
+    "tax_id": "DE312948571",
+    "phone": "+49 30 28472911"
+  },
+  "receipt_number": "REC-2023-88419",
+  "table_number": "T-14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Korean Crispy Pork Belly (Bossam Style)",
+      "quantity": "2",
+      "unit_price": "24.9",
+      "total_price": "49.8",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Kimchi & Scallion Jeon (Pancake)",
+      "quantity": "1",
+      "unit_price": "13.5",
+      "total_price": "13.5",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "Stone Pot Dolsot Bibimbap (Wagyu Beef)",
+      "quantity": "1",
+      "unit_price": "26.5",
+      "total_price": "26.5",
+      "category": "food",
+      "is_alcohol": false
+    },
+    {
+      "description": "San Pellegrino Sparkling Water (0.75L)",
+      "quantity": "2",
+      "unit_price": "7.8",
+      "total_price": "15.6",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Makgeolli Artisanal Rice Wine (750ml)",
+      "quantity": "1",
+      "unit_price": "22",
+      "total_price": "22",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Yuzu Hojicha Infused Ice Tea",
+      "quantity": "2",
+      "unit_price": "6.5",
+      "total_price": "13",
+      "category": "beverage",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "140.4",
+  "tax_rate": "0.19",
+  "tax_amount": "22.42",
+  "tip_amount": "14.6",
+  "total_amount": "155",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8831",
+    "auth_code": "741092"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Korean Crispy Pork Belly (Bossam Style)",
+      "amount": "49.8"
+    },
+    {
+      "id": 1,
+      "description": "Kimchi & Scallion Jeon (Pancake)",
+      "amount": "13.5"
+    },
+    {
+      "id": 2,
+      "description": "Stone Pot Dolsot Bibimbap (Wagyu Beef)",
+      "amount": "26.5"
+    },
+    {
+      "id": 3,
+      "description": "San Pellegrino Sparkling Water (0.75L)",
+      "amount": "15.6"
+    },
+    {
+      "id": 4,
+      "description": "Makgeolli Artisanal Rice Wine (750ml)",
+      "amount": "22"
+    },
+    {
+      "id": 5,
+      "description": "Yuzu Hojicha Infused Ice Tea",
+      "amount": "13"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "14.6"
+    }
+  ]
+}

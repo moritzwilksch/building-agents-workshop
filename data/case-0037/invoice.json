@@ -1,0 +1,33 @@
+{
+  "note": "Taxi from Frankfurt Airport to Messe Frankfurt with two heavy booth banner displays.",
+  "invoice_type": "taxi",
+  "id": "taxi_tx_88319024",
+  "issued_at": "2024-03-12T08:35:10Z",
+  "currency": "EUR",
+  "vendor_name": "Taxi-Ruf Frankfurt 684444 eG",
+  "taxi_license": "F-TX-1049",
+  "pickup": "Frankfurt Airport (FRA) Terminal 1, 60549 Frankfurt am Main",
+  "dropoff": "Messe Frankfurt, Halle 3, Ludwig-Erhard-Anlage 1, 60327 Frankfurt am Main",
+  "distance_km": "18.4",
+  "fare_amount": "46.2",
+  "tip_amount": "4.8",
+  "total_amount": "51",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7714",
+    "auth_code": "381940"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "amount": "46.2"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "4.8"
+    }
+  ]
+}

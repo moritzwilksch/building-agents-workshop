@@ -1,0 +1,115 @@
+{
+  "note": "Two-night stay for the European Green Tech Summit. Includes express dry cleaning for my blazer after an airline coffee spill prior to the keynote.",
+  "invoice_type": "hotel",
+  "id": "inv_htl_8829104",
+  "folio_number": "FOL-2023-88412",
+  "issued_date": "2023-11-16",
+  "currency": "EUR",
+  "hotel": {
+    "name": "The Circus Hotel & Suites",
+    "address": "Spandauer Str. 12",
+    "city": "Berlin",
+    "postal_code": "10178",
+    "country": "DE",
+    "tax_id": "DE284910283",
+    "phone": "+49 30 2000 3939"
+  },
+  "guest_name": "Dr. Elena Rostova",
+  "room_number": "408",
+  "room_category": "Comfort Double Room",
+  "check_in": "2023-11-14",
+  "check_out": "2023-11-16",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Comfort Double Room - Night 1",
+      "quantity": "1",
+      "unit_price": "165",
+      "total_price": "165",
+      "category": "room",
+      "is_alcohol": false
+    },
+    {
+      "description": "Comfort Double Room - Night 2",
+      "quantity": "1",
+      "unit_price": "165",
+      "total_price": "165",
+      "category": "room",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Express Overnight Dry Cleaning (Conference Blazer)",
+      "quantity": "1",
+      "unit_price": "24.5",
+      "total_price": "24.5",
+      "category": "laundry",
+      "is_alcohol": false
+    },
+    {
+      "description": "Boutique Cold Brew Tonic",
+      "quantity": "2",
+      "unit_price": "6",
+      "total_price": "12",
+      "category": "minibar",
+      "is_alcohol": false
+    },
+    {
+      "description": "Bio-Fairtrade Artisan Dark Chocolate Bar",
+      "quantity": "1",
+      "unit_price": "5.5",
+      "total_price": "5.5",
+      "category": "minibar",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "372",
+  "city_tax": "9.00",
+  "vat_rate": "0.07",
+  "vat": "26.04",
+  "total_amount": "407.04",
+  "paid": true,
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4193",
+    "auth_code": "629108"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Comfort Double Room - Night 1",
+      "amount": "165"
+    },
+    {
+      "id": 1,
+      "description": "Comfort Double Room - Night 2",
+      "amount": "165"
+    },
+    {
+      "id": 2,
+      "description": "Express Overnight Dry Cleaning (Conference Blazer)",
+      "amount": "24.5"
+    },
+    {
+      "id": 3,
+      "description": "Boutique Cold Brew Tonic",
+      "amount": "12"
+    },
+    {
+      "id": 4,
+      "description": "Bio-Fairtrade Artisan Dark Chocolate Bar",
+      "amount": "5.5"
+    },
+    {
+      "id": 5,
+      "description": "City tax",
+      "amount": "9.00"
+    },
+    {
+      "id": 6,
+      "description": "VAT",
+      "amount": "26.04"
+    }
+  ]
+}

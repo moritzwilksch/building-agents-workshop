@@ -1,0 +1,75 @@
+{
+  "note": "Branded promotional ducks and display hardware for the developer conference booth raffle next week.",
+  "invoice_type": "standard",
+  "id": "inv_std_8829141",
+  "invoice_number": "RE-2024-09412",
+  "issued_date": "2024-04-16",
+  "due_date": "2024-04-30",
+  "currency": "EUR",
+  "vendor": {
+    "name": "PromoWerke Westfalen GmbH",
+    "address": "Industriestraße 42",
+    "city": "Dortmund",
+    "postal_code": "44147",
+    "country": "DE",
+    "tax_id": "DE284910392",
+    "phone": "+49 231 9823100"
+  },
+  "buyer_name": "Julian Ebersbach",
+  "buyer_company": "Nexis Cloud Solutions GmbH",
+  "buyer_tax_id": "DE319842105",
+  "items": [
+    {
+      "description": "Custom Printed Yellow Rubber Ducks (Branded with company logo) - Pack of 250",
+      "quantity": "2",
+      "unit_price": "199",
+      "total_price": "398",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Dual-Nozzle Electric Balloon & Inflatable Air Pump",
+      "quantity": "1",
+      "unit_price": "49.9",
+      "total_price": "49.9",
+      "category": "equipment",
+      "is_alcohol": false
+    },
+    {
+      "description": "Heavy-Duty Clear Vinyl Exhibition Display Bins (60L)",
+      "quantity": "2",
+      "unit_price": "27.5",
+      "total_price": "55",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "502.9",
+  "tax_rate": "0.19",
+  "tax_amount": "95.55",
+  "total_amount": "598.45",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Printed Yellow Rubber Ducks (Branded with company logo) - Pack of 250",
+      "amount": "398"
+    },
+    {
+      "id": 1,
+      "description": "Industrial Dual-Nozzle Electric Balloon & Inflatable Air Pump",
+      "amount": "49.9"
+    },
+    {
+      "id": 2,
+      "description": "Heavy-Duty Clear Vinyl Exhibition Display Bins (60L)",
+      "amount": "55"
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "amount": "95.55"
+    }
+  ]
+}

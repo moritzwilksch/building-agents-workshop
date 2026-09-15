@@ -1,0 +1,88 @@
+{
+  "note": "Purchased supplies and custom decor for the regional developer hackathon booth and lounge area.",
+  "invoice_type": "standard",
+  "id": "inv-std-2024-88421",
+  "invoice_number": "INV-2024-0498",
+  "issued_date": "2024-05-04",
+  "due_date": "2024-05-18",
+  "currency": "EUR",
+  "vendor": {
+    "name": "EventForge & Stagecraft GmbH",
+    "address": "Industriestraße 42a",
+    "city": "Frankfurt am Main",
+    "postal_code": "60388",
+    "country": "DE",
+    "tax_id": "DE311958204",
+    "phone": "+49 69 7712 9040"
+  },
+  "buyer_name": "Lukas Brenner",
+  "buyer_company": "Nexus Data Labs GmbH",
+  "buyer_tax_id": "DE289114820",
+  "items": [
+    {
+      "description": "Custom Neon LED Sign ('DEBUGS ARE FEATURES') for Hackathon Lounge",
+      "quantity": "1",
+      "unit_price": "245",
+      "total_price": "245",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Gaffer Tape Industrial Matte Black (50m roll)",
+      "quantity": "4",
+      "unit_price": "19.5",
+      "total_price": "78",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Mini Desktop Zen Gardens with Branded Wooden Rakes (Pack of 15)",
+      "quantity": "3",
+      "unit_price": "65",
+      "total_price": "195",
+      "category": "promotional",
+      "is_alcohol": false
+    },
+    {
+      "description": "Emergency USB-C to Serial DB9 FTDI Adapter Cable (2m)",
+      "quantity": "2",
+      "unit_price": "24.95",
+      "total_price": "49.9",
+      "category": "electronics",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "567.9",
+  "tax_rate": "0.19",
+  "tax_amount": "107.9",
+  "total_amount": "675.8",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Neon LED Sign ('DEBUGS ARE FEATURES') for Hackathon Lounge",
+      "amount": "245"
+    },
+    {
+      "id": 1,
+      "description": "Gaffer Tape Industrial Matte Black (50m roll)",
+      "amount": "78"
+    },
+    {
+      "id": 2,
+      "description": "Mini Desktop Zen Gardens with Branded Wooden Rakes (Pack of 15)",
+      "amount": "195"
+    },
+    {
+      "id": 3,
+      "description": "Emergency USB-C to Serial DB9 FTDI Adapter Cable (2m)",
+      "amount": "49.9"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "107.9"
+    }
+  ]
+}

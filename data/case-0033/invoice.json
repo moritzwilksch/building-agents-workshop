@@ -1,0 +1,130 @@
+{
+  "note": "Dinner with 2 prospective partners from Kvantum Analytics to discuss Q3 data pipeline integration (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rst_20240516_98214",
+  "issued_at": "2024-05-16T21:42:10Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Umami & Co. Izakaya",
+    "address": "Kastanienallee 49",
+    "city": "Berlin",
+    "postal_code": "10119",
+    "country": "DE",
+    "tax_id": "DE319842105",
+    "phone": "+49 30 48192830"
+  },
+  "receipt_number": "TXN-884920-KA",
+  "table_number": "T14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Crispy Pork Belly Bao Buns (Set of 3)",
+      "quantity": "2",
+      "unit_price": "13.5",
+      "total_price": "27",
+      "category": "appetizer",
+      "is_alcohol": false
+    },
+    {
+      "description": "Spicy Szechuan Dan Dan Wontons",
+      "quantity": "1",
+      "unit_price": "11.5",
+      "total_price": "11.5",
+      "category": "appetizer",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoked Black Garlic Tonkotsu Ramen",
+      "quantity": "2",
+      "unit_price": "19.5",
+      "total_price": "39",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Truffle Miso Butter Shoyu Ramen",
+      "quantity": "1",
+      "unit_price": "21.5",
+      "total_price": "21.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Yuzu Botanical Craft Soda",
+      "quantity": "2",
+      "unit_price": "5.5",
+      "total_price": "11",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Hitachino Nest White Ale 0.33l",
+      "quantity": "3",
+      "unit_price": "7.5",
+      "total_price": "22.5",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Matcha Lava Cake with Black Sesame Gelato",
+      "quantity": "2",
+      "unit_price": "9.5",
+      "total_price": "19",
+      "category": "dessert",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "151.5",
+  "tax_rate": "0.19",
+  "tax_amount": "24.19",
+  "tip_amount": "15",
+  "total_amount": "166.5",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "5182",
+    "auth_code": "921404"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Crispy Pork Belly Bao Buns (Set of 3)",
+      "amount": "27"
+    },
+    {
+      "id": 1,
+      "description": "Spicy Szechuan Dan Dan Wontons",
+      "amount": "11.5"
+    },
+    {
+      "id": 2,
+      "description": "Smoked Black Garlic Tonkotsu Ramen",
+      "amount": "39"
+    },
+    {
+      "id": 3,
+      "description": "Truffle Miso Butter Shoyu Ramen",
+      "amount": "21.5"
+    },
+    {
+      "id": 4,
+      "description": "Yuzu Botanical Craft Soda",
+      "amount": "11"
+    },
+    {
+      "id": 5,
+      "description": "Hitachino Nest White Ale 0.33l",
+      "amount": "22.5"
+    },
+    {
+      "id": 6,
+      "description": "Matcha Lava Cake with Black Sesame Gelato",
+      "amount": "19"
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "amount": "15"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "note": "Early morning taxi to BER for the flight to Munich HQ after S-Bahn line disruption.",
+  "invoice_type": "taxi",
+  "id": "inv_tx_ber_99214",
+  "issued_at": "2024-11-14T06:42:15Z",
+  "currency": "EUR",
+  "vendor_name": "Taxi Funk Berlin eG",
+  "taxi_license": "B-TX-4402",
+  "pickup": "Mollstraße 1, 10178 Berlin",
+  "dropoff": "Berlin Brandenburg Airport (BER) Terminal 1",
+  "distance_km": "14.2",
+  "fare_amount": "41.5",
+  "tip_amount": "3.5",
+  "total_amount": "45",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8831",
+    "auth_code": "518924"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "amount": "41.5"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "3.5"
+    }
+  ]
+}
