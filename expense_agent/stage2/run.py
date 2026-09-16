@@ -1,11 +1,14 @@
 """Run the Stage 2 agent over cases and persist the graded run.
 
-Builds the handbook search index once, builds the agent around it, runs the
-requested cases through `AgentRunner`, and saves the resulting `Run`.
+Builds the chosen handbook search backend once, builds the agent around
+it, runs the requested cases through `AgentRunner`, and saves the
+resulting `Run`. `--search grep` uses the substring line ranker;
+`--search bm25` uses the BM25 index.
 
 Usage:
     python -m expense_agent.stage2.run
     python -m expense_agent.stage2.run --cases case-0001 case-0002 case-0003 --run-id stage2-smoke
+    python -m expense_agent.stage2.run --search bm25 --run-id stage2-bm25
 """
 
 from __future__ import annotations
@@ -18,10 +21,18 @@ from dotenv import load_dotenv
 
 from expense_agent.harness import AgentRunner, CaseLoader
 from expense_agent.stage2.agent import DEFAULT_MODEL, build_agent
-from expense_agent.stage2.search import HandbookSearch
+from expense_agent.stage2.bm25 import HandbookBM25
+from expense_agent.stage2.search import HandbookSearch, SearchBackend
 from expense_agent.tracking import RunStore
 
 DEFAULT_CASES = ["case-0001", "case-0002", "case-0003"]
+
+
+def build_search(kind: str, pdf_path: Path) -> SearchBackend:
+    """Build the requested handbook retrieval backend."""
+    if kind == "grep":
+        return HandbookSearch.from_pdf(pdf_path)
+    return HandbookBM25.from_pdf(pdf_path)
 
 
 def main() -> None:
@@ -32,10 +43,11 @@ def main() -> None:
     parser.add_argument("--run-id", default=None, help="run id; defaults to a UTC timestamp")
     parser.add_argument("--data-dir", type=Path, default=Path("data"), help="case data directory")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="pydantic-ai model id")
+    parser.add_argument("--search", choices=["grep", "bm25"], default="grep", help="handbook retrieval backend")
     args = parser.parse_args()
 
     loader = CaseLoader(args.data_dir)
-    search = HandbookSearch.from_pdf(args.data_dir / "handbook.pdf")
+    search = build_search(args.search, args.data_dir / "handbook.pdf")
     agent = build_agent(search, args.model)
     store = RunStore()
     runner = AgentRunner(agent, store, loader)

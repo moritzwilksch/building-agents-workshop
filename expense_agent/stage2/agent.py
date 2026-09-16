@@ -1,16 +1,17 @@
 """Build the Stage 2 agent: handbook search tool in, `CaseDecision` out.
 
 Instead of dumping the whole handbook into the prompt, the agent gets a
-`search_handbook` tool. The tool greps the handbook's text for the query
-terms and returns the top ten matching lines with surrounding context,
-each tagged with a page number, so the model retrieves only what it needs.
+`search_handbook` tool. The tool runs the supplied retrieval backend (a
+grep-style line search or a BM25 index) and returns the top ten matches
+with surrounding context, each tagged with a page number, so the model
+retrieves only what it needs.
 
 Usage:
     from pathlib import Path
 
-    from expense_agent.stage2 import HandbookSearch, build_agent
+    from expense_agent.stage2 import HandbookBM25, build_agent
 
-    search = HandbookSearch.from_pdf(Path("data/handbook.pdf"))
+    search = HandbookBM25.from_pdf(Path("data/handbook.pdf"))
     agent = build_agent(search)
 """
 
@@ -21,13 +22,13 @@ from pydantic_ai import Agent
 from expense_agent.harness import CaseInput
 from expense_agent.label import CaseDecision
 from expense_agent.stage2.prompts import SYSTEM_PROMPT
-from expense_agent.stage2.search import DEFAULT_RESULTS, HandbookSearch
+from expense_agent.stage2.search import DEFAULT_RESULTS, SearchBackend
 
 DEFAULT_MODEL = "openai:gpt-5.6-luna"
 
 
 def build_agent(
-    search: HandbookSearch,
+    search: SearchBackend,
     model: str = DEFAULT_MODEL,
 ) -> Agent[CaseInput, CaseDecision]:
     """Build the Stage 2 agent around a prepared handbook search index."""

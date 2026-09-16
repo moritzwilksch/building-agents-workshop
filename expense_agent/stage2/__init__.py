@@ -10,14 +10,24 @@ because those pages extract to placeholder text.
 """
 
 from expense_agent.stage2.agent import build_agent
+from expense_agent.stage2.bm25 import HandbookBM25
 from expense_agent.stage2.prompts import SYSTEM_PROMPT
-from expense_agent.stage2.search import Hit, HandbookSearch, Line, build_lines, extract_pages
+from expense_agent.stage2.search import (
+    Hit,
+    HandbookSearch,
+    Line,
+    SearchBackend,
+    build_lines,
+    extract_pages,
+)
 
 __all__ = [
     "SYSTEM_PROMPT",
     "Hit",
+    "HandbookBM25",
     "HandbookSearch",
     "Line",
+    "SearchBackend",
     "build_agent",
     "build_lines",
     "extract_pages",

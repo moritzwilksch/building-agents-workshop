@@ -32,6 +32,7 @@ openai = ">=3.12.0,<4"
 pydantic-ai-trace = ">=0.2.1,<0.3"
 fastapi = ">=0.141.1,<0.142"
 uvicorn = ">=0.52.4,<0.53"
+bm25s = ">=0.3.11,<0.4"
 
 [feature.data-generation.dependencies]
 typst = "*"

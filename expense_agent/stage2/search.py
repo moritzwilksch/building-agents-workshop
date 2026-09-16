@@ -17,6 +17,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Protocol
 
 from pypdf import PdfReader
 
@@ -40,6 +41,31 @@ class Hit:
 
     page: int
     text: str
+
+
+class SearchBackend(Protocol):
+    """A handbook retrieval backend the Stage 2 agent can call."""
+
+    def search(self, query: str, k: int = DEFAULT_RESULTS) -> list[Hit]:
+        """Return up to `k` hits for a query, best first."""
+
+    def format(self, hits: list[Hit]) -> str:
+        """Render hits as text for the model."""
+
+
+def window(lines: list[Line], index: int) -> Hit:
+    """Build a hit from the line at `index` plus its surrounding context."""
+    start = max(0, index - CONTEXT_LINES)
+    stop = min(len(lines), index + CONTEXT_LINES + 1)
+    context = lines[start:stop]
+    return Hit(page=lines[index].page, text="\n".join(line.text for line in context))
+
+
+def format_hits(hits: list[Hit]) -> str:
+    """Render hits as compact blocks, each tagged with its page number."""
+    if not hits:
+        return "No policy text matched that query. Try different keywords."
+    return "\n\n".join(f"[{rank}] page {hit.page}\n{hit.text}" for rank, hit in enumerate(hits, start=1))
 
 
 def extract_pages(pdf_path: Path) -> list[str]:
@@ -116,9 +142,7 @@ class HandbookSearch:
 
     def format(self, hits: list[Hit]) -> str:
         """Render hits as compact blocks, each tagged with its page number."""
-        if not hits:
-            return "No policy text matched that query. Try different keywords."
-        return "\n\n".join(f"[{rank}] page {hit.page}\n{hit.text}" for rank, hit in enumerate(hits, start=1))
+        return format_hits(hits)
 
     @staticmethod
     def _score(text: str, terms: set[str]) -> int:
@@ -126,7 +150,4 @@ class HandbookSearch:
         return sum(1 for term in terms if term in lowered)
 
     def _window(self, index: int) -> Hit:
-        start = max(0, index - CONTEXT_LINES)
-        stop = min(len(self.lines), index + CONTEXT_LINES + 1)
-        context = self.lines[start:stop]
-        return Hit(page=self.lines[index].page, text="\n".join(line.text for line in context))
+        return window(self.lines, index)
