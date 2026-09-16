@@ -63,7 +63,9 @@ Tipping practices vary substantially across global jurisdictions. Gratuities are
 In the autumn of 2019, a three-person client dinner in Milan produced a bill on which a single risotto accounted for more than the combined airfare of the attendees. The dish was, by all accounts, excellent. The ensuing correspondence between the hosting partner, the Milan office administrator, the Head of Global Finance, and eventually the Audit Committee ran to forty-one e-mails, two of which contained photographs of the risotto. The Audit Committee concluded that the firm had no principled objection to truffles, only to the absence of a principle. Version 3.0 of this handbook introduced the Truffle Policy in response, and it has survived every subsequent revision unchanged in substance, if not in the volume of internal jokes it generates.
 
 === The Rule
-The firm has no objection to good food, but certain ingredients turn a business meal into a tasting event. Dishes featuring truffle are evaluated under the Truffle Policy Flowchart, Figure 3 in Chapter 13, before any meal cap is applied. A dish that fails the flowchart is deducted at its gross line price like any other non-reimbursable item. The flowchart applies equally to solo meals, team dinners, and client hospitality.
+The firm has no objection to good food, but certain ingredients turn a business meal into a tasting event. Dishes featuring truffle are evaluated under the Truffle Policy Flowchart, Figure 3 in Chapter 13, before any meal cap is applied. *The pass and fail thresholds for every truffle dish are not written in this chapter; they exist only inside the Figure 3 flowchart image, so inspect and read Figure 3 for each truffle line.* A dish that fails the flowchart is deducted at its gross line price like any other non-reimbursable item. The flowchart applies equally to solo meals, team dinners, and client hospitality.
+
+- *Truffle dish on any meal*: inspect Figure 3 flowchart (Chapter 13).
 
 == Working Late and Overtime Meals
 
