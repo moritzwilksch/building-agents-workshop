@@ -17,7 +17,7 @@ Tax authorities and client procurement teams routinely scrutinize business enter
   - The business purpose (the client matter, the contract milestone, the interview round, the project review).
   - The external organization(s) whose representatives attended, or the fact that all attendees were firm employees.
   - The total number of attendees including yourself, and how many of them were external guests.
-  The itemized restaurant bill showing all food and beverage lines remains mandatory.
+  The itemized restaurant bill showing all food and beverage lines remains mandatory. The per-person cap and alcohol allowance that apply are set only in Figure 2 (Chapter 13).
 ]
 
 #card-dont("Submit vague or undocumented entertainment claims")[
@@ -26,10 +26,14 @@ Tax authorities and client procurement teams routinely scrutinize business enter
 
 == Dining Categories
 
-Figure 2 in Chapter 13 recognizes three dining categories, each with its own per-person spend cap and alcohol allowance:
+Figure 2 in Chapter 13 recognizes three dining categories, each with its own per-person spend cap and alcohol allowance. *No dinner, lunch, or alcohol cap is written in this chapter.* The per-person caps, attendee ratios, alcohol allowances, and late-night rule exist only inside the Figure 2 matrix image, so inspect and read Figure 2 before applying any dining, entertainment, or beverage rule:
 - *Solo employee dining*: One employee eating alone (Chapter 7).
 - *Internal team meal*: Two or more firm employees with no external guests. Includes project milestone dinners, onsite team lunches, and interview panel debriefs.
 - *Client hospitality*: At least one external guest. External guests include clients, prospective clients, joint venture partners, suppliers, and job candidates being interviewed or recruited.
+
+The Figure 2 matrix (Chapter 13) is the only source for these caps; inspect it before deciding:
+- *Client and team dinners or lunches*: inspect Figure 2 matrix (Chapter 13).
+- *Dining, entertainment, alcohol, late-night bills*: inspect Figure 2 matrix (Chapter 13).
 
 Where the note states the attendee count, Finance divides the reimbursable bill by that count to check the per-person cap. Where only the restaurant's guest count is printed on the bill, that count is used.
 

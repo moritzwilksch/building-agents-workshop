@@ -1,5 +1,5 @@
 {
-  "note": "Supplies and branded rubber ducks ordered for our interactive demo booth and cable management at CloudCon Berlin.",
+  "note": "Supplies and branded tote bags ordered for our interactive demo booth and cable management at CloudCon Berlin.",
   "invoice_type": "standard",
   "id": "inv_std_8841920_k9",
   "invoice_number": "EXP-2024-91823",
@@ -36,7 +36,7 @@
       "is_alcohol": false
     },
     {
-      "description": "Custom Molded Squeaky Rubber Ducks (Neon Orange - Pack of 250)",
+      "description": "Custom Screen-Printed Cotton Tote Bags (Neon Orange - Pack of 250)",
       "quantity": "2",
       "unit_price": "120",
       "total_price": "240",
@@ -71,7 +71,7 @@
     },
     {
       "id": 2,
-      "description": "Custom Molded Squeaky Rubber Ducks (Neon Orange - Pack of 250)",
+      "description": "Custom Screen-Printed Cotton Tote Bags (Neon Orange - Pack of 250)",
       "amount": "240"
     },
     {

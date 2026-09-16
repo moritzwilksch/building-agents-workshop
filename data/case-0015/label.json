@@ -1,0 +1,27 @@
+{
+  "case_id": "case-0015",
+  "decision": "rejected",
+  "claimed_amount": 712.81,
+  "reimbursed_amount": 0.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Nexta Play 5 Games Console (1TB) incl. controller",
+      "claimed": 479.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Video Game: Racing Legends 2024 (Disc Edition)",
+      "claimed": 120.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "VAT",
+      "claimed": 113.81,
+      "reimbursed": 0.0
+    }
+  ],
+  "reasoning": "The note states the games console and video games were bought for the employee's own flat for personal enjoyment ('team morale'), so the entire receipt consists of personal goods. Chapter 11's non-reimbursable catalog rejects personal entertainment items, and Chapter 10's card-dont confirms that personal or office goods do not become reimbursable through note phrasing. Under the Chapter 2 calculation steps, when every line on a receipt is non-reimbursable the receipt is rejected in full, including the VAT charged on those lines: €0.00 reimbursed."
+}

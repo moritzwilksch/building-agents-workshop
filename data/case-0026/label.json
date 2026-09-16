@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0026",
+  "decision": "rejected",
+  "claimed_amount": 183.00,
+  "reimbursed_amount": 0.00,
+  "line_items": [
+    { "id": 0, "description": "Sichuan Cumin Lamb Chops", "claimed": 49.00, "reimbursed": 0.00 },
+    { "id": 1, "description": "Dan Dan Noodles w/ Crispy Pork & Peanuts", "claimed": 43.50, "reimbursed": 0.00 },
+    { "id": 2, "description": "Mouthwatering Cold Chicken in Chili Oil", "claimed": 13.80, "reimbursed": 0.00 },
+    { "id": 3, "description": "Stir-fried Morning Glory w/ Fermented Tofu", "claimed": 27.00, "reimbursed": 0.00 },
+    { "id": 4, "description": "Tsingtao Lager 0.33l", "claimed": 19.20, "reimbursed": 0.00 },
+    { "id": 5, "description": "Sparkling Mineral Water 0.75l", "claimed": 14.00, "reimbursed": 0.00 },
+    { "id": 6, "description": "Tip", "claimed": 16.50, "reimbursed": 0.00 }
+  ],
+  "reasoning": "The receipt is dated 2024-05-18, a Saturday. Under Chapter 9, a restaurant receipt dated on a Saturday, Sunday, or public holiday is a weekend expense governed exclusively by Figure 1 (Weekend and Public Holiday Travel Approval Flowchart, Chapter 13). Figure 1 first asks whether the note names an official client conference, trade show, or scheduled client delivery on that day, and then whether it states a mandatory client or court meeting on the following business day before 10:00 AM requiring arrival the evening before. The note only says the dinner followed final-round onsite interviews with two candidates; it names neither a conference/trade show/client delivery nor a Monday pre-10:00 meeting, so Figure 1's red branch applies: the expense is strictly disallowed and treated as personal leisure, with zero reimbursement for weekend meals. This overrides the otherwise-compliant Figure 2 dining-matrix analysis (client hospitality with 2 external job candidates and 1 employee meets the 1:1 attendee ratio, EUR 166.50 food/drink over 3 attendees is about EUR 55.50 per person under the EUR 90 dinner cap, beer of EUR 19.20 is under the 30% non-alcoholic-subtotal alcohol allowance, and the EUR 16.50 tip is 9.9% of the EUR 166.50 pre-tip bill, within Germany's country-specific 20% tip cap in the Chapter 14 tipping table): those thresholds are never reached because the weekend flowchart rejects the bill in full. All seven lines, including the tip, are therefore reimbursed at 0.00."
+}

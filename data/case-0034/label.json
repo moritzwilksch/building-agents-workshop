@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0034",
+  "decision": "rejected",
+  "claimed_amount": 555.68,
+  "reimbursed_amount": 0.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Heavy-Duty Sound Deadening Foam Tiles (50x50cm, pack of 12)",
+      "claimed": 239.96,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Acoustic Decibel Sound Level Meter Class 2 (Calibrated)",
+      "claimed": 145.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "Industrial Double-Sided Heavy Mounting Tape 50m",
+      "claimed": 33.8,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 3,
+      "description": "Rubber Anti-Vibration Isolation Pads (pack of 8)",
+      "claimed": 47.7,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 88.72,
+      "reimbursed": 0.0
+    }
+  ],
+  "reasoning": "Commercial invoice for acoustic materials and a sound level meter, submitted with the note: 'Materials and sound level meter purchased to treat the podcast and client demo booth following noise complaints from adjacent office suites.' The buyer name (KlangLabs Audio GmbH rather than the firm) does not affect reimbursability per the Chapter 10 FAQ, provided the employee paid and the note explains the purchase, which it does. The foam tiles, mounting tape, and isolation pads are booth/demo materials for the client demo booth, so they fall under the Chapter 10 event-materials rule: reimbursement requires the note to both (a) name the event, workshop, or campaign and (b) state that the budget owner pre-approved the purchase. The note names the purpose but states no pre-approval, so all three event-material lines are deducted (239.96 + 33.80 + 47.70). The sound level meter at a 145.50 unit price is specialist test equipment, a peripheral at 100.00 EUR or more, which Chapter 10 makes reimbursable only when the note cites the IT Helpdesk ticket number; the note cites none, so that line is deducted too. Under the Chapter 2 calculation steps, the VAT charged on deducted lines is deducted with them (88.72). Nothing on the receipt remains reimbursable, so the receipt is rejected at 0.00 per the Chapter 2 outcome step and the Chapter 11 rule that a receipt consisting entirely of non-reimbursable items is rejected."
+}

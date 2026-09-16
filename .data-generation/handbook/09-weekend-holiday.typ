@@ -13,7 +13,7 @@ However, complex multi-jurisdictional matters, international cross-border transa
 To ensure complete fairness and objective auditing across all practice groups, Noice & Toit LLP does not rely on subjective narrative rules for weekend reimbursement. Instead, all eligibility rules for Saturday, Sunday, and statutory holiday expenses are defined strictly within our centralized visual flowchart.
 
 #card-do("Evaluate weekend claims against the visual flowchart")[
-  Any receipt dated on a Saturday, Sunday, or declared public holiday, and any hotel night beginning on such a day, is governed exclusively by Figure 1: Weekend and Public Holiday Travel Approval Flowchart in Chapter 13. The facts the flowchart asks about (a conference or client delivery on that day, a Monday morning meeting) must be stated in the submission note.
+  Any restaurant, taxi, fuel, or hotel line dated on a Saturday, Sunday, or declared public holiday, and any hotel night beginning on such a day, is governed exclusively by Figure 1: Weekend and Public Holiday Travel Approval Flowchart in Chapter 13. *This chapter states no weekend reimbursement caps or outcomes.* The fully reimbursable, partially reimbursed, and strictly disallowed branches exist only inside that flowchart image, so inspect Figure 1 before deciding. The facts the flowchart asks about (a conference or client delivery on that day, a Monday morning meeting) must be stated in the submission note.
 ]
 
 #card-dont("Assume weekend stays are automatically reimbursed")[
@@ -21,6 +21,9 @@ To ensure complete fairness and objective auditing across all practice groups, N
 ]
 
 === What Counts as a Weekend Expense
+The Figure 1 flowchart (Chapter 13) is the only source for these lines; inspect it before deciding:
+- *Weekend restaurant, taxi, fuel, or hotel line*: inspect Figure 1 flowchart (Chapter 13).
+- *Saturday, Sunday, or holiday receipt*: inspect Figure 1 flowchart (Chapter 13).
 - A *restaurant, taxi, or fuel receipt* is a weekend expense when its printed date falls on a Saturday, Sunday, or public holiday.
 - A *hotel night* is a weekend expense when it begins on such a day (see Chapter 6). Weekday nights on the same folio are evaluated normally.
 - A *flight or train ticket* is not a weekend expense merely because the travel day is a weekend; the ticket is evaluated under Chapters 4 and 5. Lodging and meals at the destination on that weekend are.
@@ -62,16 +65,16 @@ Hotel rates in trade-fair and congress cities surge during major events, and the
 ]
 
 #table(
-  columns: (1.1fr, 1.5fr, 1.1fr, 1.6fr),
-  align: (left, left, center, center),
+  columns: (1.1fr, 1.5fr, 1.1fr, 1.5fr, 1.4fr),
+  align: (left, left, center, left, center),
   fill: (_, y) => if y == 0 { rgb("#dbeafe") } else if calc.even(y) { rgb("#f8fafc") } else { none },
   stroke: 0.5pt + rgb("#cbd5e1"),
-  table.header[*City*][*Event*][*Event Window*][*Nightly Surcharge Cap*],
-  [Berlin], [FinTech Summit], [March], [€200.00 / \$225.00 / £175.00],
-  [Munich], [Bauma construction fair], [April], [€200.00 / \$225.00 / £175.00],
-  [Hamburg], [SMM Wind Energy], [September], [€200.00 / \$225.00 / £175.00],
-  [Frankfurt], [Frankfurt Book Fair], [October], [€200.00 / \$225.00 / £175.00],
-  [Düsseldorf], [Medica], [November], [€200.00 / \$225.00 / £175.00],
+  table.header[*City*][*Event*][*Event Window*][*Applies*][*Nightly Surcharge Cap*],
+  [Berlin], [FinTech Summit], [March], [Event surcharge cap], [€200.00 / \$225.00 / £175.00],
+  [Munich], [Bauma construction fair], [April], [Event surcharge cap], [€200.00 / \$225.00 / £175.00],
+  [Hamburg], [SMM Wind Energy], [September], [Event surcharge cap], [€200.00 / \$225.00 / £175.00],
+  [Frankfurt], [Frankfurt Book Fair], [October], [Event surcharge cap], [€200.00 / \$225.00 / £175.00],
+  [Düsseldorf], [Medica], [November], [Event surcharge cap], [€200.00 / \$225.00 / £175.00],
 )
 
 == Frequently Asked Questions

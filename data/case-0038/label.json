@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0038",
+  "decision": "partially_approved",
+  "claimed_amount": 675.80,
+  "reimbursed_amount": 59.38,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom Neon LED Sign ('DEBUGS ARE FEATURES') for Hackathon Lounge",
+      "claimed": 245.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 1,
+      "description": "Gaffer Tape Industrial Matte Black (50m roll)",
+      "claimed": 78.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 2,
+      "description": "Mini Desktop Zen Gardens with Branded Wooden Rakes (Pack of 15)",
+      "claimed": 195.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 3,
+      "description": "Emergency USB-C to Serial DB9 FTDI Adapter Cable (2m)",
+      "claimed": 49.90,
+      "reimbursed": 49.90
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 107.90,
+      "reimbursed": 9.48
+    }
+  ],
+  "reasoning": "Commercial invoice for hackathon booth materials, tax added on top of the subtotal (567.90 net + 107.90 VAT = 675.80). The submission note says 'Purchased supplies and custom decor for the regional developer hackathon booth and lounge area' - it names the event but does not state that a budget owner (Department Director, Practice Leader, or equivalent) pre-approved the purchase. Under the event-materials rule (Ch. 10), both statements are required; if either is missing, the event-material lines are deducted. The neon sign (245.00), gaffer tape (78.00), and branded zen-garden giveaways (195.00) are booth/signage/promotional event materials, so all three are deducted. The USB-C to serial adapter cable is a routine peripheral with a unit price of 24.95, under the 100.00 threshold, so it is reimbursable with an itemized invoice (Ch. 10). Per the deduction calculation order (Ch. 2), prohibited items are deducted at gross: where the receipt adds tax on top of the subtotal, the tax charged on the deducted items is deducted too. The deducted lines total 518.00 net, carrying 98.42 VAT (518.00 x 0.19), for a gross deduction of 616.42. The reimbursable adapter line carries 9.48 VAT (49.90 x 0.19). Reimbursed: 49.90 + 9.48 = 59.38."
+}

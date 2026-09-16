@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0014",
+  "decision": "partially_approved",
+  "claimed_amount": 478.59,
+  "reimbursed_amount": 192.99,
+  "line_items": [
+    { "id": 0, "description": "Industrial High-Torque Hot Glue Gun (300W)", "claimed": 79.98, "reimbursed": 79.98 },
+    { "id": 1, "description": "Bulk Extra-Strength Glue Sticks (5kg pack)", "claimed": 34.50, "reimbursed": 34.50 },
+    { "id": 2, "description": "Custom Screen-Printed Cotton Tote Bags (Neon Orange - Pack of 250)", "claimed": 240.00, "reimbursed": 0.00 },
+    { "id": 3, "description": "Heavy Duty Hook-and-Loop Cable Straps (Roll 25m)", "claimed": 47.70, "reimbursed": 47.70 },
+    { "id": 4, "description": "VAT", "claimed": 76.41, "reimbursed": 30.81 }
+  ],
+  "reasoning": "Commercial invoice for demo-booth supplies at CloudCon Berlin. The note names the event but never states that the budget owner pre-approved the purchase, so the branded tote bags (a promotional giveaway / event material under Ch. 10 'Event, Marketing, and Workshop Materials') fail the requirement that the note both name the event and state budget-owner pre-approval; that line is deducted in full at 240.00, plus its VAT share of 45.60 (Ch. 2 calculation step 2: deduct the non-reimbursable line's tax at the rate shown). The remaining lines are reimbursable independently of the event-materials rule: the hot glue guns (unit price 39.99) and cable straps (unit price 15.90) are peripherals/hand tools under the 100.00 unit-price threshold in Ch. 10 'Computer Hardware and Digital Peripherals', and the glue sticks (34.50) fall under the 50.00-per-invoice cap for incidental office supplies in Ch. 10 'Routine Office Supplies and Stationery'. Reimbursed net is therefore 79.98 + 34.50 + 47.70 = 162.18, plus the VAT attributable to those lines (162.18 at 19% = 30.81 of the 76.41 VAT line), for a total of 192.99. The invoice shows the vendor's VAT registration number, so no Ch. 12 net-of-VAT issue arises. Decision: partially_approved (deducted 285.60 of 478.59)."
+}

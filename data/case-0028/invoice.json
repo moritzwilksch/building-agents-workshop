@@ -1,5 +1,5 @@
 {
-  "note": "Interactive 'duck pond' giveaway booth props and USB-C test cables for the CloudExpo Berlin exhibition. Approved under Q1 field marketing budget.",
+  "note": "Giveaway booth props and USB-C test cables for the CloudExpo Berlin exhibition. Approved under Q1 field marketing budget.",
   "invoice_type": "standard",
   "id": "inv_std_884190_2024",
   "invoice_number": "INV-2024-81920",
@@ -20,7 +20,7 @@
   "buyer_tax_id": "DE318920145",
   "items": [
     {
-      "description": "Custom screen-printed yellow rubber ducks with company logo (Bulk Pack 300 pcs)",
+      "description": "Custom screen-printed stainless water bottles with company logo (Bulk Pack 300 pcs)",
       "quantity": "1",
       "unit_price": "390",
       "total_price": "390",
@@ -53,7 +53,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Custom screen-printed yellow rubber ducks with company logo (Bulk Pack 300 pcs)",
+      "description": "Custom screen-printed stainless water bottles with company logo (Bulk Pack 300 pcs)",
       "amount": "390"
     },
     {

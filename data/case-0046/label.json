@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0046",
+  "decision": "approved",
+  "claimed_amount": 124.4,
+  "reimbursed_amount": 124.4,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Ticket fare",
+      "claimed": 118.5,
+      "reimbursed": 118.5
+    },
+    {
+      "id": 1,
+      "description": "Seat reservation",
+      "claimed": 5.9,
+      "reimbursed": 5.9
+    }
+  ],
+  "reasoning": "Rail ticket München Hbf → Frankfurt(Main)Hbf with a note stating the business purpose (quarterly partner alignment summit), which satisfies the Ch. 2 note requirement for rail travel. Under Ch. 5 (Rail Travel as the Preferred Regional Option), second class is the firm standard and is reimbursed without further justification, so the €118.50 fare is paid in full; the non-flexible saver fare is fine, since Finance does not deduct the difference from a flexible fare. Seat reservation fees are reimbursable in full under the Ch. 5 seat-reservation rule, so the €5.90 reservation is also paid. No deduction applies; the claim is approved at €124.40."
+}

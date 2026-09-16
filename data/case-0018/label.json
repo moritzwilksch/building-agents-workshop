@@ -1,0 +1,13 @@
+{
+  "case_id": "case-0018",
+  "decision": "partially_approved",
+  "claimed_amount": 464.70,
+  "reimbursed_amount": 42.48,
+  "line_items": [
+    { "id": 0, "description": "Custom Yellow Rubber Ducks (500-pack, branded debugging giveaways)", "claimed": 275.00, "reimbursed": 0.00 },
+    { "id": 1, "description": "Giant 40cm Inflatable Mascot Duck for Booth Display", "claimed": 79.80, "reimbursed": 0.00 },
+    { "id": 2, "description": "Heavy-Duty Cable Ties & Adhesive Mounting Anchors (Black, 100pk)", "claimed": 35.70, "reimbursed": 42.48 },
+    { "id": 3, "description": "VAT", "claimed": 74.20, "reimbursed": 0.00 }
+  ],
+  "reasoning": "Commercial invoice for event materials and supplies. The note names the event (Berlin DevOps Days) but never states that a budget owner pre-approved the purchase, so the Ch. 10 event-materials card (both note facts required) means the booth giveaways and display props — lines 0 and 1 — are deducted at gross (354.80) plus their VAT share per Ch. 2 calculation step 2 (52.25 + 15.16 = 67.41 at 19%). Line 2, the cable ties and mounting anchors, are incidental consumable supplies reimbursable out of pocket up to €50.00 per invoice under Ch. 10, and €35.70 is within the cap, so that line is reimbursed with its tax: 35.70 + 35.70 × 0.19 (6.78) = 42.48. Total reimbursed 42.48 of 464.70; partially approved."
+}

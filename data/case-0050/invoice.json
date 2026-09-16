@@ -1,5 +1,5 @@
 {
-  "note": "Two-night stay for the European Green Tech Summit. Includes express dry cleaning for my blazer after an airline coffee spill prior to the keynote.",
+  "note": "Two-night stay for the European Green Tech Summit. Includes late checkout and luggage storage on the final day so I could attend the closing keynote before heading to the airport.",
   "invoice_type": "hotel",
   "id": "inv_htl_8829104",
   "folio_number": "FOL-2023-88412",
@@ -40,7 +40,7 @@
   ],
   "incidentals": [
     {
-      "description": "Express Overnight Dry Cleaning (Conference Blazer)",
+      "description": "Late Checkout & Overnight Luggage Storage (Conference Final Day)",
       "quantity": "1",
       "unit_price": "24.5",
       "total_price": "24.5",
@@ -88,7 +88,7 @@
     },
     {
       "id": 2,
-      "description": "Express Overnight Dry Cleaning (Conference Blazer)",
+      "description": "Late Checkout & Overnight Luggage Storage (Conference Final Day)",
       "amount": "24.5"
     },
     {

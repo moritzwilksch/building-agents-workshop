@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0032",
+  "decision": "approved",
+  "claimed_amount": 247.0,
+  "reimbursed_amount": 247.0,
+  "line_items": [
+    { "id": 0, "description": "Crispy Pork Belly Bao Buns (2 pcs)", "claimed": 27.0, "reimbursed": 27.0 },
+    { "id": 1, "description": "Smoked Brisket Claypot Rice with Wild Mushroom", "claimed": 88.5, "reimbursed": 88.5 },
+    { "id": 2, "description": "Szechuan Pepper Soft-Shell Crab", "claimed": 31.0, "reimbursed": 31.0 },
+    { "id": 3, "description": "Yuzu Matcha Tiramisu", "claimed": 28.5, "reimbursed": 28.5 },
+    { "id": 4, "description": "Nordic Forest Herbal Infusion", "claimed": 13.0, "reimbursed": 13.0 },
+    { "id": 5, "description": "Hitachino Nest White Ale 330ml", "claimed": 34.0, "reimbursed": 34.0 },
+    { "id": 6, "description": "Tip", "claimed": 25.0, "reimbursed": 25.0 }
+  ],
+  "reasoning": "Working dinner with 3 prospective hires from Scaleworks (4 attendees total) is client hospitality under Ch. 8; the note states the business purpose, the external organization, and the attendee count, satisfying the Ch. 8 documentation requirement and the Figure 2 'Mandatory' note. Receipt time 21:42 on Thursday 2024-11-14 avoids both the Figure 2 late-night rule (23:00 or later is rejected in full) and the Figure 1 weekend/public-holiday flowchart, so the ordinary client hospitality branches apply. Per-person spend: subtotal €222.00 / 4 attendees = €55.50, within the Figure 2 client hospitality dinner cap of €90 per attendee. Alcohol: the 4 Hitachino beers are allowed here — the Ch. 7 zero-alcohol solo rule does not apply because this is client hospitality, not solo dining; the €34.00 alcohol line is within the Figure 2 allowance of 30% of the €188.00 non-alcoholic subtotal (€56.40). No truffle dishes, so Figure 3 does not apply. Tip: Germany's Chapter 14 Global Tipping Standards row allows up to 20% of the pre-tip bill; the €25.00 tip is within 20% of €222.00 (€44.40), since the 19% VAT is already included in the menu prices. Nothing is deducted; the claim is approved in full at €247.00."
+}

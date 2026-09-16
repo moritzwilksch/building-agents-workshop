@@ -1,5 +1,5 @@
 {
-  "note": "Hotel stay in Hamburg for the European Maritime Tech Summit. Needed express dry cleaning after a coffee spill before the keynote presentation, and booked the quiet workspace pod for late client video calls.",
+  "note": "Hotel stay in Hamburg for the European Maritime Tech Summit. Booked the quiet workspace pod for late client video calls and a same-day shoe shine before the conference dinner.",
   "invoice_type": "hotel",
   "id": "inv_hf_92817401",
   "folio_number": "FOL-2024-88412",
@@ -40,7 +40,7 @@
   ],
   "incidentals": [
     {
-      "description": "Express Dry Cleaning (Suit & Silk Tie)",
+      "description": "Same-Day Shoe Shine & Sneaker Cleaning Service",
       "quantity": "1",
       "unit_price": "38.00",
       "total_price": "38.00",
@@ -88,7 +88,7 @@
     },
     {
       "id": 2,
-      "description": "Express Dry Cleaning (Suit & Silk Tie)",
+      "description": "Same-Day Shoe Shine & Sneaker Cleaning Service",
       "amount": "38.00"
     },
     {

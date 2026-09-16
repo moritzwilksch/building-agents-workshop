@@ -1,11 +1,11 @@
 {
-  "note": "Dinner with 2 prospective partners from Kvantum Analytics to discuss Q3 data pipeline integration (3 attendees total).",
+  "note": "Dinner with the Kvantum Analytics platform team to walk through the Q3 data pipeline rollout plan (3 attendees total).",
   "invoice_type": "restaurant",
   "id": "rec_rst_20240516_98214",
   "issued_at": "2024-05-16T21:42:10Z",
   "currency": "EUR",
   "vendor": {
-    "name": "Umami & Co. Izakaya",
+    "name": "Kizuna Sake & Ramen Bar",
     "address": "Kastanienallee 49",
     "city": "Berlin",
     "postal_code": "10119",
@@ -18,7 +18,7 @@
   "number_of_guests": 3,
   "items": [
     {
-      "description": "Crispy Pork Belly Bao Buns (Set of 3)",
+      "description": "Chicken Karaage Bao Buns (Set of 3)",
       "quantity": "2",
       "unit_price": "13.5",
       "total_price": "27",
@@ -88,7 +88,7 @@
   "charges": [
     {
       "id": 0,
-      "description": "Crispy Pork Belly Bao Buns (Set of 3)",
+      "description": "Chicken Karaage Bao Buns (Set of 3)",
       "amount": "27"
     },
     {

@@ -1,0 +1,33 @@
+{
+  "case_id": "case-0016",
+  "decision": "approved",
+  "claimed_amount": 282.8,
+  "reimbursed_amount": 282.8,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "claimed": 214.99,
+      "reimbursed": 214.99
+    },
+    {
+      "id": 1,
+      "description": "German Air Transport Tax (LuftVSt)",
+      "claimed": 15.53,
+      "reimbursed": 15.53
+    },
+    {
+      "id": 2,
+      "description": "Airport Passenger Service Charge",
+      "claimed": 32.4,
+      "reimbursed": 32.4
+    },
+    {
+      "id": 3,
+      "description": "Security & Screening Surcharge",
+      "claimed": 19.88,
+      "reimbursed": 19.88
+    }
+  ],
+  "reasoning": "One-way domestic economy flight HAM to MUC on 2024-03-20, ticket issued 2024-03-12, i.e. 8 calendar days before departure. Advance booking: the ticket was not issued fewer than seven calendar days before departure, so the strict note requirement for late bookings does not bite; the submission note also states the business reason (annual Q1 embedded systems architecture review) in any case. Cabin class: economy is the default and mandatory for domestic flights and segments under eight hours, and the ticket shows economy. Fees: the German Air Transport Tax (LuftVSt), the Airport Passenger Service Charge, and the Security & Screening Surcharge are mandatory government taxes and airport charges, which are part of the ticket price and fully reimbursable. No seat fees, bag fees, Wi-Fi, or lounge charges appear on the e-ticket. Citations: Ch. 4 advance-booking window (seven-day rule, strict note requirement waived because the note states the business reason), Ch. 4 Standard Economy Class mandate for domestic flights and segments under eight hours, Ch. 4 card-do on mandatory taxes and carrier surcharges, Ch. 2 card-dont on submitting claims with missing or ambiguous details. No deductions; approved in full at 282.80 EUR."
+}

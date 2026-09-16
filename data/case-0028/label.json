@@ -1,0 +1,33 @@
+{
+  "case_id": "case-0028",
+  "decision": "partially_approved",
+  "claimed_amount": 613.68,
+  "reimbursed_amount": 94.96,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom screen-printed stainless water bottles with company logo (Bulk Pack 300 pcs)",
+      "claimed": 390.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Inflatable mini carnival pool (120cm) & electric air pump",
+      "claimed": 45.9,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "Industrial magnetic USB-C charging cables (Pack of 5)",
+      "claimed": 79.8,
+      "reimbursed": 79.8
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "claimed": 97.98,
+      "reimbursed": 15.16
+    }
+  ],
+  "reasoning": "The note names the event (CloudExpo Berlin exhibition) but does not state that the budget owner pre-approved the purchase: 'Approved under Q1 field marketing budget' names a budget, not an approver or the approver's role. The Ch. 10 event-materials card requires both statements and says that if either is missing, the event material lines are deducted; the Ch. 2 submission-note card likewise requires the approver's role where Ch. 10 requires it. So the branded giveaway bottles (line 0) and the inflatable pool and pump, i.e. booth props (line 1), are deducted. The USB-C cables (line 2) are evaluated under their own category per Ch. 10: at a unit price of 39.90 they are peripherals under the 100.00 threshold, reimbursable with an itemized invoice regardless of the event-note defect. Per Ch. 2 step 2, the tax charged on deducted lines is deducted with them: (390.00 + 45.90) x 0.19 = 82.82 of the VAT is removed, leaving only 79.80 x 0.19 = 15.16 of VAT on the reimbursed cables. Total reimbursed: 79.80 + 15.16 = 94.96."
+}
