@@ -33,6 +33,9 @@ pydantic-ai-trace = ">=0.2.1,<0.3"
 fastapi = ">=0.141.1,<0.142"
 uvicorn = ">=0.52.4,<0.53"
 bm25s = ">=0.3.11,<0.4"
+pillow = ">=12.3.0,<13"
+pdf2image = ">=1.17.0,<2"
+poppler = ">=26.9.0,<27"
 
 [feature.data-generation.dependencies]
 typst = "*"
