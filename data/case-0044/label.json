@@ -1,0 +1,13 @@
+{
+  "case_id": "case-0044",
+  "decision": "approved",
+  "claimed_amount": 496.01,
+  "reimbursed_amount": 496.01,
+  "line_items": [
+    { "id": 0, "description": "Base fare", "claimed": 384.00, "reimbursed": 384.00 },
+    { "id": 1, "description": "Airport Passenger Service Charge", "claimed": 52.48, "reimbursed": 52.48 },
+    { "id": 2, "description": "German Air Transport Tax (LuftVSt)", "claimed": 15.53, "reimbursed": 15.53 },
+    { "id": 3, "description": "Carrier International Surcharge (YQ)", "claimed": 44.00, "reimbursed": 44.00 }
+  ],
+  "reasoning": "Round-trip flight FRA-ZRH (outbound 2024-03-24, return 2024-03-27) for the Q1 enterprise architecture onsite, so a genuine business trip, and the note names the Practice Leader who pre-approved the international booking. (1) Booking window: the ticket was issued 2024-03-14, ten calendar days before the first segment's departure on 2024-03-24. Ch. 4 rejects a ticket only when issued fewer than seven calendar days before departure without a stated business reason; ten days clears that window, so no reason is required. The 21-day international advance-booking guidance is a planning recommendation with no deduction attached, so missing it costs nothing. (2) Cabin class: both segments (FRA-ZRH 55 min, ZRH-FRA 60 min) are far under eight hours, where economy is mandatory under Ch. 4, and the ticket is economy. No business- or first-class violation, so the ticket is not rejected. (3) Fees: the Airport Passenger Service Charge, the German Air Transport Tax (LuftVSt), and the Carrier International Surcharge (YQ) are mandatory government taxes, passenger service charges, and carrier-imposed surcharges, which Ch. 4 reimburses in full as part of the ticket price. No seat selection, priority, lounge, Wi-Fi, or bag fees appear. (4) The outbound falls on a Sunday, but Ch. 9 states a flight ticket is not a weekend expense merely because the travel day is a weekend; it is evaluated under Ch. 4, which it satisfies. Nothing is deducted; all four lines are reimbursed at 384.00 + 52.48 + 15.53 + 44.00 = 496.01."
+}

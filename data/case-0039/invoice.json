@@ -1,0 +1,88 @@
+{
+  "note": "Materials and interactive display props for our developer booth at the Berlin Indie Games Expo. The branded mascot keychains and interactive ball pit setup are part of the player engagement activation.",
+  "invoice_type": "standard",
+  "id": "inv_std_8841920_k9",
+  "invoice_number": "INV-2024-0892",
+  "issued_date": "2024-03-29",
+  "due_date": "2024-04-12",
+  "currency": "EUR",
+  "vendor": {
+    "name": "KreativWerk & EventBedarf GmbH",
+    "address": "Revaler Straße 99, Tor 3",
+    "city": "Berlin",
+    "postal_code": "10245",
+    "country": "DE",
+    "tax_id": "DE318492041",
+    "phone": "+49 30 55198240"
+  },
+  "buyer_name": "Elena Rostova",
+  "buyer_company": "VoxelWave Interactive GmbH",
+  "buyer_tax_id": "DE294820194",
+  "items": [
+    {
+      "description": "Miniature Custom Mascot Keychains (Branded with company logo for expo booth giveaway)",
+      "quantity": "350",
+      "unit_price": "1.2",
+      "total_price": "420",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Heavy-Duty Gaffer Tape (Matte Black, 50mm x 50m)",
+      "quantity": "4",
+      "unit_price": "19.5",
+      "total_price": "78",
+      "category": "office",
+      "is_alcohol": false
+    },
+    {
+      "description": "Ultra-low latency USB-C to MIDI Host Interface Adapter for demo station",
+      "quantity": "2",
+      "unit_price": "44.95",
+      "total_price": "89.9",
+      "category": "electronics",
+      "is_alcohol": false
+    },
+    {
+      "description": "Collapsible Pop-up Ball Pit Enclosure (1.5m diameter, for interactive product display)",
+      "quantity": "1",
+      "unit_price": "64.5",
+      "total_price": "64.5",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "652.4",
+  "tax_rate": "0.19",
+  "tax_amount": "123.96",
+  "total_amount": "776.36",
+  "paid": true,
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Miniature Custom Mascot Keychains (Branded with company logo for expo booth giveaway)",
+      "amount": "420"
+    },
+    {
+      "id": 1,
+      "description": "Industrial Heavy-Duty Gaffer Tape (Matte Black, 50mm x 50m)",
+      "amount": "78"
+    },
+    {
+      "id": 2,
+      "description": "Ultra-low latency USB-C to MIDI Host Interface Adapter for demo station",
+      "amount": "89.9"
+    },
+    {
+      "id": 3,
+      "description": "Collapsible Pop-up Ball Pit Enclosure (1.5m diameter, for interactive product display)",
+      "amount": "64.5"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "123.96"
+    }
+  ]
+}

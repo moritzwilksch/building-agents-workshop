@@ -1,0 +1,28 @@
+{
+  "note": "Stretch limousine transfer from the hotel to Messe Berlin for the client evening event.",
+  "invoice_type": "taxi",
+  "id": "TX-BER-2024-91823",
+  "issued_at": "2024-10-16T08:42:15Z",
+  "currency": "EUR",
+  "vendor_name": "Berliner Stretch-Limousine & Chauffeur Service GmbH",
+  "taxi_license": "B-STL-2201",
+  "pickup": "Hotel Oderberger, Oderberger Str. 57, 10435 Berlin",
+  "dropoff": "Messe Berlin (South Entrance), Jafféstraße, 14055 Berlin",
+  "distance_km": "18.4",
+  "fare_amount": "68",
+  "tip_amount": "0",
+  "total_amount": "68",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Visa",
+    "last_four": "4821",
+    "auth_code": "72941X"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Limousine fare",
+      "amount": "68"
+    }
+  ]
+}

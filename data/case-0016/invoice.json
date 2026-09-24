@@ -1,0 +1,76 @@
+{
+  "note": "Direct flight HAM to MUC for the annual Q1 embedded systems architecture review with the hardware team.",
+  "invoice_type": "flight",
+  "id": "inv_fl_89127391",
+  "booking_reference": "EW7X8M",
+  "ticket_number": "104-2498110482",
+  "issued_at": "2024-03-12T14:22:00Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Eurowings GmbH",
+    "address": "Flughafenstraße 1-3",
+    "city": "Hamburg",
+    "postal_code": "22335",
+    "country": "DE",
+    "tax_id": "DE811124505",
+    "phone": "+49 221 59988222"
+  },
+  "passenger_name": "Dr. Felix Obermeier",
+  "segments": [
+    {
+      "flight_number": "EW9032",
+      "departure_airport": "HAM",
+      "arrival_airport": "MUC",
+      "departure_time": "2024-03-20T07:10:00Z",
+      "arrival_time": "2024-03-20T08:25:00Z",
+      "seat": "12F",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "214.99",
+  "taxes_and_fees": [
+    {
+      "name": "German Air Transport Tax (LuftVSt)",
+      "rate": null,
+      "amount": "15.53"
+    },
+    {
+      "name": "Airport Passenger Service Charge",
+      "rate": null,
+      "amount": "32.4"
+    },
+    {
+      "name": "Security & Screening Surcharge",
+      "rate": null,
+      "amount": "19.88"
+    }
+  ],
+  "total_amount": "282.8",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4092",
+    "auth_code": "582914"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "214.99"
+    },
+    {
+      "id": 1,
+      "description": "German Air Transport Tax (LuftVSt)",
+      "amount": "15.53"
+    },
+    {
+      "id": 2,
+      "description": "Airport Passenger Service Charge",
+      "amount": "32.4"
+    },
+    {
+      "id": 3,
+      "description": "Security & Screening Surcharge",
+      "amount": "19.88"
+    }
+  ]
+}

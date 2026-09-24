@@ -1,0 +1,22 @@
+{
+  "note": "Purchased heavy-duty velcro straps and cable trunking to tidy up the server rack cabling during the weekend datacenter migration.",
+  "invoice_type": "card_slip",
+  "id": "slip_20241018_91823",
+  "issued_at": "2024-10-18T16:42:15Z",
+  "currency": "EUR",
+  "merchant_name": "BAUHAUS Fachcentrum Berlin-Schöneberg",
+  "terminal_id": "TID-99248102",
+  "total_amount": "47.85",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8821",
+    "auth_code": "AUTH729104"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "BAUHAUS Fachcentrum Berlin-Schöneberg",
+      "amount": "47.85"
+    }
+  ]
+}

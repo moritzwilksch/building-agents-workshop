@@ -1,0 +1,38 @@
+{
+  "note": "ICE ticket to Frankfurt for the quarterly partner enablement session.",
+  "invoice_type": "train",
+  "id": "trn_94810284_db",
+  "booking_code": "Q8R7XM",
+  "issued_at": "2024-04-12T14:19:33+02:00",
+  "currency": "EUR",
+  "operator": {
+    "name": "DB Fernverkehr AG",
+    "address": "Stephensonstraße 1",
+    "city": "Frankfurt am Main",
+    "postal_code": "60326",
+    "country": "DE",
+    "tax_id": "DE811569869",
+    "phone": "+49 30 2970"
+  },
+  "passenger_name": "Dr. Henrik Lindemann",
+  "travel_class": "2nd",
+  "origin_station": "München Hbf",
+  "destination_station": "Frankfurt(Main)Hbf",
+  "departure_time": "2024-04-16T08:28:00+02:00",
+  "is_flexible": false,
+  "ticket_fare": "114.9",
+  "seat_reservation_fee": "5.2",
+  "total_amount": "120.1",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Ticket fare",
+      "amount": "114.9"
+    },
+    {
+      "id": 1,
+      "description": "Seat reservation",
+      "amount": "5.2"
+    }
+  ]
+}

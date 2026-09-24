@@ -1,0 +1,15 @@
+{
+  "case_id": "case-0020",
+  "decision": "approved",
+  "claimed_amount": 137.0,
+  "reimbursed_amount": 137.0,
+  "line_items": [
+    { "id": 0, "description": "Crispy Pork Belly Bao (3 pcs)", "claimed": 27.0, "reimbursed": 27.0 },
+    { "id": 1, "description": "Szechuan Dan Dan Noodles with Minced Duck", "claimed": 39.0, "reimbursed": 39.0 },
+    { "id": 2, "description": "Ghost Pepper Chili Crunch Tasting Flight", "claimed": 14.5, "reimbursed": 14.5 },
+    { "id": 3, "description": "Tsingtao 1903 Draft (0.5L)", "claimed": 20.4, "reimbursed": 20.4 },
+    { "id": 4, "description": "Smoked Plum Sour Mocktail", "claimed": 8.5, "reimbursed": 8.5 },
+    { "id": 5, "description": "San Pellegrino Sparkling Mineral Water (0.75L)", "claimed": 15.0, "reimbursed": 15.0 },
+    { "id": 6, "description": "Tip", "claimed": 12.6, "reimbursed": 12.6 }
+  ],
+  "reasoning": "Client hospitality dinner under Figure 2 (Ch. 8): the note states the business purpose (dinner with 2 prospective partners from CloudNorth during the Berlin partner summit), the external organization (CloudNorth), and the attendee count (3 attendees total), so the documentation requirement is met and the bill is evaluated as client hospitality, not solo dining. The receipt is dated Thursday 2023-11-16 at 21:42, so Figure 1 (weekend/holiday) does not apply and the bill is before the 23:00 late-night cutoff. Per-person spend: 137.00 / 3 = 45.67, well under the Figure 2 client hospitality dinner cap of 90 per attendee. Alcohol: the Tsingtao beer (20.40) is reimbursable for client hospitality up to 30% of the non-alcoholic food and drink subtotal; the non-alcoholic subtotal is 124.40 - 20.40 = 104.00, giving an allowance of 31.20, so the 20.40 of beer is fully covered. No truffle lines, so Figure 3 does not apply. Tip: under the Chapter 14 Global Tipping Standards, Germany allows up to 20% of the pre-tip bill (the Chapter 14 country row overrides the 10% EU norm in Chapter 7); 20% of 124.40 is 24.88, and the 12.60 tip is about 10%, so it is fully reimbursable. Nothing is deducted: reimbursed equals claimed at 137.00." }

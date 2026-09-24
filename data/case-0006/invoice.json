@@ -1,0 +1,88 @@
+{
+  "note": "Monthly plant rental and moss wall maintenance for client-facing conference rooms ahead of the quarterly compliance audit.",
+  "invoice_type": "standard",
+  "id": "inv_std_9921471a",
+  "invoice_number": "BOT-2024-0883",
+  "issued_date": "2024-05-01",
+  "due_date": "2024-05-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Urban Canopy & Foliage Design GmbH",
+    "address": "Gärtnerstraße 44",
+    "city": "Berlin",
+    "postal_code": "10245",
+    "country": "DE",
+    "tax_id": "DE294819033",
+    "phone": "+49 30 78219901"
+  },
+  "buyer_name": "Moritz Falkenrath",
+  "buyer_company": "CloudScale Dynamics GmbH",
+  "buyer_tax_id": "DE318490215",
+  "items": [
+    {
+      "description": "Monstera Deliciosa (Mature Specimen, 1.8m) - Monthly Botanical Office Rental",
+      "quantity": "2",
+      "unit_price": "65",
+      "total_price": "130",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Ficus Lyrata Fiddle Leaf Fig (Large, Self-Watering Planter) Rental",
+      "quantity": "3",
+      "unit_price": "55",
+      "total_price": "165",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Emergency Biophilic Acoustic Moss Wall Revival & Foliage Grooming Service",
+      "quantity": "1",
+      "unit_price": "145",
+      "total_price": "145",
+      "category": "services",
+      "is_alcohol": false
+    },
+    {
+      "description": "Organic Neem Oil Foliar Spray & Plant Tonic (500ml)",
+      "quantity": "2",
+      "unit_price": "13.95",
+      "total_price": "27.9",
+      "category": "office_supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "467.9",
+  "tax_rate": "0.19",
+  "tax_amount": "88.9",
+  "total_amount": "556.8",
+  "paid": true,
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Monstera Deliciosa (Mature Specimen, 1.8m) - Monthly Botanical Office Rental",
+      "amount": "130"
+    },
+    {
+      "id": 1,
+      "description": "Ficus Lyrata Fiddle Leaf Fig (Large, Self-Watering Planter) Rental",
+      "amount": "165"
+    },
+    {
+      "id": 2,
+      "description": "Emergency Biophilic Acoustic Moss Wall Revival & Foliage Grooming Service",
+      "amount": "145"
+    },
+    {
+      "id": 3,
+      "description": "Organic Neem Oil Foliar Spray & Plant Tonic (500ml)",
+      "amount": "27.9"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "88.9"
+    }
+  ]
+}

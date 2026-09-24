@@ -1,0 +1,88 @@
+{
+  "note": "Simulation props and demo gear for the Q1 SRE Chaos Engineering onsite workshop. Pre-approved by Mara Klein in Engineering as interactive training aids.",
+  "invoice_type": "standard",
+  "id": "inv_std_8829104",
+  "invoice_number": "INV-2024-09411",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Hacks & Props Event Engineering UG",
+    "address": "Kreativwerkstatt Spreeufer 44, Tor 3",
+    "city": "Berlin",
+    "postal_code": "10179",
+    "country": "DE",
+    "tax_id": "DE294817290",
+    "phone": "+49 30 55912830"
+  },
+  "buyer_name": "Dr. Elena Rostova",
+  "buyer_company": "Vortex Cloud Solutions GmbH",
+  "buyer_tax_id": "DE318492015",
+  "items": [
+    {
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "quantity": "1",
+      "unit_price": "249.99",
+      "total_price": "249.99",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "quantity": "1",
+      "unit_price": "189.5",
+      "total_price": "189.5",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "High-Density Fog Fluid (5L jug)",
+      "quantity": "2",
+      "unit_price": "29.5",
+      "total_price": "59",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered)",
+      "quantity": "3",
+      "unit_price": "34.99",
+      "total_price": "104.97",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "603.46",
+  "tax_rate": "0.19",
+  "tax_amount": "114.66",
+  "total_amount": "718.12",
+  "paid": true,
+  "payment_terms": "Immediate payment via Corporate Credit Card",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "amount": "249.99"
+    },
+    {
+      "id": 1,
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "amount": "189.5"
+    },
+    {
+      "id": 2,
+      "description": "High-Density Fog Fluid (5L jug)",
+      "amount": "59"
+    },
+    {
+      "id": 3,
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered)",
+      "amount": "104.97"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "114.66"
+    }
+  ]
+}

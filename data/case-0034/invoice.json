@@ -1,0 +1,88 @@
+{
+  "note": "Materials and sound level meter purchased to treat the podcast and client demo booth following noise complaints from adjacent office suites.",
+  "invoice_type": "standard",
+  "id": "inv_std_8842109x",
+  "invoice_number": "RE-2024-11082",
+  "issued_date": "2024-04-18",
+  "due_date": "2024-05-02",
+  "currency": "EUR",
+  "vendor": {
+    "name": "AkustikProfi Bau- & Tonbedarf e.K.",
+    "address": "Industriestraße 14",
+    "city": "Leipzig",
+    "postal_code": "04229",
+    "country": "DE",
+    "tax_id": "DE284910223",
+    "phone": "+49 341 8933210"
+  },
+  "buyer_name": "Felix Richter",
+  "buyer_company": "KlangLabs Audio GmbH",
+  "buyer_tax_id": "DE309481239",
+  "items": [
+    {
+      "description": "Heavy-Duty Sound Deadening Foam Tiles (50x50cm, pack of 12)",
+      "quantity": "4",
+      "unit_price": "59.99",
+      "total_price": "239.96",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Acoustic Decibel Sound Level Meter Class 2 (Calibrated)",
+      "quantity": "1",
+      "unit_price": "145.5",
+      "total_price": "145.5",
+      "category": "tools",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Double-Sided Heavy Mounting Tape 50m",
+      "quantity": "2",
+      "unit_price": "16.9",
+      "total_price": "33.8",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Rubber Anti-Vibration Isolation Pads (pack of 8)",
+      "quantity": "3",
+      "unit_price": "15.9",
+      "total_price": "47.7",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "466.96",
+  "tax_rate": "0.19",
+  "tax_amount": "88.72",
+  "total_amount": "555.68",
+  "paid": true,
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Heavy-Duty Sound Deadening Foam Tiles (50x50cm, pack of 12)",
+      "amount": "239.96"
+    },
+    {
+      "id": 1,
+      "description": "Acoustic Decibel Sound Level Meter Class 2 (Calibrated)",
+      "amount": "145.5"
+    },
+    {
+      "id": 2,
+      "description": "Industrial Double-Sided Heavy Mounting Tape 50m",
+      "amount": "33.8"
+    },
+    {
+      "id": 3,
+      "description": "Rubber Anti-Vibration Isolation Pads (pack of 8)",
+      "amount": "47.7"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "88.72"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "case-0036",
+  "decision": "approved",
+  "claimed_amount": 25.00,
+  "reimbursed_amount": 25.00,
+  "line_items": [
+    { "id": 0, "description": "Limousine fare", "claimed": 22.00, "reimbursed": 22.00 },
+    { "id": 1, "description": "Tip", "claimed": 3.00, "reimbursed": 3.00 }
+  ],
+  "reasoning": "The receipt is from a stretch-limousine chauffeur service, a premium ground-transport tier under the Chapter 5 premium/luxury-rideshare rule. That rule reimburses the fare only up to the €25.00 unjustified-ride threshold; the pre-tip fare of €22.00 is below the threshold, so there is no excess to deduct and the full fare is reimbursed. The €3.00 tip is 13.6% of the €22.00 fare, within Germany's 20% taxi-tip cap under the Chapter 14 Global Tipping Standards. Total approved €25.00."
+}

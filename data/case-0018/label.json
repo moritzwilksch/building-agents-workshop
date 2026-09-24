@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0018",
+  "decision": "partially_approved",
+  "claimed_amount": 726.50,
+  "reimbursed_amount": 164.82,
+  "line_items": [
+    { "id": 0, "description": "Branded Silicone Phone Grips (logo print, 300 pcs)", "claimed": 268.00, "reimbursed": 0.00 },
+    { "id": 1, "description": "Industrial Gaffer Tape (Matte Black, 50mm x 50m)", "claimed": 81.60, "reimbursed": 50.00 },
+    { "id": 2, "description": "Freestanding Fabric Backdrop Frame (3m, printed panel)", "claimed": 172.40, "reimbursed": 0.00 },
+    { "id": 3, "description": "USB-C Multiport Adapter (HDMI, 2x USB-A, 100W PD)", "claimed": 88.50, "reimbursed": 88.50 },
+    { "id": 4, "description": "VAT", "claimed": 116.00, "reimbursed": 26.32 }
+  ],
+  "reasoning": "Commercial invoice for Berlin Legal Tech Forum booth goods, evaluated per line under its own category (Ch. 10). Line 0 (branded silicone phone grips, 268.00) and line 2 (freestanding fabric backdrop frame, 172.40) are event materials under the Ch. 10 event-materials card: promotional giveaways and booth display or signage material are reimbursable in full only when the note both names the event and states that a named person pre-approved the purchase. The note names the Berlin Legal Tech Forum but states no pre-approval, so both lines are deducted in full; the backdrop frame is deducted on either reading, since read instead as decor it is a Facilities item that the Ch. 10 card on event goods that double as office goods excludes regardless of pre-approval. Line 1 (gaffer tape, 81.60) is a general-purpose routine consumable explicitly listed by the Ch. 10 office-supplies card ('tape'), classified by what the item is rather than by the event it was bought for, so it is capped at 50.00 per invoice rather than deducted with the event materials; 50.00 net is reimbursed and the 31.60 excess is deducted. Line 3 (USB-C multiport adapter, 88.50) is a peripheral with a unit price under the Ch. 10 100.00 threshold, so it is reimbursable with an itemized invoice and needs no IT Helpdesk ticket number. Line 4: the invoice adds a single 19% VAT on top of the net subtotal and shows the vendor's VAT registration number, so VAT is reimbursed only on the reimbursable net: (50.00 + 88.50) x 0.19 = 138.50 x 0.19 = 26.32 (half-up from 26.315); the VAT attributable to the deducted lines is deducted with them. Total reimbursed: 50.00 + 88.50 + 26.32 = 164.82 of 726.50, so the invoice is partially approved."
+}

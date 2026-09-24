@@ -1,0 +1,10 @@
+no_auto_install: true
+
+pre-commit:
+  jobs:
+    - name: ruff
+      glob: "*.{py,pyi}"
+      run: pixi run -e lint ruff check --fix --force-exclude {files}
+    - name: ruff-format
+      glob: "*.{py,pyi}"
+      run: pixi run -e lint ruff format --force-exclude {files}

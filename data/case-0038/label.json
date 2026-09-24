@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0038",
+  "decision": "partially_approved",
+  "claimed_amount": 675.80,
+  "reimbursed_amount": 118.88,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom Neon LED Sign ('DEBUGS ARE FEATURES') for Hackathon Lounge",
+      "claimed": 245.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 1,
+      "description": "Gaffer Tape Industrial Matte Black (50m roll)",
+      "claimed": 78.00,
+      "reimbursed": 50.00
+    },
+    {
+      "id": 2,
+      "description": "Mini Desktop Zen Gardens with Branded Wooden Rakes (Pack of 15)",
+      "claimed": 195.00,
+      "reimbursed": 0.00
+    },
+    {
+      "id": 3,
+      "description": "Emergency USB-C to Serial DB9 FTDI Adapter Cable (2m)",
+      "claimed": 49.90,
+      "reimbursed": 49.90
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 107.90,
+      "reimbursed": 18.98
+    }
+  ],
+  "reasoning": "Commercial invoice for hackathon goods. The note names the event but does not state that a budget owner pre-approved the purchase, so Chapter 10 requires deduction of the custom neon sign and branded zen-garden giveaways as event signage and promotional materials. The generic gaffer tape is a routine consumable and is reimbursable up to the 50.00 per-invoice office-supplies cap. The USB-C serial adapters cost 24.95 each, below the 100.00 peripheral threshold, so their 49.90 line is reimbursable. Reimbursable net is 99.90 and its 19% VAT is 18.98. Total reimbursement is 118.88."
+}

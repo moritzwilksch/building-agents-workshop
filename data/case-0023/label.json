@@ -1,0 +1,11 @@
+{
+  "case_id": "case-0023",
+  "decision": "approved",
+  "claimed_amount": 60.00,
+  "reimbursed_amount": 60.00,
+  "line_items": [
+    { "id": 0, "description": "Taxi fare", "claimed": 54.20, "reimbursed": 54.20 },
+    { "id": 1, "description": "Tip", "claimed": 5.80, "reimbursed": 5.80 }
+  ],
+  "reasoning": "Taxi from a Munich hotel to Flughafen München (airport drop-off). The fare of €54.20 exceeds the €25.00 threshold in Chapter 5 (City Transit, Taxis, and Ride-Hailing), but the rule reimburses a fare above the threshold in full when the pickup or drop-off is an airport or long-distance rail station, so the fare is reimbursed at the full €54.20. The €5.80 tip is governed by the Chapter 5 taxi-tip rule and the Chapter 14 Global Tipping Standards: Germany caps taxi tips at 20% of the fare before tip, and €5.80 is 10.7% of €54.20, within the cap, so the tip is reimbursed in full. Total reimbursed €60.00, no deductions."
+}

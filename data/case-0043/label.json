@@ -1,0 +1,51 @@
+{
+  "case_id": "case-0043",
+  "decision": "rejected",
+  "claimed_amount": 155.0,
+  "reimbursed_amount": 0.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Korean Crispy Pork Belly (Bossam Style)",
+      "claimed": 49.8,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Kimchi & Scallion Jeon (Pancake)",
+      "claimed": 13.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "Stone Pot Dolsot Bibimbap (Wagyu Beef)",
+      "claimed": 26.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 3,
+      "description": "San Pellegrino Sparkling Water (0.75L)",
+      "claimed": 15.6,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 4,
+      "description": "Makgeolli Artisanal Rice Wine (750ml)",
+      "claimed": 22.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 5,
+      "description": "Yuzu Hojicha Infused Ice Tea",
+      "claimed": 13.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "claimed": 14.6,
+      "reimbursed": 0.0
+    }
+  ],
+  "reasoning": "The receipt is dated Saturday 2023-10-14, so Chapter 9 routes this claim exclusively through Figure 1 (Chapter 13), the Weekend and Public Holiday Travel Approval Flowchart. Figure 1 first asks whether the submission note names an official client conference, trade show, or scheduled client delivery on that calendar day: it does not. It then asks whether the note states a mandatory client or court meeting on the following business day before 10:00 AM requiring arrival the evening before: it does not (the note only mentions a Saturday dinner with two external design partners from Studio Hyperlink to discuss the Q4 UI redesign). The claim therefore lands on the 'Strictly disallowed' branch, treated as personal leisure with zero reimbursement for weekend meals. The dining details would otherwise pass Figure 2 (Chapter 13): it is a client hospitality dinner (3 attendees, at least one external guest), €140.40 subtotal / 3 = €46.80 per person, under the €90 dinner cap; the €22.00 makgeolli is below the 30% alcohol allowance (30% of the €118.40 non-alcoholic subtotal = €35.52); receipt time 21:48 is before the 23:00 late-night cutoff; and the €14.60 tip is within the Chapter 14 / Appendix German 20% tip cap (20% of €140.40 = €28.08). But every one of those checks is moot, because Figure 1 disallows the weekend dinner bill in full. Decision: rejected; all seven lines reimbursed at €0.00."
+}

@@ -1,0 +1,117 @@
+{
+  "note": "Working dinner with 3 prospective cloud architecture leads from Scaleworks to review Q1 integration targets (4 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "inv_rest_894127",
+  "issued_at": "2024-11-14T21:42:15Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Cinder & Umami Modern Asian Kitchen",
+    "address": "Torstraße 178",
+    "city": "Berlin",
+    "postal_code": "10115",
+    "country": "DE",
+    "tax_id": "DE319842095",
+    "phone": "+49 30 55192840"
+  },
+  "receipt_number": "REC-2024-88419",
+  "table_number": "T-14",
+  "number_of_guests": 4,
+  "items": [
+    {
+      "description": "Crispy Pork Belly Bao Buns (2 pcs)",
+      "quantity": "2",
+      "unit_price": "13.5",
+      "total_price": "27",
+      "category": "starter",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoked Brisket Claypot Rice with Wild Mushroom",
+      "quantity": "3",
+      "unit_price": "29.5",
+      "total_price": "88.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Szechuan Pepper Soft-Shell Crab",
+      "quantity": "1",
+      "unit_price": "31",
+      "total_price": "31",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Yuzu Matcha Tiramisu",
+      "quantity": "3",
+      "unit_price": "9.5",
+      "total_price": "28.5",
+      "category": "dessert",
+      "is_alcohol": false
+    },
+    {
+      "description": "Nordic Forest Herbal Infusion",
+      "quantity": "2",
+      "unit_price": "6.5",
+      "total_price": "13",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Hitachino Nest White Ale 330ml",
+      "quantity": "4",
+      "unit_price": "8.5",
+      "total_price": "34",
+      "category": "alcohol",
+      "is_alcohol": true
+    }
+  ],
+  "subtotal": "222",
+  "tax_rate": "0.19",
+  "tax_amount": "35.45",
+  "tip_amount": "25",
+  "total_amount": "247",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4198",
+    "auth_code": "582910"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Crispy Pork Belly Bao Buns (2 pcs)",
+      "amount": "27"
+    },
+    {
+      "id": 1,
+      "description": "Smoked Brisket Claypot Rice with Wild Mushroom",
+      "amount": "88.5"
+    },
+    {
+      "id": 2,
+      "description": "Szechuan Pepper Soft-Shell Crab",
+      "amount": "31"
+    },
+    {
+      "id": 3,
+      "description": "Yuzu Matcha Tiramisu",
+      "amount": "28.5"
+    },
+    {
+      "id": 4,
+      "description": "Nordic Forest Herbal Infusion",
+      "amount": "13"
+    },
+    {
+      "id": 5,
+      "description": "Hitachino Nest White Ale 330ml",
+      "amount": "34"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "25"
+    }
+  ]
+}

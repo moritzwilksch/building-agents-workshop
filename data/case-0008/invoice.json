@@ -1,0 +1,88 @@
+{
+  "note": "Booth staging supplies and hardware tools for the quarterly hackathon, including promotional ducks for attendee giveaways. Pre-approved by Dr. Lena Hoffmann in Engineering under the team event budget.",
+  "invoice_type": "standard",
+  "id": "inv_std_20240328_88412",
+  "invoice_number": "INV-2024-88412",
+  "issued_date": "2024-03-28",
+  "due_date": "2024-04-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "KreativWerk & TechBedarf Kreuzberg GmbH",
+    "address": "Holzmarktstraße 25",
+    "city": "Berlin",
+    "postal_code": "10243",
+    "country": "DE",
+    "tax_id": "DE284910294",
+    "phone": "+49 30 5549 1800"
+  },
+  "buyer_name": "Dr. Moritz von Flotow",
+  "buyer_company": "HyperScale Distributed Labs GmbH",
+  "buyer_tax_id": "DE319882104",
+  "items": [
+    {
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "quantity": "1",
+      "unit_price": "280",
+      "total_price": "280",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Boutique USB-C Soldering Iron TS80P (Silver Pro Edition)",
+      "quantity": "2",
+      "unit_price": "99",
+      "total_price": "198",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Glow-in-the-Dark Gaffer Tape (50mm x 25m Roll)",
+      "quantity": "4",
+      "unit_price": "19.5",
+      "total_price": "78",
+      "category": "office_supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Office Air-Revival Monster Ficus (Rental & Staging Deposit)",
+      "quantity": "1",
+      "unit_price": "145",
+      "total_price": "145",
+      "category": "botanical",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "701",
+  "tax_rate": "0.19",
+  "tax_amount": "133.19",
+  "total_amount": "834.19",
+  "paid": true,
+  "payment_terms": "Net 14",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Emergency 400-Pack Squeaky Neon Rubber Ducks (Mascot Load-Testing Fleet)",
+      "amount": "280"
+    },
+    {
+      "id": 1,
+      "description": "Boutique USB-C Soldering Iron TS80P (Silver Pro Edition)",
+      "amount": "198"
+    },
+    {
+      "id": 2,
+      "description": "Glow-in-the-Dark Gaffer Tape (50mm x 25m Roll)",
+      "amount": "78"
+    },
+    {
+      "id": 3,
+      "description": "Office Air-Revival Monster Ficus (Rental & Staging Deposit)",
+      "amount": "145"
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "amount": "133.19"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "note": "Stretch limousine from the client office in Unterföhring back to the hotel after the workshop.",
+  "invoice_type": "taxi",
+  "id": "TX-2023-882190",
+  "issued_at": "2023-11-14T20:45:12Z",
+  "currency": "EUR",
+  "vendor_name": "Münchner Stretch-Limousinen & Chauffeurdienst GmbH",
+  "taxi_license": "M-STL-4412",
+  "pickup": "Dieselstraße 12, 85774 Unterföhring",
+  "dropoff": "Hotel Bayerischer Hof, Promenadeplatz 2-6, 80333 München",
+  "distance_km": "18.4",
+  "fare_amount": "22",
+  "tip_amount": "3",
+  "total_amount": "25",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "5821",
+    "auth_code": "841903"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Limousine fare",
+      "amount": "22"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "3"
+    }
+  ]
+}

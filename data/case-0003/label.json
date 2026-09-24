@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0003",
+  "decision": "partially_approved",
+  "claimed_amount": 718.12,
+  "reimbursed_amount": 492.61,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom Laser-Engraved Giant Jenga Tower with Tech Debt Failure Scenarios",
+      "claimed": 249.99,
+      "reimbursed": 249.99
+    },
+    {
+      "id": 1,
+      "description": "Industrial Fog Machine (1200W) for Server Room Incident Simulation Demo",
+      "claimed": 189.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "High-Density Fog Fluid (5L jug) (x2)",
+      "claimed": 59.0,
+      "reimbursed": 59.0
+    },
+    {
+      "id": 3,
+      "description": "Emergency Mechanical Siren & Strobe Beacon (USB-C Powered) (x3)",
+      "claimed": 104.97,
+      "reimbursed": 104.97
+    },
+    {
+      "id": 4,
+      "description": "MwSt (19%)",
+      "claimed": 114.66,
+      "reimbursed": 78.65
+    }
+  ],
+  "reasoning": "The named Q1 SRE Chaos Engineering workshop and Mara Klein's stated Engineering pre-approval qualify the workshop props, demonstration gear, and consumables as event materials. The fog machine is powered equipment with a unit price above the 100.00 peripheral and tool threshold, and the note cites no IT Helpdesk ticket, so its 189.50 charge and 36.01 VAT share are deducted. The remaining lines and their VAT are reimbursed."
+}

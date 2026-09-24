@@ -1,0 +1,115 @@
+{
+  "note": "Hotel stay in Hamburg for the European Maritime Tech Summit. Booked the quiet workspace pod for late client video calls and a same-day shoe shine before the conference dinner.",
+  "invoice_type": "hotel",
+  "id": "inv_hf_92817401",
+  "folio_number": "FOL-2024-88412",
+  "issued_date": "2024-05-16",
+  "currency": "EUR",
+  "hotel": {
+    "name": "Tortue Hamburg - Design Hotels",
+    "address": "Stadthausbrücke 10",
+    "city": "Hamburg",
+    "postal_code": "20355",
+    "country": "DE",
+    "tax_id": "DE312984571",
+    "phone": "+49 40 33441400"
+  },
+  "guest_name": "Dr. Julian Weiss",
+  "room_number": "314",
+  "room_category": "Deluxe King Courtyard",
+  "check_in": "2024-05-14",
+  "check_out": "2024-05-16",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Deluxe Room Night 14/05",
+      "quantity": "1",
+      "unit_price": "195.00",
+      "total_price": "195.00",
+      "category": "accommodation",
+      "is_alcohol": false
+    },
+    {
+      "description": "Deluxe Room Night 15/05",
+      "quantity": "1",
+      "unit_price": "195.00",
+      "total_price": "195.00",
+      "category": "accommodation",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Same-Day Shoe Shine & Sneaker Cleaning Service",
+      "quantity": "1",
+      "unit_price": "38.00",
+      "total_price": "38.00",
+      "category": "service",
+      "is_alcohol": false
+    },
+    {
+      "description": "Minibar - Artisan Sea Salt Truffle Chips & Fritz-Kola",
+      "quantity": "2",
+      "unit_price": "9.00",
+      "total_price": "18.00",
+      "category": "snack",
+      "is_alcohol": false
+    },
+    {
+      "description": "Quiet-Zone High-Speed Workspace Pod Rental (Half Day)",
+      "quantity": "1",
+      "unit_price": "45.00",
+      "total_price": "45.00",
+      "category": "amenity",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "491.00",
+  "city_tax": "12.00",
+  "vat_rate": "0.07",
+  "vat": "34.37",
+  "total_amount": "537.37",
+  "paid": true,
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4821",
+    "auth_code": "682194"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Deluxe Room Night 14/05",
+      "amount": "195.00"
+    },
+    {
+      "id": 1,
+      "description": "Deluxe Room Night 15/05",
+      "amount": "195.00"
+    },
+    {
+      "id": 2,
+      "description": "Same-Day Shoe Shine & Sneaker Cleaning Service",
+      "amount": "38.00"
+    },
+    {
+      "id": 3,
+      "description": "Minibar - Artisan Sea Salt Truffle Chips & Fritz-Kola",
+      "amount": "18.00"
+    },
+    {
+      "id": 4,
+      "description": "Quiet-Zone High-Speed Workspace Pod Rental (Half Day)",
+      "amount": "45.00"
+    },
+    {
+      "id": 5,
+      "description": "City tax",
+      "amount": "12.00"
+    },
+    {
+      "id": 6,
+      "description": "VAT",
+      "amount": "34.37"
+    }
+  ]
+}

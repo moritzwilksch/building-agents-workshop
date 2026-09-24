@@ -1,0 +1,95 @@
+{
+  "note": "Direct flight to Helsinki for the Nordic Tech Summit and onsite partner onboarding; pre-approved by Practice Leader Dr. Andrea Sommer.",
+  "invoice_type": "flight",
+  "id": "inv-lh-2024-884102",
+  "booking_reference": "K89ZLQ",
+  "ticket_number": "220-4918204911",
+  "issued_at": "2024-04-12T09:15:22Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Lufthansa Group AG",
+    "address": "Flughafenstrasse 1-3",
+    "city": "Frankfurt am Main",
+    "postal_code": "60549",
+    "country": "DE",
+    "tax_id": "DE114144589",
+    "phone": "+49 69 86799799"
+  },
+  "passenger_name": "Dr. Elena Vance",
+  "segments": [
+    {
+      "flight_number": "LH850",
+      "departure_airport": "FRA",
+      "arrival_airport": "HEL",
+      "departure_time": "2024-05-02T11:45:00Z",
+      "arrival_time": "2024-05-02T15:15:00Z",
+      "seat": "14A",
+      "cabin_class": "economy"
+    },
+    {
+      "flight_number": "LH851",
+      "departure_airport": "HEL",
+      "arrival_airport": "FRA",
+      "departure_time": "2024-05-05T18:15:00Z",
+      "arrival_time": "2024-05-05T19:50:00Z",
+      "seat": "12F",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "540",
+  "taxes_and_fees": [
+    {
+      "name": "International Passenger Service Fee (DE)",
+      "rate": null,
+      "amount": "78.5"
+    },
+    {
+      "name": "German Aviation Security Charge (LuftSiG)",
+      "rate": null,
+      "amount": "42.1"
+    },
+    {
+      "name": "Helsinki Airport Departure Tax & Security Fee",
+      "rate": null,
+      "amount": "38.2"
+    },
+    {
+      "name": "Carrier-Imposed International Fuel & Operating Surcharge (YQ)",
+      "rate": null,
+      "amount": "96"
+    }
+  ],
+  "total_amount": "794.8",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4109",
+    "auth_code": "581024"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "540"
+    },
+    {
+      "id": 1,
+      "description": "International Passenger Service Fee (DE)",
+      "amount": "78.5"
+    },
+    {
+      "id": 2,
+      "description": "German Aviation Security Charge (LuftSiG)",
+      "amount": "42.1"
+    },
+    {
+      "id": 3,
+      "description": "Helsinki Airport Departure Tax & Security Fee",
+      "amount": "38.2"
+    },
+    {
+      "id": 4,
+      "description": "Carrier-Imposed International Fuel & Operating Surcharge (YQ)",
+      "amount": "96"
+    }
+  ]
+}

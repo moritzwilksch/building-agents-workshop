@@ -1,0 +1,33 @@
+{
+  "note": "Cab from client hotel to Munich Airport for early return flight to Berlin.",
+  "invoice_type": "taxi",
+  "id": "TX-2024-88421",
+  "issued_at": "2024-05-16T06:42:15Z",
+  "currency": "EUR",
+  "vendor_name": "Taxi-Zentrale München eG",
+  "taxi_license": "M-TX-4192",
+  "pickup": "Hotel Vier Jahreszeiten Kempinski, Maximilianstraße 17, 80539 München",
+  "dropoff": "Flughafen München Terminal 2, 85356 München-Flughafen",
+  "distance_km": "18.4",
+  "fare_amount": "54.2",
+  "tip_amount": "5.8",
+  "total_amount": "60",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "6104",
+    "auth_code": "582194"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "amount": "54.2"
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "amount": "5.8"
+    }
+  ]
+}

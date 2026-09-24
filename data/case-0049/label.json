@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0049",
+  "decision": "partially_approved",
+  "claimed_amount": 327.50,
+  "reimbursed_amount": 326.85,
+  "line_items": [
+    { "id": 0, "description": "Crispy Truffle Polenta Bites", "claimed": 25.00, "reimbursed": 25.00 },
+    { "id": 1, "description": "Dry-Aged Ribeye w/ Smoked Bone Marrow Butter", "claimed": 135.00, "reimbursed": 135.00 },
+    { "id": 2, "description": "Handmade Wild Mushroom Tagliatelle", "claimed": 26.50, "reimbursed": 26.50 },
+    { "id": 3, "description": "San Pellegrino Sparkling Water (750ml)", "claimed": 15.00, "reimbursed": 15.00 },
+    { "id": 4, "description": "Smoked Rosemary Old Fashioned", "claimed": 68.00, "reimbursed": 67.35 },
+    { "id": 5, "description": "Yuzu Basil Sorbet & Espresso Flight", "claimed": 23.00, "reimbursed": 23.00 },
+    { "id": 6, "description": "Tip", "claimed": 35.00, "reimbursed": 35.00 }
+  ],
+  "reasoning": "Client hospitality dinner for 4 (3 prospective clients from Veloce Media plus the host). The note states the business purpose (Q3 platform migration discussion), the external organization, and the attendee count, so Chapter 8's documentation requirements are met and the bill is evaluated as client hospitality under Figure 2 (fig:dining-matrix), not as a solo meal. The receipt is printed 21:44 (before the 23:00 late-night cutoff in Figure 2) and dated Thursday 2024-05-16, so the late-night and weekend rules (Figure 1, fig:weekend-flowchart) do not apply. Truffle screening (Figure 3, fig:truffle-flowchart): the Crispy Truffle Polenta Bites are a starter, so under Step 2 they are ordinary food and fully reimbursable; no other line mentions truffle. Alcohol allowance: the non-alcoholic food and drink subtotal is 25.00 + 135.00 + 26.50 + 15.00 + 23.00 = 224.50, so Figure 2's 30% combined alcohol allowance for client hospitality is 67.35. The only alcohol line (Smoked Rosemary Old Fashioned, 68.00) exceeds the allowance by 0.65, which is deducted; the line is reimbursed at 67.35. Per-person cap check: 291.85 / 4 = 72.96, within the EUR 90 dinner cap per attendee. Tip: the vendor is in Germany, and the Chapter 14 tipping table's Germany row (20% cap) overrides the 10% EU regional norm; 20% of the 292.50 pre-tip bill is 58.50, so the 35.00 tip is fully reimbursed. Total reimbursed: 224.50 + 67.35 + 23.00 lines plus tip = 326.85, against 327.50 claimed; sole deduction is the 0.65 alcohol excess."
+}

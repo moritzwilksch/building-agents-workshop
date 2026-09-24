@@ -1,0 +1,115 @@
+{
+  "note": "Accommodation and overnight EV charging during the 2-day AI Summit Berlin. Lounge day pass used for a quiet client video call between sessions.",
+  "invoice_type": "hotel",
+  "id": "inv_htl_89f02a4b",
+  "folio_number": "FOL-2024-88412",
+  "issued_date": "2024-10-16",
+  "currency": "EUR",
+  "hotel": {
+    "name": "Hotel The Yard & Botanical Suites",
+    "address": "Holzmarktstraße 19-24",
+    "city": "Berlin",
+    "postal_code": "10243",
+    "country": "DE",
+    "tax_id": "DE298104721",
+    "phone": "+49 30 8920440"
+  },
+  "guest_name": "Dr. Elena Rostova",
+  "room_number": "412",
+  "room_category": "Deluxe King Studio",
+  "check_in": "2024-10-14",
+  "check_out": "2024-10-16",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Room Charge - Night 1 (Oct 14)",
+      "quantity": "1",
+      "unit_price": "175",
+      "total_price": "175",
+      "category": "room",
+      "is_alcohol": false
+    },
+    {
+      "description": "Room Charge - Night 2 (Oct 15)",
+      "quantity": "1",
+      "unit_price": "175",
+      "total_price": "175",
+      "category": "room",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Executive Lounge Day Pass - Quiet Video-Call Booth (Half Day)",
+      "quantity": "1",
+      "unit_price": "38",
+      "total_price": "38",
+      "category": "laundry",
+      "is_alcohol": false
+    },
+    {
+      "description": "Minibar: Organic Truffle Cashews & Bio Mate Kola",
+      "quantity": "2",
+      "unit_price": "8",
+      "total_price": "16",
+      "category": "snack",
+      "is_alcohol": false
+    },
+    {
+      "description": "Overnight Secure Courtyard Parking w/ EV Charging",
+      "quantity": "2",
+      "unit_price": "30",
+      "total_price": "60",
+      "category": "service",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "464",
+  "city_tax": "15",
+  "vat_rate": "0.07",
+  "vat": "32.48",
+  "total_amount": "511.48",
+  "paid": true,
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "8814",
+    "auth_code": "714902"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Room Charge - Night 1 (Oct 14)",
+      "amount": "175"
+    },
+    {
+      "id": 1,
+      "description": "Room Charge - Night 2 (Oct 15)",
+      "amount": "175"
+    },
+    {
+      "id": 2,
+      "description": "Executive Lounge Day Pass - Quiet Video-Call Booth (Half Day)",
+      "amount": "38"
+    },
+    {
+      "id": 3,
+      "description": "Minibar: Organic Truffle Cashews & Bio Mate Kola",
+      "amount": "16"
+    },
+    {
+      "id": 4,
+      "description": "Overnight Secure Courtyard Parking w/ EV Charging",
+      "amount": "60"
+    },
+    {
+      "id": 5,
+      "description": "City tax",
+      "amount": "15"
+    },
+    {
+      "id": 6,
+      "description": "VAT",
+      "amount": "32.48"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "case-0042",
+  "decision": "approved",
+  "claimed_amount": 267.50,
+  "reimbursed_amount": 267.50,
+  "line_items": [
+    { "id": 0, "description": "Fire-Roasted Padrón Peppers with Smoked Sea Salt", "claimed": 9.50, "reimbursed": 9.50 },
+    { "id": 1, "description": "Hamachi Crudo with Yuzu Kosho & Pickled Daikon", "claimed": 36.00, "reimbursed": 36.00 },
+    { "id": 2, "description": "Dry-Aged Iberian Pork Chop with Chimichurri", "claimed": 68.00, "reimbursed": 68.00 },
+    { "id": 3, "description": "Miso Glazed Black Cod with Shiitake Dashi", "claimed": 38.50, "reimbursed": 38.50 },
+    { "id": 4, "description": "Nordaq Sparkling Water (750ml)", "claimed": 17.00, "reimbursed": 17.00 },
+    { "id": 5, "description": "Smoky Mezcal Paloma", "claimed": 45.00, "reimbursed": 45.00 },
+    { "id": 6, "description": "Charred Basque Cheesecake with Fig Compote", "claimed": 28.50, "reimbursed": 28.50 },
+    { "id": 7, "description": "Tip", "claimed": 25.00, "reimbursed": 25.00 }
+  ],
+  "reasoning": "Client hospitality dinner for 3 (1 employee + 2 external design partners from Studio Kraft) in Berlin on Tuesday 2024-05-14, receipt timed 21:42. Under the Chapter 2 calculation order every check passes. (1) Eligibility: itemized restaurant receipt, not a card slip, and not a prohibited category. (2) The note states the business purpose (finalize UI deliverables for Q3), the external organization (Studio Kraft), and the total attendee count (3), satisfying the documentation requirement in Chapter 8 and the mandatory note elements of the Client Hospitality Dinner branch of Figure 2 (Ch. 13); the attendee ratio of 2 external guests per 1 employee meets the minimum 1:1 ratio. (3) The receipt date is a Tuesday, so Figure 1 (Ch. 9 weekend/holiday rules) does not apply, and the 21:42 receipt time is before the 23:00 late-night rejection boundary in Figure 2. (4) Truffle screening under Figure 3 (Ch. 13): no dish mentions truffle, so no line is screened out. (5) Per-person dinner cap: the pre-tip subtotal of EUR 242.50 divided by 3 attendees is EUR 80.83 per person, under the EUR 90 dinner cap in Figure 2 (Ch. 13), so no category-cap deduction. (6) Alcohol allowance: cocktails of EUR 45.00 are at most 30% of the non-alcoholic food-and-drink subtotal (0.30 x EUR 197.50 = EUR 59.25) per the Client Hospitality branch of Figure 2, so the full EUR 45.00 is reimbursable. (7) Tip cap: under the Global Tipping Standards table in Chapter 14, Germany allows tips up to 20% of the bill before tip; 0.20 x EUR 242.50 = EUR 48.50, and the EUR 25.00 tip is well within that cap. No item is deducted, so the line is approved in full for EUR 267.50."
+}

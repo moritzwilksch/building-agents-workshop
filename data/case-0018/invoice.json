@@ -1,0 +1,68 @@
+{
+  "note": "Booth kit and giveaways for the Berlin Legal Tech Forum, plus gaffer tape and a spare USB-C adapter for the team.",
+  "invoice_type": "standard",
+  "id": "inv_std_31740628",
+  "invoice_number": "MS-2024-18427",
+  "issued_date": "2024-05-14",
+  "due_date": "2024-05-28",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Messebau & Werbetechnik Spree GmbH",
+    "address": "Chausseestr. 84",
+    "city": "Berlin",
+    "postal_code": "10115",
+    "country": "DE",
+    "tax_id": "DE301274958",
+    "phone": "+49 30 44278160"
+  },
+  "buyer_name": "Dr. Julian Vogl",
+  "buyer_company": "Nexora Systems GmbH",
+  "buyer_tax_id": "DE318920144",
+  "items": [
+    {
+      "description": "Branded Silicone Phone Grips (logo print, 300 pcs)",
+      "quantity": "1.0",
+      "unit_price": "268.00",
+      "total_price": "268.00",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Industrial Gaffer Tape (Matte Black, 50mm x 50m)",
+      "quantity": "1.0",
+      "unit_price": "81.60",
+      "total_price": "81.60",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Freestanding Fabric Backdrop Frame (3m, printed panel)",
+      "quantity": "1.0",
+      "unit_price": "172.40",
+      "total_price": "172.40",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "USB-C Multiport Adapter (HDMI, 2x USB-A, 100W PD)",
+      "quantity": "1.0",
+      "unit_price": "88.50",
+      "total_price": "88.50",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "610.50",
+  "tax_rate": "0.19",
+  "tax_amount": "116.00",
+  "total_amount": "726.50",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    { "id": 0, "description": "Branded Silicone Phone Grips (logo print, 300 pcs)", "amount": "268.00" },
+    { "id": 1, "description": "Industrial Gaffer Tape (Matte Black, 50mm x 50m)", "amount": "81.60" },
+    { "id": 2, "description": "Freestanding Fabric Backdrop Frame (3m, printed panel)", "amount": "172.40" },
+    { "id": 3, "description": "USB-C Multiport Adapter (HDMI, 2x USB-A, 100W PD)", "amount": "88.50" },
+    { "id": 4, "description": "VAT", "amount": "116.00" }
+  ]
+}

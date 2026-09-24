@@ -1,0 +1,75 @@
+{
+  "note": "Branded UV-reactive wristbands and UV inspection lights purchased for the blacklight scavenger hunt booth challenge at CloudFest Berlin.",
+  "invoice_type": "standard",
+  "id": "inv-std-20240417-8831",
+  "invoice_number": "INV-2024-8831",
+  "issued_date": "2024-04-17",
+  "due_date": "2024-05-15",
+  "currency": "EUR",
+  "vendor": {
+    "name": "EventWerk Werbemittel & Messebau GmbH",
+    "address": "Industriestraße 14, Halle 3B",
+    "city": "Leipzig",
+    "postal_code": "04229",
+    "country": "DE",
+    "tax_id": "DE284910283",
+    "phone": "+49 341 9874 5210"
+  },
+  "buyer_name": "Dr. Marlene Voss",
+  "buyer_company": "Synthetix Solutions GmbH",
+  "buyer_tax_id": "DE318492015",
+  "items": [
+    {
+      "description": "Custom UV-reactive silicone event wristbands (bulk 500-pack)",
+      "quantity": "1",
+      "unit_price": "185",
+      "total_price": "185",
+      "category": "supplies",
+      "is_alcohol": false
+    },
+    {
+      "description": "Handheld 395nm UV blacklight inspection lamps (pack of 4)",
+      "quantity": "2",
+      "unit_price": "39.9",
+      "total_price": "79.8",
+      "category": "hardware",
+      "is_alcohol": false
+    },
+    {
+      "description": "Heavy-duty vinyl branded tabletop prize display tray (80cm x 60cm)",
+      "quantity": "1",
+      "unit_price": "45.2",
+      "total_price": "45.2",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "310",
+  "tax_rate": "0.19",
+  "tax_amount": "58.9",
+  "total_amount": "368.9",
+  "paid": true,
+  "payment_terms": "Net 30",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Custom UV-reactive silicone event wristbands (bulk 500-pack)",
+      "amount": "185"
+    },
+    {
+      "id": 1,
+      "description": "Handheld 395nm UV blacklight inspection lamps (pack of 4)",
+      "amount": "79.8"
+    },
+    {
+      "id": 2,
+      "description": "Heavy-duty vinyl branded tabletop prize display tray (80cm x 60cm)",
+      "amount": "45.2"
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "amount": "58.9"
+    }
+  ]
+}

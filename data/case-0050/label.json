@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0050",
+  "decision": "partially_approved",
+  "claimed_amount": 407.04,
+  "reimbursed_amount": 351.4,
+  "line_items": [
+    { "id": 0, "description": "Comfort Double Room - Night 1", "claimed": 165.0, "reimbursed": 160.0 },
+    { "id": 1, "description": "Comfort Double Room - Night 2", "claimed": 165.0, "reimbursed": 160.0 },
+    { "id": 2, "description": "Late Checkout & Overnight Luggage Storage (Conference Final Day)", "claimed": 24.5, "reimbursed": 0.0 },
+    { "id": 3, "description": "Boutique Cold Brew Tonic", "claimed": 12.0, "reimbursed": 0.0 },
+    { "id": 4, "description": "Bio-Fairtrade Artisan Dark Chocolate Bar", "claimed": 5.5, "reimbursed": 0.0 },
+    { "id": 5, "description": "City tax", "claimed": 9.0, "reimbursed": 9.0 },
+    { "id": 6, "description": "VAT", "claimed": 26.04, "reimbursed": 22.4 }
+  ],
+  "reasoning": "Hotel folio for a two-night stay in Berlin (nights of Tue 2023-11-14 and Wed 2023-11-15). Both nights begin on weekdays, so Figure 1 (weekend flowchart) is not triggered and Chapter 6 alone governs. Berlin is a Tier 2 city with a EUR 160.00 nightly room cap (Chapter 6; Chapter 14 appendix table). The rate is EUR 165.00 per night, so EUR 5.00 per night is deducted. The Chapter 9 trade-fair override does not apply: the note names the 'European Green Tech Summit', which is not the listed Berlin FinTech Summit (window: March), and the stay is in November, so the ordinary tier cap governs. Incidentals: the late check-out fee line (bundled with luggage storage, dominated by the late-checkout fee) is deducted in full, and both minibar lines (Cold Brew Tonic, chocolate bar) are deducted in full — minibar items are always deducted even when non-alcoholic (Chapter 6 'Folio Substantiation' list; Chapter 11 'Hotel Incidentals'). Per Chapter 2 step 2, deductions also remove the tax charged on those items. The folio's VAT of EUR 26.04 is 7% of the EUR 372.00 net subtotal, so the deductible VAT share is 7% on the deducted amounts: 7% x EUR 10.00 room excess = EUR 0.70, 7% x EUR 24.50 late checkout = EUR 1.715, 7% x EUR 17.50 minibar = EUR 1.225; total VAT deduction EUR 3.64, leaving EUR 22.40 of VAT reimbursed (7% on the capped EUR 320.00 room total). The EUR 9.00 Berlin city tax is itemized on the folio and reimbursed in full (Chapter 6; Chapter 14 appendix). The hotel shows its VAT registration number, so the VAT remains reimbursable (Chapter 12). Total deductions: 10.00 room excess + 0.70 VAT on excess + 24.50 late checkout + 1.715 VAT + 17.50 minibar + 1.225 VAT = 55.64. Reimbursed: 407.04 - 55.64 = 351.40."
+}

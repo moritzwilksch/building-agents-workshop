@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0040",
+  "decision": "approved",
+  "claimed_amount": 45.0,
+  "reimbursed_amount": 45.0,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "claimed": 41.5,
+      "reimbursed": 41.5
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "claimed": 3.5,
+      "reimbursed": 3.5
+    }
+  ],
+  "reasoning": "Licensed Berlin taxi (B-TX-4402) to BER Terminal 1. The €41.50 fare exceeds the €25 unjustified-ride threshold, but Ch. 5 reimburses a taxi in full when the pickup or drop-off is an airport, which independently justifies the ride; the note states destination and purpose as Ch. 2 requires. The €3.50 tip is 8.43% of the pre-tip fare, within the 20% Germany tip cap in the Ch. 14 Global Tipping Standards (which override the 10% EU regional norm). The receipt is dated Thursday 2024-11-14 06:42, so no weekend/holiday (Fig. 1) or early-hour justification issue arises. Full reimbursement of €45.00."
+}

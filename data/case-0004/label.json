@@ -1,0 +1,10 @@
+{
+  "case_id": "case-0004",
+  "decision": "partially_approved",
+  "claimed_amount": 68.00,
+  "reimbursed_amount": 25.00,
+  "line_items": [
+    { "id": 0, "description": "Limousine fare", "claimed": 68.00, "reimbursed": 25.00 }
+  ],
+  "reasoning": "The receipt is from a stretch-limousine chauffeur service, a premium ground-transport tier under the Chapter 5 premium/luxury-rideshare rule, so the fare is reimbursed only up to the €25.00 unjustified-ride threshold and the excess is deducted. The pre-tip fare of €68.00 exceeds the threshold, and the ride is neither from/to an airport or long-distance rail station nor justified by any Chapter 5 note condition, so the premium-tier cap applies. There is no tip. Total reimbursed €25.00 of the €68.00 claimed: partially approved."
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "case-0014",
+  "decision": "partially_approved",
+  "claimed_amount": 478.59,
+  "reimbursed_amount": 154.68,
+  "line_items": [
+    { "id": 0, "description": "Industrial High-Torque Hot Glue Gun (300W)", "claimed": 79.98, "reimbursed": 79.98 },
+    { "id": 1, "description": "Bulk Extra-Strength Glue Sticks (5kg pack)", "claimed": 34.50, "reimbursed": 20.99 },
+    { "id": 2, "description": "Custom Screen-Printed Cotton Tote Bags (Neon Orange - Pack of 250)", "claimed": 240.00, "reimbursed": 0.00 },
+    { "id": 3, "description": "Heavy Duty Hook-and-Loop Cable Straps (Roll 25m)", "claimed": 47.70, "reimbursed": 29.01 },
+    { "id": 4, "description": "VAT", "claimed": 76.41, "reimbursed": 24.70 }
+  ],
+  "reasoning": "Commercial invoice for demo-booth supplies at CloudCon Berlin. The note names the event but does not state that a budget owner pre-approved the purchase, so the branded tote bags fail Chapter 10's event-material requirement and are deducted with their VAT. The hot glue guns cost 39.99 each and qualify as tools below the 100.00 peripheral threshold. The glue sticks and hook-and-loop straps are consumable supplies, so they share Chapter 10's 50.00 per-invoice supply cap. That allowance is allocated proportionally: 20.99 to the glue sticks and 29.01 to the straps. Reimbursable net is 79.98 + 50.00 = 129.98, with 24.70 of VAT. Total reimbursement is 154.68."
+}

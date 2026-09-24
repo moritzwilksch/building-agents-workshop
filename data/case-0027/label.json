@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0027",
+  "decision": "approved",
+  "claimed_amount": 421.5,
+  "reimbursed_amount": 421.5,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom Mini Rubber Ducks (Screen-Printed Logo) - 500pk",
+      "claimed": 275.0,
+      "reimbursed": 275.0
+    },
+    {
+      "id": 1,
+      "description": "Inflatable Duck Pond Display Pool (120cm)",
+      "claimed": 34.5,
+      "reimbursed": 34.5
+    },
+    {
+      "id": 2,
+      "description": "Electric Quick-Fill Air Pump 230V",
+      "claimed": 18.9,
+      "reimbursed": 18.9
+    },
+    {
+      "id": 3,
+      "description": "Telescopic Net with Foam Handle",
+      "claimed": 25.8,
+      "reimbursed": 25.8
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 67.3,
+      "reimbursed": 67.3
+    }
+  ],
+  "reasoning": "The note names CloudFest Berlin and states that Priya Nair in Marketing approved the booth game for lead generation. The rubber ducks, display pool, air pump, and nets are event giveaways and demonstration gear for that named, pre-approved event, so all lines and their VAT are reimbursed in full."
+}

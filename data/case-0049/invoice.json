@@ -1,0 +1,117 @@
+{
+  "note": "Dinner with 3 prospective clients from Veloce Media to discuss the Q3 platform migration project (4 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rest_20240516_9932",
+  "issued_at": "2024-05-16T21:44:18Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Ember & Thyme Bistro",
+    "address": "Torstraße 179",
+    "city": "Berlin",
+    "postal_code": "10115",
+    "country": "DE",
+    "tax_id": "DE318992015",
+    "phone": "+49 30 55198243"
+  },
+  "receipt_number": "RCP-20240516-0881",
+  "table_number": "T14",
+  "number_of_guests": 4,
+  "items": [
+    {
+      "description": "Crispy Truffle Polenta Bites",
+      "quantity": "2",
+      "unit_price": "12.5",
+      "total_price": "25",
+      "category": "starter",
+      "is_alcohol": false
+    },
+    {
+      "description": "Dry-Aged Ribeye w/ Smoked Bone Marrow Butter",
+      "quantity": "3",
+      "unit_price": "45",
+      "total_price": "135",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "Handmade Wild Mushroom Tagliatelle",
+      "quantity": "1",
+      "unit_price": "26.5",
+      "total_price": "26.5",
+      "category": "meal",
+      "is_alcohol": false
+    },
+    {
+      "description": "San Pellegrino Sparkling Water (750ml)",
+      "quantity": "2",
+      "unit_price": "7.5",
+      "total_price": "15",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoked Rosemary Old Fashioned",
+      "quantity": "4",
+      "unit_price": "17",
+      "total_price": "68",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Yuzu Basil Sorbet & Espresso Flight",
+      "quantity": "2",
+      "unit_price": "11.5",
+      "total_price": "23",
+      "category": "dessert",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "292.5",
+  "tax_rate": "0.19",
+  "tax_amount": "46.7",
+  "tip_amount": "35",
+  "total_amount": "327.5",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7241",
+    "auth_code": "849102"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Crispy Truffle Polenta Bites",
+      "amount": "25"
+    },
+    {
+      "id": 1,
+      "description": "Dry-Aged Ribeye w/ Smoked Bone Marrow Butter",
+      "amount": "135"
+    },
+    {
+      "id": 2,
+      "description": "Handmade Wild Mushroom Tagliatelle",
+      "amount": "26.5"
+    },
+    {
+      "id": 3,
+      "description": "San Pellegrino Sparkling Water (750ml)",
+      "amount": "15"
+    },
+    {
+      "id": 4,
+      "description": "Smoked Rosemary Old Fashioned",
+      "amount": "68"
+    },
+    {
+      "id": 5,
+      "description": "Yuzu Basil Sorbet & Espresso Flight",
+      "amount": "23"
+    },
+    {
+      "id": 6,
+      "description": "Tip",
+      "amount": "35"
+    }
+  ]
+}

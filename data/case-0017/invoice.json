@@ -1,0 +1,95 @@
+{
+  "note": "Flights to Stockholm for the Q2 cloud infrastructure migration sync with the Nordic engineering team.",
+  "invoice_type": "flight",
+  "id": "inv_fl_20240412_091",
+  "booking_reference": "K9TX4W",
+  "ticket_number": "220-4920184712",
+  "issued_at": "2024-04-12T08:42:15Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Lufthansa German Airlines",
+    "address": "Flughafenstraße 1-3",
+    "city": "Frankfurt am Main",
+    "postal_code": "60549",
+    "country": "DE",
+    "tax_id": "DE114103514",
+    "phone": "+49 69 86 799 799"
+  },
+  "passenger_name": "Dr. Florian Brandt",
+  "segments": [
+    {
+      "flight_number": "LH802",
+      "departure_airport": "FRA",
+      "arrival_airport": "ARN",
+      "departure_time": "2024-04-18T09:35:00Z",
+      "arrival_time": "2024-04-18T11:45:00Z",
+      "seat": "14F",
+      "cabin_class": "economy"
+    },
+    {
+      "flight_number": "LH807",
+      "departure_airport": "ARN",
+      "arrival_airport": "FRA",
+      "departure_time": "2024-04-19T18:15:00Z",
+      "arrival_time": "2024-04-19T20:25:00Z",
+      "seat": "12C",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "385.00",
+  "taxes_and_fees": [
+    {
+      "name": "German Air Transport Tax (Ökosteuer)",
+      "rate": "0.19",
+      "amount": "42.15"
+    },
+    {
+      "name": "Airport Passenger Service Charge",
+      "rate": null,
+      "amount": "56.30"
+    },
+    {
+      "name": "Carrier Imposed Surcharge (YQ)",
+      "rate": null,
+      "amount": "38.00"
+    },
+    {
+      "name": "Swedish Aviation Tax",
+      "rate": null,
+      "amount": "18.45"
+    }
+  ],
+  "total_amount": "539.90",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7741",
+    "auth_code": "581902"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "385.00"
+    },
+    {
+      "id": 1,
+      "description": "German Air Transport Tax (Ökosteuer)",
+      "amount": "42.15"
+    },
+    {
+      "id": 2,
+      "description": "Airport Passenger Service Charge",
+      "amount": "56.30"
+    },
+    {
+      "id": 3,
+      "description": "Carrier Imposed Surcharge (YQ)",
+      "amount": "38.00"
+    },
+    {
+      "id": 4,
+      "description": "Swedish Aviation Tax",
+      "amount": "18.45"
+    }
+  ]
+}

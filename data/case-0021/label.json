@@ -1,0 +1,11 @@
+{
+  "case_id": "case-0021",
+  "decision": "partially_approved",
+  "claimed_amount": 194.90,
+  "reimbursed_amount": 5.90,
+  "line_items": [
+    { "id": 0, "description": "Ticket fare (1st class)", "claimed": 189.00, "reimbursed": 0.00 },
+    { "id": 1, "description": "Seat reservation", "claimed": 5.90, "reimbursed": 5.90 }
+  ],
+  "reasoning": "First Class rail ticket from Berlin Hbf to Hamburg Hbf, a scheduled journey well under the four-hour threshold in Chapter 5. Second Class is the firm standard, and First Class is allowed only on longer routes; on a shorter route the ticket shows no Second Class fare Finance could reimburse instead, so the fare line is rejected in full. The seat reservation is a separate line and Chapter 5 reimburses seat reservation fees in full, so it is paid. Total reimbursed EUR 5.90 of the EUR 194.90 claimed: partially approved."
+}

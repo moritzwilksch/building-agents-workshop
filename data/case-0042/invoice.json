@@ -1,0 +1,130 @@
+{
+  "note": "Dinner with 2 design partners from Studio Kraft to finalize UI deliverables for Q3 (3 attendees total).",
+  "invoice_type": "restaurant",
+  "id": "rec_rst_20240514_9182",
+  "issued_at": "2024-05-14T21:42:15Z",
+  "currency": "EUR",
+  "vendor": {
+    "name": "Fuego & Botanik Grillroom",
+    "address": "Kastanienallee 32",
+    "city": "Berlin",
+    "postal_code": "10435",
+    "country": "DE",
+    "tax_id": "DE294810355",
+    "phone": "+49 30 5549 2011"
+  },
+  "receipt_number": "T-2024-88421",
+  "table_number": "14",
+  "number_of_guests": 3,
+  "items": [
+    {
+      "description": "Fire-Roasted Padrón Peppers with Smoked Sea Salt",
+      "quantity": "1",
+      "unit_price": "9.5",
+      "total_price": "9.5",
+      "category": "appetizer",
+      "is_alcohol": false
+    },
+    {
+      "description": "Hamachi Crudo with Yuzu Kosho & Pickled Daikon",
+      "quantity": "2",
+      "unit_price": "18",
+      "total_price": "36",
+      "category": "appetizer",
+      "is_alcohol": false
+    },
+    {
+      "description": "Dry-Aged Iberian Pork Chop with Chimichurri",
+      "quantity": "2",
+      "unit_price": "34",
+      "total_price": "68",
+      "category": "main",
+      "is_alcohol": false
+    },
+    {
+      "description": "Miso Glazed Black Cod with Shiitake Dashi",
+      "quantity": "1",
+      "unit_price": "38.5",
+      "total_price": "38.5",
+      "category": "main",
+      "is_alcohol": false
+    },
+    {
+      "description": "Nordaq Sparkling Water (750ml)",
+      "quantity": "2",
+      "unit_price": "8.5",
+      "total_price": "17",
+      "category": "beverage",
+      "is_alcohol": false
+    },
+    {
+      "description": "Smoky Mezcal Paloma",
+      "quantity": "3",
+      "unit_price": "15",
+      "total_price": "45",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "Charred Basque Cheesecake with Fig Compote",
+      "quantity": "3",
+      "unit_price": "9.5",
+      "total_price": "28.5",
+      "category": "dessert",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "242.5",
+  "tax_rate": "0.19",
+  "tax_amount": "38.72",
+  "tip_amount": "25",
+  "total_amount": "267.5",
+  "payment_method": "card",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "7144",
+    "auth_code": "481092"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Fire-Roasted Padrón Peppers with Smoked Sea Salt",
+      "amount": "9.5"
+    },
+    {
+      "id": 1,
+      "description": "Hamachi Crudo with Yuzu Kosho & Pickled Daikon",
+      "amount": "36"
+    },
+    {
+      "id": 2,
+      "description": "Dry-Aged Iberian Pork Chop with Chimichurri",
+      "amount": "68"
+    },
+    {
+      "id": 3,
+      "description": "Miso Glazed Black Cod with Shiitake Dashi",
+      "amount": "38.5"
+    },
+    {
+      "id": 4,
+      "description": "Nordaq Sparkling Water (750ml)",
+      "amount": "17"
+    },
+    {
+      "id": 5,
+      "description": "Smoky Mezcal Paloma",
+      "amount": "45"
+    },
+    {
+      "id": 6,
+      "description": "Charred Basque Cheesecake with Fig Compote",
+      "amount": "28.5"
+    },
+    {
+      "id": 7,
+      "description": "Tip",
+      "amount": "25"
+    }
+  ]
+}

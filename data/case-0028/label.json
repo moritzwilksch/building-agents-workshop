@@ -1,0 +1,33 @@
+{
+  "case_id": "case-0028",
+  "decision": "approved",
+  "claimed_amount": 613.68,
+  "reimbursed_amount": 613.68,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Custom screen-printed stainless water bottles with company logo (Bulk Pack 300 pcs)",
+      "claimed": 390.0,
+      "reimbursed": 390.0
+    },
+    {
+      "id": 1,
+      "description": "Inflatable mini carnival pool (120cm) & electric air pump",
+      "claimed": 45.9,
+      "reimbursed": 45.9
+    },
+    {
+      "id": 2,
+      "description": "Industrial magnetic USB-C charging cables (Pack of 5)",
+      "claimed": 79.8,
+      "reimbursed": 79.8
+    },
+    {
+      "id": 3,
+      "description": "VAT",
+      "claimed": 97.98,
+      "reimbursed": 97.98
+    }
+  ],
+  "reasoning": "The note names the CloudExpo Berlin exhibition and states that Jonas Weber in Field Marketing pre-approved the purchase. The giveaway bottles and inflatable pool and pump are event materials for that named, pre-approved event. The USB-C cables are routine peripherals below the per-unit threshold. All net lines and their VAT are reimbursed in full."
+}

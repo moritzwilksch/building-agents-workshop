@@ -1,0 +1,62 @@
+{
+  "note": "Picked these up for the team room at my flat — team morale.",
+  "invoice_type": "standard",
+  "id": "inv_std_8829141",
+  "invoice_number": "RE-2024-09412",
+  "issued_date": "2024-04-16",
+  "due_date": "2024-04-30",
+  "currency": "EUR",
+  "vendor": {
+    "name": "PromoWerke Westfalen GmbH",
+    "address": "Industriestraße 42",
+    "city": "Dortmund",
+    "postal_code": "44147",
+    "country": "DE",
+    "tax_id": "DE284910392",
+    "phone": "+49 231 9823100"
+  },
+  "buyer_name": "Julian Ebersbach",
+  "buyer_company": "Nexis Cloud Solutions GmbH",
+  "buyer_tax_id": "DE319842105",
+  "items": [
+    {
+      "description": "Nexta Play 5 Games Console (1TB) incl. controller",
+      "quantity": "1",
+      "unit_price": "479",
+      "total_price": "479",
+      "category": "equipment",
+      "is_alcohol": false
+    },
+    {
+      "description": "Video Game: Racing Legends 2024 (Disc Edition)",
+      "quantity": "2",
+      "unit_price": "60",
+      "total_price": "120",
+      "category": "supplies",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "599",
+  "tax_rate": "0.19",
+  "tax_amount": "113.81",
+  "total_amount": "712.81",
+  "paid": true,
+  "payment_terms": "14 days net",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Nexta Play 5 Games Console (1TB) incl. controller",
+      "amount": "479"
+    },
+    {
+      "id": 1,
+      "description": "Video Game: Racing Legends 2024 (Disc Edition)",
+      "amount": "120"
+    },
+    {
+      "id": 2,
+      "description": "VAT",
+      "amount": "113.81"
+    }
+  ]
+}

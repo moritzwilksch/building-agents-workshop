@@ -1,0 +1,39 @@
+{
+  "case_id": "case-0034",
+  "decision": "partially_approved",
+  "claimed_amount": 555.68,
+  "reimbursed_amount": 59.5,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Heavy-Duty Sound Deadening Foam Tiles (50x50cm, pack of 12)",
+      "claimed": 239.96,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 1,
+      "description": "Acoustic Decibel Sound Level Meter Class 2 (Calibrated)",
+      "claimed": 145.5,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 2,
+      "description": "Industrial Double-Sided Heavy Mounting Tape 50m",
+      "claimed": 33.8,
+      "reimbursed": 20.74
+    },
+    {
+      "id": 3,
+      "description": "Rubber Anti-Vibration Isolation Pads (pack of 8)",
+      "claimed": 47.7,
+      "reimbursed": 29.26
+    },
+    {
+      "id": 4,
+      "description": "VAT",
+      "claimed": 88.72,
+      "reimbursed": 9.5
+    }
+  ],
+  "reasoning": "The sound-deadening foam is a booth or workspace installation rather than a routine incidental supply, and the note names no event or pre-approver, so it is deducted. The 145.50 specialist sound meter exceeds the 100.00 tool and peripheral threshold and the note cites no IT Helpdesk ticket, so it is also deducted. The mounting tape and isolation pads are general-purpose consumables covered by the shared 50.00 per-invoice supplies cap, allocated proportionally as 20.74 to the tape and 29.26 to the pads. VAT on the reimbursed 50.00 net is 9.50."
+}

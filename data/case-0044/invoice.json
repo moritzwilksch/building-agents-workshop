@@ -1,0 +1,85 @@
+{
+  "note": "Flight to Zurich for the annual Q1 enterprise architecture onsite alignment; pre-approved by Practice Leader Dr. Andrea Sommer.",
+  "invoice_type": "flight",
+  "id": "inv_fl_8492041",
+  "booking_reference": "X7K9LM",
+  "ticket_number": "220-4928104829",
+  "issued_at": "2024-03-14T09:22:15Z",
+  "currency": "EUR",
+  "airline": {
+    "name": "Lufthansa German Airlines",
+    "address": "Flughafenring 1",
+    "city": "Frankfurt am Main",
+    "postal_code": "60549",
+    "country": "DE",
+    "tax_id": "DE114144577",
+    "phone": "+49 69 86 799 799"
+  },
+  "passenger_name": "Marcus Vogel",
+  "segments": [
+    {
+      "flight_number": "LH1198",
+      "departure_airport": "FRA",
+      "arrival_airport": "ZRH",
+      "departure_time": "2024-03-24T17:50:00Z",
+      "arrival_time": "2024-03-24T18:45:00Z",
+      "seat": "14A",
+      "cabin_class": "economy"
+    },
+    {
+      "flight_number": "LH1199",
+      "departure_airport": "ZRH",
+      "arrival_airport": "FRA",
+      "departure_time": "2024-03-27T18:55:00Z",
+      "arrival_time": "2024-03-27T19:55:00Z",
+      "seat": "12C",
+      "cabin_class": "economy"
+    }
+  ],
+  "base_fare": "384.00",
+  "taxes_and_fees": [
+    {
+      "name": "Airport Passenger Service Charge",
+      "rate": null,
+      "amount": "52.48"
+    },
+    {
+      "name": "German Air Transport Tax (LuftVSt)",
+      "rate": null,
+      "amount": "15.53"
+    },
+    {
+      "name": "Carrier International Surcharge (YQ)",
+      "rate": null,
+      "amount": "44.00"
+    }
+  ],
+  "total_amount": "496.01",
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "9104",
+    "auth_code": "048291"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Base fare",
+      "amount": "384.00"
+    },
+    {
+      "id": 1,
+      "description": "Airport Passenger Service Charge",
+      "amount": "52.48"
+    },
+    {
+      "id": 2,
+      "description": "German Air Transport Tax (LuftVSt)",
+      "amount": "15.53"
+    },
+    {
+      "id": 3,
+      "description": "Carrier International Surcharge (YQ)",
+      "amount": "44.00"
+    }
+  ]
+}

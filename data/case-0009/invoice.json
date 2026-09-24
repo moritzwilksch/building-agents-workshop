@@ -1,0 +1,128 @@
+{
+  "note": "Two-night accommodation for the Medica Expo. My silk tie was stained with red wine during the trip and needed same-day dry cleaning ahead of the keynote presentation.",
+  "invoice_type": "hotel",
+  "id": "inv_hot_90218412",
+  "folio_number": "FOL-2024-88491",
+  "issued_date": "2024-11-16",
+  "currency": "EUR",
+  "hotel": {
+    "name": "The Urban Alpaca Boutique Hotel & Spa",
+    "address": "Kaiserswerther Str. 380",
+    "city": "Düsseldorf",
+    "postal_code": "40474",
+    "country": "DE",
+    "tax_id": "DE298374112",
+    "phone": "+49 211 4982001"
+  },
+  "guest_name": "Dr. Henrik Lindqvist",
+  "room_number": "412",
+  "room_category": "Deluxe Executive Loft",
+  "check_in": "2024-11-14",
+  "check_out": "2024-11-16",
+  "number_of_nights": 2,
+  "room_charges": [
+    {
+      "description": "Room Charge - Night 1 (Nov 14)",
+      "quantity": "1",
+      "unit_price": "195.00",
+      "total_price": "195.00",
+      "category": "lodging",
+      "is_alcohol": false
+    },
+    {
+      "description": "Room Charge - Night 2 (Nov 15)",
+      "quantity": "1",
+      "unit_price": "195.00",
+      "total_price": "195.00",
+      "category": "lodging",
+      "is_alcohol": false
+    }
+  ],
+  "incidentals": [
+    {
+      "description": "Express Emergency Dry Cleaning (1x Silk Tie red wine extraction)",
+      "quantity": "1",
+      "unit_price": "28.00",
+      "total_price": "28.00",
+      "category": "laundry",
+      "is_alcohol": false
+    },
+    {
+      "description": "Artisanal Smoked Rosemary Almonds & Craft Botanical Tonic",
+      "quantity": "2",
+      "unit_price": "9.00",
+      "total_price": "18.00",
+      "category": "minibar",
+      "is_alcohol": false
+    },
+    {
+      "description": "Minibar Craft IPA (Altstadt Brauhaus)",
+      "quantity": "2",
+      "unit_price": "8.00",
+      "total_price": "16.00",
+      "category": "beverage",
+      "is_alcohol": true
+    },
+    {
+      "description": "'Pre-Keynote De-Stressor' Neck & Shoulder Express Massage (30 min)",
+      "quantity": "1",
+      "unit_price": "65.00",
+      "total_price": "65.00",
+      "category": "spa",
+      "is_alcohol": false
+    }
+  ],
+  "subtotal": "517.00",
+  "city_tax": "12.50",
+  "vat_rate": "0.07",
+  "vat": "36.19",
+  "total_amount": "565.69",
+  "paid": true,
+  "card": {
+    "card_brand": "Mastercard",
+    "last_four": "4419",
+    "auth_code": "781044"
+  },
+  "charges": [
+    {
+      "id": 0,
+      "description": "Room Charge - Night 1 (Nov 14)",
+      "amount": "195.00"
+    },
+    {
+      "id": 1,
+      "description": "Room Charge - Night 2 (Nov 15)",
+      "amount": "195.00"
+    },
+    {
+      "id": 2,
+      "description": "Express Emergency Dry Cleaning (1x Silk Tie red wine extraction)",
+      "amount": "28.00"
+    },
+    {
+      "id": 3,
+      "description": "Artisanal Smoked Rosemary Almonds & Craft Botanical Tonic",
+      "amount": "18.00"
+    },
+    {
+      "id": 4,
+      "description": "Minibar Craft IPA (Altstadt Brauhaus)",
+      "amount": "16.00"
+    },
+    {
+      "id": 5,
+      "description": "'Pre-Keynote De-Stressor' Neck & Shoulder Express Massage (30 min)",
+      "amount": "65.00"
+    },
+    {
+      "id": 6,
+      "description": "City tax",
+      "amount": "12.50"
+    },
+    {
+      "id": 7,
+      "description": "VAT",
+      "amount": "36.19"
+    }
+  ]
+}

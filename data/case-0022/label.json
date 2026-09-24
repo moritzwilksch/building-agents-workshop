@@ -1,0 +1,16 @@
+{
+  "case_id": "case-0022",
+  "decision": "partially_approved",
+  "claimed_amount": 511.48,
+  "reimbursed_amount": 357.40,
+  "line_items": [
+    { "id": 0, "description": "Room Charge - Night 1 (Oct 14)", "claimed": 175.00, "reimbursed": 160.00 },
+    { "id": 1, "description": "Room Charge - Night 2 (Oct 15)", "claimed": 175.00, "reimbursed": 160.00 },
+    { "id": 2, "description": "Executive Lounge Day Pass - Quiet Video-Call Booth (Half Day)", "claimed": 38.00, "reimbursed": 0.00 },
+    { "id": 3, "description": "Minibar: Organic Truffle Cashews & Bio Mate Kola", "claimed": 16.00, "reimbursed": 0.00 },
+    { "id": 4, "description": "Overnight Secure Courtyard Parking w/ EV Charging", "claimed": 60.00, "reimbursed": 0.00 },
+    { "id": 5, "description": "City tax", "claimed": 15.00, "reimbursed": 15.00 },
+    { "id": 6, "description": "VAT", "claimed": 32.48, "reimbursed": 22.40 }
+  ],
+  "reasoning": "Hotel folio for two weekday nights in Berlin. The Tier 2 room cap limits each EUR 175.00 room charge to EUR 160.00. AI Summit Berlin is not a listed trade-fair override. The executive-lounge pass is an optional premium hotel amenity, not rented business workspace, and is deducted even though it was used for a client call. The minibar is deducted. Parking is deducted because the note does not identify a rental or pool vehicle. City tax is reimbursed in full, and VAT is limited to 7% of the eligible EUR 320.00 room amount, or EUR 22.40. Total reimbursement is EUR 357.40."
+}

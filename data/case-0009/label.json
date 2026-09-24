@@ -1,0 +1,57 @@
+{
+  "case_id": "case-0009",
+  "decision": "partially_approved",
+  "claimed_amount": 565.69,
+  "reimbursed_amount": 456.55,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Room Charge - Night 1 (Nov 14)",
+      "claimed": 195.0,
+      "reimbursed": 195.0
+    },
+    {
+      "id": 1,
+      "description": "Room Charge - Night 2 (Nov 15)",
+      "claimed": 195.0,
+      "reimbursed": 195.0
+    },
+    {
+      "id": 2,
+      "description": "Express Emergency Dry Cleaning (1x Silk Tie red wine extraction)",
+      "claimed": 28.0,
+      "reimbursed": 25.0
+    },
+    {
+      "id": 3,
+      "description": "Artisanal Smoked Rosemary Almonds & Craft Botanical Tonic",
+      "claimed": 18.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 4,
+      "description": "Minibar Craft IPA (Altstadt Brauhaus)",
+      "claimed": 16.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 5,
+      "description": "'Pre-Keynote De-Stressor' Neck & Shoulder Express Massage (30 min)",
+      "claimed": 65.0,
+      "reimbursed": 0.0
+    },
+    {
+      "id": 6,
+      "description": "City tax",
+      "claimed": 12.5,
+      "reimbursed": 12.5
+    },
+    {
+      "id": 7,
+      "description": "VAT",
+      "claimed": 36.19,
+      "reimbursed": 29.05
+    }
+  ],
+  "reasoning": "Two-night Düsseldorf stay for the Medica Expo; the nights of November 14 and 15, 2024 begin on a Thursday and a Friday, so no night falls on a weekend or public holiday and the weekend flowchart does not apply, and checking out on Saturday the 16th does not make the final night a weekend night. The note names the Medica Expo and both nights fall in November, the event window, so the trade-fair override in Chapter 9 replaces Düsseldorf's €120 Tier 3 cap with the €200 event surcharge cap; each €195 night is within the override and is reimbursed in full, and the 'Deluxe Executive Loft' category earns no higher or lower cap either way. The folio documents red-wine extraction from a silk tie ahead of the keynote, which establishes that business attire was soiled during the trip, so the €28 dry cleaning is reimbursable up to the €25 short-stay laundry cap with €3.00 deducted. Both minibar lines, including the alcoholic craft IPA, and the €65 'de-stressor' massage are deducted in full, as all spa and wellness charges are personal. City tax is reimbursed in full. VAT is allocated at the folio's single printed 7% rate on the reimbursed net charges, which deducts €7.14 of the €36.19 VAT."
+}

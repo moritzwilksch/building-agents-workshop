@@ -1,0 +1,21 @@
+{
+  "case_id": "case-0037",
+  "decision": "approved",
+  "claimed_amount": 51.00,
+  "reimbursed_amount": 51.00,
+  "line_items": [
+    {
+      "id": 0,
+      "description": "Taxi fare",
+      "claimed": 46.20,
+      "reimbursed": 46.20
+    },
+    {
+      "id": 1,
+      "description": "Tip",
+      "claimed": 4.80,
+      "reimbursed": 4.80
+    }
+  ],
+  "reasoning": "Taxi from Frankfurt Airport to Messe Frankfurt on Tuesday 2024-03-12, so the weekend/holiday flowchart (Figure 1) does not apply. The pre-tip fare of EUR 46.20 exceeds the EUR 25.00 unjustified-ride threshold in Chapter 5, but the pickup is Frankfurt Airport, and Chapter 5 makes a fare reimbursable in full when the pickup or drop-off is an airport or long-distance rail station, regardless of the threshold. The bulky-display justification in the note is not needed for this branch. The tip of EUR 4.80 is 10.4% of the EUR 46.20 fare, within the 20% cap for taxis in Germany under the Global Tipping Standards table in Chapter 14, so it is reimbursable in full. Total reimbursed: EUR 51.00, approved."
+}

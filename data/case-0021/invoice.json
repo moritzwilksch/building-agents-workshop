@@ -1,0 +1,38 @@
+{
+  "note": "Client workshop in Hamburg.",
+  "invoice_type": "train",
+  "id": "train_db_93817402",
+  "booking_code": "NV82WQ",
+  "issued_at": "2024-03-02T11:15:22+01:00",
+  "currency": "EUR",
+  "operator": {
+    "name": "Deutsche Bahn AG",
+    "address": "Stephensonstraße 1",
+    "city": "Frankfurt am Main",
+    "postal_code": "60326",
+    "country": "DE",
+    "tax_id": "DE811569869",
+    "phone": "+49 30 2970"
+  },
+  "passenger_name": "Lukas Lindemann",
+  "travel_class": "1st",
+  "origin_station": "Berlin Hbf",
+  "destination_station": "Hamburg Hbf",
+  "departure_time": "2024-03-14T07:38:00+01:00",
+  "is_flexible": false,
+  "ticket_fare": "189.0",
+  "seat_reservation_fee": "5.9",
+  "total_amount": "194.9",
+  "charges": [
+    {
+      "id": 0,
+      "description": "Ticket fare (1st class)",
+      "amount": "189.0"
+    },
+    {
+      "id": 1,
+      "description": "Seat reservation",
+      "amount": "5.9"
+    }
+  ]
+}
